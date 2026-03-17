@@ -19,6 +19,7 @@ NOTEBOOKS = [
     "notebooks/step_0b_select_CMIP_forcing.ipynb",
     "notebooks/step_1a_generate_historical_forcing.ipynb",
     "notebooks/step_1b_generate_future_forcing.ipynb",
+    "notebooks/step_1c_generate_DestinE_future_forcing.ipynb",
     "notebooks/step_2a_calibrate_HBV_montecarlo.ipynb",
     "notebooks/step_2b_calibrate_HBV_SCE.ipynb",
     "notebooks/step_3a_model_run_historical.ipynb",
