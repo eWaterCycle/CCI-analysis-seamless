@@ -103,7 +103,10 @@ first_nb = NOTEBOOKS[0]
 pm.execute_notebook(
     first_nb,
     outdir / f"{Path(first_nb).stem}_executed.ipynb",
-    parameters={"region_id": region_id},
+    parameters={
+        "country": country,
+        "region_id": region_id
+    },
 )
 
 # Wait until settings.json exists
@@ -139,6 +142,7 @@ for nb in NOTEBOOKS[1:]:
         nb,
         outdir / f"{name}_executed.ipynb",
         parameters={
+            "country": country,
             "region_id": region_id,
             "settings_path": str(settings_path)
         },
