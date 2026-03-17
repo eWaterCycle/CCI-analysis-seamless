@@ -9,6 +9,7 @@ from filelock import FileLock
 import csv
 
 region_id = sys.argv[1]
+country = sys.argv[2]
 
 HOME_PATH = "/project/ewater/Data/"
 
@@ -26,15 +27,14 @@ NOTEBOOKS = [
 ]
 
 # Output directory for executed notebooks
-outdir = Path(f"regions/{region_id}")
+outdir = Path(f"regions/{country}/{region_id}")
 outdir.mkdir(parents=True, exist_ok=True)
 
 done_dir = Path(f"done")
 done_dir.mkdir(parents=True, exist_ok=True)
 
 # Directory where the settings file will appear
-settings_dir = Path(f"regions/{region_id}")
-settings_dir.mkdir(parents=True, exist_ok=True)
+settings_dir = outdir
 settings_path = settings_dir / "settings.json"
 
 #######################################
@@ -42,7 +42,7 @@ settings_path = settings_dir / "settings.json"
 #######################################
 
 def is_region_done(region_id, csv_file):
-    """Check if region is already recorded in CSV (safe, with lock)."""
+    """Check if region is already recorded in CSV."""
     if not os.path.exists(csv_file):
         return False
 
@@ -84,11 +84,14 @@ def add_region_to_csv(region_id, csv_file):
         else:
             print(f"Region {region_id} already in CSV.")
 
-csv_file = done_dir / "regions_done.csv"
+csv_dir = done_dir / f"{country}"  # switch up to separate csv files due to bigger number of runs
+csv_dir.mkdir(parents=True, exist_ok=True)
+
+csv_file = csv_dir / "regions_done.csv"
 lock_file = str(csv_file) + ".lock"
 
 if is_region_done(region_id, csv_file):
-    print(f"Region {region_id} is already done: TERMINATING")
+    print(f"Region {region_id} in {country} is already done: TERMINATING")
 
     sys.exit()  # stops notebook execution
     
@@ -114,7 +117,7 @@ with open(settings_path) as f:
 
 
 #######################################
-# STEP 2 — RUN THE OTHER 7 NOTEBOOKS
+# STEP 2 — RUN THE OTHER NOTEBOOKS
 #######################################
 
 for nb in NOTEBOOKS[1:]:
@@ -145,24 +148,3 @@ for nb in NOTEBOOKS[1:]:
 # Finished successfully — now record region
 add_region_to_csv(region_id, csv_file)
 
-
-#######################################
-# STEP 3 — OPTIONAL: EXPORT EXECUTED NOTEBOOKS AS HTML
-#######################################
-
-# for executed_nb in outdir.glob("*_executed.ipynb"):
-#     subprocess.run([
-#         "jupyter", "nbconvert",
-#         "--to", "md",
-#         executed_nb,
-#         "--output-dir", str(outdir)
-#     ])
-
-#######################################
-# STEP 4 — OPTIONAL: TAR RESULTS FOR EASY DOWNLOAD
-#######################################
-
-# tar_path = f"output_{region_id}.tar.gz"
-# subprocess.run(["tar", "-czf", tar_path, f"output/{region_id}"])
-
-# print(f"Region {region_id} complete. Results archived to {tar_path}")
