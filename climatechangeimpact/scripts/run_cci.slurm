@@ -18,4 +18,4 @@ rclone mount --read-only --allow-non-empty dcache:/climate-data/caravan /project
 
 cd /home/ewater-mmelotto/seamless_spider/climatechangeimpact
 
-python scripts/cci.py $REGION_ID
+python scripts/cci.py $REGION_ID $COUNTRY
