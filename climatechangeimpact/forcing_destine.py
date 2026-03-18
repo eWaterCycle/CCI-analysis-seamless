@@ -137,12 +137,16 @@ class DestinEForcing(DefaultForcing):
         cls: type["DestinEForcing"],
         directory: str,
     ) -> "LumpedMakkinkForcing":
-        other_data = str(directory / "config.json")
+
+        if isinstance(directory, Path):
+            directory = str(directory)
+        
+        other_data = str(directory + "/config.json")
         files = {
-            "pr": str(directory / "pr.nc"),
-            "tas": str(directory / "tas.nc"),
-            "rsds": str(directory / "rsds.nc"),
-            "evspsblpot": str(directory / "evspsblpot.nc")
+            "pr": str(directory + "/pr.nc"),
+            "tas": str(directory + "/tas.nc"),
+            "rsds": str(directory + "/rsds.nc"),
+            "evspsblpot": str(directory + "/evspsblpot.nc")
         }
         with open(other_data, "r") as json_file:
             config_data = json.load(json_file)
