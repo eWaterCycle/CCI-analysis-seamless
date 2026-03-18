@@ -240,11 +240,14 @@ class DestinEForcing(DefaultForcing):
 
         ds_lumped = cls.derive_e_pot(ds_lumped)
 
+        if isinstance(directory, Path):
+            directory = str(directory)
+        
         files = {
-            "pr": str(directory / "pr.nc"),
-            "tas": str(directory / "tas.nc"),
-            "rsds": str(directory / "rsds.nc"),
-            "evspsblpot": str(directory / "evspsblpot.nc")
+            "pr": str(directory + "/pr.nc"),
+            "tas": str(directory + "/tas.nc"),
+            "rsds": str(directory + "/rsds.nc"),
+            "evspsblpot": str(directory + "/evspsblpot.nc")
         }
 
         
