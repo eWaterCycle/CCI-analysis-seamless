@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 for country in regions/*
 do
     country_name=$(basename "$country")
@@ -18,6 +16,6 @@ do
             scripts/run_cci.slurm
 
         break 2  # done as testing to see if this works
-        sleep 1
+        # sleep 1  # for small workloads use this
     done
 done
