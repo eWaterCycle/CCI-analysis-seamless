@@ -235,7 +235,7 @@ class DestinEForcing(DefaultForcing):
             "long_name": "Surface downwelling shortwave radiation"
         }
 
-        with ProgressBar():
+        with ProgressBar(dt=10.0):  # update every 10 seconds
             ds_lumped = ds_lumped.compute()
 
         ds_lumped = cls.derive_e_pot(ds_lumped)
@@ -257,7 +257,7 @@ class DestinEForcing(DefaultForcing):
         ds_lumped["rsds"].to_netcdf(files["rsds"])
         ds_lumped["evspsblpot"].to_netcdf(files["evspsblpot"])
 
-        config_file_path = str(directory / "config.json")
+        config_file_path = str(directory + "/config.json")
         config_file = dict()
         config_file["start"] = str(start_time)
         config_file["end"] = str(end_time)
