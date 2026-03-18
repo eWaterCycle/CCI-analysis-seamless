@@ -17,7 +17,7 @@ SHAPEFILE_URL = (
     f"https://data.4tu.nl/file/{COMMON_URL}/bbe94526-cf1a-4b96-8155-244f20094719"
 )
 DIRECTORY = f"/scratch-shared/mmelotto/caravan_data"
-DIRECTORY = f"/gpfs/scratch1/shared/mmelotto/caravan_data"
+DIRECTORY = f"/project/ewater/Data/caravan_data"  # Spider
 
 PROPERTY_VARS = [
     "timezone",
