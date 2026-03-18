@@ -1,10 +1,11 @@
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -c 2
-#SBATCH -t 00:10:00
+#SBATCH -t 06:00:00
 #SBATCH -p short
 
 conda init
+source ~/.bashrc
 conda activate ewatercycle_spider
 
 mkdir /project/ewater/Data/climate_data
