@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -c 2
-#SBATCH -t 06:00:00
+#SBATCH -t 04:00:00
 #SBATCH -p short
 
 conda init
