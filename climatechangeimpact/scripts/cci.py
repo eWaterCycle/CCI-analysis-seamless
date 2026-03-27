@@ -37,9 +37,9 @@ done_dir.mkdir(parents=True, exist_ok=True)
 settings_dir = outdir
 settings_path = settings_dir / "settings.json"
 
-#######################################
-# STEP 0 — Check if already done
-#######################################
+#################################################
+# STEP 0 — Check if region is already done before
+#################################################
 
 def is_region_done(region_id, csv_file):
     """Check if region is already recorded in CSV."""
@@ -126,14 +126,8 @@ with open(settings_path) as f:
 for nb in NOTEBOOKS[1:]:
     name = Path(nb).stem
 
-    if "step_2a_calibrate_HBV_montecarlo" in name:
-        file_parameters_path = HOME_PATH + "/ewatercycleClimateImpact/HBV/output_data" + f"/{region_id}/{region_id}_params_MC.csv"
-        if os.path.exists(file_parameters_path):
-            print(f"Skipping {name} because calibration is already complete")
-            continue
-    
-    if "step_2b_calibrate_HBV_SCE" in name:
-        file_parameters_path = HOME_PATH + "/ewatercycleClimateImpact/HBV/output_data" + f"/{region_id}/{region_id}_params_SCE.csv"
+    if "step_2a_calibrate_HBV_SCE" in name:
+        file_parameters_path = HOME_PATH + "/ewatercycleClimateImpact/HBV/output_data" + f"/{country}/{region_id}/{region_id}_params_SCE.csv"
         if os.path.exists(file_parameters_path):
             print(f"Skipping {name} because calibration is already complete")
             continue
@@ -149,6 +143,6 @@ for nb in NOTEBOOKS[1:]:
     )
 
 
-# Finished successfully — now record region
+# Finished successfully — now record region so it isn't run again
 add_region_to_csv(region_id, csv_file)
 
