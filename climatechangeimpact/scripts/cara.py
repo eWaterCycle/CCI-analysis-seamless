@@ -16,8 +16,14 @@ OPENDAP_URL = f"https://opendap.4tu.nl/thredds/dodsC/data2/djht/{COMMON_URL}/1/"
 SHAPEFILE_URL = (
     f"https://data.4tu.nl/file/{COMMON_URL}/bbe94526-cf1a-4b96-8155-244f20094719"
 )
-DIRECTORY = f"/scratch-shared/mmelotto/caravan_data"
-DIRECTORY = f"/project/ewater/Data/caravan_data"  # Spider
+
+home_check = Path.home()
+
+# DIRECTORY = f"/scratch-shared/mmelotto/caravan_data"  # Snellius
+if "ewater" in str(home_check):
+    DIRECTORY = f"/project/ewater/Data/caravan_data"  # Spider
+else:
+    DIRECTORY = f"/data/shared/climate-data/caravan/"  # SRC
 
 PROPERTY_VARS = [
     "timezone",
