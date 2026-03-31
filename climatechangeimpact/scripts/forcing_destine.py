@@ -39,6 +39,13 @@ from dask.diagnostics import ProgressBar
 
 DESTINE_CLIMATE_DATA_URL = "https://cacheb.dcms.destine.eu/d1-climate-dt/ScenarioMIP-SSP3-7.0-IFS-NEMO-0001-high-sfc-v0.zarr"  # https://destine.ecmwf.int/climate-change-adaptation-digital-twin-climate-dt/#1730973047014-709bbfad-4970
 
+# Polytope endpoint for retrieving historical data (not available as zarr on Cache B).
+# The LUMI endpoint is used by default; MN5 alternative: polytope.mn5.apps.dte.destination-earth.eu
+DESTINE_HISTORICAL_POLYTOPE_ADDRESS = "polytope.lumi.apps.dte.destination-earth.eu"
+
+# GRIB parameter IDs for the DestinE Climate DT historical simulation
+DESTINE_HISTORICAL_PARAMS = ["167", "228", "169"]  # t2m, tp (total precip), ssrd
+
 PROPERTY_VARS = [
     "timezone",
     "name",
@@ -297,6 +304,7 @@ class DestinEForcing(DefaultForcing):
 
     @staticmethod
     def derive_e_pot(ds):
+
         T = ds["tas"]  # temperature °K
         if T.attrs["units"] == "K":
             T = T - 273.15
@@ -344,5 +352,179 @@ class DestinEForcing(DefaultForcing):
             "units": CORRECT_UNITS["evspsblpot"],
             "long_name": "Potential evaporation (Makkink)"
         })
-    
+
         return ds
+
+
+RENAME_DESTINE_HIST = {
+    "t2m": "tas",
+    "tp": "pr",
+    "ssrd": "rsds",
+}
+
+
+class DestinEHistoricalForcing(DefaultForcing):
+    """Retrieves DestinE Climate DT CMIP6 historical data via the polytope API.
+
+    The historical simulation (ICON model, 1990–~2020) is not available as a zarr
+    store on Cache B. Instead it is accessed via the polytope API using earthkit.data,
+    which returns GRIB data on a HEALPix grid. The class regrids to a regular lat/lon
+    grid, clips to the catchment, and computes potential evaporation using the same
+    Makkink approach as DestinEForcing.
+
+    Authentication uses the same DESP credentials as DestinEForcing (via dest_auth).
+    Polytope auth is handled by earthkit using the DESP_USERNAME / DESP_PASSWORD
+    environment variables, or a previously written ~/.netrc entry.
+
+    Requirements:
+        pip install earthkit-data earthkit-regrid
+
+    Note:
+        Unit conversions for tp (total precipitation) and ssrd (surface solar radiation
+        downwards) assume the GRIB fields contain hourly accumulated values (m and J/m²
+        respectively). Verify against actual data if results look off.
+    """
+
+    @classmethod
+    def load(
+        cls: type["DestinEHistoricalForcing"],
+        directory: str,
+    ) -> "LumpedMakkinkForcing":
+        if isinstance(directory, Path):
+            directory = str(directory)
+
+        other_data = str(directory + "/config.json")
+        files = {
+            "pr": str(directory + "/pr.nc"),
+            "tas": str(directory + "/tas.nc"),
+            "rsds": str(directory + "/rsds.nc"),
+            "evspsblpot": str(directory + "/evspsblpot.nc")
+        }
+        with open(other_data, "r") as json_file:
+            config_data = json.load(json_file)
+
+        return ewatercycle.forcing.sources["LumpedMakkinkForcing"](
+            directory=directory,
+            start_time=config_data["start"],
+            end_time=config_data["end"],
+            shape=config_data["shape"],
+            filenames=files,
+        )
+
+    @classmethod
+    def generate(
+        cls: type["DestinEHistoricalForcing"],
+        start_time: str,
+        end_time: str,
+        directory: str,
+        variables: tuple[str, ...] = (),
+        shape: str | Path | None = None,
+        polytope_address: str = DESTINE_HISTORICAL_POLYTOPE_ADDRESS,
+        **kwargs,
+    ) -> "LumpedMakkinkForcing":
+        """Retrieve DestinE Climate DT CMIP6 historical forcing via polytope.
+
+        Args:
+            start_time: Start time in UTC ISO format string, e.g. 'YYYY-MM-DDTHH:MM:SSZ'.
+            end_time: End time in UTC ISO format string, e.g. 'YYYY-MM-DDTHH:MM:SSZ'.
+            directory: Directory in which forcing should be written.
+            shape: Path to a shapefile of the catchment.
+            polytope_address: Polytope server address. Defaults to LUMI endpoint.
+                Use 'polytope.mn5.apps.dte.destination-earth.eu' for MN5.
+        """
+        import earthkit.data
+        import earthkit.regrid
+
+        start = pd.Timestamp(start_time[:10])
+        end = pd.Timestamp(end_time[:10])
+
+        request = {
+            "class": "d1",
+            "dataset": "climate-dt",
+            "generation": "1",
+            "expver": "0001",
+            "stream": "clte",
+            "type": "fc",
+            "realization": "1",
+            "activity": "CMIP6",
+            "experiment": "hist",
+            "model": "icon",
+            "levtype": "sfc",
+            "param": DESTINE_HISTORICAL_PARAMS,  # t2m, tp, ssrd
+            "date": f"{start.strftime('%Y%m%d')}/to/{end.strftime('%Y%m%d')}",
+            "time": "0000",
+            "resolution": "standard",  # H128 ≈ 0.4° resolution; use "high" (H1024) if needed
+        }
+
+        fields = earthkit.data.from_source(
+            "polytope",
+            "destination-earth",
+            request,
+            address=polytope_address,
+        )
+
+        # Regrid from HEALPix to a regular 0.5° lat/lon grid so rioxarray can clip it
+        fields_regular = earthkit.regrid.interpolate(fields, out_grid={"grid": [0.5, 0.5]})
+
+        ds = fields_regular.to_xarray()
+
+        # Clip to catchment shape
+        gdf = gpd.read_file(shape)
+        ds = ds.rio.write_crs("EPSG:4326")
+        ds = ds.rio.clip(gdf.geometry, gdf.crs)
+
+        # Daily mean and spatial lumping
+        ds_daily = ds.resample(time="1D").mean()
+        ds_lumped = ds_daily.mean(dim=["latitude", "longitude"])
+
+        ds_lumped = ds_lumped.rename(RENAME_DESTINE_HIST)
+
+        # Unit conversions — consistent with DestinEForcing (zarr SSP3-7.0).
+        # tp: accumulated m/hr → kg m-2 s-1 (1 m/hr = 1/3.6 kg m-2 s-1)
+        # TODO: verify units in actual polytope GRIB output and adjust if needed
+        ds_lumped["tas"].attrs = {"units": CORRECT_UNITS["tas"], "long_name": "Air temperature at 2 m"}
+
+        ds_lumped["pr"] = ds_lumped["pr"] / 3.6
+        ds_lumped["pr"].attrs = {"units": CORRECT_UNITS["pr"], "long_name": "Precipitation"}
+
+        # ssrd: accumulated J/m²/hr → W m-2 (divide by 3600 s)
+        ds_lumped["rsds"] = ds_lumped["rsds"] / 3600
+        ds_lumped["rsds"].attrs = {"units": CORRECT_UNITS["rsds"], "long_name": "Surface downwelling shortwave radiation"}
+
+        from dask.diagnostics import ProgressBar
+        with ProgressBar(dt=10.0):
+            ds_lumped = ds_lumped.compute()
+
+        ds_lumped = cls.derive_e_pot(ds_lumped)
+
+        if isinstance(directory, Path):
+            directory = str(directory)
+
+        files = {
+            "pr": str(directory + "/pr.nc"),
+            "tas": str(directory + "/tas.nc"),
+            "rsds": str(directory + "/rsds.nc"),
+            "evspsblpot": str(directory + "/evspsblpot.nc")
+        }
+
+        ds_lumped["pr"].to_netcdf(files["pr"])
+        ds_lumped["tas"].to_netcdf(files["tas"])
+        ds_lumped["rsds"].to_netcdf(files["rsds"])
+        ds_lumped["evspsblpot"].to_netcdf(files["evspsblpot"])
+
+        config_file_path = str(directory + "/config.json")
+        config_file = {"start": str(start_time), "end": str(end_time), "shape": str(shape)}
+        with open(config_file_path, "w") as json_file:
+            json.dump(config_file, json_file, indent=4)
+
+        return ewatercycle.forcing.sources["LumpedMakkinkForcing"](
+            directory=directory,
+            start_time=start_time,
+            end_time=end_time,
+            shape=shape,
+            filenames=files,
+        )
+
+    @staticmethod
+    def derive_e_pot(ds):
+        return DestinEForcing.derive_e_pot(ds)
