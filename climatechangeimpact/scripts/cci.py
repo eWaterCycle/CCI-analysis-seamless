@@ -136,8 +136,8 @@ for nb in NOTEBOOKS[1:]:
         nb,
         outdir / f"{name}_executed.ipynb",
         parameters={
-            "country": country,
-            "region_id": region_id,
+            # "country": country,
+            # "region_id": region_id,
             "settings_path": str(settings_path)
         },
     )
