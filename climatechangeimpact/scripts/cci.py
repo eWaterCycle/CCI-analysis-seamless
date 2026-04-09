@@ -22,7 +22,8 @@ NOTEBOOKS = [
     "notebooks/step_2a_calibrate_HBV_SCE.ipynb",
     "notebooks/step_3a_model_run_historical.ipynb",
     "notebooks/step_3b_model_run_future.ipynb",
-    "notebooks/step_4_analyse.ipynb"
+    "notebooks/step_4_analyse.ipynb",
+    "notebooks/step_5_koppen_geiger.ipynb"
 ]
 
 # Output directory for executed notebooks
