@@ -26,10 +26,9 @@ The notebooks are numbered and should be run in order:
 | `step_0a` | Select catchment, time periods, and CMIP6 model; save settings |
 | `step_0b` | Query ESGF to confirm which ensemble members are available |
 | `step_1a` | Generate historical forcing (ERA5 + CMIP6 historical) |
-| `step_1b` | Generate future forcing (CMIP6 SSP scenarios) |
-| `step_1c` | Generate future forcing from Destination Earth (optional) |
+| `step_1b` | Generate future forcing (CMIP6 SSP scenarios + DestinE future, if available) |
 | `step_2a` | Calibrate HBV model parameters using Shuffled Complex Evolution |
-| `step_3a` | Run HBV with historical forcing; compare against observations |
+| `step_3a` | Run HBV with historical forcing; compare against observations (includes DestinE historical) |
 | `step_3b` | Run HBV with future forcing across all scenarios |
 | `step_4` | Analyse discharge changes using CDFs and return period plots |
 
@@ -39,14 +38,14 @@ All settings are stored in `settings.json` after `step_0a` and shared across all
 
 The workflow is designed to run seamlessly for a single catchment during development and for many catchments in parallel on HPC. The script `climatechangeimpact/scripts/cci.py` executes the full notebook sequence for a given catchment using [papermill](https://papermill.readthedocs.io/), skipping regions that have already been completed.
 
-To run on Spider HPC (or similar):
+To submit jobs for all regions on Spider HPC:
 
 ```bash
 cd climatechangeimpact
-python scripts/cci.py <region_id> <country>
+. scripts/submit_cci.sh
 ```
 
-The notebook `managing_seamless_spider.ipynb` handles job submission across many regions.
+This iterates over all subdirectories in `regions/` and submits a SLURM job per catchment via `scripts/run_cci.slurm`. Each job runs `scripts/cci.py` with the region ID and country derived from the folder structure.
 
 ## Getting started (single catchment)
 
@@ -80,10 +79,17 @@ This workflow runs inside the eWaterCycle environment. The main dependencies are
 climatechangeimpact/
     notebooks/          # Main workflow notebooks (step_0a through step_4)
     scripts/
-        cci.py          # Runs full workflow for one catchment via papermill
-        cara.py         # CaravanForcing class for eWaterCycle
+        cci.py              # Runs full workflow for one catchment via papermill
+        cara.py             # CaravanForcing class for eWaterCycle
         forcing_destine.py  # DestinE forcing support
-        dest_auth.py    # DestinE authentication
+        dest_auth.py        # DestinE authentication
+        desp-authentication.py  # DestinE DESP authentication
+        run_cci.slurm       # SLURM job script for Spider HPC
+        submit_cci.sh       # Batch job submission script
+        cancel_jobs.sh      # Cancel running SLURM jobs
+        all_regions.csv     # List of all catchment regions to process
+        camel_ids.txt       # CAMELS catchment IDs
+        get_camels.ipynb    # Notebook for retrieving CAMELS data
     regions/            # Output notebooks and settings per catchment
     GenerateCaravanLeafeltMap.ipynb  # Interactive map of available catchments
     build_region_structure.ipynb    # Prepares directory structure for HPC runs
