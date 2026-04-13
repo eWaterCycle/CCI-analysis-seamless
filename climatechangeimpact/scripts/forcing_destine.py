@@ -93,6 +93,8 @@ CORRECT_UNITS = {
 class DestinEForcing(DefaultForcing):
     """Retrieves specified part of the destinE dataset from the zarr server.
 
+    FOR NOW: redundant, because not everything is in zarr yet
+
     Examples:
         The caravan dataset is an already prepared set by Frederik Kratzert,
         (see https://doi.org/10.1038/s41597-023-01975-w).
@@ -627,3 +629,259 @@ class DestinEHistoricalForcing(DefaultForcing):
             )
     
         return windows
+
+
+class DestinEFutureForcing(DefaultForcing):
+    """Retrieves DestinE Climate DT future scenario data via the polytope API.
+
+    The future projection (IFS-FESOM model, SSP3-7.0 scenario) is accessed via the
+    polytope API using earthkit.data, which returns GRIB data on an unstructured grid.
+    The class performs spatial averaging over the catchment polygon and daily
+    aggregation, then computes potential evaporation using the same Makkink approach
+    as DestinEForcing.
+
+    Authentication uses the same DESP credentials as DestinEForcing. Polytope auth is
+    handled by earthkit using the DESP_USERNAME / DESP_PASSWORD environment variables,
+    or a previously written ~/.netrc entry.
+
+    Requirements:
+        pip install earthkit-data earthkit-regrid
+
+    Note:
+        ssrd (surface solar radiation downwards) is converted from hourly accumulated
+        J/m² to W/m² by dividing by 3600. Precipitation (tprate) is already in
+        kg m⁻² s⁻¹ and requires no conversion. Verify against actual data if results
+        look off.
+    """
+
+    @classmethod
+    def load(
+            cls: type["DestinEForcing"],
+            directory: str,
+    ) -> "LumpedMakkinkForcing":
+        """Load previously generated future forcing from a directory.
+
+        Reads the config.json written by generate() to reconstruct the start/end
+        times and file paths, then returns a LumpedMakkinkForcing instance pointing
+        to the saved NetCDF files.
+
+        Args:
+            directory: Path to the directory containing config.json and the NetCDF
+                files produced by generate().
+
+        Returns:
+            A LumpedMakkinkForcing instance configured with the saved forcing files.
+        """
+        if isinstance(directory, Path):
+            directory = str(directory)
+
+        other_data = str(directory + "/config.json")
+
+        with open(other_data, "r") as json_file:
+            config_data = json.load(json_file)
+
+        start_time = config_data["start"]
+        end_time = config_data["end"]
+
+        start_string = datetime.strptime(start_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
+        end_string = datetime.strptime(end_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
+        name_string = "DestinE_future_day"
+
+        files = {
+            "pr": str(directory + f"/{name_string}_pr_{start_string}-{end_string}.nc"),
+            "tas": str(directory + f"/{name_string}_tas_{start_string}-{end_string}.nc"),
+            "rsds": str(directory + f"/{name_string}_rsds_{start_string}-{end_string}.nc"),
+            "evspsblpot": str(directory + f"/{name_string}_evspsblpot_{start_string}-{end_string}.nc")
+        }
+
+        return ewatercycle.forcing.sources["LumpedMakkinkForcing"](
+            directory=directory,
+            start_time=config_data["start"],
+            end_time=config_data["end"],
+            shape=config_data["shape"],
+            filenames=files,
+        )
+
+    @classmethod
+    def generate(
+            cls: type["DestinEForcing"],
+            start_time: str,
+            end_time: str,
+            directory: str,
+            variables: tuple[str, ...] = (),
+            shape: str | Path | None = None,
+            polytope_address: str = DESTINE_HISTORICAL_POLYTOPE_ADDRESS,
+            **kwargs,
+    ):
+        """Download and process future scenario forcing data from the polytope API.
+
+        Splits the requested period into 5-year windows and fetches hourly GRIB data
+        for 2m temperature (167), precipitation rate (260048), and surface solar
+        radiation downwards (169) from the IFS-FESOM SSP3-7.0 run. Data are spatially
+        averaged over the catchment polygon, aggregated to daily means, unit-converted,
+        and written to NetCDF files. Potential evaporation is computed via Makkink.
+
+        Args:
+            start_time: ISO 8601 start datetime string, e.g. "2020-01-01T00:00:00Z".
+            end_time: ISO 8601 end datetime string, e.g. "2030-12-31T00:00:00Z".
+            directory: Output directory for NetCDF files and config.json.
+            variables: Unused; kept for interface compatibility.
+            shape: Path to the catchment shapefile used to define the polygon query.
+            polytope_address: URL of the polytope server. Defaults to
+                DESTINE_HISTORICAL_POLYTOPE_ADDRESS.
+            **kwargs: Unused; kept for interface compatibility.
+
+        Returns:
+            A LumpedMakkinkForcing instance pointing to the saved NetCDF files.
+        """
+        time_windows = cls.generate_time_windows(start_time, end_time)
+        ds_chunks = []
+
+        gdf = gpd.read_file(shape)
+        centroid = gdf.geometry.centroid.union_all().centroid
+        lat, lon = centroid.y, centroid.x
+
+        points_list = [[pt.y, pt.x] for pt in gdf.geometry.representative_point()]
+
+        gdf = gdf.to_crs("EPSG:4326")
+
+        polygon = gdf.geometry.union_all()
+        coords = list(polygon.exterior.coords)
+        polygon_points = [[lat, lon] for lon, lat in coords]
+
+        for window_number in range(len(time_windows)):
+
+            print(f"Data is split up in parts\nRunning {window_number + 1} of {len(time_windows)}")
+            start = time_windows[window_number][0]
+            print(f"{start = }")
+            end = time_windows[window_number][1]
+            print(f"{end = }")
+
+            # https://confluence.ecmwf.int/display/DDCZ/NextGEMS+data+catalogue
+            request = {
+                "class": "d1",
+                "activity": "ScenarioMIP",
+                "experiment": "SSP3-7.0",
+                "expver": "0001",
+                "model": "IFS-FESOM",
+                "generation": "1",
+                "realization": "2",
+                "resolution": "high",
+                "stream": "clte",
+                "type": "fc",
+                "levtype": "sfc",
+                "param": "167/260048/169",
+                "date": f"{start}/to/{end}",
+                "time": "0000/0100/0200/0300/0400/0500/0600/0700/0800/0900/1000/1100/1200/1300/1400/1500/1600/1700/1800/1900/2000/2100/2200/2300",
+                "feature": {
+                    "type": "polygon",
+                    "shape": polygon_points,
+                }
+            }
+
+            LIVE_REQUEST = os.getenv("LIVE_REQUEST", "true").lower() == "true"
+
+            if LIVE_REQUEST:
+                data = earthkit.data.from_source("polytope", "destination-earth", request, address=polytope_address,
+                                                 stream=False)
+
+            ds = data.to_xarray()
+            ds = ds.rename({
+                "2t": "tas",
+                "ssrd": "rsds",
+                "tprate": "pr"
+            })
+
+            # 1. Convert string datetimes to proper datetime64
+            ds['datetimes'] = pd.to_datetime(ds['datetimes'].values)
+
+            # 2. Rename to 'time'
+            ds = ds.rename({'datetimes': 'time'})
+
+            # 3. Squeeze out singleton dimensions
+            ds = ds.squeeze(dim=['number', 'steps'], drop=True)
+
+            # 4. Daily aggregation
+            ds_daily = xr.Dataset()
+            ds_daily['tas'] = ds['tas'].resample(time='1D').mean()
+            ds_daily['pr'] = ds['pr'].resample(time='1D').mean()
+            ds_daily['rsds'] = ds['rsds'].resample(time='1D').mean()
+
+            # 5. Spatial averaging over 'points' dimension
+            ds_lumped = ds_daily.mean(dim='points')
+
+            ds_chunks.append(ds_lumped)
+
+        print("Concatenating all windows...")
+        ds_total = xr.concat(ds_chunks, dim='time')
+        ds_total = ds_total.sortby('time')
+
+        # Set attributes (no conversion needed for pr - already in kg m-2 s-1)
+        ds_total["tas"].attrs = {"units": CORRECT_UNITS["tas"], "long_name": "Air temperature at 2 m"}
+        ds_total["pr"].attrs = {"units": CORRECT_UNITS["pr"], "long_name": "Precipitation"}
+
+        # ssrd: accumulated J/m²/hr → W m-2
+        ds_total["rsds"] = ds_total["rsds"] / 3600
+        ds_total["rsds"].attrs = {"units": CORRECT_UNITS["rsds"],
+                                  "long_name": "Surface downwelling shortwave radiation"}
+
+        with ProgressBar(dt=10.0):
+            ds_total = ds_total.compute()
+
+        ds_total = cls.derive_e_pot(ds_total)
+        ds_total["time"] = pd.to_datetime(ds_total["time"].values).tz_localize(None)
+
+        if isinstance(directory, Path):
+            directory = str(directory)
+
+        start_string = datetime.strptime(start_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
+        end_string = datetime.strptime(end_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
+        name_string = "DestinE_future_day"
+
+        files = {
+            "pr": str(directory + f"/{name_string}_pr_{start_string}-{end_string}.nc"),
+            "tas": str(directory + f"/{name_string}_tas_{start_string}-{end_string}.nc"),
+            "rsds": str(directory + f"/{name_string}_rsds_{start_string}-{end_string}.nc"),
+            "evspsblpot": str(directory + f"/{name_string}_evspsblpot_{start_string}-{end_string}.nc")
+        }
+
+        ds_total["pr"].to_netcdf(files["pr"])
+        ds_total["tas"].to_netcdf(files["tas"])
+        ds_total["rsds"].to_netcdf(files["rsds"])
+        ds_total["evspsblpot"].to_netcdf(files["evspsblpot"])
+
+        config_file_path = str(directory + "/config.json")
+        config_file = dict()
+        config_file["start"] = str(start_time)
+        config_file["end"] = str(end_time)
+        config_file["shape"] = str(shape)
+
+        with open(config_file_path, "w") as json_file:
+            json.dump(config_file, json_file, indent=4)
+
+        forcing_destinE = ewatercycle.forcing.sources["LumpedMakkinkForcing"](
+            directory=directory,
+            start_time=start_time,
+            end_time=end_time,
+            shape=shape,
+            filenames=files,
+        )
+
+        return forcing_destinE
+
+    @staticmethod
+    def derive_e_pot(ds):
+        """Compute potential evaporation using the Makkink method.
+
+        Delegates to DestinEForcing.derive_e_pot. See that method for details.
+        """
+        return DestinEForcing.derive_e_pot(ds)
+
+    @staticmethod
+    def generate_time_windows(start_date, end_date, window_years=5):
+        """Split a date range into consecutive windows of up to window_years years.
+
+        Delegates to DestinEHistoricalForcing.generate_time_windows. See that method
+        for details.
+        """
+        return DestinEHistoricalForcing.generate_time_windows(start_date, end_date, window_years)
