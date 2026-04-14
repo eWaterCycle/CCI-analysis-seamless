@@ -9,6 +9,7 @@ from pathlib import Path
 import geopandas as gpd
 import rioxarray
 import json
+import yaml
 import earthkit.data
 import earthkit.regrid
 from dask.diagnostics import ProgressBar
@@ -90,6 +91,18 @@ CORRECT_UNITS = {
     'evspsblpot': 'kg m-2 s-1'
 }
 
+def _write_forcing_yaml(directory: str, start_time: str, end_time: str, shape, files: dict) -> None:
+    """Write an ewatercycle_forcing.yaml with basenames so the directory is self-contained."""
+    yaml_data = {
+        "start_time": start_time,
+        "end_time": end_time,
+        "shape": Path(str(shape)).name,
+        "filenames": {var: Path(path).name for var, path in files.items()},
+    }
+    with open(Path(directory) / "ewatercycle_forcing.yaml", "w") as f:
+        yaml.dump(yaml_data, f, default_flow_style=False, sort_keys=False)
+
+
 class DestinEForcing(DefaultForcing):
     """Retrieves specified part of the destinE dataset from the zarr server.
 
@@ -156,35 +169,20 @@ class DestinEForcing(DefaultForcing):
         directory: str,
     ) -> "LumpedMakkinkForcing":
 
-        if isinstance(directory, Path):
-            directory = str(directory)
-        
-        other_data = str(directory + "/config.json")
+        directory = str(directory)
 
-        with open(other_data, "r") as json_file:
-            config_data = json.load(json_file)
+        with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
+            config = yaml.safe_load(f)
 
-        start_time = config_data["start"]
-        end_time = config_data["end"]
+        files = {var: str(Path(directory) / fname) for var, fname in config["filenames"].items()}
 
-        start_string = datetime.strptime(start_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
-        end_string = datetime.strptime(end_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
-        name_string = "DestinE_future_day"
-        
-        files = {
-            "pr": str(directory + f"/{name_string}_pr_{start_string}-{end_string}.nc"),
-            "tas": str(directory + f"/{name_string}_tas_{start_string}-{end_string}.nc"),
-            "rsds": str(directory + f"/{name_string}_rsds_{start_string}-{end_string}.nc"),
-            "evspsblpot": str(directory + f"/{name_string}_evspsblpot_{start_string}-{end_string}.nc")
-        }
-            
         return ewatercycle.forcing.sources["LumpedMakkinkForcing"](
-                directory=directory,
-                start_time=config_data["start"],
-                end_time=config_data["end"],
-                shape=config_data["shape"],
-                filenames=files,
-            )
+            directory=directory,
+            start_time=config["start_time"],
+            end_time=config["end_time"],
+            shape=str(Path(directory) / config["shape"]),
+            filenames=files,
+        )
             
     
     @classmethod
@@ -292,16 +290,7 @@ class DestinEForcing(DefaultForcing):
         ds_lumped["rsds"].to_netcdf(files["rsds"])
         ds_lumped["evspsblpot"].to_netcdf(files["evspsblpot"])
 
-        config_file_path = str(directory + "/config.json")
-        config_file = dict()
-        config_file["start"] = str(start_time)
-        config_file["end"] = str(end_time)
-        config_file["shape"] = str(shape)
-        
-
-        # Write to a JSON file
-        with open(config_file_path, "w") as json_file:
-            json.dump(config_file, json_file, indent=4)
+        _write_forcing_yaml(directory, start_time, end_time, shape, files)
 
         # Make the forcing
         forcing_destinE = ewatercycle.forcing.sources["LumpedMakkinkForcing"](
@@ -395,33 +384,18 @@ class DestinEHistoricalForcing(DefaultForcing):
         directory: str,
     ) -> "LumpedMakkinkForcing":
     
-        if isinstance(directory, Path):
-            directory = str(directory)
-        
-        other_data = str(directory + "/config.json")
-    
-        with open(other_data, "r") as json_file:
-            config_data = json.load(json_file)
-    
-        start_time = config_data["start"]
-        end_time = config_data["end"]
-    
-        start_string = datetime.strptime(start_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
-        end_string = datetime.strptime(end_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
-        name_string = "DestinE_historic_day"
-        
-        files = {
-            "pr": str(directory + f"/{name_string}_pr_{start_string}-{end_string}.nc"),
-            "tas": str(directory + f"/{name_string}_tas_{start_string}-{end_string}.nc"),
-            "rsds": str(directory + f"/{name_string}_rsds_{start_string}-{end_string}.nc"),
-            "evspsblpot": str(directory + f"/{name_string}_evspsblpot_{start_string}-{end_string}.nc")
-        }
+        directory = str(directory)
+
+        with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
+            config = yaml.safe_load(f)
+
+        files = {var: str(Path(directory) / fname) for var, fname in config["filenames"].items()}
 
         return ewatercycle.forcing.sources["LumpedMakkinkForcing"](
             directory=directory,
-            start_time=config_data["start"],
-            end_time=config_data["end"],
-            shape=config_data["shape"],
+            start_time=config["start_time"],
+            end_time=config["end_time"],
+            shape=str(Path(directory) / config["shape"]),
             filenames=files,
         )
 
@@ -580,15 +554,8 @@ class DestinEHistoricalForcing(DefaultForcing):
         ds_total["rsds"].to_netcdf(files["rsds"])
         ds_total["evspsblpot"].to_netcdf(files["evspsblpot"])
     
-        config_file_path = str(directory + "/config.json")
-        config_file = dict()
-        config_file["start"] = str(start_time)
-        config_file["end"] = str(end_time)
-        config_file["shape"] = str(shape)
-    
-        with open(config_file_path, "w") as json_file:
-            json.dump(config_file, json_file, indent=4)
-    
+        _write_forcing_yaml(directory, start_time, end_time, shape, files)
+
         forcing_destinE = ewatercycle.forcing.sources["LumpedMakkinkForcing"](
             directory=directory,
             start_time=start_time,
@@ -596,7 +563,7 @@ class DestinEHistoricalForcing(DefaultForcing):
             shape=shape,
             filenames=files,
         )
-    
+
         return forcing_destinE
 
     @staticmethod
@@ -661,44 +628,29 @@ class DestinEFutureForcing(DefaultForcing):
     ) -> "LumpedMakkinkForcing":
         """Load previously generated future forcing from a directory.
 
-        Reads the config.json written by generate() to reconstruct the start/end
-        times and file paths, then returns a LumpedMakkinkForcing instance pointing
-        to the saved NetCDF files.
+        Reads the ewatercycle_forcing.yaml written by generate() to reconstruct
+        the start/end times, shapefile, and file paths, then returns a
+        LumpedMakkinkForcing instance pointing to the saved NetCDF files.
 
         Args:
-            directory: Path to the directory containing config.json and the NetCDF
-                files produced by generate().
+            directory: Path to the directory containing ewatercycle_forcing.yaml
+                and the NetCDF files produced by generate().
 
         Returns:
             A LumpedMakkinkForcing instance configured with the saved forcing files.
         """
-        if isinstance(directory, Path):
-            directory = str(directory)
+        directory = str(directory)
 
-        other_data = str(directory + "/config.json")
+        with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
+            config = yaml.safe_load(f)
 
-        with open(other_data, "r") as json_file:
-            config_data = json.load(json_file)
-
-        start_time = config_data["start"]
-        end_time = config_data["end"]
-
-        start_string = datetime.strptime(start_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
-        end_string = datetime.strptime(end_time, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y_%m_%d")
-        name_string = "DestinE_future_day"
-
-        files = {
-            "pr": str(directory + f"/{name_string}_pr_{start_string}-{end_string}.nc"),
-            "tas": str(directory + f"/{name_string}_tas_{start_string}-{end_string}.nc"),
-            "rsds": str(directory + f"/{name_string}_rsds_{start_string}-{end_string}.nc"),
-            "evspsblpot": str(directory + f"/{name_string}_evspsblpot_{start_string}-{end_string}.nc")
-        }
+        files = {var: str(Path(directory) / fname) for var, fname in config["filenames"].items()}
 
         return ewatercycle.forcing.sources["LumpedMakkinkForcing"](
             directory=directory,
-            start_time=config_data["start"],
-            end_time=config_data["end"],
-            shape=config_data["shape"],
+            start_time=config["start_time"],
+            end_time=config["end_time"],
+            shape=str(Path(directory) / config["shape"]),
             filenames=files,
         )
 
@@ -724,7 +676,7 @@ class DestinEFutureForcing(DefaultForcing):
         Args:
             start_time: ISO 8601 start datetime string, e.g. "2020-01-01T00:00:00Z".
             end_time: ISO 8601 end datetime string, e.g. "2030-12-31T00:00:00Z".
-            directory: Output directory for NetCDF files and config.json.
+            directory: Output directory for NetCDF files and ewatercycle_forcing.yaml.
             variables: Unused; kept for interface compatibility.
             shape: Path to the catchment shapefile used to define the polygon query.
             polytope_address: URL of the polytope server. Defaults to
@@ -850,14 +802,7 @@ class DestinEFutureForcing(DefaultForcing):
         ds_total["rsds"].to_netcdf(files["rsds"])
         ds_total["evspsblpot"].to_netcdf(files["evspsblpot"])
 
-        config_file_path = str(directory + "/config.json")
-        config_file = dict()
-        config_file["start"] = str(start_time)
-        config_file["end"] = str(end_time)
-        config_file["shape"] = str(shape)
-
-        with open(config_file_path, "w") as json_file:
-            json.dump(config_file, json_file, indent=4)
+        _write_forcing_yaml(directory, start_time, end_time, shape, files)
 
         forcing_destinE = ewatercycle.forcing.sources["LumpedMakkinkForcing"](
             directory=directory,
