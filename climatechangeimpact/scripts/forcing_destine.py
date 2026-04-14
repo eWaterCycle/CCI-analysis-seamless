@@ -713,6 +713,7 @@ class DestinEFutureForcing(DefaultForcing):
             request = {
                 "class": "d1",
                 "activity": "ScenarioMIP",
+                "dataset": "climate-dt",
                 "experiment": "SSP3-7.0",
                 "expver": "0001",
                 "model": "IFS-FESOM",
