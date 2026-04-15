@@ -132,15 +132,20 @@ for nb in NOTEBOOKS[1:]:
         if os.path.exists(file_parameters_path):
             print(f"Skipping {name} because calibration is already complete")
             continue
-            
+
+        kernel = "ewatercycle_spider_calibration"
+    else:
+        kernel = "ewatercycle_spider"
+
+    print(f"Running {name} with kernel: {kernel}")
+
     pm.execute_notebook(
         nb,
         outdir / f"{name}_executed.ipynb",
         parameters={
-            # "country": country,
-            # "region_id": region_id,
             "settings_path": str(settings_path)
         },
+        kernel_name=kernel,
     )
 
 
