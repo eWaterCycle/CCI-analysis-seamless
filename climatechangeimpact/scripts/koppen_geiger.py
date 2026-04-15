@@ -250,9 +250,9 @@ def analyse_koppen_geiger(
         top_df = generate_koppen_tables(
             df_percent,
             koppen_description=koppen_description,
-            save_tex=tex_file,
-            save_md=md_file,
-            save_pkl=pkl_file,
+            # save_tex=tex_file,
+            # save_md=md_file,
+            # save_pkl=pkl_file,
             caption=caption,
             label=label,
         )
