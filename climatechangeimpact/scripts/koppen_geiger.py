@@ -203,7 +203,8 @@ def analyse_koppen_geiger(
         label += f"_{scenario}"
 
     save_dir = Path(save_dir or ".")
-    analysis_dir = Path(save_dir or ".") / suffix
+    # analysis_dir = Path(save_dir or ".") / suffix
+    analysis_dir = Path(save_dir or ".") 
     analysis_dir.mkdir(parents=True, exist_ok=True)
 
     analysis_dir / f"koppen_map_{suffix}.png"
