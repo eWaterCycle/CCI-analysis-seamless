@@ -568,7 +568,7 @@ class DestinEHistoricalForcing(DefaultForcing):
         return DestinEForcing.derive_e_pot(ds)
 
     @staticmethod
-    def generate_time_windows(start_date, end_date, window_years=5):
+    def generate_time_windows(start_date, end_date, window_years=2):
         start = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%SZ")
         end = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%SZ")
     
@@ -821,7 +821,7 @@ class DestinEFutureForcing(DefaultForcing):
         return DestinEForcing.derive_e_pot(ds)
 
     @staticmethod
-    def generate_time_windows(start_date, end_date, window_years=5):
+    def generate_time_windows(start_date, end_date, window_years=2):
         """Split a date range into consecutive windows of up to window_years years.
 
         Delegates to DestinEHistoricalForcing.generate_time_windows. See that method
