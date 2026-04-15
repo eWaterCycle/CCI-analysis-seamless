@@ -53,9 +53,6 @@ DESTINE_CLIMATE_DATA_URL = "https://cacheb.dcms.destine.eu/d1-climate-dt/Scenari
 # The LUMI endpoint is used by default; MN5 alternative: polytope.mn5.apps.dte.destination-earth.eu
 DESTINE_HISTORICAL_POLYTOPE_ADDRESS = "polytope.lumi.apps.dte.destination-earth.eu"
 
-# GRIB parameter IDs for the DestinE Climate DT historical simulation
-DESTINE_HISTORICAL_PARAMS = ["167", "228", "169"]  # t2m, tp (total precip), ssrd
-
 PROPERTY_VARS = [
     "timezone",
     "name",
