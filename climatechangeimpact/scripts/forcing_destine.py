@@ -40,7 +40,7 @@ for logger_name in ["earthkit", "polytope", "earthkit.data"]:
 
 
 NUMBER_OF_MONTHS_DESTINE_WINDOW = 3
-NUMBER_OF_YEARS_DESTINE_WINDOW = 1
+NUMBER_OF_YEARS_DESTINE_WINDOW = 2
 MAX_POLYGON_POINTS = 3600  # Polytope API hard limit on polygon vertices
 DESTINE_CLIMATE_DATA_URL = "https://cacheb.dcms.destine.eu/d1-climate-dt/ScenarioMIP-SSP3-7.0-IFS-NEMO-0001-high-sfc-v0.zarr"  # https://destine.ecmwf.int/climate-change-adaptation-digital-twin-climate-dt/#1730973047014-709bbfad-4970
 
