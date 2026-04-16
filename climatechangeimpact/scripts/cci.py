@@ -108,6 +108,7 @@ pm.execute_notebook(
         "country": country,
         "region_id": region_id
     },
+    kernel_name="ewatercycle_spider",
 )
 
 # Wait until settings.json exists
