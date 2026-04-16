@@ -1,5 +1,7 @@
 #! /usr/bin/env python3
 
+'''This is used when fetching data from cacheb, so when the zarr files are online (they are currently not yet)'''
+
 from typing import Annotated
 from urllib.parse import parse_qs, urlparse
 import sys
