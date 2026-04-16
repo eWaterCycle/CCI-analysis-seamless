@@ -12,15 +12,22 @@ from bmipy import Bmi
 
 
 def import_bmi() -> Type[Bmi]:
-    """Import LeakyBucketBmi, raise a useful error if the package is missing."""
+    """Return LeakyBucketBmi, or a stub that raises a clear error on instantiation.
+
+    The stub approach lets the module import cleanly even when leakybucket-bmi is
+    not installed — the error is only raised when the model is actually used.
+    """
     try:
         from leakybucket.leakybucket_bmi import LeakyBucketBmi
+        return LeakyBucketBmi
     except ModuleNotFoundError:
-        raise ModuleNotFoundError(
-            "leakybucket-bmi package not found. "
-            "Install it with: pip install leakybucket-bmi"
-        )
-    return LeakyBucketBmi
+        class _MissingLeakyBucketBmi:
+            def __init__(self, *args, **kwargs):
+                raise ModuleNotFoundError(
+                    "leakybucket-bmi package not found. "
+                    "Install it with: pip install leakybucket-bmi"
+                )
+        return _MissingLeakyBucketBmi
 
 
 LEAKYBUCKET_PARAMS = ("leakiness",)
