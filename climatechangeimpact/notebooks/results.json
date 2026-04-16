@@ -1,5 +1,49 @@
 {
     "caravan_id": "camelsaus_102101A",
+    "catchment_area_km2": 648.01,
+    "calibration": {
+        "KGE": 0.2417,
+        "NSE": 0.2294,
+        "period": "1994-08-01 / 2004-07-31"
+    },
+    "return_periods": {
+        "observed_reference": {
+            "q100_mm_d": 9.4914,
+            "q1000_mm_d": 67.5788
+        },
+        "modelled historic discharge, forcing: CMIP6,MPI-ESM1-2-LR,r1i1p1f1": {
+            "rp_at_obs_q100": 6.36,
+            "rp_at_obs_q1000": 29.71
+        },
+        "ERA5": {
+            "rp_at_obs_q100": 6.82,
+            "rp_at_obs_q1000": 32.16
+        },
+        "DestinE_historical": {
+            "rp_at_obs_q100": 10.59,
+            "rp_at_obs_q1000": 64.53
+        },
+        "ssp126": {
+            "rp_at_obs_q100": "5.21 \u00b1 0.73",
+            "rp_at_obs_q1000": "19.79 \u00b1 3.91"
+        },
+        "ssp245": {
+            "rp_at_obs_q100": "5.2 \u00b1 0.43",
+            "rp_at_obs_q1000": "23.47 \u00b1 2.21"
+        },
+        "ssp370": {
+            "rp_at_obs_q100": "4.73 \u00b1 0.42",
+            "rp_at_obs_q1000": "18.45 \u00b1 2.66"
+        },
+        "ssp585": {
+            "rp_at_obs_q100": "4.6 \u00b1 0.77",
+            "rp_at_obs_q1000": "19.83 \u00b1 5.2"
+        },
+        "DestinE_future": {
+            "rp_at_obs_q100": "3.85 \u00b1 0.0",
+            "rp_at_obs_q1000": "17.8 \u00b1 0.0"
+        }
+    },
     "koppen_geiger": {
         "Af": 0.0,
         "Am": 0.0,
