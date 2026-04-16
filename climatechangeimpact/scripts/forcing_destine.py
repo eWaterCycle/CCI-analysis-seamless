@@ -41,6 +41,7 @@ for logger_name in ["earthkit", "polytope", "earthkit.data"]:
 
 NUMBER_OF_MONTHS_DESTINE_WINDOW = 3
 NUMBER_OF_YEARS_DESTINE_WINDOW = 1
+MAX_POLYGON_POINTS = 3600  # Polytope API hard limit on polygon vertices
 DESTINE_CLIMATE_DATA_URL = "https://cacheb.dcms.destine.eu/d1-climate-dt/ScenarioMIP-SSP3-7.0-IFS-NEMO-0001-high-sfc-v0.zarr"  # https://destine.ecmwf.int/climate-change-adaptation-digital-twin-climate-dt/#1730973047014-709bbfad-4970
 
 # Polytope endpoint for retrieving historical data (not available as zarr on Cache B).
@@ -391,15 +392,21 @@ class DestinEHistoricalForcing(DefaultForcing):
             **kwargs,
         ):
     
-        time_windows = cls.generate_time_windows_monthly(start_time, end_time)
+        time_windows = cls.generate_time_windows(start_time, end_time)
         ds_chunks = []
 
         gdf = gpd.read_file(shape)
-        centroid = gdf.geometry.centroid.union_all().centroid
-    
         gdf = gdf.to_crs("EPSG:4326")
-        
+
         polygon = gdf.geometry.union_all()
+        if len(polygon.exterior.coords) > MAX_POLYGON_POINTS:
+            original = polygon
+            tolerance = 0.001
+            while len(polygon.exterior.coords) > MAX_POLYGON_POINTS:
+                polygon = original.simplify(tolerance, preserve_topology=True)
+                tolerance *= 2
+            print(f"Polygon simplified to {len(polygon.exterior.coords)} points "
+                  f"(tolerance={tolerance / 2:.4f} deg)")
         coords = list(polygon.exterior.coords)
         polygon_points = [[lat, lon] for lon, lat in coords]
     
@@ -705,18 +712,21 @@ class DestinEFutureForcing(DefaultForcing):
         Returns:
             A LumpedMakkinkForcing instance pointing to the saved NetCDF files.
         """
-        time_windows = cls.generate_time_windows_monthly(start_time, end_time)
+        time_windows = cls.generate_time_windows(start_time, end_time)
         ds_chunks = []
 
         gdf = gpd.read_file(shape)
-        centroid = gdf.geometry.centroid.union_all().centroid
-        lat, lon = centroid.y, centroid.x
-
-        points_list = [[pt.y, pt.x] for pt in gdf.geometry.representative_point()]
-
         gdf = gdf.to_crs("EPSG:4326")
 
         polygon = gdf.geometry.union_all()
+        if len(polygon.exterior.coords) > MAX_POLYGON_POINTS:
+            original = polygon
+            tolerance = 0.001
+            while len(polygon.exterior.coords) > MAX_POLYGON_POINTS:
+                polygon = original.simplify(tolerance, preserve_topology=True)
+                tolerance *= 2
+            print(f"Polygon simplified to {len(polygon.exterior.coords)} points "
+                  f"(tolerance={tolerance / 2:.4f} deg)")
         coords = list(polygon.exterior.coords)
         polygon_points = [[lat, lon] for lon, lat in coords]
 
