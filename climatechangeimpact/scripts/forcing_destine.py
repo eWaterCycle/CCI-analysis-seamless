@@ -14,6 +14,7 @@ import earthkit.data
 import earthkit.regrid
 from dask.diagnostics import ProgressBar
 from datetime import datetime
+import calendar
 
 import fiona
 import urllib3
@@ -37,16 +38,9 @@ for logger_name in ["earthkit", "polytope", "earthkit.data"]:
     logging.getLogger(logger_name).setLevel(logging.WARNING)
 # from cacheb_authentication_new import authenticate
 
-# token = authenticate()
 
-# netrc_content = f"""machine cacheb.dcms.destine.eu
-#     login anonymous
-#     password {token}
-# """
-
-# with open(Path.home() / ".netrc", "a") as fp:
-#     fp.write(netrc_content)
-
+NUMBER_OF_MONTHS_DESTINE_WINDOW = 3
+NUMBER_OF_YEARS_DESTINE_WINDOW = 1
 DESTINE_CLIMATE_DATA_URL = "https://cacheb.dcms.destine.eu/d1-climate-dt/ScenarioMIP-SSP3-7.0-IFS-NEMO-0001-high-sfc-v0.zarr"  # https://destine.ecmwf.int/climate-change-adaptation-digital-twin-climate-dt/#1730973047014-709bbfad-4970
 
 # Polytope endpoint for retrieving historical data (not available as zarr on Cache B).
@@ -300,18 +294,6 @@ class DestinEForcing(DefaultForcing):
 
         return forcing_destinE
 
-    # @staticmethod
-    # def authenticate_destinE():
-    #     token = authenticate()
-
-    #     netrc_content = f"""machine cacheb.dcms.destine.eu
-    #         login anonymous
-    #         password {token}
-    #     """
-        
-    #     with open(Path.home() / ".netrc", "a") as fp:
-    #         fp.write(netrc_content)
-
     @staticmethod
     def derive_e_pot(ds):
 
@@ -409,14 +391,11 @@ class DestinEHistoricalForcing(DefaultForcing):
             **kwargs,
         ):
     
-        time_windows = cls.generate_time_windows(start_time, end_time)
+        time_windows = cls.generate_time_windows_monthly(start_time, end_time)
         ds_chunks = []
-    
+
         gdf = gpd.read_file(shape)
         centroid = gdf.geometry.centroid.union_all().centroid
-        lat, lon = centroid.y, centroid.x
-    
-        points_list = [[pt.y, pt.x] for pt in gdf.geometry.representative_point()]
     
         gdf = gdf.to_crs("EPSG:4326")
         
@@ -568,30 +547,73 @@ class DestinEHistoricalForcing(DefaultForcing):
         return DestinEForcing.derive_e_pot(ds)
 
     @staticmethod
-    def generate_time_windows(start_date, end_date, window_years=1):
+    def generate_time_windows(start_date, end_date, window_years=NUMBER_OF_YEARS_DESTINE_WINDOW):
         start = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%SZ")
         end = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%SZ")
-    
+
         windows = []
         current_start = start
-    
+
         while current_start <= end:
             end_year = current_start.year + window_years - 1
             current_end = current_start.replace(year=end_year, month=12, day=31)
-    
+
             if current_end > end:
                 current_end = end
-    
+
             windows.append((
                 current_start.strftime("%Y%m%d"),
                 current_end.strftime("%Y%m%d")
             ))
-    
+
             # next window
             current_start = current_end.replace(
                 year=current_end.year + 1, month=1, day=1
             )
-    
+
+        return windows
+
+    @staticmethod
+    def generate_time_windows_monthly(start_date, end_date, window_months=NUMBER_OF_MONTHS_DESTINE_WINDOW):
+        """Split a date range into consecutive windows of `window_months` months.
+
+        Use this when the API request limit requires smaller chunks than a full year.
+        Switch back to generate_time_windows() if/when the limit is raised.
+
+        Args:
+            start_date: ISO 8601 string, e.g. "1990-01-01T00:00:00Z".
+            end_date:   ISO 8601 string, e.g. "2020-12-31T00:00:00Z".
+            window_months: Months per chunk (default 3 = quarterly).
+
+        Returns:
+            List of (start_str, end_str) tuples in "YYYYMMDD" format.
+        """
+        start = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%SZ")
+        end   = datetime.strptime(end_date,   "%Y-%m-%dT%H:%M:%SZ")
+
+        windows = []
+        current_start = start
+
+        while current_start <= end:
+            m = current_start.month - 1 + window_months - 1  # 0-indexed end-month offset
+            end_year  = current_start.year + m // 12
+            end_month = m % 12 + 1
+            end_day   = calendar.monthrange(end_year, end_month)[1]
+            current_end = current_start.replace(year=end_year, month=end_month, day=end_day)
+
+            if current_end > end:
+                current_end = end
+
+            windows.append((
+                current_start.strftime("%Y%m%d"),
+                current_end.strftime("%Y%m%d"),
+            ))
+
+            # First day of the month after current_end
+            next_month = current_end.month % 12 + 1
+            next_year  = current_end.year + (1 if current_end.month == 12 else 0)
+            current_start = current_end.replace(year=next_year, month=next_month, day=1)
+
         return windows
 
 
@@ -683,7 +705,7 @@ class DestinEFutureForcing(DefaultForcing):
         Returns:
             A LumpedMakkinkForcing instance pointing to the saved NetCDF files.
         """
-        time_windows = cls.generate_time_windows(start_time, end_time)
+        time_windows = cls.generate_time_windows_monthly(start_time, end_time)
         ds_chunks = []
 
         gdf = gpd.read_file(shape)
@@ -821,10 +843,21 @@ class DestinEFutureForcing(DefaultForcing):
         return DestinEForcing.derive_e_pot(ds)
 
     @staticmethod
-    def generate_time_windows(start_date, end_date, window_years=1):
+    def generate_time_windows(start_date, end_date, window_years=NUMBER_OF_YEARS_DESTINE_WINDOW):
         """Split a date range into consecutive windows of up to window_years years.
 
         Delegates to DestinEHistoricalForcing.generate_time_windows. See that method
         for details.
         """
         return DestinEHistoricalForcing.generate_time_windows(start_date, end_date, window_years)
+
+    @staticmethod
+    def generate_time_windows_monthly(start_date, end_date, window_months=NUMBER_OF_MONTHS_DESTINE_WINDOW):
+        """Split a date range into consecutive windows of `window_months` months.
+
+        Delegates to DestinEHistoricalForcing.generate_time_windows_monthly. See that
+        method for details.
+        """
+        return DestinEHistoricalForcing.generate_time_windows_monthly(
+            start_date, end_date, window_months
+        )
