@@ -21,6 +21,8 @@ NOTEBOOKS = [
     "notebooks/step_1b_generate_future_forcing.ipynb",
     "notebooks/step_2a_calibrate_HBV_SCE.ipynb",
     "notebooks/step_2b_bias_correction.ipynb",
+    "notebooks/step_2c_calibrate_leakybucket.ipynb",
+    "notebooks/step_2d_bias_correction_leakybucket.ipynb",
     "notebooks/step_3a_model_run_historical.ipynb",
     "notebooks/step_3b_model_run_future.ipynb",
     "notebooks/step_4_analyse.ipynb",
@@ -135,6 +137,13 @@ for nb in NOTEBOOKS[1:]:
             continue
 
         kernel = "ewatercycle_spider_calibration"
+    elif "step_2c_calibrate_leakybucket" in name:
+        file_parameters_path = HOME_PATH + "/ewatercycleClimateImpact/HBV/output_data" + f"/{country}/{region_id}/{region_id}_params_leakybucket.csv"
+        if os.path.exists(file_parameters_path):
+            print(f"Skipping {name} because LeakyBucket calibration is already complete")
+            continue
+
+        kernel = "ewatercycle_spider"
     else:
         kernel = "ewatercycle_spider"
 
