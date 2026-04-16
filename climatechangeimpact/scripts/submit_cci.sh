@@ -15,8 +15,8 @@ do
             --export=REGION_ID="$region_name",COUNTRY="$country_name" \
             scripts/run_cci.slurm
 
-        # break 2  # done as testing to see if this works
-       break 1  # done as testing to see if this works
+        break 2  # done as testing to see if this works
+#       break 1  # done as testing to see if this works
         # sleep 1  # for small workloads use this
     done
 done
