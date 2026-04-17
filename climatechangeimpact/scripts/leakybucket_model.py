@@ -47,7 +47,7 @@ class LeakyBucketBmi(Bmi):
         self._pr = ds["pr"]
 
         # Optionally slice to a requested time window
-        if "start_time" in config and "end_time" in config:
+        if config.get("start_time") is not None and config.get("end_time") is not None:
             t_start = pd.Timestamp(config["start_time"]).tz_localize(None)
             t_end   = pd.Timestamp(config["end_time"]).tz_localize(None)
             self._pr = self._pr.sel(time=slice(t_start, t_end))
