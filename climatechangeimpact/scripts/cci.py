@@ -22,7 +22,6 @@ NOTEBOOKS = [
     "notebooks/step_2a_calibrate_HBV_SCE.ipynb",
     "notebooks/step_2b_bias_correction.ipynb",
     "notebooks/step_2c_calibrate_leakybucket.ipynb",
-    "notebooks/step_2d_bias_correction_leakybucket.ipynb",
     "notebooks/step_3a_model_run_historical.ipynb",
     "notebooks/step_3b_model_run_future.ipynb",
     "notebooks/step_4_analyse.ipynb",
