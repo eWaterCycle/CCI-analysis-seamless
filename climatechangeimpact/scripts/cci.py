@@ -137,7 +137,7 @@ for nb in NOTEBOOKS[1:]:
 
         kernel = "ewatercycle_spider_calibration"
     elif "step_2c_calibrate_leakybucket" in name:
-        file_parameters_path = HOME_PATH + "/ewatercycleClimateImpact/HBV/output_data" + f"/{country}/{region_id}/{region_id}_params_leakybucket.csv"
+        file_parameters_path = HOME_PATH + "/ewatercycleClimateImpact/HBV/output_data" + f"/{country}/{region_id}/{region_id}_LB_params_SCE.csv"
         if os.path.exists(file_parameters_path):
             print(f"Skipping {name} because LeakyBucket calibration is already complete")
             continue
