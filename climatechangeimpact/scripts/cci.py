@@ -142,7 +142,7 @@ for nb in NOTEBOOKS[1:]:
             print(f"Skipping {name} because LeakyBucket calibration is already complete")
             continue
 
-        kernel = "ewatercycle_spider"
+        kernel = "ewatercycle_spider_calibration"
     else:
         kernel = "ewatercycle_spider"
 
