@@ -81,5 +81,81 @@
         "NSE": 0.1983,
         "leakiness": 0.499947,
         "period": "1994-08-01 / 2004-07-31"
+    },
+    "return_periods_HBV": {
+        "observed_reference": {
+            "q100_mm_d": 9.4914,
+            "q1000_mm_d": 67.5788
+        },
+        "modelled historic discharge, forcing: CMIP6,MPI-ESM1-2-LR,r1i1p1f1": {
+            "rp_at_obs_q100": 6.36,
+            "rp_at_obs_q1000": 29.71
+        },
+        "ERA5": {
+            "rp_at_obs_q100": 6.82,
+            "rp_at_obs_q1000": 32.16
+        },
+        "DestinE_historical": {
+            "rp_at_obs_q100": 10.59,
+            "rp_at_obs_q1000": 64.53
+        },
+        "ssp126": {
+            "rp_at_obs_q100": "5.21 \u00b1 0.73",
+            "rp_at_obs_q1000": "19.79 \u00b1 3.91"
+        },
+        "ssp245": {
+            "rp_at_obs_q100": "5.2 \u00b1 0.43",
+            "rp_at_obs_q1000": "23.47 \u00b1 2.21"
+        },
+        "ssp370": {
+            "rp_at_obs_q100": "4.73 \u00b1 0.42",
+            "rp_at_obs_q1000": "18.45 \u00b1 2.66"
+        },
+        "ssp585": {
+            "rp_at_obs_q100": "4.6 \u00b1 0.77",
+            "rp_at_obs_q1000": "19.83 \u00b1 5.2"
+        },
+        "DestinE_future": {
+            "rp_at_obs_q100": "3.85 \u00b1 0.0",
+            "rp_at_obs_q1000": "17.8 \u00b1 0.0"
+        }
+    },
+    "return_periods_leakybucket": {
+        "observed_reference": {
+            "q100_mm_d": 41.6098,
+            "q1000_mm_d": 296.3186
+        },
+        "ERA5": {
+            "rp_at_obs_q100": 17.2,
+            "rp_at_obs_q1000": 193.81
+        },
+        "LB historic, forcing: CMIP6,MPI-ESM1-2-LR,r1i1p1f1": {
+            "rp_at_obs_q100": 7.18,
+            "rp_at_obs_q1000": 33.94
+        },
+        "DestinE_historical": {
+            "rp_at_obs_q100": 31.18,
+            "rp_at_obs_q1000": 400.66
+        },
+        "ssp126": {
+            "rp_at_obs_q100": "8.32 \u00b1 1.88",
+            "rp_at_obs_q1000": "29.84 \u00b1 6.37"
+        },
+        "ssp245": {
+            "rp_at_obs_q100": "6.38 \u00b1 0.24",
+            "rp_at_obs_q1000": "21.88 \u00b1 0.96"
+        },
+        "ssp370": {
+            "rp_at_obs_q100": "7.31 \u00b1 1.03",
+            "rp_at_obs_q1000": "26.02 \u00b1 2.64"
+        },
+        "ssp585": {
+            "rp_at_obs_q100": "6.59 \u00b1 0.9",
+            "rp_at_obs_q1000": "25.33 \u00b1 2.2"
+        },
+        "DestinE_future": {
+            "rp_at_obs_q100": "8.01 \u00b1 0.0",
+            "rp_at_obs_q1000": "49.96 \u00b1 0.0"
+        }
     }
 }
