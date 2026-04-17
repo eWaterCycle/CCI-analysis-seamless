@@ -24,15 +24,19 @@ class LeakyBucketBmi(Bmi):
 
     At each timestep precipitation fills the bucket and a fraction leaks out:
 
-        Q  = leakiness × S          [m d⁻¹]
-        dS = P·dt − Q·dt            [m]
+        Q  = leakiness × S          [mm d⁻¹]
+        dS = P·dt − Q·dt            [mm]
 
-    where S is storage [m] and leakiness is in [d⁻¹].
+    where S is storage [mm] and leakiness is in [d⁻¹].
+    Note: `pr` [kg m⁻² s⁻¹] × dt [s] = [kg m⁻²] = [mm water depth], so storage
+    and discharge are naturally in mm — matching the Caravan Q variable units.
 
     Config file (JSON):
         precipitation_file : path to a NetCDF with a daily 'pr' variable [kg m⁻² s⁻¹]
         leakiness          : leakiness coefficient [d⁻¹]
-        initial_storage    : starting storage [m], default 0
+        initial_storage    : starting storage [mm], default 0
+        start_time         : ISO-8601 string to slice forcing (optional)
+        end_time           : ISO-8601 string to slice forcing (optional)
     """
 
     def initialize(self, config_file: str) -> None:
@@ -41,6 +45,13 @@ class LeakyBucketBmi(Bmi):
 
         ds = xr.open_dataset(config["precipitation_file"])
         self._pr = ds["pr"]
+
+        # Optionally slice to a requested time window
+        if "start_time" in config and "end_time" in config:
+            t_start = pd.Timestamp(config["start_time"]).tz_localize(None)
+            t_end   = pd.Timestamp(config["end_time"]).tz_localize(None)
+            self._pr = self._pr.sel(time=slice(t_start, t_end))
+
         self._time_data = self._pr["time"]
 
         # Timestep size in seconds
@@ -100,9 +111,9 @@ class LeakyBucketBmi(Bmi):
 
     def get_var_units(self, name: str) -> str:
         if name == "storage":
-            return "m"
+            return "mm"
         if name == "discharge":
-            return "m d-1"
+            return "mm d-1"
         raise ValueError(f"Unknown variable: {name}")
 
     def get_var_itemsize(self, name: str) -> int:
@@ -213,7 +224,7 @@ class LeakyBucketMethods(eWaterCycleModel):
     leakiness : float
         Fraction of storage released as discharge per day [d⁻¹].
     initial_storage : float, optional
-        Initial water storage in the bucket [m]. Defaults to 0.
+        Initial water storage in the bucket [mm]. Defaults to 0.
     """
 
     forcing: LumpedMakkinkForcing | CaravanForcing
@@ -223,6 +234,8 @@ class LeakyBucketMethods(eWaterCycleModel):
         "precipitation_file": "",
         "leakiness": 0.5,
         "initial_storage": 0.0,
+        "start_time": None,
+        "end_time": None,
     }
 
     def _make_cfg_file(self, **kwargs) -> Path:
@@ -246,6 +259,9 @@ class LeakyBucketMethods(eWaterCycleModel):
         self._config["precipitation_file"] = str(
             self.forcing.directory / self.forcing["pr"]
         )
+        # Optional time window — restricts the simulation to a sub-period of the forcing
+        self._config["start_time"] = kwargs.get("start_time", None)
+        self._config["end_time"]   = kwargs.get("end_time",   None)
 
         config_file = self._cfg_dir / "leakybucket_config.json"
         with config_file.open(mode="w") as f:
@@ -274,7 +290,7 @@ class LeakyBucketMethods(eWaterCycleModel):
     def states(self) -> ItemsView[str, Any]:
         """Exposed Leaky Bucket states.
 
-        storage (m): current water depth stored in the bucket.
+        storage (mm): current water depth stored in the bucket.
         """
         storage = self._bmi.get_value("storage", dest=np.zeros(1))[0]
         return {"storage": float(storage)}.items()
