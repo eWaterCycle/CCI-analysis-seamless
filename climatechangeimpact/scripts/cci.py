@@ -16,7 +16,7 @@ HOME_PATH = "/project/ewater/Data/"
 # All notebooks to run
 NOTEBOOKS = [
     "notebooks/step_0a_select_caravan_region_time_and_scenarios.ipynb",   # produces settings.json
-    "notebooks/step_0b_select_CMIP_forcing.ipynb",
+    # "notebooks/step_0b_select_CMIP_forcing.ipynb",
     "notebooks/step_1a_generate_historical_forcing.ipynb",
     "notebooks/step_1b_generate_future_forcing.ipynb",
     "notebooks/step_2a_calibrate_HBV_SCE.ipynb",
