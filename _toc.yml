@@ -1,0 +1,30 @@
+format: jb-book
+root: README.md
+options:
+ maxdepth: 1
+  
+parts:
+  - caption: Results
+    chapters:
+      - file: climatechangeimpact/koppen_geiger_results.ipynb
+
+  - caption: Interactive Results
+    chapters:
+      - file: climatechangeimpact/
+
+  - caption: The Workflow
+    chapters:
+      - file: climatechangeimpact/notebooks/koppen_geiger_results_interactive.ipynb
+
+  - caption: Regions
+    chapters:
+      - file: climatechangeimpact/regions/australia.md
+        sections:
+          - file: climatechangeimpact/regions/australia/camelsaus_102101A/step_4_analyse_executed.ipynb
+
+
+
+  # - caption: Credits
+  #   chapters:
+  #   - file: changelog.md
+  #   - file: credits.md
