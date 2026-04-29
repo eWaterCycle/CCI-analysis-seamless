@@ -1,36 +1,36 @@
 format: jb-book
-root: ../README.md
+root: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/README.md
 options:
  maxdepth: 1
   
 parts:
   - caption: Results
     chapters:
-      - file: ../climatechangeimpact/koppen_geiger_results.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/koppen_geiger_results.ipynb
 
   - caption: Interactive Results
     chapters:
-      - file: ../climatechangeimpact/koppen_geiger_results_interactive.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/koppen_geiger_results_interactive.ipynb
 
   - caption: The Workflow
     chapters:
-      - file: ../climatechangeimpact/notebooks/step_0a_select_caravan_region_time_and_scenarios.ipynb
-      - file: ../climatechangeimpact/notebooks/step_0b_select_CMIP_forcing.ipynb
-      - file: ../climatechangeimpact/notebooks/step_1a_generate_historical_forcing.ipynb
-      - file: ../climatechangeimpact/notebooks/step_1b_generate_future_forcing.ipynb
-      - file: ../climatechangeimpact/notebooks/step_2a_calibrate_HBV_SCE.ipynb
-      - file: ../climatechangeimpact/notebooks/step_2b_bias_correction.ipynb
-      - file: ../climatechangeimpact/notebooks/step_2c_calibrate_leakybucket.ipynb
-      - file: ../climatechangeimpact/notebooks/step_3a_model_run_historical.ipynb
-      - file: ../climatechangeimpact/notebooks/step_3b_model_run_future.ipynb
-      - file: ../climatechangeimpact/notebooks/step_4_analyse.ipynb
-      - file: ../climatechangeimpact/notebooks/step_5_koppen_geiger.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_0a_select_caravan_region_time_and_scenarios.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_0b_select_CMIP_forcing.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_1a_generate_historical_forcing.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_1b_generate_future_forcing.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_2a_calibrate_HBV_SCE.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_2b_bias_correction.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_2c_calibrate_leakybucket.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_3a_model_run_historical.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_3b_model_run_future.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_4_analyse.ipynb
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/notebooks/step_5_koppen_geiger.ipynb
 
   - caption: Regions
     chapters:
-      - file: ../climatechangeimpact/regions/australia.md
+      - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/regions/australia.md
         sections:
-          - file: ../climatechangeimpact/regions/australia/camelsaus_102101A/step_4_analyse_executed.ipynb
+          - external: https://raw.githubusercontent.com/eWaterCycle/CCI-analysis-seamless/main/climatechangeimpact/regions/australia/camelsaus_102101A/step_4_analyse_executed.ipynb
 
 
 
