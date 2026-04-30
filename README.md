@@ -2,7 +2,9 @@
 
 This repository contains a workflow for assessing the impact of climate change on river discharge. It is built on top of [eWaterCycle](https://www.ewatercycle.org/), a platform for reproducible hydrological modelling, and serves as an example of a seamless eWaterCycle application: a workflow that can run at a single catchment during development and then scale to many catchments on HPC infrastructure without modification.
 
-The workflow uses the [HBV](https://doi.org/10.1002/hyp.3360050103) and LeakyBucket conceptual hydrological models and [Caravan](https://doi.org/10.1038/s41597-023-01975-w) catchment data, driven by ERA5 reanalysis, CMIP6 & DestinE climate projections.
+The workflow uses the [HBV](https://doi.org/10.1002/hyp.10510) and LeakyBucket conceptual hydrological models and [Caravan](https://doi.org/10.1038/s41597-023-01975-w) catchment data, driven by ERA5 reanalysis, CMIP6 & DestinE climate projections.
+
+Results in an [interactive map](https://www.ewatercycle.org/CCI-analysis-seamless/caravan_catchments_KG_map_world.html).
 
 ## What it does
 
