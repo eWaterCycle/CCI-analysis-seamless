@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Map to GitHub Pages
 
 on:
   push:
@@ -26,6 +26,6 @@ jobs:
         with:
           path: climatechangeimpact/docs
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy Map to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
