@@ -1,0 +1,210 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:24<09:09, 24.98s/cell]Executing:   9%|▊         | 2/23 [01:03<11:27, 32.76s/cell]Executing:  13%|█▎        | 3/23 [02:54<22:54, 68.73s/cell]Executing:  22%|██▏       | 5/23 [03:04<09:49, 32.72s/cell]Executing:  26%|██▌       | 6/23 [03:05<06:36, 23.35s/cell]Executing:  30%|███       | 7/23 [03:05<04:25, 16.58s/cell]Executing:  39%|███▉      | 9/23 [03:05<02:06,  9.07s/cell]Executing:  48%|████▊     | 11/23 [03:05<01:06,  5.53s/cell]Executing:  57%|█████▋    | 13/23 [03:05<00:35,  3.56s/cell]Executing:  65%|██████▌   | 15/23 [03:05<00:19,  2.38s/cell]Executing:  74%|███████▍  | 17/23 [03:06<00:09,  1.64s/cell]Executing:  83%|████████▎ | 19/23 [03:19<00:13,  3.29s/cell]Executing:  96%|█████████▌| 22/23 [03:21<00:02,  2.25s/cell]Executing: 100%|██████████| 23/23 [03:21<00:00,  1.91s/cell]Executing: 100%|██████████| 23/23 [03:24<00:00,  8.89s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:03<01:16,  3.46s/cell]Executing:   9%|▊         | 2/23 [00:09<01:50,  5.25s/cell]Executing:  17%|█▋        | 4/23 [00:11<00:45,  2.38s/cell]Executing:  26%|██▌       | 6/23 [00:11<00:21,  1.29s/cell]Executing:  30%|███       | 7/23 [00:11<00:16,  1.04s/cell]Executing:  43%|████▎     | 10/23 [00:11<00:06,  1.92cell/s]Executing:  52%|█████▏    | 12/23 [00:13<00:06,  1.69cell/s]Executing:  61%|██████    | 14/23 [00:22<00:17,  1.91s/cell]Executing:  74%|███████▍  | 17/23 [00:22<00:06,  1.15s/cell]Executing:  83%|████████▎ | 19/23 [00:23<00:03,  1.09cell/s]Executing:  87%|████████▋ | 20/23 [00:23<00:02,  1.22cell/s]Executing:  96%|█████████▌| 22/23 [45:14<07:14, 434.15s/cell]Executing: 100%|██████████| 23/23 [45:15<00:00, 353.12s/cell]Executing: 100%|██████████| 23/23 [45:17<00:00, 118.17s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:01<00:16,  1.30s/cell]Executing:  14%|█▍        | 2/14 [00:08<00:54,  4.55s/cell]Executing:  21%|██▏       | 3/14 [00:08<00:29,  2.69s/cell]Executing:  29%|██▊       | 4/14 [00:08<00:17,  1.76s/cell]Executing:  36%|███▌      | 5/14 [00:09<00:11,  1.33s/cell]Executing:  43%|████▎     | 6/14 [00:09<00:08,  1.00s/cell]Executing:  50%|█████     | 7/14 [00:10<00:05,  1.36cell/s]Executing:  71%|███████▏  | 10/14 [23:19<18:02, 270.66s/cell]Executing:  71%|███████▏  | 10/14 [23:22<09:21, 140.26s/cell]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [8]":
+---------------------------------------------------------------------------
+RemoteTraceback                           Traceback (most recent call last)
+RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/tmp/ipykernel_698226/989959065.py", line 25, in <module>
+    CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py", line 276, in load
+    raise FileNotFoundError(msg)
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/chile/camelscl_11500002/CMIP6/MPI-ESM1-2-LR/ssp245/r2i1p1f1/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py", line 816, in _run_task
+    output_files = task.run()
+                   ^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py", line 264, in run
+    self.output_files = self._run(input_files)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 687, in _run
+    product.close()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 522, in close
+    self.save_provenance()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py", line 289, in save_provenance
+    with open(self.provenance_file, 'wb') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/chile/camelscl_11500002/CMIP6/MPI-ESM1-2-LR/ssp245/r2i1p1f1/preproc/diagnostic/rsds/CMIP6_MPI-ESM1-2-LR_day_ssp245_r2i1p1f1_rsds_gn_2029-2049_provenance.xml'
+"""
+
+The above exception was the direct cause of the following exception:
+
+PermissionError                           Traceback (most recent call last)
+Cell In[8], line 30
+     28         shutil.rmtree(path_CMIP6)
+     29     path_CMIP6.mkdir(exist_ok=True, parents=True)
+---> 30     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
+     31        dataset=cmip_dataset,
+     32        start_time=settings['future_start_date'],
+     33        end_time=settings['future_end_date'],
+     34        directory=path_CMIP6,
+     35        shape=settings['path_shape'],
+     36     )
+     37 display(CMIP_forcing_object)
+     39 # Quick plot of the precipitation and potential evaporation data
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
+     47 @classmethod
+     48 def generate(  # type: ignore[override]
+     49     cls: type["Makkink"],
+   (...)     55     **model_specific_options,
+     56 ) -> "Makkink":
+---> 57     return super().generate(
+     58         dataset,
+     59         start_time,
+     60         end_time,
+     61         shape,
+     62         directory,
+     63         variables=("pr", "tas", "rsds"),
+     64         postprocessor=derive_e_pot,
+     65         **model_specific_options,
+     66     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
+    129 """Generate forcings for a model.
+    130 
+    131 The forcing is generated with help of
+   (...)    151     model_specific_options: Subclass specific options.
+    152 """
+    153 recipe = cls._build_recipe(
+    154     dataset=dataset,
+    155     start_time=get_time(start_time),
+   (...)    159     **model_specific_options,
+    160 )
+--> 162 recipe_output = cls._run_recipe(
+    163     recipe, directory=Path(directory) if directory else None
+    164 )
+    166 derived_variables: tuple[str, ...] = ()
+    167 if postprocessor is not None:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
+    211 @classmethod
+    212 def _run_recipe(
+    213     cls,
+    214     recipe: Recipe,
+    215     directory: Path | None = None,
+    216 ) -> dict[str, str]:
+--> 217     return run_recipe(recipe, directory)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
+    100 warnings.filterwarnings(  # Not relevant for end users.
+    101     action="ignore",
+    102     message="Thank you for trying out the new ESMValCore API",
+    103 )
+    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
+    105     action="ignore",
+    106     message="Saving to netcdf with legacy-style attribute",
+    107 )
+--> 109 output = _save_and_run_recipe(recipe, output_dir)
+    110 return _parse_recipe_output(output)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
+    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
+    136     session = _session(output_dir)
+--> 137     output = esmlvaltool_recipe.run(session=session)
+    138 finally:
+    139     recipe_path.unlink()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:138, in Recipe.run(self, task, session)
+    136     _dask.check_distributed_config()
+    137     self._engine = self._load(session=session)
+--> 138     self._engine.run()
+    140 shutil.copy2(self.path, session.run_dir)
+    142 output = self.get_output()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1095, in Recipe.run(self)
+   1092 if self.session['search_esgf'] != 'never':
+   1093     esgf.download(self._download_files, self.session['download_dir'])
+-> 1095 self.tasks.run(max_parallel_tasks=self.session['max_parallel_tasks'])
+   1096 logger.info(
+   1097     "Wrote recipe with version numbers and wildcards "
+   1098     "to:\nfile://%s", filled_recipe)
+   1099 self.write_html_summary()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:738, in TaskSet.run(self, max_parallel_tasks)
+    736     self._run_sequential()
+    737 else:
+--> 738     self._run_parallel(address, max_parallel_tasks)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:782, in TaskSet._run_parallel(self, scheduler_address, max_parallel_tasks)
+    780 ready = {t for t in running if running[t].ready()}
+    781 for task in ready:
+--> 782     _copy_results(task, running[task])
+    783     running.pop(task)
+    785 # Wait if there are still tasks running
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:805, in _copy_results(task, future)
+    803 def _copy_results(task, future):
+    804     """Update task with the results from the remote process."""
+--> 805     task.output_files, task.products = future.get()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py:774, in ApplyResult.get(self, timeout)
+    772     return self._value
+    773 else:
+--> 774     raise self._value
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py:125, in worker()
+    123 job, i, func, args, kwds = task
+    124 try:
+--> 125     result = (True, func(*args, **kwds))
+    126 except Exception as e:
+    127     if wrap_exception and func is not _helper_reraises_exception:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:816, in _run_task()
+    813     client = Client(scheduler_address)
+    815 with client:
+--> 816     output_files = task.run()
+    818 return output_files, task.products
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:264, in run()
+    261 logger.info("Starting task %s in process [%s]", self.name,
+    262             os.getpid())
+    263 start = datetime.datetime.now()
+--> 264 self.output_files = self._run(input_files)
+    265 runtime = datetime.datetime.now() - start
+    266 logger.info("Successfully completed task %s (priority %s) in %s",
+    267             self.name, self.priority, runtime)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:687, in _run()
+    685             if block == blocks[-1]:
+    686                 product.cubes  # pylint: disable=pointless-statement
+--> 687                 product.close()
+    688                 saved.add(product.filename)
+    690 for product in self.products:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:522, in close()
+    520 self.save()
+    521 self._cubes = None
+--> 522 self.save_provenance()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py:289, in save_provenance()
+    284 self.provenance = ProvDocument(
+    285     records=set(self.provenance.records),
+    286     namespaces=self.provenance.namespaces,
+    287 )
+    288 self._include_provenance()
+--> 289 with open(self.provenance_file, 'wb') as file:
+    290     # Create file with correct permissions before saving.
+    291     self.provenance.serialize(file, format='xml')
+    292 self.activity = None
+
+PermissionError: [Errno 13] Permission denied: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/chile/camelscl_11500002/CMIP6/MPI-ESM1-2-LR/ssp245/r2i1p1f1/preproc/diagnostic/rsds/CMIP6_MPI-ESM1-2-LR_day_ssp245_r2i1p1f1_rsds_gn_2029-2049_provenance.xml'
+
