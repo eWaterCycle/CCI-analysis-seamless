@@ -1,0 +1,83 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:39,  1.81s/cell]Executing:   9%|▊         | 2/23 [00:03<00:34,  1.63s/cell]Executing:  13%|█▎        | 3/23 [00:08<01:08,  3.45s/cell]Executing:  17%|█▋        | 4/23 [00:09<00:41,  2.17s/cell]Executing:  22%|██▏       | 5/23 [00:09<00:26,  1.48s/cell]Executing:  26%|██▌       | 6/23 [00:09<00:17,  1.05s/cell]Executing:  35%|███▍      | 8/23 [00:09<00:08,  1.75cell/s]Executing:  52%|█████▏    | 12/23 [00:10<00:03,  3.20cell/s]Executing:  57%|█████▋    | 13/23 [00:10<00:02,  3.34cell/s]Executing:  65%|██████▌   | 15/23 [00:10<00:01,  4.52cell/s]Executing:  70%|██████▉   | 16/23 [00:10<00:01,  4.59cell/s]Executing:  83%|████████▎ | 19/23 [00:11<00:01,  3.59cell/s]Executing:  96%|█████████▌| 22/23 [00:12<00:00,  4.15cell/s]Executing: 100%|██████████| 23/23 [00:12<00:00,  4.40cell/s]Executing: 100%|██████████| 23/23 [00:14<00:00,  1.58cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:25,  1.14s/cell]Executing:   9%|▊         | 2/23 [00:07<01:30,  4.31s/cell]Executing:  17%|█▋        | 4/23 [00:07<00:32,  1.71s/cell]Executing:  22%|██▏       | 5/23 [00:08<00:22,  1.23s/cell]Executing:  26%|██▌       | 6/23 [00:08<00:15,  1.13cell/s]Executing:  43%|████▎     | 10/23 [00:08<00:04,  2.71cell/s]Executing:  48%|████▊     | 11/23 [00:09<00:06,  1.95cell/s]Executing:  52%|█████▏    | 12/23 [00:09<00:04,  2.30cell/s]Executing:  61%|██████    | 14/23 [00:09<00:02,  3.36cell/s]Executing:  70%|██████▉   | 16/23 [00:10<00:01,  4.69cell/s]Executing:  78%|███████▊  | 18/23 [00:10<00:01,  3.82cell/s]Executing:  83%|████████▎ | 19/23 [00:10<00:00,  4.19cell/s]Executing:  87%|████████▋ | 20/23 [00:11<00:01,  2.78cell/s]IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+Autosave too slow: 2524.42 sec, over 25% limit. Backing off to 60 sec
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+Autosave too slow: 316.64 sec, over 25% limit. Backing off to 120 sec
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+Autosave too slow: 341.39 sec, over 25% limit. Backing off to 240 sec
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+Autosave too slow: 1112.80 sec, over 25% limit. Backing off to 480 sec
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+Autosave too slow: 251.31 sec, over 25% limit. Backing off to 960 sec
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+Autosave too slow: 322.02 sec, over 25% limit. Backing off to 1920 sec
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+IOStream.flush timed out
+Executing:  96%|█████████▌| 22/23 [6:51:13<1:18:10, 4690.14s/cell]Executing:  96%|█████████▌| 22/23 [6:58:03<19:00, 1140.14s/cell]  
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 45, in execute
+    self.papermill_execute_cells()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 72, in papermill_execute_cells
+    self.execute_cell(cell, index)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 1005, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 791, in _async_poll_for_reply
+    raise CellTimeoutError.error_from_timeout_and_cell(
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 4 seconds.
+The message was: Timeout waiting for IOPub output.
+Here is a preview of the cell contents:
+-------------------
+['%%time ', '', '# Generate forcing for the calibration + validation period', 'try:', '    DestinE_hist_forcing_object = DestinEHistoricalForcing.load(settings["path_DestinE_historical"])']
+...
+['        directory=settings["path_DestinE_historical"],', '        shape=settings["path_shape"],', '    )', '', 'display(DestinE_hist_forcing_object)']
+-------------------
+
