@@ -1,0 +1,36 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/traitlets/config/application.py", line 1074, in launch_instance
+    app.initialize(argv)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/traitlets/config/application.py", line 118, in inner
+    return method(app, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 711, in initialize
+    self.init_sockets()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 333, in init_sockets
+    self.shell_port = self._bind_socket(self.shell_socket, self.shell_port)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 255, in _bind_socket
+    return self._try_bind_socket(s, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 231, in _try_bind_socket
+    s.bind("tcp://%s:%i" % (self.ip, port))
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/zmq/sugar/socket.py", line 320, in bind
+    super().bind(addr)
+  File "zmq/backend/cython/_zmq.py", line 1009, in zmq.backend.cython._zmq.Socket.bind
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 190, in zmq.backend.cython._zmq._check_rc
+    raise ZMQError(errno)
+    ^^^^^^^^^^^
+zmq.error.ZMQError: Address already in use (addr='tcp://127.0.0.1:32815')
+2026/04/29 17:35:09 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
+2026/04/29 17:35:09 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
+2026/04/29 17:35:09 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": EOF
+[2026-04-30T01:34:23.008] error: *** JOB 35347311 ON wn-dc-02 CANCELLED AT 2026-04-30T01:34:23 DUE TO TIME LIMIT ***

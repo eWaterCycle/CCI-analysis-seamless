@@ -1,0 +1,16 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:07<02:44,  7.46s/cell]Executing:   9%|▊         | 2/23 [00:08<01:16,  3.64s/cell]Executing:  13%|█▎        | 3/23 [00:12<01:12,  3.62s/cell]Executing:  52%|█████▏    | 12/23 [00:12<00:05,  1.86cell/s]Executing:  74%|███████▍  | 17/23 [00:12<00:01,  3.04cell/s]Executing:  91%|█████████▏| 21/23 [00:13<00:00,  3.38cell/s]Executing: 100%|██████████| 23/23 [00:16<00:00,  1.37cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:42,  1.91s/cell]Executing:   9%|▊         | 2/23 [00:06<01:14,  3.56s/cell]Executing:  13%|█▎        | 3/23 [00:06<00:40,  2.02s/cell]Executing:  17%|█▋        | 4/23 [00:12<01:05,  3.46s/cell]Executing:  39%|███▉      | 9/23 [19:31<40:08, 172.02s/cell]Executing:  48%|████▊     | 11/23 [19:31<24:12, 121.05s/cell]Executing:  61%|██████    | 14/23 [19:32<11:06, 74.06s/cell] Executing:  65%|██████▌   | 15/23 [19:33<08:21, 62.67s/cell]Executing:  74%|███████▍  | 17/23 [23:38<08:06, 81.10s/cell]Executing:  78%|███████▊  | 18/23 [23:38<05:32, 66.53s/cell]Executing:  83%|████████▎ | 19/23 [23:38<03:31, 52.92s/cell]Executing:  87%|████████▋ | 20/23 [23:39<02:02, 40.99s/cell][2026-04-30T01:02:20.010] error: *** JOB 35347197 ON wn-dc-14 CANCELLED AT 2026-04-30T01:02:20 DUE TO TIME LIMIT ***

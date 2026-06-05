@@ -1,0 +1,31 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<02:59,  8.15s/cell]Executing:   9%|▊         | 2/23 [00:09<01:27,  4.19s/cell]Executing:  13%|█▎        | 3/23 [00:15<01:39,  4.99s/cell]Executing:  35%|███▍      | 8/23 [00:15<00:17,  1.19s/cell]Executing:  61%|██████    | 14/23 [00:15<00:04,  1.91cell/s]Executing:  78%|███████▊  | 18/23 [00:15<00:01,  2.81cell/s]Executing:  91%|█████████▏| 21/23 [00:16<00:00,  2.82cell/s]Executing: 100%|██████████| 23/23 [00:17<00:00,  2.94cell/s]Executing: 100%|██████████| 23/23 [00:19<00:00,  1.18cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:34,  1.59s/cell]Executing:   9%|▊         | 2/23 [00:08<01:34,  4.49s/cell]Executing:  30%|███       | 7/23 [00:08<00:14,  1.14cell/s]Executing:  35%|███▍      | 8/23 [00:20<00:13,  1.14cell/s]2026/04/29 17:24:36 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_2014-2014.nc": EOF
+2026/04/29 17:24:50 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2000-2000.nc": EOF
+2026/04/29 17:25:36 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2000-2000.nc": EOF
+2026/04/29 17:25:38 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_2000-2000.nc": EOF
+2026/04/29 17:33:32 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_2013-2013.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_2013-2013.nc": EOF
+2026/04/29 17:33:34 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2000-2000.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2000-2000.nc": EOF
+2026/04/29 17:33:36 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc": EOF
+2026/04/29 17:38:49 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc": EOF
+2026/04/29 17:39:09 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc: ReadFileHandle.Read error: low level retry 2/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc": EOF
+2026/04/29 17:39:29 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc: ReadFileHandle.Read error: low level retry 3/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc": EOF
+2026/04/29 17:40:08 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc: ReadFileHandle.Read error: low level retry 4/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc": EOF
+2026/04/29 17:40:34 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1999-1999.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1999-1999.nc": EOF
+2026/04/29 17:40:36 ERROR : /: Dir.Stat error: couldn't list files: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/": EOF
+2026/04/29 17:40:36 ERROR : IO error: couldn't list files: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/": EOF
+2026/04/29 17:46:48 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1999-1999.nc": EOF
+Executing:  39%|███▉      | 9/23 [56:32<2:04:50, 535.07s/cell]Executing:  48%|████▊     | 11/23 [56:39<1:13:56, 369.68s/cell]Executing:  65%|██████▌   | 15/23 [56:39<26:06, 195.79s/cell]  Executing:  70%|██████▉   | 16/23 [56:50<22:50, 195.79s/cell]Executing:  74%|███████▍  | 17/23 [1:00:20<17:26, 174.39s/cell]Executing:  78%|███████▊  | 18/23 [1:00:21<12:19, 147.93s/cell]Executing:  87%|████████▋ | 20/23 [1:00:31<05:14, 104.68s/cell][2026-04-30T01:01:20.012] error: *** JOB 35347183 ON wn-la-09 CANCELLED AT 2026-04-30T01:01:20 DUE TO TIME LIMIT ***

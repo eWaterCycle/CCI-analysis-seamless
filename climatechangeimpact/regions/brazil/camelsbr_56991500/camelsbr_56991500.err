@@ -1,0 +1,30 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<03:10,  8.64s/cell]Executing:   9%|▊         | 2/23 [00:09<01:26,  4.13s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:20,  4.02s/cell]Executing:  26%|██▌       | 6/23 [00:13<00:23,  1.38s/cell]Executing:  57%|█████▋    | 13/23 [00:13<00:04,  2.26cell/s]Executing:  70%|██████▉   | 16/23 [00:13<00:02,  2.99cell/s]Executing:  83%|████████▎ | 19/23 [00:14<00:01,  3.12cell/s]Executing:  91%|█████████▏| 21/23 [00:15<00:00,  3.67cell/s]Executing: 100%|██████████| 23/23 [00:15<00:00,  3.49cell/s]Executing: 100%|██████████| 23/23 [00:18<00:00,  1.26cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:07<02:37,  7.16s/cell]Executing:   9%|▊         | 2/23 [00:11<01:56,  5.57s/cell]Executing:  39%|███▉      | 9/23 [00:11<00:11,  1.21cell/s]Executing:  52%|█████▏    | 12/23 [00:12<00:07,  1.56cell/s]Executing:  74%|███████▍  | 17/23 [00:12<00:02,  2.75cell/s]Executing:  87%|████████▋ | 20/23 [00:13<00:01,  2.92cell/s]Executing:  91%|█████████▏| 21/23 [00:31<00:00,  2.92cell/s][2026-04-30T00:55:51.009] error: *** JOB 35347142 ON wn-dc-04 CANCELLED AT 2026-04-30T00:55:51 DUE TO TIME LIMIT ***

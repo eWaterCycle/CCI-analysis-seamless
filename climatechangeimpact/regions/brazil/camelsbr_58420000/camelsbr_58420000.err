@@ -1,0 +1,18 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<03:13,  8.78s/cell]Executing:   9%|▊         | 2/23 [00:10<01:33,  4.45s/cell]Executing:  13%|█▎        | 3/23 [00:15<01:36,  4.82s/cell]Executing:  17%|█▋        | 4/23 [00:15<00:56,  2.96s/cell]Executing:  30%|███       | 7/23 [00:15<00:17,  1.12s/cell]Executing:  39%|███▉      | 9/23 [00:15<00:10,  1.37cell/s]Executing:  61%|██████    | 14/23 [00:15<00:02,  3.03cell/s]Executing:  78%|███████▊  | 18/23 [00:16<00:01,  4.76cell/s]Executing:  91%|█████████▏| 21/23 [00:17<00:00,  3.39cell/s]Executing: 100%|██████████| 23/23 [00:18<00:00,  2.94cell/s]Executing: 100%|██████████| 23/23 [00:21<00:00,  1.08cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to open SQLite history /home/ewater-mmelotto/.ipython/profile_default/history.sqlite (database is locked).
+[IPKernelApp] ERROR | History file was moved to /home/ewater-mmelotto/.ipython/profile_default/history-corrupt-2026-04-29T14.59.18.252224+00.00.sqlite and a new file created.
+Executing:   4%|▍         | 1/23 [00:07<02:43,  7.41s/cell]Executing:   9%|▊         | 2/23 [00:13<02:23,  6.85s/cell]Executing:  30%|███       | 7/23 [00:13<00:21,  1.33s/cell]Executing:  43%|████▎     | 10/23 [00:14<00:10,  1.24cell/s]Executing:  57%|█████▋    | 13/23 [00:15<00:06,  1.58cell/s]Executing:  74%|███████▍  | 17/23 [00:15<00:02,  2.58cell/s]Executing:  83%|████████▎ | 19/23 [00:16<00:01,  2.41cell/s]Executing:  91%|█████████▏| 21/23 [00:16<00:00,  2.69cell/s]Executing:  91%|█████████▏| 21/23 [00:28<00:00,  2.69cell/s][2026-04-30T00:58:50.009] error: *** JOB 35347172 ON wn-la-17 CANCELLED AT 2026-04-30T00:58:50 DUE TO TIME LIMIT ***

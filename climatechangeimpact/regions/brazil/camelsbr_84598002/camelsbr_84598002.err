@@ -1,0 +1,84 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/traitlets/config/application.py", line 1074, in launch_instance
+    app.initialize(argv)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/traitlets/config/application.py", line 118, in inner
+    return method(app, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 711, in initialize
+    self.init_sockets()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 348, in init_sockets
+    self.init_iopub(context)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 382, in init_iopub
+    self.iopub_port = self._bind_socket(self.iopub_socket, self.iopub_port)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 255, in _bind_socket
+    return self._try_bind_socket(s, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 231, in _try_bind_socket
+    s.bind("tcp://%s:%i" % (self.ip, port))
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/zmq/sugar/socket.py", line 320, in bind
+    super().bind(addr)
+  File "zmq/backend/cython/_zmq.py", line 1009, in zmq.backend.cython._zmq.Socket.bind
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 190, in zmq.backend.cython._zmq._check_rc
+    raise ZMQError(errno)
+    ^^^^^^^^^^^
+zmq.error.ZMQError: Address already in use (addr='tcp://127.0.0.1:60277')
+2026/04/29 17:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
+2026/04/29 17:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
+2026/04/29 17:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": EOF
+Error occurred while starting new kernel client for kernel 3e57cfaf-39e5-44bb-bc39-1fb0bdd0264b: Kernel didn't respond in 60 seconds
+Exception ignored in atexit callback: <bound method IPKernelApp.close of <ipykernel.kernelapp.IPKernelApp object at 0x7f18fe79df10>>
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 433, in close
+    self.context.term()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/zmq/sugar/context.py", line 264, in term
+    super().term()
+  File "zmq/backend/cython/_zmq.py", line 596, in zmq.backend.cython._zmq.Context.term
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+KeyboardInterrupt: 
+Executing:   0%|          | 0/23 [01:01<?, ?cell/s]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
+    with self.setup_kernel(**kwargs):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 603, in setup_kernel
+    self.start_new_kernel_client()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 566, in async_start_new_kernel_client
+    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_client/client.py", line 208, in _async_wait_for_ready
+    raise RuntimeError("Kernel didn't respond in %d seconds" % timeout)
+RuntimeError: Kernel didn't respond in 60 seconds

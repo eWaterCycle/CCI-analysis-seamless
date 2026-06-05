@@ -1,0 +1,24 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:08<02:57,  8.06s/cell]Executing:   9%|▊         | 2/23 [00:08<01:21,  3.86s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:25,  4.27s/cell]Executing:  22%|██▏       | 5/23 [00:18<00:59,  3.28s/cell]Executing:  26%|██▌       | 6/23 [00:18<00:40,  2.40s/cell]Executing:  39%|███▉      | 9/23 [00:19<00:15,  1.09s/cell]Executing:  70%|██████▉   | 16/23 [00:19<00:02,  2.48cell/s]Executing:  83%|████████▎ | 19/23 [00:20<00:01,  2.74cell/s]Executing:  91%|█████████▏| 21/23 [00:20<00:00,  3.35cell/s]Executing: 100%|██████████| 23/23 [00:20<00:00,  3.55cell/s]Executing: 100%|██████████| 23/23 [00:23<00:00,  1.01s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: attempt to write a readonly database
+Executing:   4%|▍         | 1/23 [00:04<01:46,  4.83s/cell]Executing:   9%|▊         | 2/23 [00:09<01:36,  4.62s/cell]Executing:  13%|█▎        | 3/23 [00:09<00:52,  2.61s/cell]Executing:  30%|███       | 7/23 [00:09<00:11,  1.35cell/s]Executing:  35%|███▍      | 8/23 [00:26<00:11,  1.35cell/s]2026/04/29 17:27:33 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_2014-2014.nc": EOF
+2026/04/29 17:38:56 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_2014-2014.nc": EOF
+2026/04/29 17:39:06 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2006-2006.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2006-2006.nc": EOF
+2026/04/29 17:39:36 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_2014-2014.nc": EOF
+2026/04/29 17:39:46 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2006-2006.nc: ReadFileHandle.Read error: low level retry 2/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2006-2006.nc": EOF
+2026/04/29 17:40:16 ERROR : /: Dir.Stat error: couldn't list files: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/": EOF
+2026/04/29 17:40:16 ERROR : IO error: couldn't list files: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/": EOF
+2026/04/29 17:40:26 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2006-2006.nc: ReadFileHandle.Read error: low level retry 3/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2006-2006.nc": EOF
+Executing:  39%|███▉      | 9/23 [54:10<2:08:52, 552.32s/cell]Executing:  48%|████▊     | 11/23 [54:11<1:14:19, 371.66s/cell]Executing:  57%|█████▋    | 13/23 [54:11<42:13, 253.36s/cell]  Executing:  61%|██████    | 14/23 [54:11<30:57, 206.42s/cell]Executing:  74%|███████▍  | 17/23 [58:53<15:39, 156.61s/cell]Executing:  78%|███████▊  | 18/23 [58:54<10:47, 129.44s/cell]Executing:  83%|████████▎ | 19/23 [58:54<06:54, 103.69s/cell]Executing:  87%|████████▋ | 20/23 [58:54<04:02, 80.79s/cell] Executing:  91%|█████████▏| 21/23 [58:54<02:02, 61.42s/cell][2026-04-30T01:06:51.010] error: *** JOB 35347230 ON wn-dc-11 CANCELLED AT 2026-04-30T01:06:51 DUE TO TIME LIMIT ***
