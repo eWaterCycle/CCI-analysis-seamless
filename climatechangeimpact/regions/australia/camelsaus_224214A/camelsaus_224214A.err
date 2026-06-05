@@ -1,0 +1,172 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:40,  1.83s/cell]Executing:   9%|▊         | 2/23 [00:02<00:30,  1.43s/cell]Executing:  13%|█▎        | 3/23 [00:07<00:58,  2.91s/cell]Executing:  22%|██▏       | 5/23 [00:08<00:26,  1.45s/cell]Executing:  26%|██▌       | 6/23 [00:09<00:22,  1.30s/cell]Executing:  35%|███▍      | 8/23 [00:09<00:11,  1.28cell/s]Executing:  39%|███▉      | 9/23 [00:09<00:08,  1.62cell/s]Executing:  48%|████▊     | 11/23 [00:09<00:04,  2.49cell/s]Executing:  52%|█████▏    | 12/23 [00:10<00:05,  1.95cell/s]Executing:  57%|█████▋    | 13/23 [00:10<00:04,  2.34cell/s]Executing:  61%|██████    | 14/23 [00:15<00:13,  1.45s/cell]Executing:  70%|██████▉   | 16/23 [00:16<00:08,  1.17s/cell]Executing:  70%|██████▉   | 16/23 [00:19<00:08,  1.21s/cell]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [10]":
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[10], line 3
+      2 try:
+----> 3     caravan_forcing_object = ewatercycle.forcing.sources['CaravanForcing'].load(directory=settings["path_caravan"])
+      4 except:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
+    272     msg = (
+    273         f"Forcing file {meta} not found. "
+    274         f"Perhaps you want to use {cls.__name__}(...)?"
+    275     )
+--> 276     raise FileNotFoundError(msg)
+    277 metadata = meta.read_text()
+
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/australia/camelsaus_224214A/caravan/ewatercycle_forcing.yaml not found. Perhaps you want to use CaravanForcing(...)?
+
+During handling of the above exception, another exception occurred:
+
+KeyError                                  Traceback (most recent call last)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:219, in CachingFileManager._acquire_with_cache_info(self, needs_lock)
+    218 try:
+--> 219     file = self._cache[self._key]
+    220 except KeyError:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/lru_cache.py:56, in LRUCache.__getitem__(self, key)
+     55 with self._lock:
+---> 56     value = self._cache[key]
+     57     self._cache.move_to_end(key)
+
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224214A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), 'dbb4a24f-87de-44b5-ba6c-18fd00d7c0b0']
+
+During handling of the above exception, another exception occurred:
+
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[10], line 5
+      3     caravan_forcing_object = ewatercycle.forcing.sources['CaravanForcing'].load(directory=settings["path_caravan"])
+      4 except:
+----> 5     caravan_forcing_object = CaravanForcing.generate(
+      6         start_time=settings["calibration_start_date"],
+      7         end_time=settings["validation_end_date"],
+      8         directory=settings["path_caravan"],
+      9         basin_id=settings["caravan_id"],
+     10     )
+     12 # Note that this will throw an error when data is already present in `forcing_path_caravan`. In that case:
+     13 # - delete that data and run again or
+     14 # - load that data using the cell below (with the correct path!)
+
+File ~/seamless_spider/climatechangeimpact/scripts/cara.py:172, in CaravanForcing.generate(cls, start_time, end_time, directory, variables, shape, **kwargs)
+    169 basin_id = str(kwargs["basin_id"])
+    171 dataset: str = basin_id.split("_")[0]
+--> 172 ds = cls.get_dataset(dataset, basin_id)
+    173 ds_basin = ds
+    174 ds_basin_time = crop_ds(ds_basin, start_time, end_time)
+
+File ~/seamless_spider/climatechangeimpact/scripts/cara.py:129, in CaravanForcing.get_dataset(cls, dataset, basin_id)
+    115 @classmethod
+    116 def get_dataset(cls: type["CaravanForcing"], dataset: str, basin_id: str) -> xr.Dataset:
+    117     """Opens specified dataset from data.4tu.nl OPeNDAP server.
+    118 
+    119     Args:
+   (...)    127             'lamah'
+    128     """
+--> 129     return xr.open_dataset(f"{DIRECTORY}/timeseries/netcdf/{dataset}/{basin_id}.nc")
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/api.py:607, in open_dataset(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, create_default_indexes, inline_array, chunked_array_type, from_array_kwargs, backend_kwargs, **kwargs)
+    595 decoders = _resolve_decoders_kwargs(
+    596     decode_cf,
+    597     open_backend_dataset_parameters=backend.open_dataset_parameters,
+   (...)    603     decode_coords=decode_coords,
+    604 )
+    606 overwrite_encoded_chunks = kwargs.pop("overwrite_encoded_chunks", None)
+--> 607 backend_ds = backend.open_dataset(
+    608     filename_or_obj,
+    609     drop_variables=drop_variables,
+    610     **decoders,
+    611     **kwargs,
+    612 )
+    613 ds = _dataset_from_backend_dataset(
+    614     backend_ds,
+    615     filename_or_obj,
+   (...)    626     **kwargs,
+    627 )
+    628 return ds
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:771, in NetCDF4BackendEntrypoint.open_dataset(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, auto_complex, lock, autoclose)
+    749 def open_dataset(
+    750     self,
+    751     filename_or_obj: T_PathFileOrDataStore,
+   (...)    768     autoclose=False,
+    769 ) -> Dataset:
+    770     filename_or_obj = _normalize_path(filename_or_obj)
+--> 771     store = NetCDF4DataStore.open(
+    772         filename_or_obj,
+    773         mode=mode,
+    774         format=format,
+    775         group=group,
+    776         clobber=clobber,
+    777         diskless=diskless,
+    778         persist=persist,
+    779         auto_complex=auto_complex,
+    780         lock=lock,
+    781         autoclose=autoclose,
+    782     )
+    784     store_entrypoint = StoreBackendEntrypoint()
+    785     with close_on_error(store):
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:529, in NetCDF4DataStore.open(cls, filename, mode, format, group, clobber, diskless, persist, auto_complex, lock, lock_maker, autoclose)
+    525 else:
+    526     manager = CachingFileManager(
+    527         netCDF4.Dataset, filename, mode=mode, kwargs=kwargs, lock=lock
+    528     )
+--> 529 return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:429, in NetCDF4DataStore.__init__(self, manager, group, mode, lock, autoclose)
+    427 self._group = group
+    428 self._mode = mode
+--> 429 self.format = self.ds.data_model
+    430 self._filename = self.ds.filepath()
+    431 self.is_remote = is_remote_uri(self._filename)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:538, in NetCDF4DataStore.ds(self)
+    536 @property
+    537 def ds(self):
+--> 538     return self._acquire()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:532, in NetCDF4DataStore._acquire(self, needs_lock)
+    531 def _acquire(self, needs_lock=True):
+--> 532     with self._manager.acquire_context(needs_lock) as root:
+    533         ds = _nc4_require_group(root, self._group, self._mode)
+    534     return ds
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py:137, in _GeneratorContextManager.__enter__(self)
+    135 del self.args, self.kwds, self.func
+    136 try:
+--> 137     return next(self.gen)
+    138 except StopIteration:
+    139     raise RuntimeError("generator didn't yield") from None
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:207, in CachingFileManager.acquire_context(self, needs_lock)
+    204 @contextmanager
+    205 def acquire_context(self, needs_lock: bool = True) -> Iterator[T_File]:
+    206     """Context manager for acquiring a file."""
+--> 207     file, cached = self._acquire_with_cache_info(needs_lock)
+    208     try:
+    209         yield file
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:225, in CachingFileManager._acquire_with_cache_info(self, needs_lock)
+    223     kwargs = kwargs.copy()
+    224     kwargs["mode"] = self._mode
+--> 225 file = self._opener(*self._args, **kwargs)
+    226 if self._mode == "w":
+    227     # ensure file doesn't get overridden when opened again
+    228     self._mode = "a"
+
+File src/netCDF4/_netCDF4.pyx:2521, in netCDF4._netCDF4.Dataset.__init__()
+
+File src/netCDF4/_netCDF4.pyx:2158, in netCDF4._netCDF4._ensure_nc_success()
+
+FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224214A.nc'
+
