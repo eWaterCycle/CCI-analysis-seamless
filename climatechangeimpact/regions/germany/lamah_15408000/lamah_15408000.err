@@ -1,0 +1,33 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<03:13,  8.79s/cell]Executing:   9%|▊         | 2/23 [00:10<01:35,  4.55s/cell]Executing:  13%|█▎        | 3/23 [00:16<01:48,  5.42s/cell]Executing:  35%|███▍      | 8/23 [00:16<00:19,  1.29s/cell]Executing:  52%|█████▏    | 12/23 [00:17<00:07,  1.42cell/s]Executing:  70%|██████▉   | 16/23 [00:17<00:03,  2.29cell/s]Executing:  83%|████████▎ | 19/23 [00:18<00:01,  2.20cell/s]Executing:  91%|█████████▏| 21/23 [00:18<00:00,  2.66cell/s]Executing: 100%|██████████| 23/23 [00:19<00:00,  2.78cell/s]Executing: 100%|██████████| 23/23 [00:22<00:00,  1.04cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:06<02:22,  6.46s/cell]Executing:   9%|▊         | 2/23 [00:14<02:31,  7.19s/cell]Executing:  22%|██▏       | 5/23 [00:14<00:37,  2.07s/cell]Executing:  30%|███       | 7/23 [00:14<00:20,  1.26s/cell]Executing:  39%|███▉      | 9/23 [00:14<00:11,  1.22cell/s]Executing:  48%|████▊     | 11/23 [00:15<00:09,  1.32cell/s]Executing:  65%|██████▌   | 15/23 [00:15<00:03,  2.52cell/s]Executing:  74%|███████▍  | 17/23 [00:16<00:01,  3.27cell/s]Executing:  83%|████████▎ | 19/23 [00:16<00:01,  3.06cell/s]Executing:  91%|█████████▏| 21/23 [00:17<00:00,  3.03cell/s]Executing:  91%|█████████▏| 21/23 [00:27<00:00,  3.03cell/s]2026/04/29 19:26:02 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
+2026/04/29 19:27:02 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": net/http: TLS handshake timeout
+2026/04/29 19:27:03 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": net/http: TLS handshake timeout
+[2026-04-30T03:19:56.011] error: *** JOB 35348965 ON wn-la-18 CANCELLED AT 2026-04-30T03:19:56 DUE TO TIME LIMIT ***
