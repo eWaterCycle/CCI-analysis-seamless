@@ -1,0 +1,55 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:15<05:40, 15.46s/cell]Executing:   9%|▊         | 2/23 [00:28<04:51, 13.89s/cell]Executing:  13%|█▎        | 3/23 [00:58<07:06, 21.33s/cell]Executing:  39%|███▉      | 9/23 [00:58<01:00,  4.36s/cell]Executing:  65%|██████▌   | 15/23 [00:58<00:16,  2.05s/cell]Executing:  91%|█████████▏| 21/23 [01:03<00:02,  1.50s/cell]Executing: 100%|██████████| 23/23 [01:05<00:00,  2.86s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:24,  1.12s/cell]Executing:   9%|▊         | 2/23 [00:07<01:30,  4.31s/cell]Executing:  22%|██▏       | 5/23 [00:12<00:44,  2.47s/cell]Executing:  39%|███▉      | 9/23 [04:23<08:40, 37.18s/cell]Executing:  48%|████▊     | 11/23 [04:23<05:16, 26.42s/cell]Executing:  70%|██████▉   | 16/23 [04:24<01:30, 12.95s/cell]Executing:  70%|██████▉   | 16/23 [04:34<01:30, 12.95s/cell]Executing:  74%|███████▍  | 17/23 [05:01<01:36, 16.06s/cell]Executing:  78%|███████▊  | 18/23 [05:02<01:08, 13.68s/cell]Executing:  87%|████████▋ | 20/23 [05:02<00:28,  9.55s/cell]Executing:  91%|█████████▏| 21/23 [05:14<00:19,  9.55s/cell]Executing:  96%|█████████▌| 22/23 [22:48<02:48, 168.53s/cell]Executing: 100%|██████████| 23/23 [22:49<00:00, 138.68s/cell]Executing: 100%|██████████| 23/23 [22:52<00:00, 59.68s/cell] 
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:01<00:13,  1.04s/cell]Executing:  14%|█▍        | 2/14 [00:07<00:48,  4.06s/cell]Executing:  29%|██▊       | 4/14 [00:07<00:16,  1.62s/cell]Executing:  36%|███▌      | 5/14 [00:07<00:10,  1.18s/cell]Executing:  71%|███████▏  | 10/14 [07:41<04:11, 62.77s/cell]Executing:  86%|████████▌ | 12/14 [07:41<01:30, 45.10s/cell]Executing: 100%|██████████| 14/14 [24:37<00:00, 178.15s/cell]Executing: 100%|██████████| 14/14 [24:39<00:00, 105.69s/cell]
+Executing:   0%|          | 0/43 [00:00<?, ?cell/s]Error occurred while starting new kernel client for kernel c56452b3-28a7-4085-8723-21c62537f816: Kernel didn't respond in 60 seconds
+Executing:   0%|          | 0/43 [01:02<?, ?cell/s]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
+    with self.setup_kernel(**kwargs):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 603, in setup_kernel
+    self.start_new_kernel_client()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 566, in async_start_new_kernel_client
+    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_client/client.py", line 208, in _async_wait_for_ready
+    raise RuntimeError("Kernel didn't respond in %d seconds" % timeout)
+RuntimeError: Kernel didn't respond in 60 seconds

@@ -1,0 +1,417 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:40,  1.83s/cell]Executing:   9%|▊         | 2/23 [00:36<07:26, 21.28s/cell]Executing:  13%|█▎        | 3/23 [02:46<23:36, 70.83s/cell]Executing:  17%|█▋        | 4/23 [02:46<13:35, 42.94s/cell]Executing:  22%|██▏       | 5/23 [02:52<08:49, 29.40s/cell]Executing:  26%|██▌       | 6/23 [02:52<05:31, 19.48s/cell]Executing:  30%|███       | 7/23 [02:52<03:30, 13.18s/cell]Executing:  48%|████▊     | 11/23 [02:52<00:55,  4.61s/cell]Executing:  70%|██████▉   | 16/23 [02:52<00:15,  2.15s/cell]Executing:  83%|████████▎ | 19/23 [03:05<00:11,  2.83s/cell]Executing:  91%|█████████▏| 21/23 [03:05<00:04,  2.19s/cell]Executing: 100%|██████████| 23/23 [03:07<00:00,  1.89s/cell]Executing: 100%|██████████| 23/23 [03:10<00:00,  8.28s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:11<04:06, 11.22s/cell]Executing:   9%|▊         | 2/23 [00:17<02:58,  8.49s/cell]Executing:  13%|█▎        | 3/23 [00:17<01:33,  4.66s/cell]Executing:  22%|██▏       | 5/23 [00:18<00:37,  2.07s/cell]Executing:  30%|███       | 7/23 [00:18<00:19,  1.19s/cell]Executing:  39%|███▉      | 9/23 [06:05<15:56, 68.32s/cell]Executing:  43%|████▎     | 10/23 [06:05<11:35, 53.50s/cell]Executing:  48%|████▊     | 11/23 [06:05<08:11, 40.94s/cell]Executing:  57%|█████▋    | 13/23 [06:06<04:04, 24.42s/cell]Executing:  65%|██████▌   | 15/23 [06:06<02:04, 15.50s/cell]Executing:  70%|██████▉   | 16/23 [06:19<01:48, 15.50s/cell]Executing:  74%|███████▍  | 17/23 [07:18<02:15, 22.59s/cell]Executing:  74%|███████▍  | 17/23 [07:21<02:35, 25.96s/cell]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [13]":
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[13], line 24
+     23     load_location = path_CMIP6 / "work" / "diagnostic" / "script" 
+---> 24     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+     25 except:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
+    272     msg = (
+    273         f"Forcing file {meta} not found. "
+    274         f"Perhaps you want to use {cls.__name__}(...)?"
+    275     )
+--> 276     raise FileNotFoundError(msg)
+    277 metadata = meta.read_text()
+
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/england/camelsgb_25020/CMIP6/MPI-ESM1-2-LR/historical/r1i1p1f1/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+
+During handling of the above exception, another exception occurred:
+
+OperationalError                          Traceback (most recent call last)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/search/connection.py:366, in create_single_session(cache, expire_after, **kwargs)
+    365 try:
+--> 366     session = (requests_cache
+    367                .CachedSession(cache,
+    368                               expire_after=expire_after))
+    369 except DatabaseError:
+    370     # Corrupted cache:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/session.py:62, in CacheMixin.__init__(self, cache_name, backend, serializer, expire_after, urls_expire_after, cache_control, allowable_codes, allowable_methods, always_revalidate, ignored_parameters, match_headers, filter_fn, key_fn, stale_if_error, **kwargs)
+     44 def __init__(
+     45     self,
+     46     cache_name: StrOrPath = DEFAULT_CACHE_NAME,
+   (...)     60     **kwargs,
+     61 ):
+---> 62     self.cache = init_backend(cache_name, backend, serializer=serializer, **kwargs)
+     63     self.settings = CacheSettings.from_kwargs(
+     64         expire_after=expire_after,
+     65         urls_expire_after=urls_expire_after,
+   (...)     75         **kwargs,
+     76     )
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/backends/__init__.py:92, in init_backend(cache_name, backend, **kwargs)
+     88     raise ValueError(
+     89         f'Invalid backend: {backend}. Provide a backend instance, or choose from one of the '
+     90         f'following aliases: {list(BACKEND_CLASSES.keys())}'
+     91     )
+---> 92 return BACKEND_CLASSES[backend](cache_name, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/backends/sqlite.py:62, in SQLiteCache.__init__(self, db_path, serializer, **kwargs)
+     61 skwargs = {'serializer': serializer, **kwargs} if serializer else kwargs
+---> 62 self.responses: SQLiteDict = SQLiteDict(db_path, table_name='responses', **skwargs)
+     63 self.redirects: SQLiteDict = SQLiteDict(
+     64     db_path,
+     65     table_name='redirects',
+   (...)     68     **kwargs,
+     69 )
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/backends/sqlite.py:226, in SQLiteDict.__init__(self, db_path, table_name, busy_timeout, fast_save, retries, serializer, use_cache_dir, use_memory, use_temp, wal, **kwargs)
+    225 self.wal = wal
+--> 226 self.init_db()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/backends/sqlite.py:238, in SQLiteDict.init_db(self)
+    236     pass
+--> 238 con.execute(
+    239     f'CREATE TABLE IF NOT EXISTS {self.table_name} ('
+    240     '    key TEXT PRIMARY KEY,'
+    241     '    value BLOB, '
+    242     '    expires INTEGER'
+    243     ')'
+    244 )
+    245 con.execute(f'CREATE INDEX IF NOT EXISTS expires_idx ON {self.table_name}(expires)')
+
+OperationalError: database is locked
+
+During handling of the above exception, another exception occurred:
+
+OperationalError                          Traceback (most recent call last)
+Cell In[13], line 30
+     27         shutil.rmtree(path_CMIP6)
+     28     path_CMIP6.mkdir(exist_ok=True, parents=True)
+---> 30     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
+     31        dataset=cmip_dataset,
+     32        start_time=settings['calibration_start_date'],
+     33        end_time=settings['validation_end_date'],
+     34        directory=path_CMIP6,
+     35        shape=settings['path_shape'],
+     36     )
+     38 display(CMIP_forcing_object)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
+     47 @classmethod
+     48 def generate(  # type: ignore[override]
+     49     cls: type["Makkink"],
+   (...)     55     **model_specific_options,
+     56 ) -> "Makkink":
+---> 57     return super().generate(
+     58         dataset,
+     59         start_time,
+     60         end_time,
+     61         shape,
+     62         directory,
+     63         variables=("pr", "tas", "rsds"),
+     64         postprocessor=derive_e_pot,
+     65         **model_specific_options,
+     66     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
+    129 """Generate forcings for a model.
+    130 
+    131 The forcing is generated with help of
+   (...)    151     model_specific_options: Subclass specific options.
+    152 """
+    153 recipe = cls._build_recipe(
+    154     dataset=dataset,
+    155     start_time=get_time(start_time),
+   (...)    159     **model_specific_options,
+    160 )
+--> 162 recipe_output = cls._run_recipe(
+    163     recipe, directory=Path(directory) if directory else None
+    164 )
+    166 derived_variables: tuple[str, ...] = ()
+    167 if postprocessor is not None:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
+    211 @classmethod
+    212 def _run_recipe(
+    213     cls,
+    214     recipe: Recipe,
+    215     directory: Path | None = None,
+    216 ) -> dict[str, str]:
+--> 217     return run_recipe(recipe, directory)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
+    100 warnings.filterwarnings(  # Not relevant for end users.
+    101     action="ignore",
+    102     message="Thank you for trying out the new ESMValCore API",
+    103 )
+    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
+    105     action="ignore",
+    106     message="Saving to netcdf with legacy-style attribute",
+    107 )
+--> 109 output = _save_and_run_recipe(recipe, output_dir)
+    110 return _parse_recipe_output(output)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
+    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
+    136     session = _session(output_dir)
+--> 137     output = esmlvaltool_recipe.run(session=session)
+    138 finally:
+    139     recipe_path.unlink()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:137, in Recipe.run(self, task, session)
+    135 with log_to_dir(session.run_dir):
+    136     _dask.check_distributed_config()
+--> 137     self._engine = self._load(session=session)
+    138     self._engine.run()
+    140 shutil.copy2(self.path, session.run_dir)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:97, in Recipe._load(self, session)
+     78 """Load the recipe.
+     79 
+     80 This method loads the recipe into the internal ESMValCore Recipe
+   (...)     93     Return an instance of the Recipe
+     94 """
+     95 logger.info(pprint.pformat(session))
+---> 97 return RecipeEngine(raw_recipe=self.data,
+     98                     session=session,
+     99                     recipe_file=self.path)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:740, in Recipe.__init__(self, raw_recipe, session, recipe_file)
+    737 self.entity = self._initialize_provenance(
+    738     raw_recipe.get('documentation', {}))
+    739 try:
+--> 740     self.tasks = self.initialize_tasks()
+    741 except RecipeError as exc:
+    742     self._log_recipe_errors(exc)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1066, in Recipe.initialize_tasks(self)
+   1064 def initialize_tasks(self):
+   1065     """Define tasks in recipe."""
+-> 1066     tasks = self._create_tasks()
+   1067     tasks = tasks.flatten()
+   1068     logger.info("These tasks will be executed: %s",
+   1069                 ', '.join(t.name for t in tasks))
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1041, in Recipe._create_tasks(self)
+   1038     priority += 1
+   1040 # Create preprocessor tasks
+-> 1041 new_tasks, failed = self._create_preprocessor_tasks(
+   1042     diagnostic_name, diagnostic, tasknames_to_run,
+   1043     any_diag_script_is_run)
+   1044 failed_tasks.extend(failed)
+   1045 for task in new_tasks:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1005, in Recipe._create_preprocessor_tasks(self, diagnostic_name, diagnostic, tasknames_to_run, any_diag_script_is_run)
+   1003 logger.info("Creating preprocessor task %s", task_name)
+   1004 try:
+-> 1005     task = _get_preprocessor_task(
+   1006         datasets=list(datasets),
+   1007         profiles=self._preprocessors,
+   1008         task_name=task_name,
+   1009     )
+   1010 except RecipeError as exc:
+   1011     failed_tasks.append(exc)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:679, in _get_preprocessor_task(datasets, profiles, task_name)
+    676 order = _extract_preprocessor_order(profile)
+    678 # Create preprocessor task
+--> 679 products = _get_preprocessor_products(
+    680     datasets=datasets,
+    681     profile=profile,
+    682     order=order,
+    683     name=task_name,
+    684 )
+    686 if not products:
+    687     raise RecipeError(f"Did not find any input data for task {task_name}")
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:525, in _get_preprocessor_products(datasets, profile, order, name)
+    523 check.preprocessor_supplementaries(dataset, settings)
+    524 input_datasets = _get_input_datasets(dataset)
+--> 525 missing = _check_input_files(input_datasets)
+    526 if missing:
+    527     if _allow_skipping(dataset):
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:294, in _check_input_files(input_datasets)
+    292 for dataset in [input_dataset] + input_dataset.supplementaries:
+    293     try:
+--> 294         check.data_availability(dataset)
+    295     except RecipeError as exc:
+    296         missing.add(exc.message)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/check.py:169, in data_availability(dataset, log)
+    167 def data_availability(dataset, log=True):
+    168     """Check if input_files cover the required years."""
+--> 169     input_files = dataset.files
+    170     facets = dataset.facets
+    172     if log:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/dataset.py:660, in Dataset.files(self)
+    658 """The files associated with this dataset."""
+    659 if self._files is None:
+--> 660     self.find_files()
+    661 return self._files
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/dataset.py:611, in Dataset.find_files(self)
+    608 if _isglob(self.facets.get('timerange')):
+    609     self._update_timerange()
+--> 611 self._find_files()
+    612 for supplementary in self.supplementaries:
+    613     supplementary.find_files()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/dataset.py:642, in Dataset._find_files(self)
+    639 # Local files are not available in 'when_missing' mode or 'always' mode
+    640 # is used: check ESGF
+    641 local_files = {f.name: f for f in self.files}
+--> 642 search_result = esgf.find_files(**self.facets)
+    643 for file in search_result:
+    644     if file.name not in local_files:
+    645         # Use ESGF files that are not available locally.
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_search.py:345, in find_files(project, short_name, dataset, **facets)
+    342     if isinstance(value, list):
+    343         facets[facet] = tuple(value)
+--> 345 return cached_search(**facets)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_search.py:356, in cached_search(**facets)
+    350 """Search for files on ESGF.
+    351 
+    352 A cached search function will speed up recipes that use the same
+    353 variable multiple times.
+    354 """
+    355 esgf_facets = get_esgf_facets(facets)
+--> 356 files = esgf_search_files(esgf_facets)
+    358 if 'version' not in facets or facets['version'] != '*':
+    359     files = select_latest_versions(files, facets.get('version'))
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_search.py:149, in esgf_search_files(facets)
+    136 def esgf_search_files(facets):
+    137     """Search for files on ESGF.
+    138 
+    139     Parameters
+   (...)    147         The found files.
+    148     """
+--> 149     results = _search_index_nodes(facets)
+    151     files = ESGFFile._from_results(results, facets)
+    153     msg = 'none' if not files else '\n' + '\n'.join(str(f) for f in files)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_search.py:118, in _search_index_nodes(facets)
+    116 logger.debug("Searching %s for datasets using facets=%s", url, facets)
+    117 try:
+--> 118     results = context.search(
+    119         batch_size=500,
+    120         ignore_facet_check=True,
+    121     )
+    122     FIRST_ONLINE_INDEX_NODE = url
+    123     return list(results)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/search/context.py:141, in SearchContext.search(self, batch_size, ignore_facet_check, **constraints)
+    138 if not ignore_facet_check:
+    139     sc.__update_counts()
+--> 141 return ResultSet(sc, batch_size=batch_size)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/search/results.py:42, in ResultSet.__init__(self, context, batch_size, eager)
+     40 self.__len_cache = None
+     41 if eager:
+---> 42     self.__get_batch(0)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/search/results.py:83, in ResultSet.__get_batch(self, batch_i)
+     79 limit = self.batch_size
+     81 query_dict = self.context._build_query()
+     82 response = (self.context.connection
+---> 83             .send_search(query_dict, limit=limit, offset=offset,
+     84                          shards=self.context.shards))
+     86 if self.__len_cache is None:
+     87     self.__len_cache = response['response']['numFound']
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/search/connection.py:158, in SearchConnection.send_search(self, query_dict, limit, offset, shards)
+    156 full_query = self._build_query(query_dict, limit, offset, shards)
+    157 if not self._isopen:
+--> 158     self.open()
+    159 response = self._send_query('search', full_query)
+    160 ret = response.json()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/search/connection.py:103, in SearchConnection.open(self)
+    101     self.session = self._passed_session
+    102 else:
+--> 103     self.session = create_single_session(
+    104         cache=self.cache,
+    105         expire_after=self.expire_after)
+    106 self._isopen = True
+    107 return
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/search/connection.py:375, in create_single_session(cache, expire_after, **kwargs)
+    373         except Exception:
+    374             pass
+--> 375         session = (requests_cache
+    376                    .CachedSession(cache, expire_after=expire_after))
+    377 else:
+    378     session = requests.Session()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/session.py:62, in CacheMixin.__init__(self, cache_name, backend, serializer, expire_after, urls_expire_after, cache_control, allowable_codes, allowable_methods, always_revalidate, ignored_parameters, match_headers, filter_fn, key_fn, stale_if_error, **kwargs)
+     44 def __init__(
+     45     self,
+     46     cache_name: StrOrPath = DEFAULT_CACHE_NAME,
+   (...)     60     **kwargs,
+     61 ):
+---> 62     self.cache = init_backend(cache_name, backend, serializer=serializer, **kwargs)
+     63     self.settings = CacheSettings.from_kwargs(
+     64         expire_after=expire_after,
+     65         urls_expire_after=urls_expire_after,
+   (...)     75         **kwargs,
+     76     )
+     77     self._lock = RLock()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/backends/__init__.py:92, in init_backend(cache_name, backend, **kwargs)
+     87 if backend not in BACKEND_CLASSES:
+     88     raise ValueError(
+     89         f'Invalid backend: {backend}. Provide a backend instance, or choose from one of the '
+     90         f'following aliases: {list(BACKEND_CLASSES.keys())}'
+     91     )
+---> 92 return BACKEND_CLASSES[backend](cache_name, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/backends/sqlite.py:62, in SQLiteCache.__init__(self, db_path, serializer, **kwargs)
+     60 # Only override serializer if a non-None value is specified
+     61 skwargs = {'serializer': serializer, **kwargs} if serializer else kwargs
+---> 62 self.responses: SQLiteDict = SQLiteDict(db_path, table_name='responses', **skwargs)
+     63 self.redirects: SQLiteDict = SQLiteDict(
+     64     db_path,
+     65     table_name='redirects',
+   (...)     68     **kwargs,
+     69 )
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/backends/sqlite.py:226, in SQLiteDict.__init__(self, db_path, table_name, busy_timeout, fast_save, retries, serializer, use_cache_dir, use_memory, use_temp, wal, **kwargs)
+    224 self.table_name = table_name
+    225 self.wal = wal
+--> 226 self.init_db()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/requests_cache/backends/sqlite.py:238, in SQLiteDict.init_db(self)
+    235 except sqlite3.OperationalError:
+    236     pass
+--> 238 con.execute(
+    239     f'CREATE TABLE IF NOT EXISTS {self.table_name} ('
+    240     '    key TEXT PRIMARY KEY,'
+    241     '    value BLOB, '
+    242     '    expires INTEGER'
+    243     ')'
+    244 )
+    245 con.execute(f'CREATE INDEX IF NOT EXISTS expires_idx ON {self.table_name}(expires)')
+
+OperationalError: database is locked
+
