@@ -1,0 +1,117 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:31,  1.41s/cell]Executing:   9%|▊         | 2/23 [00:02<00:25,  1.21s/cell]Executing:  13%|█▎        | 3/23 [00:06<00:50,  2.55s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:21,  1.18s/cell]Executing:  35%|███▍      | 8/23 [00:07<00:08,  1.80cell/s]Executing:  61%|██████    | 14/23 [00:07<00:02,  4.32cell/s]Executing:  74%|███████▍  | 17/23 [00:07<00:01,  5.58cell/s]Executing:  87%|████████▋ | 20/23 [00:08<00:00,  4.63cell/s]Executing:  96%|█████████▌| 22/23 [00:10<00:00,  2.53cell/s]Executing: 100%|██████████| 23/23 [00:11<00:00,  1.96cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:25,  1.14s/cell]Executing:   9%|▊         | 2/23 [00:06<01:16,  3.65s/cell]Executing:  17%|█▋        | 4/23 [00:06<00:26,  1.42s/cell]Executing:  26%|██▌       | 6/23 [00:06<00:13,  1.27cell/s]Executing:  30%|███       | 7/23 [00:06<00:09,  1.63cell/s]Executing:  39%|███▉      | 9/23 [09:28<27:30, 117.89s/cell]Executing:  48%|████▊     | 11/23 [09:28<14:46, 73.84s/cell]Executing:  61%|██████    | 14/23 [09:28<06:08, 41.00s/cell]Executing:  74%|███████▍  | 17/23 [09:56<02:51, 28.65s/cell]Executing:  78%|███████▊  | 18/23 [09:56<02:01, 24.24s/cell]Executing:  87%|████████▋ | 20/23 [09:57<00:50, 16.84s/cell]Executing:  96%|█████████▌| 22/23 [14:06<00:49, 49.73s/cell]Executing: 100%|██████████| 23/23 [14:06<00:00, 40.96s/cell]Executing: 100%|██████████| 23/23 [14:09<00:00, 36.93s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:01<00:13,  1.04s/cell]Executing:  14%|█▍        | 2/14 [00:06<00:42,  3.56s/cell]Executing:  29%|██▊       | 4/14 [00:06<00:13,  1.37s/cell]Executing:  43%|████▎     | 6/14 [00:06<00:06,  1.33cell/s]Executing:  64%|██████▍   | 9/14 [00:06<00:02,  2.39cell/s]Executing:  64%|██████▍   | 9/14 [00:18<00:02,  2.39cell/s]Executing:  71%|███████▏  | 10/14 [04:46<03:37, 54.31s/cell]Executing:  86%|████████▌ | 12/14 [04:46<01:10, 35.06s/cell]Executing: 100%|██████████| 14/14 [09:54<00:00, 75.21s/cell]Executing: 100%|██████████| 14/14 [09:56<00:00, 42.64s/cell]
+Executing:   0%|          | 0/43 [00:00<?, ?cell/s]Error occurred while starting new kernel client for kernel 9b5c4803-781a-4c25-928f-0beaa040f8c8: Kernel didn't respond in 60 seconds
+ERROR:tornado.general:Uncaught exception in zmqstream callback
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/eventloop/zmqstream.py", line 600, in _handle_events
+    self._handle_recv()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/eventloop/zmqstream.py", line 619, in _handle_recv
+    msg = self.socket.recv_multipart(zmq.NOBLOCK, copy=self._recv_copy)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/sugar/socket.py", line 802, in recv_multipart
+    part = self.recv(flags, copy=copy, track=track)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1218, in zmq.backend.cython._zmq.Socket.recv
+    def recv(self, flags=0, copy: bint = True, track: bint = False):
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1255, in zmq.backend.cython._zmq.Socket.recv
+    frame = _recv_frame(self.handle, flags, track)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1388, in zmq.backend.cython._zmq._recv_frame
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 190, in zmq.backend.cython._zmq._check_rc
+    raise ZMQError(errno)
+    ^^^^^^^^^^^
+zmq.error.ZMQError: Socket operation on non-socket
+ERROR:tornado.application:Exception in callback functools.partial(<function ZMQStream._update_handler.<locals>.<lambda> at 0x7fdda022efc0>)
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+          ^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/eventloop/zmqstream.py", line 684, in <lambda>
+    self.io_loop.add_callback(lambda: self._handle_events(self.socket, 0))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/eventloop/zmqstream.py", line 600, in _handle_events
+    self._handle_recv()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/eventloop/zmqstream.py", line 619, in _handle_recv
+    msg = self.socket.recv_multipart(zmq.NOBLOCK, copy=self._recv_copy)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/sugar/socket.py", line 802, in recv_multipart
+    part = self.recv(flags, copy=copy, track=track)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1218, in zmq.backend.cython._zmq.Socket.recv
+    def recv(self, flags=0, copy: bint = True, track: bint = False):
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1255, in zmq.backend.cython._zmq.Socket.recv
+    frame = _recv_frame(self.handle, flags, track)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1388, in zmq.backend.cython._zmq._recv_frame
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 190, in zmq.backend.cython._zmq._check_rc
+    raise ZMQError(errno)
+    ^^^^^^^^^^^
+zmq.error.ZMQError: Socket operation on non-socket
+[IPKernelApp] ERROR | Exception in message handler:
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/ipykernel/kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/ipykernel/kernelbase.py", line 1017, in kernel_info_request
+    msg = self.session.send(stream, "kernel_info_reply", content, parent, ident)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/jupyter_client/session.py", line 867, in send
+    stream.send_multipart(to_send, copy=copy)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/sugar/socket.py", line 749, in send_multipart
+    self.send(msg, zmq.SNDMORE | flags, copy=copy, track=track)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/zmq/sugar/socket.py", line 698, in send
+    return super().send(data, flags=flags, copy=copy, track=track)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1152, in zmq.backend.cython._zmq.Socket.send
+    def send(self, data, flags=0, copy: bint = True, track: bint = False):
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1194, in zmq.backend.cython._zmq.Socket.send
+    _check_closed(self)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1339, in zmq.backend.cython._zmq._check_closed
+    raise ZMQError(ENOTSOCK)
+    ^^^^^^^^^^^
+zmq.error.ZMQError: Socket operation on non-socket
+Executing:   0%|          | 0/43 [01:02<?, ?cell/s]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
+    with self.setup_kernel(**kwargs):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 603, in setup_kernel
+    self.start_new_kernel_client()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 566, in async_start_new_kernel_client
+    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_client/client.py", line 208, in _async_wait_for_ready
+    raise RuntimeError("Kernel didn't respond in %d seconds" % timeout)
+RuntimeError: Kernel didn't respond in 60 seconds
