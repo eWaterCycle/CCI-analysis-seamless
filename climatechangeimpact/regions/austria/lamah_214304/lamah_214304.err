@@ -1,0 +1,16 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:05<02:06,  5.74s/cell]Executing:   9%|▊         | 2/23 [00:06<01:00,  2.88s/cell]Executing:  13%|█▎        | 3/23 [00:10<01:05,  3.25s/cell]Executing:  22%|██▏       | 5/23 [00:15<00:52,  2.94s/cell]Executing:  43%|████▎     | 10/23 [00:15<00:12,  1.01cell/s]Executing:  70%|██████▉   | 16/23 [00:15<00:03,  2.12cell/s]Executing:  83%|████████▎ | 19/23 [00:16<00:01,  2.38cell/s]Executing:  91%|█████████▏| 21/23 [00:16<00:00,  2.87cell/s]Executing: 100%|██████████| 23/23 [00:17<00:00,  3.06cell/s]Executing: 100%|██████████| 23/23 [00:20<00:00,  1.15cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: attempt to write a readonly database
+Executing:   4%|▍         | 1/23 [00:05<01:51,  5.06s/cell]Executing:   9%|▊         | 2/23 [00:09<01:38,  4.67s/cell]Executing:  26%|██▌       | 6/23 [00:09<00:18,  1.09s/cell]Executing:  35%|███▍      | 8/23 [00:09<00:11,  1.33cell/s]Executing:  35%|███▍      | 8/23 [00:19<00:11,  1.33cell/s]Executing:  39%|███▉      | 9/23 [09:05<25:25, 108.96s/cell]Executing:  43%|████▎     | 10/23 [09:05<18:20, 84.63s/cell]Executing:  48%|████▊     | 11/23 [09:06<12:50, 64.21s/cell]Executing:  52%|█████▏    | 12/23 [09:06<08:45, 47.75s/cell]Executing:  61%|██████    | 14/23 [09:06<04:07, 27.55s/cell]Executing:  65%|██████▌   | 15/23 [09:07<02:49, 21.25s/cell]Executing:  70%|██████▉   | 16/23 [09:07<01:51, 15.99s/cell]Executing:  74%|███████▍  | 17/23 [14:03<08:57, 89.57s/cell]Executing:  78%|███████▊  | 18/23 [14:03<05:26, 65.24s/cell]Executing:  87%|████████▋ | 20/23 [14:04<01:50, 36.78s/cell][2026-04-30T00:42:50.007] error: *** JOB 35347019 ON wn-dc-15 CANCELLED AT 2026-04-30T00:42:50 DUE TO TIME LIMIT ***
