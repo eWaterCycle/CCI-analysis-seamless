@@ -1,0 +1,63 @@
+mkdir: cannot create directory ‘/project’: Permission denied
+mkdir: cannot create directory ‘/project’: Permission denied
+2026/05/26 23:53:14 NOTICE: mount helper error: fusermount3: bad mount point /project/ewater/Data/climate_data: Permission denied
+2026/05/26 23:53:14 CRITICAL: Fatal error: failed to mount FUSE fs: fusermount: exit status 1
+2026/05/26 23:53:15 NOTICE: mount helper error: fusermount3: bad mount point /project/ewater/Data/caravan_data: Permission denied
+2026/05/26 23:53:15 CRITICAL: Fatal error: failed to mount FUSE fs: fusermount: exit status 1
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:57,  2.59s/cell]Executing:   9%|▊         | 2/23 [00:04<00:40,  1.94s/cell]Executing:  13%|█▎        | 3/23 [00:09<01:12,  3.62s/cell]Executing:  17%|█▋        | 4/23 [00:09<00:43,  2.27s/cell]Executing:  22%|██▏       | 5/23 [00:10<00:26,  1.49s/cell]Executing:  30%|███       | 7/23 [00:10<00:12,  1.25cell/s]Executing:  43%|████▎     | 10/23 [00:10<00:05,  2.32cell/s]Executing:  48%|████▊     | 11/23 [00:10<00:05,  2.35cell/s]Executing:  52%|█████▏    | 12/23 [00:11<00:04,  2.53cell/s]Executing:  61%|██████    | 14/23 [00:12<00:03,  2.44cell/s]Executing:  61%|██████    | 14/23 [00:13<00:08,  1.01cell/s]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [9]":
+---------------------------------------------------------------------------
+PermissionError                           Traceback (most recent call last)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/pathlib.py:1311, in Path.mkdir(self, mode, parents, exist_ok)
+   1310 try:
+-> 1311     os.mkdir(self, mode)
+   1312 except FileNotFoundError:
+
+PermissionError: [Errno 13] Permission denied: '/project/ewater/Data'
+
+During handling of the above exception, another exception occurred:
+
+PermissionError                           Traceback (most recent call last)
+Cell In[9], line 18
+     15 else:
+     16     settings["koppen_raster_path"] = f"/data/shared/climate-data/koppen_geiger/{koppen_geiger_periods}/koppen_geiger_0p00833333.tif"
+---> 18 home_path.mkdir(exist_ok=True, parents=True)
+     20 settings["base_path"] = str(home_path / "ewatercycleClimateImpact" / "HBV")
+     22 settings["path_caravan"] =  str(Path(settings["base_path"]) / "forcing_data" / settings["country"] / settings["caravan_id"] / "caravan")
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/pathlib.py:1320, in Path.mkdir(self, mode, parents, exist_ok)
+   1316     self.mkdir(mode, parents=False, exist_ok=exist_ok)
+   1317 except OSError:
+   1318     # Cannot rely on checking for EEXIST, since the operating system
+   1319     # could give priority to other errors like EACCES or EROFS
+-> 1320     if not exist_ok or not self.is_dir():
+   1321         raise
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/pathlib.py:875, in Path.is_dir(self)
+    871 """
+    872 Whether this path is a directory.
+    873 """
+    874 try:
+--> 875     return S_ISDIR(self.stat().st_mode)
+    876 except OSError as e:
+    877     if not _ignore_error(e):
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/pathlib.py:840, in Path.stat(self, follow_symlinks)
+    835 def stat(self, *, follow_symlinks=True):
+    836     """
+    837     Return the result of the stat() system call on this path, like
+    838     os.stat() does.
+    839     """
+--> 840     return os.stat(self, follow_symlinks=follow_symlinks)
+
+PermissionError: [Errno 13] Permission denied: '/project/ewater/Data'
+
