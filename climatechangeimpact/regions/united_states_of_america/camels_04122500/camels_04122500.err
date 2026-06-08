@@ -1,0 +1,281 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
+    with conn:
+         ^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:07<02:37,  7.15s/cell]Executing:   9%|▊         | 2/23 [00:08<01:21,  3.87s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:29,  4.46s/cell]Executing:  17%|█▋        | 4/23 [00:14<00:53,  2.81s/cell]Executing:  22%|██▏       | 5/23 [00:14<00:35,  1.98s/cell]Executing:  26%|██▌       | 6/23 [00:15<00:24,  1.42s/cell]Executing:  30%|███       | 7/23 [00:15<00:16,  1.02s/cell]Executing:  35%|███▍      | 8/23 [00:15<00:11,  1.30cell/s]Executing:  39%|███▉      | 9/23 [00:15<00:08,  1.67cell/s]Executing:  43%|████▎     | 10/23 [00:15<00:06,  2.11cell/s]Executing:  48%|████▊     | 11/23 [00:16<00:04,  2.43cell/s]Executing:  57%|█████▋    | 13/23 [00:16<00:02,  4.00cell/s]Executing:  70%|██████▉   | 16/23 [00:16<00:01,  4.34cell/s]Executing:  74%|███████▍  | 17/23 [00:17<00:01,  4.16cell/s]Executing:  78%|███████▊  | 18/23 [00:17<00:01,  3.82cell/s]Executing:  83%|████████▎ | 19/23 [00:18<00:01,  2.20cell/s]Executing:  87%|████████▋ | 20/23 [00:19<00:01,  2.20cell/s]Executing:  91%|█████████▏| 21/23 [00:19<00:00,  2.57cell/s]Executing:  96%|█████████▌| 22/23 [00:19<00:00,  2.29cell/s]Executing: 100%|██████████| 23/23 [00:20<00:00,  2.43cell/s]Executing: 100%|██████████| 23/23 [00:22<00:00,  1.01cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
+    with conn:
+         ^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:06<02:24,  6.57s/cell]Executing:   9%|▊         | 2/23 [00:12<02:15,  6.44s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:11,  3.55s/cell]Executing:  17%|█▋        | 4/23 [00:13<00:42,  2.24s/cell]Executing:  22%|██▏       | 5/23 [00:13<00:26,  1.50s/cell]Executing:  30%|███       | 7/23 [00:13<00:12,  1.26cell/s]Executing:  35%|███▍      | 8/23 [00:13<00:09,  1.58cell/s]2026/04/29 20:29:10 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc": EOF
+2026/04/29 20:29:12 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_1994-1994.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_1994-1994.nc": EOF
+2026/04/29 20:32:25 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1994-1994.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1994-1994.nc": EOF
+2026/04/29 20:32:33 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc": EOF
+2026/04/29 20:32:35 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_1995-1995.nc": EOF
+2026/04/29 20:36:09 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_1995-1995.nc": EOF
+2026/04/29 20:36:11 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc: ReadFileHandle.Read error: low level retry 2/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc": EOF
+2026/04/29 20:36:31 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc: ReadFileHandle.Read error: low level retry 3/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc": EOF
+Executing:  39%|███▉      | 9/23 [15:22<58:31, 250.81s/cell]Executing:  39%|███▉      | 9/23 [15:25<23:59, 102.84s/cell]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [7]":
+---------------------------------------------------------------------------
+RemoteTraceback                           Traceback (most recent call last)
+RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/tmp/ipykernel_1747922/2963463459.py", line 4, in <module>
+    ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py", line 276, in load
+    raise FileNotFoundError(msg)
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/camels_04122500/ERA5/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py", line 816, in _run_task
+    output_files = task.run()
+                   ^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py", line 264, in run
+    self.output_files = self._run(input_files)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 664, in _run
+    self._initialize_product_provenance()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 623, in _initialize_product_provenance
+    self._initialize_products(self.products)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 660, in _initialize_products
+    product.initialize_provenance(self.activity)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py", line 193, in initialize_provenance
+    self._initialize_ancestors(activity)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py", line 231, in _initialize_ancestors
+    ancestor.initialize_provenance(activity)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py", line 192, in initialize_provenance
+    self._initialize_entity()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py", line 209, in _initialize_entity
+    with Dataset(self.filename, 'r') as dataset:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src/netCDF4/_netCDF4.pyx", line 2521, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 2158, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -51] NetCDF: Unknown file format: '/home/ewater-mmelotto/climate_data/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_1995-1995.nc'
+"""
+
+The above exception was the direct cause of the following exception:
+
+OSError                                   Traceback (most recent call last)
+Cell In[7], line 6
+      4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+      5 except:    
+----> 6     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
+      7        dataset="ERA5",
+      8        start_time=settings['calibration_start_date'],
+      9        end_time=settings['validation_end_date'],
+     10        directory=settings['path_ERA5'],
+     11        shape=settings['path_shape'],
+     12     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
+     47 @classmethod
+     48 def generate(  # type: ignore[override]
+     49     cls: type["Makkink"],
+   (...)     55     **model_specific_options,
+     56 ) -> "Makkink":
+---> 57     return super().generate(
+     58         dataset,
+     59         start_time,
+     60         end_time,
+     61         shape,
+     62         directory,
+     63         variables=("pr", "tas", "rsds"),
+     64         postprocessor=derive_e_pot,
+     65         **model_specific_options,
+     66     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
+    129 """Generate forcings for a model.
+    130 
+    131 The forcing is generated with help of
+   (...)    151     model_specific_options: Subclass specific options.
+    152 """
+    153 recipe = cls._build_recipe(
+    154     dataset=dataset,
+    155     start_time=get_time(start_time),
+   (...)    159     **model_specific_options,
+    160 )
+--> 162 recipe_output = cls._run_recipe(
+    163     recipe, directory=Path(directory) if directory else None
+    164 )
+    166 derived_variables: tuple[str, ...] = ()
+    167 if postprocessor is not None:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
+    211 @classmethod
+    212 def _run_recipe(
+    213     cls,
+    214     recipe: Recipe,
+    215     directory: Path | None = None,
+    216 ) -> dict[str, str]:
+--> 217     return run_recipe(recipe, directory)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
+    100 warnings.filterwarnings(  # Not relevant for end users.
+    101     action="ignore",
+    102     message="Thank you for trying out the new ESMValCore API",
+    103 )
+    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
+    105     action="ignore",
+    106     message="Saving to netcdf with legacy-style attribute",
+    107 )
+--> 109 output = _save_and_run_recipe(recipe, output_dir)
+    110 return _parse_recipe_output(output)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
+    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
+    136     session = _session(output_dir)
+--> 137     output = esmlvaltool_recipe.run(session=session)
+    138 finally:
+    139     recipe_path.unlink()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:138, in Recipe.run(self, task, session)
+    136     _dask.check_distributed_config()
+    137     self._engine = self._load(session=session)
+--> 138     self._engine.run()
+    140 shutil.copy2(self.path, session.run_dir)
+    142 output = self.get_output()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1095, in Recipe.run(self)
+   1092 if self.session['search_esgf'] != 'never':
+   1093     esgf.download(self._download_files, self.session['download_dir'])
+-> 1095 self.tasks.run(max_parallel_tasks=self.session['max_parallel_tasks'])
+   1096 logger.info(
+   1097     "Wrote recipe with version numbers and wildcards "
+   1098     "to:\nfile://%s", filled_recipe)
+   1099 self.write_html_summary()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:738, in TaskSet.run(self, max_parallel_tasks)
+    736     self._run_sequential()
+    737 else:
+--> 738     self._run_parallel(address, max_parallel_tasks)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:782, in TaskSet._run_parallel(self, scheduler_address, max_parallel_tasks)
+    780 ready = {t for t in running if running[t].ready()}
+    781 for task in ready:
+--> 782     _copy_results(task, running[task])
+    783     running.pop(task)
+    785 # Wait if there are still tasks running
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:805, in _copy_results(task, future)
+    803 def _copy_results(task, future):
+    804     """Update task with the results from the remote process."""
+--> 805     task.output_files, task.products = future.get()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py:774, in ApplyResult.get(self, timeout)
+    772     return self._value
+    773 else:
+--> 774     raise self._value
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py:125, in worker()
+    123 job, i, func, args, kwds = task
+    124 try:
+--> 125     result = (True, func(*args, **kwds))
+    126 except Exception as e:
+    127     if wrap_exception and func is not _helper_reraises_exception:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:816, in _run_task()
+    813     client = Client(scheduler_address)
+    815 with client:
+--> 816     output_files = task.run()
+    818 return output_files, task.products
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:264, in run()
+    261 logger.info("Starting task %s in process [%s]", self.name,
+    262             os.getpid())
+    263 start = datetime.datetime.now()
+--> 264 self.output_files = self._run(input_files)
+    265 runtime = datetime.datetime.now() - start
+    266 logger.info("Successfully completed task %s (priority %s) in %s",
+    267             self.name, self.priority, runtime)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:664, in _run()
+    662 def _run(self, _):
+    663     """Run the preprocessor."""
+--> 664     self._initialize_product_provenance()
+    666     steps = {
+    667         step
+    668         for product in self.products for step in product.settings
+    669     }
+    670     blocks = get_step_blocks(steps, self.order)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:623, in _initialize_product_provenance()
+    621 def _initialize_product_provenance(self):
+    622     """Initialize product provenance."""
+--> 623     self._initialize_products(self.products)
+    624     self._initialize_multimodel_provenance()
+    625     self._initialize_ensemble_provenance()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:660, in _initialize_products()
+    658 """Initialize products."""
+    659 for product in products:
+--> 660     product.initialize_provenance(self.activity)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py:193, in initialize_provenance()
+    191 self._initialize_activity(activity)
+    192 self._initialize_entity()
+--> 193 self._initialize_ancestors(activity)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py:231, in _initialize_ancestors()
+    229         ancestor.restore_provenance()
+    230     else:
+--> 231         ancestor.initialize_provenance(activity)
+    232 self.provenance.update(ancestor.provenance)
+    233 self.wasderivedfrom(ancestor)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py:192, in initialize_provenance()
+    190 self._initialize_namespaces()
+    191 self._initialize_activity(activity)
+--> 192 self._initialize_entity()
+    193 self._initialize_ancestors(activity)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_provenance.py:209, in _initialize_entity()
+    207 if self.attributes is None:
+    208     self.attributes = {}
+--> 209     with Dataset(self.filename, 'r') as dataset:
+    210         for attr in dataset.ncattrs():
+    211             self.attributes[attr] = dataset.getncattr(attr)
+
+File src/netCDF4/_netCDF4.pyx:2521, in netCDF4._netCDF4.Dataset.__init__()
+
+File src/netCDF4/_netCDF4.pyx:2158, in netCDF4._netCDF4._ensure_nc_success()
+
+OSError: [Errno -51] NetCDF: Unknown file format: '/home/ewater-mmelotto/climate_data/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_1995-1995.nc'
+
