@@ -1,0 +1,40 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:32,  1.48s/cell]Executing:   9%|▊         | 2/23 [00:02<00:24,  1.17s/cell]Executing:  13%|█▎        | 3/23 [00:06<00:46,  2.32s/cell]Executing:  17%|█▋        | 4/23 [00:06<00:28,  1.50s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:19,  1.08s/cell]Executing:  30%|███       | 7/23 [00:06<00:08,  1.79cell/s]Executing:  43%|████▎     | 10/23 [00:07<00:04,  3.24cell/s]Executing:  52%|█████▏    | 12/23 [00:07<00:02,  3.99cell/s]Executing:  57%|█████▋    | 13/23 [00:07<00:02,  4.42cell/s]Executing:  61%|██████    | 14/23 [00:07<00:01,  4.55cell/s]Executing:  65%|██████▌   | 15/23 [00:07<00:01,  4.97cell/s]Executing:  70%|██████▉   | 16/23 [00:08<00:01,  4.73cell/s]Executing:  78%|███████▊  | 18/23 [00:08<00:01,  4.58cell/s]Executing:  83%|████████▎ | 19/23 [00:09<00:01,  2.65cell/s]Executing:  96%|█████████▌| 22/23 [00:10<00:00,  2.99cell/s]Executing: 100%|██████████| 23/23 [00:10<00:00,  3.39cell/s]Executing: 100%|██████████| 23/23 [00:11<00:00,  1.93cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:21,  1.03cell/s]Executing:   9%|▊         | 2/23 [00:05<01:04,  3.09s/cell]Executing:  17%|█▋        | 4/23 [00:05<00:24,  1.28s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:17,  1.01cell/s]Executing:  26%|██▌       | 6/23 [00:07<00:15,  1.07cell/s]Executing:  30%|███       | 7/23 [00:07<00:11,  1.37cell/s]Executing:  39%|███▉      | 9/23 [03:32<11:13, 48.10s/cell]Executing:  48%|████▊     | 11/23 [03:33<05:48, 29.01s/cell]Executing:  52%|█████▏    | 12/23 [03:33<04:08, 22.62s/cell]Executing:  57%|█████▋    | 13/23 [03:33<02:52, 17.21s/cell]Executing:  61%|██████    | 14/23 [03:33<01:55, 12.85s/cell]Executing:  65%|██████▌   | 15/23 [03:33<01:15,  9.44s/cell]Executing:  74%|███████▍  | 17/23 [04:08<01:16, 12.83s/cell]Executing:  78%|███████▊  | 18/23 [04:08<00:49,  9.91s/cell]Executing:  83%|████████▎ | 19/23 [04:08<00:29,  7.45s/cell]Executing:  87%|████████▋ | 20/23 [04:10<00:17,  5.85s/cell]Executing:  96%|█████████▌| 22/23 [17:22<02:54, 174.02s/cell]Executing: 100%|██████████| 23/23 [17:23<00:00, 133.25s/cell]Executing: 100%|██████████| 23/23 [17:26<00:00, 45.50s/cell] 
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Error occurred while starting new kernel client for kernel 7a793de0-fa08-4e9f-a8a5-3393225bb12f: Kernel didn't respond in 60 seconds
+Executing:   0%|          | 0/14 [01:02<?, ?cell/s]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
+    with self.setup_kernel(**kwargs):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 603, in setup_kernel
+    self.start_new_kernel_client()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 566, in async_start_new_kernel_client
+    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_client/client.py", line 208, in _async_wait_for_ready
+    raise RuntimeError("Kernel didn't respond in %d seconds" % timeout)
+RuntimeError: Kernel didn't respond in 60 seconds
