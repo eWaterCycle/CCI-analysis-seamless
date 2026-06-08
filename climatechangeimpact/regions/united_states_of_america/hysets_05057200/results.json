@@ -1,0 +1,127 @@
+{
+    "caravan_id": "hysets_05057200",
+    "catchment_area_km2": 1897.2756082824753,
+    "calibration_HBV": {
+        "Distance Metric": 1.0428,
+        "Nelder-Mead": 0.1378,
+        "KGE": 0.3254,
+        "NSE": 0.2169,
+        "period": "1994-08-01 / 2004-07-31"
+    },
+    "calibration_leakybucket": {
+        "Distance Metric": 36.1982,
+        "Nelder-Mead": 1.4156,
+        "KGE": -14.8009,
+        "NSE": -31.5368,
+        "leakiness": 0.001052,
+        "period": "1994-08-01 / 2004-07-31"
+    },
+    "return_periods_HBV": {
+        "observed_reference": {
+            "q100_mm_d": 50.5021,
+            "q1000_mm_d": 574.0032
+        },
+        "modelled historic discharge, forcing: CMIP6,MPI-ESM1-2-LR,r1i1p1f1": {
+            "rp_at_obs_q100": 510.77,
+            "rp_at_obs_q1000": 5802.38
+        },
+        "ERA5": {
+            "rp_at_obs_q100": 741.16,
+            "rp_at_obs_q1000": 8413.75
+        },
+        "DestinE_historical": {
+            "rp_at_obs_q100": 181.2,
+            "rp_at_obs_q1000": 2013.81
+        },
+        "ssp126": {
+            "rp_at_obs_q100": "738.82 \u00b1 437.12",
+            "rp_at_obs_q1000": "8425.04 \u00b1 5050.72"
+        },
+        "ssp245": {
+            "rp_at_obs_q100": "536.63 \u00b1 167.72",
+            "rp_at_obs_q1000": "6110.4 \u00b1 1961.89"
+        },
+        "ssp370": {
+            "rp_at_obs_q100": "625.0 \u00b1 101.78",
+            "rp_at_obs_q1000": "7089.41 \u00b1 1152.47"
+        },
+        "ssp585": {
+            "rp_at_obs_q100": "505.17 \u00b1 156.2",
+            "rp_at_obs_q1000": "5767.93 \u00b1 1860.0"
+        },
+        "DestinE_future": {
+            "rp_at_obs_q100": "415.04 \u00b1 0.0",
+            "rp_at_obs_q1000": "4699.12 \u00b1 0.0"
+        }
+    },
+    "return_periods_leakybucket": {
+        "observed_reference": {
+            "q100_mm_d": 50.5021,
+            "q1000_mm_d": 574.0032
+        },
+        "ERA5": {
+            "rp_at_obs_q100": 52526.3,
+            "rp_at_obs_q1000": 620514.97
+        },
+        "LB historic, forcing: CMIP6,MPI-ESM1-2-LR,r1i1p1f1": {
+            "rp_at_obs_q100": 68504.32,
+            "rp_at_obs_q1000": 811631.57
+        },
+        "DestinE_historical": {
+            "rp_at_obs_q100": 33460.2,
+            "rp_at_obs_q1000": 396821.13
+        },
+        "ssp126": {
+            "rp_at_obs_q100": "15767.44 \u00b1 837.32",
+            "rp_at_obs_q1000": "186281.49 \u00b1 9647.98"
+        },
+        "ssp245": {
+            "rp_at_obs_q100": "9995.73 \u00b1 2061.07",
+            "rp_at_obs_q1000": "117878.42 \u00b1 24273.26"
+        },
+        "ssp370": {
+            "rp_at_obs_q100": "10136.61 \u00b1 2694.02",
+            "rp_at_obs_q1000": "119610.16 \u00b1 31903.36"
+        },
+        "ssp585": {
+            "rp_at_obs_q100": "10733.77 \u00b1 1346.2",
+            "rp_at_obs_q1000": "126790.84 \u00b1 15737.04"
+        },
+        "DestinE_future": {
+            "rp_at_obs_q100": "31558.76 \u00b1 0.0",
+            "rp_at_obs_q1000": "373093.44 \u00b1 0.0"
+        }
+    },
+    "koppen_geiger": {
+        "Af": 0.0,
+        "Am": 0.0,
+        "Aw": 0.0,
+        "BWh": 0.0,
+        "BWk": 0.0,
+        "BSh": 0.0,
+        "BSk": 0.0,
+        "Csa": 0.0,
+        "Csb": 0.0,
+        "Csc": 0.0,
+        "Cwa": 0.0,
+        "Cwb": 0.0,
+        "Cwc": 0.0,
+        "Cfa": 0.0,
+        "Cfb": 0.0,
+        "Cfc": 0.0,
+        "Dsa": 0.0,
+        "Dsb": 0.0,
+        "Dsc": 0.0,
+        "Dsd": 0.0,
+        "Dwa": 0.0,
+        "Dwb": 10.94,
+        "Dwc": 0.0,
+        "Dwd": 0.0,
+        "Dfa": 0.0,
+        "Dfb": 89.06,
+        "Dfc": 0.0,
+        "Dfd": 0.0,
+        "ET": 0.0,
+        "EF": 0.0
+    }
+}

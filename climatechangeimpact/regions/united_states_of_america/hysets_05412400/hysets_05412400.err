@@ -1,0 +1,27 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:45,  2.05s/cell]Executing:   9%|▊         | 2/23 [00:59<12:11, 34.85s/cell]Executing:  13%|█▎        | 3/23 [07:02<1:01:28, 184.43s/cell]Executing:  17%|█▋        | 4/23 [07:02<35:22, 111.69s/cell]  Executing:  26%|██▌       | 6/23 [07:02<14:54, 52.61s/cell] Executing:  30%|███       | 7/23 [07:03<10:11, 38.23s/cell]Executing:  35%|███▍      | 8/23 [07:03<06:52, 27.49s/cell]Executing:  43%|████▎     | 10/23 [07:03<03:18, 15.26s/cell]Executing:  48%|████▊     | 11/23 [07:03<02:19, 11.61s/cell]Executing:  52%|█████▏    | 12/23 [07:03<01:35,  8.69s/cell]Executing:  57%|█████▋    | 13/23 [07:04<01:04,  6.44s/cell]Executing:  61%|██████    | 14/23 [07:04<00:42,  4.71s/cell]Executing:  70%|██████▉   | 16/23 [07:05<00:19,  2.84s/cell]Executing:  78%|███████▊  | 18/23 [07:05<00:09,  1.81s/cell]Executing:  83%|████████▎ | 19/23 [08:53<01:39, 24.81s/cell]Executing:  91%|█████████▏| 21/23 [08:53<00:30, 15.39s/cell]Executing:  96%|█████████▌| 22/23 [08:56<00:12, 12.59s/cell]Executing: 100%|██████████| 23/23 [08:59<00:00, 23.47s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:04<01:47,  4.89s/cell]Executing:   9%|▊         | 2/23 [00:16<03:00,  8.60s/cell]Executing:  17%|█▋        | 4/23 [00:17<01:06,  3.50s/cell]Executing:  22%|██▏       | 5/23 [00:17<00:45,  2.50s/cell]Executing:  26%|██▌       | 6/23 [00:17<00:30,  1.78s/cell]Executing:  30%|███       | 7/23 [00:17<00:21,  1.31s/cell]Executing:  39%|███▉      | 9/23 [04:58<15:24, 66.04s/cell]Executing:  43%|████▎     | 10/23 [04:58<10:45, 49.63s/cell]Executing:  48%|████▊     | 11/23 [05:01<07:27, 37.32s/cell]Executing:  52%|█████▏    | 12/23 [05:01<04:58, 27.17s/cell]Executing:  61%|██████    | 14/23 [05:02<02:18, 15.38s/cell]Executing:  65%|██████▌   | 15/23 [05:02<01:34, 11.75s/cell]Executing:  74%|███████▍  | 17/23 [05:27<01:12, 12.07s/cell]Executing:  78%|███████▊  | 18/23 [05:27<00:47,  9.48s/cell]Executing:  87%|████████▋ | 20/23 [05:29<00:18,  6.12s/cell]Executing:  96%|█████████▌| 22/23 [15:21<01:49, 109.86s/cell]Executing: 100%|██████████| 23/23 [15:22<00:00, 87.72s/cell] Executing: 100%|██████████| 23/23 [15:25<00:00, 40.24s/cell]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [15]":
+---------------------------------------------------------------------------
+Exception                                 Traceback (most recent call last)
+File ~/seamless_spider/climatechangeimpact/scripts/desp-authentication.py:125
+    119     error_message_element = tree.xpath('//span[@id="input-error"]/text()')
+    120     error_message = (
+    121         error_message_element[0].strip()
+    122         if error_message_element
+    123         else "Error message not found"
+    124     )
+--> 125     raise Exception(error_message)
+    127 if login.status_code != 302:
+    128     raise Exception("Login failed")
+
+Exception: Your account is temporarily disabled due to excessive requests or wrong login attempts. Please wait a few minutes and try again, or contact our support team.
+
