@@ -1,0 +1,167 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [02:39<58:39, 159.98s/cell]Executing:   9%|▊         | 2/23 [03:56<38:51, 111.03s/cell]Executing:  13%|█▎        | 3/23 [07:42<54:25, 163.29s/cell]Executing:  17%|█▋        | 4/23 [07:42<31:23, 99.13s/cell] Executing:  22%|██▏       | 5/23 [07:43<19:02, 63.49s/cell]Executing:  30%|███       | 7/23 [07:44<08:25, 31.57s/cell]Executing:  35%|███▍      | 8/23 [07:44<05:48, 23.24s/cell]Executing:  43%|████▎     | 10/23 [07:44<02:51, 13.23s/cell]Executing:  61%|██████    | 14/23 [07:45<00:53,  5.95s/cell]Executing:  70%|██████▉   | 16/23 [07:45<00:30,  4.35s/cell]Executing:  74%|███████▍  | 17/23 [07:45<00:21,  3.65s/cell]Executing:  78%|███████▊  | 18/23 [07:45<00:14,  2.97s/cell]Executing:  83%|████████▎ | 19/23 [08:28<00:46, 11.54s/cell]Executing:  87%|████████▋ | 20/23 [08:28<00:26,  8.89s/cell]Executing:  91%|█████████▏| 21/23 [08:29<00:13,  6.76s/cell]Executing:  96%|█████████▌| 22/23 [08:32<00:05,  5.76s/cell]Executing: 100%|██████████| 23/23 [08:32<00:00,  4.31s/cell]Executing: 100%|██████████| 23/23 [08:36<00:00, 22.44s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:42,  1.92s/cell]Executing:   9%|▊         | 2/23 [00:14<02:46,  7.91s/cell]Executing:  17%|█▋        | 4/23 [00:14<00:57,  3.05s/cell]Executing:  22%|██▏       | 5/23 [00:14<00:38,  2.14s/cell]Executing:  35%|███▍      | 8/23 [00:14<00:14,  1.06cell/s]Executing:  35%|███▍      | 8/23 [00:33<00:14,  1.06cell/s]Executing:  39%|███▉      | 9/23 [18:34<54:57, 235.57s/cell]Executing:  48%|████▊     | 11/23 [18:36<29:19, 146.63s/cell]Executing:  61%|██████    | 14/23 [18:36<12:08, 80.96s/cell] Executing:  70%|██████▉   | 16/23 [18:36<06:37, 56.78s/cell]Executing:  70%|██████▉   | 16/23 [18:53<06:37, 56.78s/cell]Executing:  74%|███████▍  | 17/23 [20:22<06:32, 65.42s/cell]Executing:  78%|███████▊  | 18/23 [20:23<04:22, 52.56s/cell]Executing:  87%|████████▋ | 20/23 [20:29<01:43, 34.41s/cell]Executing:  96%|█████████▌| 22/23 [25:24<01:13, 73.12s/cell]Executing: 100%|██████████| 23/23 [25:27<00:00, 59.31s/cell]Executing: 100%|██████████| 23/23 [25:29<00:00, 66.52s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:01<00:22,  1.76s/cell]Executing:  14%|█▍        | 2/14 [00:12<01:25,  7.16s/cell]Executing:  29%|██▊       | 4/14 [00:13<00:28,  2.80s/cell]Executing:  36%|███▌      | 5/14 [00:13<00:18,  2.03s/cell]Executing:  43%|████▎     | 6/14 [00:13<00:11,  1.48s/cell]Executing:  64%|██████▍   | 9/14 [00:13<00:03,  1.48cell/s]Executing:  71%|███████▏  | 10/14 [48:35<41:12, 618.03s/cell]Executing:  86%|████████▌ | 12/14 [48:35<12:48, 384.43s/cell]Executing: 100%|██████████| 14/14 [50:56<00:00, 274.32s/cell]Executing: 100%|██████████| 14/14 [50:59<00:00, 218.54s/cell]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [11]":
+---------------------------------------------------------------------------
+JSONDecodeError                           Traceback (most recent call last)
+Cell In[11], line 5
+      3     DestinE_forcing_object = DestinEFutureForcing.load(settings['path_DestinE'])
+      4 except:
+----> 5     DestinE_forcing_object = DestinEFutureForcing.generate(
+      6        start_time=settings['future_start_date'],
+      7        end_time=settings['future_end_date'],
+      8        directory=settings['path_DestinE'],
+      9        shape=settings['path_shape'],
+     10     )
+     12 display(DestinE_forcing_object)
+     14 # Quick plot of the precipitation and potential evaporation data
+
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:767, in DestinEFutureForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
+    764 LIVE_REQUEST = os.getenv("LIVE_REQUEST", "true").lower() == "true"
+    766 if LIVE_REQUEST:
+--> 767     data = earthkit.data.from_source("polytope", "destination-earth", request, address=polytope_address,
+    768                                      stream=False)
+    770 ds = data.to_xarray()
+    771 ds = ds.rename({
+    772     "2t": "tas",
+    773     "ssrd": "rsds",
+    774     "tprate": "pr"
+    775 })
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:145, in from_source(name, lazily, *args, **kwargs)
+    143 while src is not prev:
+    144     prev = src
+--> 145     src = src.mutate()
+    146 return src
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:106, in Polytope.mutate(self)
+    104     return self._mutate_stream()
+    105 else:
+--> 106     return self._retrieve()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:163, in Polytope._retrieve(self)
+    161 # Download each request in parallel when the config allows it
+    162 retriever = FileRequestRetriever(self, retriever=_retrieve_one)
+--> 163 path = retriever.retrieve(self.request, self.dataset)
+    165 # TODO: for simplicity we assume all retrieved files have the same content-type. Revisit if needed.
+    166 content_type = None
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/utils/request.py:135, in FileRequestRetriever.retrieve(self, requests, *extra_args)
+    132 nthreads = min(self.owner.config("number-of-download-threads"), len(requests))
+    134 if nthreads < 2:
+--> 135     path = [self.retriever(r, *extra_args) for r in requests]
+    136 else:
+    137     from earthkit.data.utils.progbar import tqdm
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:156, in Polytope._retrieve.<locals>._retrieve_one(request, dataset)
+    152     return download_to_target(url, target)
+    154 # The cache file path/data is constructed by using the request only. We cannot simply base
+    155 # it on the URL since the URL may change every time we ask for the pointers.
+--> 156 return self.cache_file(
+    157     retrieve,
+    158     (dataset, request),
+    159 )
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:65, in Source.cache_file(self, create, args, **kwargs)
+     62 if owner is None:
+     63     owner = re.sub(r"(?!^)([A-Z]+)", r"-\1", self.__class__.__name__).lower()
+---> 65 return cache_file(owner, create, args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/core/caching.py:1099, in cache_file(owner, create, args, hash_extra, extension, force, replace)
+   1097 with FileLock(lock):
+   1098     if not os.path.exists(path):  # Check again, another thread/process may have created the file
+-> 1099         owner_data = create(path + ".tmp", args)
+   1100         os.rename(path + ".tmp", path)
+   1101 try:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:140, in Polytope._retrieve.<locals>._retrieve_one.<locals>.retrieve(target, args)
+    135 """
+    136 Caching callback method to retrieve data into target file. Only called if
+    137 the data is not already cached.
+    138 """
+    139 # get the pointer and the url to download
+--> 140 pointers = self.client.retrieve(
+    141     args[0],
+    142     args[1],
+    143     pointer=True,
+    144     asynchronous=False,
+    145 )
+    147 url = pointers[0]["location"]
+    149 # download the file and return the associated HTTP header info.
+    150 # This might contain useful info such as content-type. It will be
+    151 # stored in the cache database.
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
+    196 def decorated(self, *args, **kwargs):
+--> 197     return fun(self, *args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:217, in authenticated.<locals>.decorated(self, *args, **kwargs)
+    215 @wraps(method, assign=default_assign + default_update, update=[])
+    216 def decorated(self, *args, **kwargs):
+--> 217     auth_headers = self.auth.get_auth_headers()
+    218     if len(auth_headers) < 1:
+    219         e = PolytopeError(situation=("trying to run a Polytope command " + "which requires authentication"))
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Auth.py:50, in Auth.get_auth_headers(self)
+     48 def get_auth_headers(self):
+     49     auth_headers = []
+---> 50     user_key, user_email, _ = self.fetch_key(login=False)
+     51     if user_key and user_email:
+     52         auth_headers.append("EmailKey %s:%s" % (user_email, user_key))
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Auth.py:153, in Auth.fetch_key(self, login)
+    151 try:
+    152     with open(str(key_file), "r") as infile:
+--> 153         info = json.load(infile)
+    154         key = info.get("user_key", None)
+    155         email = info.get("user_email", None)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/__init__.py:293, in load(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)
+    274 def load(fp, *, cls=None, object_hook=None, parse_float=None,
+    275         parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+    276     """Deserialize ``fp`` (a ``.read()``-supporting file-like object containing
+    277     a JSON document) to a Python object.
+    278 
+   (...)    291     kwarg; otherwise ``JSONDecoder`` is used.
+    292     """
+--> 293     return loads(fp.read(),
+    294         cls=cls, object_hook=object_hook,
+    295         parse_float=parse_float, parse_int=parse_int,
+    296         parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/__init__.py:346, in loads(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)
+    341     s = s.decode(detect_encoding(s), 'surrogatepass')
+    343 if (cls is None and object_hook is None and
+    344         parse_int is None and parse_float is None and
+    345         parse_constant is None and object_pairs_hook is None and not kw):
+--> 346     return _default_decoder.decode(s)
+    347 if cls is None:
+    348     cls = JSONDecoder
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/decoder.py:337, in JSONDecoder.decode(self, s, _w)
+    332 def decode(self, s, _w=WHITESPACE.match):
+    333     """Return the Python representation of ``s`` (a ``str`` instance
+    334     containing a JSON document).
+    335 
+    336     """
+--> 337     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+    338     end = _w(s, end).end()
+    339     if end != len(s):
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/decoder.py:355, in JSONDecoder.raw_decode(self, s, idx)
+    353     obj, end = self.scan_once(s, idx)
+    354 except StopIteration as err:
+--> 355     raise JSONDecodeError("Expecting value", s, err.value) from None
+    356 return obj, end
+
+JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
