@@ -1,0 +1,176 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<03:02,  8.28s/cell]Executing:   9%|▊         | 2/23 [00:09<01:28,  4.23s/cell]Executing:  13%|█▎        | 3/23 [00:15<01:34,  4.74s/cell]Executing:  22%|██▏       | 5/23 [00:15<00:37,  2.09s/cell]Executing:  30%|███       | 7/23 [00:15<00:19,  1.20s/cell]Executing:  39%|███▉      | 9/23 [00:15<00:10,  1.33cell/s]Executing:  61%|██████    | 14/23 [00:15<00:02,  3.06cell/s]Executing:  78%|███████▊  | 18/23 [00:15<00:01,  4.84cell/s]Executing:  91%|█████████▏| 21/23 [00:16<00:00,  3.80cell/s]Executing: 100%|██████████| 23/23 [00:19<00:00,  1.15cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<02:56,  8.02s/cell]Executing:   9%|▊         | 2/23 [00:14<02:27,  7.01s/cell]Executing:  35%|███▍      | 8/23 [00:14<00:17,  1.17s/cell]Executing:  39%|███▉      | 9/23 [00:18<00:28,  2.03s/cell]
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [7]":
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[7], line 4
+      3     load_location = Path(settings['path_ERA5']) / "work" / "diagnostic" / "script" 
+----> 4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+      5 except:    
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
+    272     msg = (
+    273         f"Forcing file {meta} not found. "
+    274         f"Perhaps you want to use {cls.__name__}(...)?"
+    275     )
+--> 276     raise FileNotFoundError(msg)
+    277 metadata = meta.read_text()
+
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_14050000/ERA5/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+
+During handling of the above exception, another exception occurred:
+
+RecipeError                               Traceback (most recent call last)
+Cell In[7], line 6
+      4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+      5 except:    
+----> 6     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
+      7        dataset="ERA5",
+      8        start_time=settings['calibration_start_date'],
+      9        end_time=settings['validation_end_date'],
+     10        directory=settings['path_ERA5'],
+     11        shape=settings['path_shape'],
+     12     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
+     47 @classmethod
+     48 def generate(  # type: ignore[override]
+     49     cls: type["Makkink"],
+   (...)     55     **model_specific_options,
+     56 ) -> "Makkink":
+---> 57     return super().generate(
+     58         dataset,
+     59         start_time,
+     60         end_time,
+     61         shape,
+     62         directory,
+     63         variables=("pr", "tas", "rsds"),
+     64         postprocessor=derive_e_pot,
+     65         **model_specific_options,
+     66     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
+    129 """Generate forcings for a model.
+    130 
+    131 The forcing is generated with help of
+   (...)    151     model_specific_options: Subclass specific options.
+    152 """
+    153 recipe = cls._build_recipe(
+    154     dataset=dataset,
+    155     start_time=get_time(start_time),
+   (...)    159     **model_specific_options,
+    160 )
+--> 162 recipe_output = cls._run_recipe(
+    163     recipe, directory=Path(directory) if directory else None
+    164 )
+    166 derived_variables: tuple[str, ...] = ()
+    167 if postprocessor is not None:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
+    211 @classmethod
+    212 def _run_recipe(
+    213     cls,
+    214     recipe: Recipe,
+    215     directory: Path | None = None,
+    216 ) -> dict[str, str]:
+--> 217     return run_recipe(recipe, directory)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
+    100 warnings.filterwarnings(  # Not relevant for end users.
+    101     action="ignore",
+    102     message="Thank you for trying out the new ESMValCore API",
+    103 )
+    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
+    105     action="ignore",
+    106     message="Saving to netcdf with legacy-style attribute",
+    107 )
+--> 109 output = _save_and_run_recipe(recipe, output_dir)
+    110 return _parse_recipe_output(output)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
+    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
+    136     session = _session(output_dir)
+--> 137     output = esmlvaltool_recipe.run(session=session)
+    138 finally:
+    139     recipe_path.unlink()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:137, in Recipe.run(self, task, session)
+    135 with log_to_dir(session.run_dir):
+    136     _dask.check_distributed_config()
+--> 137     self._engine = self._load(session=session)
+    138     self._engine.run()
+    140 shutil.copy2(self.path, session.run_dir)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:97, in Recipe._load(self, session)
+     78 """Load the recipe.
+     79 
+     80 This method loads the recipe into the internal ESMValCore Recipe
+   (...)     93     Return an instance of the Recipe
+     94 """
+     95 logger.info(pprint.pformat(session))
+---> 97 return RecipeEngine(raw_recipe=self.data,
+     98                     session=session,
+     99                     recipe_file=self.path)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:740, in Recipe.__init__(self, raw_recipe, session, recipe_file)
+    737 self.entity = self._initialize_provenance(
+    738     raw_recipe.get('documentation', {}))
+    739 try:
+--> 740     self.tasks = self.initialize_tasks()
+    741 except RecipeError as exc:
+    742     self._log_recipe_errors(exc)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1066, in Recipe.initialize_tasks(self)
+   1064 def initialize_tasks(self):
+   1065     """Define tasks in recipe."""
+-> 1066     tasks = self._create_tasks()
+   1067     tasks = tasks.flatten()
+   1068     logger.info("These tasks will be executed: %s",
+   1069                 ', '.join(t.name for t in tasks))
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1054, in Recipe._create_tasks(self)
+   1052     recipe_error = RecipeError('Could not create all tasks')
+   1053     recipe_error.failed_tasks.extend(failed_tasks)
+-> 1054     raise recipe_error
+   1056 check.tasks_valid(tasks)
+   1058 # Resolve diagnostic ancestors
+
+RecipeError: Could not create all tasks
+
