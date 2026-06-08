@@ -1,0 +1,174 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:42<15:33, 42.45s/cell]Executing:   9%|▊         | 2/23 [01:39<17:52, 51.08s/cell]Executing:  13%|█▎        | 3/23 [04:10<32:17, 96.86s/cell]Executing:  22%|██▏       | 5/23 [04:11<12:37, 42.08s/cell]Executing:  35%|███▍      | 8/23 [04:11<04:45, 19.04s/cell]Executing:  43%|████▎     | 10/23 [04:12<02:44, 12.65s/cell]Executing:  52%|█████▏    | 12/23 [04:12<01:33,  8.53s/cell]Executing:  61%|██████    | 14/23 [04:12<00:53,  5.90s/cell]Executing:  70%|██████▉   | 16/23 [04:13<00:28,  4.12s/cell]Executing:  74%|███████▍  | 17/23 [04:13<00:20,  3.43s/cell]Executing:  83%|████████▎ | 19/23 [04:35<00:23,  5.96s/cell]Executing:  91%|█████████▏| 21/23 [04:35<00:08,  4.02s/cell]Executing:  96%|█████████▌| 22/23 [04:38<00:03,  3.77s/cell]Executing: 100%|██████████| 23/23 [04:38<00:00,  3.01s/cell]Executing: 100%|██████████| 23/23 [04:42<00:00, 12.26s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:35,  1.62s/cell]Executing:   9%|▊         | 2/23 [00:11<02:16,  6.48s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:13,  3.66s/cell]Executing:  17%|█▋        | 4/23 [00:11<00:42,  2.26s/cell]Executing:  22%|██▏       | 5/23 [00:12<00:27,  1.52s/cell]Executing:  26%|██▌       | 6/23 [00:12<00:20,  1.19s/cell]Executing:  30%|███       | 7/23 [00:12<00:13,  1.16cell/s]Executing:  39%|███▉      | 9/23 [04:58<16:11, 69.38s/cell]Executing:  48%|████▊     | 11/23 [04:59<08:14, 41.22s/cell]Executing:  57%|█████▋    | 13/23 [05:00<04:23, 26.36s/cell]Executing:  61%|██████    | 14/23 [05:01<03:08, 20.90s/cell]Executing:  65%|██████▌   | 15/23 [05:01<02:09, 16.20s/cell]Executing:  74%|███████▍  | 17/23 [05:25<01:27, 14.61s/cell]Executing:  78%|███████▊  | 18/23 [05:26<00:57, 11.52s/cell]Executing:  87%|████████▋ | 20/23 [05:28<00:22,  7.42s/cell]Executing:  96%|█████████▌| 22/23 [19:53<02:38, 158.62s/cell]Executing:  96%|█████████▌| 22/23 [19:55<00:54, 54.36s/cell] 
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
+    pm.execute_notebook(
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [17]":
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+File <timed exec>:3
+
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:369, in DestinEHistoricalForcing.load(cls, directory)
+    367 directory = str(directory)
+--> 369 with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
+    370     config = yaml.safe_load(f)
+
+FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_04080000/DestinE_historical/ewatercycle_forcing.yaml'
+
+During handling of the above exception, another exception occurred:
+
+KeyError                                  Traceback (most recent call last)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:219, in CachingFileManager._acquire_with_cache_info(self, needs_lock)
+    218 try:
+--> 219     file = self._cache[self._key]
+    220 except KeyError:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/lru_cache.py:56, in LRUCache.__getitem__(self, key)
+     55 with self._lock:
+---> 56     value = self._cache[key]
+     57     self._cache.move_to_end(key)
+
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_04080000/DestinE_historical/DestinE_historic_day_pr_1994_08_01-2014_07_31.nc',), 'a', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), 'b0de1615-cbd0-41e1-a82c-aa5a50e9cbff']
+
+During handling of the above exception, another exception occurred:
+
+PermissionError                           Traceback (most recent call last)
+Cell In[17], line 1
+----> 1 get_ipython().run_cell_magic('time', '', '\n# Generate forcing for the calibration + validation period\ntry:\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.load(settings["path_DestinE_historical"])\n    print("Loading")\nexcept FileNotFoundError:\n# DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n    print("Generating")\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n        start_time=settings["calibration_start_date"],\n        end_time=settings["validation_end_date"],\n        directory=settings["path_DestinE_historical"],\n        shape=settings["path_shape"],\n    )\n\ndisplay(DestinE_hist_forcing_object)\n')
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/interactiveshell.py:2593, in InteractiveShell.run_cell_magic(self, magic_name, line, cell)
+   2591 with self.builtin_trap:
+   2592     args = (magic_arg_s, cell)
+-> 2593     result = fn(*args, **kwargs)
+   2595 # The code below prevents the output from being displayed
+   2596 # when using magics with decorator @output_can_be_silenced
+   2597 # when the last Python token in the expression is a ';'.
+   2598 if getattr(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, False):
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1448, in ExecutionMagics.time(self, line, cell, local_ns)
+   1446 if interrupt_occured:
+   1447     if exit_on_interrupt and captured_exception:
+-> 1448         raise captured_exception
+   1449     return
+   1450 return out
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1412, in ExecutionMagics.time(self, line, cell, local_ns)
+   1410 st = clock2()
+   1411 try:
+-> 1412     exec(code, glob, local_ns)
+   1413     out = None
+   1414     # multi-line %%time case
+
+File <timed exec>:8
+
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:535, in DestinEHistoricalForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
+    526 name_string = "DestinE_historic_day"
+    528 files = {
+    529     "pr": str(directory + f"/{name_string}_pr_{start_string}-{end_string}.nc"),
+    530     "tas": str(directory + f"/{name_string}_tas_{start_string}-{end_string}.nc"),
+    531     "rsds": str(directory + f"/{name_string}_rsds_{start_string}-{end_string}.nc"),
+    532     "evspsblpot": str(directory + f"/{name_string}_evspsblpot_{start_string}-{end_string}.nc")
+    533 }
+--> 535 ds_total["pr"].to_netcdf(files["pr"])
+    536 ds_total["tas"].to_netcdf(files["tas"])
+    537 ds_total["rsds"].to_netcdf(files["rsds"])
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/core/dataarray.py:4238, in DataArray.to_netcdf(self, path, mode, format, group, engine, encoding, unlimited_dims, compute, invalid_netcdf, auto_complex)
+   4234 else:
+   4235     # No problems with the name - so we're fine!
+   4236     dataset = self.to_dataset()
+-> 4238 return to_netcdf(  # type: ignore[return-value]  # mypy cannot resolve the overloads:(
+   4239     dataset,
+   4240     path,
+   4241     mode=mode,
+   4242     format=format,
+   4243     group=group,
+   4244     engine=engine,
+   4245     encoding=encoding,
+   4246     unlimited_dims=unlimited_dims,
+   4247     compute=compute,
+   4248     multifile=False,
+   4249     invalid_netcdf=invalid_netcdf,
+   4250     auto_complex=auto_complex,
+   4251 )
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/writers.py:422, in to_netcdf(dataset, path_or_file, mode, format, group, engine, encoding, unlimited_dims, compute, multifile, invalid_netcdf, auto_complex)
+    419 else:
+    420     target = normalized_path  # type: ignore[assignment]
+--> 422 store = get_writable_netcdf_store(
+    423     target,
+    424     engine,
+    425     mode=mode,
+    426     format=format,
+    427     autoclose=autoclose,
+    428     invalid_netcdf=invalid_netcdf,
+    429     auto_complex=auto_complex,
+    430 )
+    431 if group is not None:
+    432     store = store.get_child_store(group)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/writers.py:78, in get_writable_netcdf_store(target, engine, format, mode, autoclose, invalid_netcdf, auto_complex)
+     75 if auto_complex is not None:
+     76     kwargs["auto_complex"] = auto_complex
+---> 78 return store_open(target, mode=mode, format=format, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:529, in NetCDF4DataStore.open(cls, filename, mode, format, group, clobber, diskless, persist, auto_complex, lock, lock_maker, autoclose)
+    525 else:
+    526     manager = CachingFileManager(
+    527         netCDF4.Dataset, filename, mode=mode, kwargs=kwargs, lock=lock
+    528     )
+--> 529 return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:429, in NetCDF4DataStore.__init__(self, manager, group, mode, lock, autoclose)
+    427 self._group = group
+    428 self._mode = mode
+--> 429 self.format = self.ds.data_model
+    430 self._filename = self.ds.filepath()
+    431 self.is_remote = is_remote_uri(self._filename)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:538, in NetCDF4DataStore.ds(self)
+    536 @property
+    537 def ds(self):
+--> 538     return self._acquire()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:532, in NetCDF4DataStore._acquire(self, needs_lock)
+    531 def _acquire(self, needs_lock=True):
+--> 532     with self._manager.acquire_context(needs_lock) as root:
+    533         ds = _nc4_require_group(root, self._group, self._mode)
+    534     return ds
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py:137, in _GeneratorContextManager.__enter__(self)
+    135 del self.args, self.kwds, self.func
+    136 try:
+--> 137     return next(self.gen)
+    138 except StopIteration:
+    139     raise RuntimeError("generator didn't yield") from None
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:207, in CachingFileManager.acquire_context(self, needs_lock)
+    204 @contextmanager
+    205 def acquire_context(self, needs_lock: bool = True) -> Iterator[T_File]:
+    206     """Context manager for acquiring a file."""
+--> 207     file, cached = self._acquire_with_cache_info(needs_lock)
+    208     try:
+    209         yield file
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:225, in CachingFileManager._acquire_with_cache_info(self, needs_lock)
+    223     kwargs = kwargs.copy()
+    224     kwargs["mode"] = self._mode
+--> 225 file = self._opener(*self._args, **kwargs)
+    226 if self._mode == "w":
+    227     # ensure file doesn't get overridden when opened again
+    228     self._mode = "a"
+
+File src/netCDF4/_netCDF4.pyx:2521, in netCDF4._netCDF4.Dataset.__init__()
+
+File src/netCDF4/_netCDF4.pyx:2158, in netCDF4._netCDF4._ensure_nc_success()
+
+PermissionError: [Errno 13] Permission denied: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_04080000/DestinE_historical/DestinE_historic_day_pr_1994_08_01-2014_07_31.nc'
+
