@@ -1,3 +1,4 @@
-climatechangeimpact/regions/*/*/step_4_analyse* !text !filter !merge !diff
 climatechangeimpact/regions/*/*/*.ipynb filter=lfs diff=lfs merge=lfs -text
 climatechangeimpact/regions/*/*/step_4_analyse* !text -filter -merge -diff
+climatechangeimpact/regions/*/*/figures/* filter=lfs diff=lfs merge=lfs
+climatechangeimpact/regions/*/*/figures/mev_weibull_HBV.png !filter !diff !merge
