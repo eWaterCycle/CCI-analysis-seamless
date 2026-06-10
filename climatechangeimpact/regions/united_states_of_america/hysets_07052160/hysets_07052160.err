@@ -1,33 +1,5 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:40,  7.28s/cell]Executing:   9%|▊         | 2/23 [00:08<01:14,  3.54s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:09,  3.50s/cell]Executing:  26%|██▌       | 6/23 [00:11<00:20,  1.21s/cell]Executing:  43%|████▎     | 10/23 [00:12<00:07,  1.70cell/s]Executing:  52%|█████▏    | 12/23 [00:12<00:05,  1.95cell/s]Executing:  57%|█████▋    | 13/23 [00:13<00:04,  2.15cell/s]Executing:  70%|██████▉   | 16/23 [00:13<00:02,  3.48cell/s]Executing:  78%|███████▊  | 18/23 [00:13<00:01,  3.46cell/s]Executing:  83%|████████▎ | 19/23 [00:14<00:01,  2.63cell/s]Executing:  87%|████████▋ | 20/23 [00:14<00:01,  2.73cell/s]Executing:  96%|█████████▌| 22/23 [00:15<00:00,  2.51cell/s]Executing: 100%|██████████| 23/23 [00:15<00:00,  2.86cell/s]Executing: 100%|██████████| 23/23 [00:18<00:00,  1.24cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:06<02:28,  6.73s/cell]Executing:   9%|▊         | 2/23 [00:11<01:51,  5.33s/cell]Executing:  22%|██▏       | 5/23 [00:11<00:27,  1.54s/cell]Executing:  30%|███       | 7/23 [00:11<00:15,  1.01cell/s]Executing:  35%|███▍      | 8/23 [00:11<00:12,  1.23cell/s]Executing:  39%|███▉      | 9/23 [00:12<00:11,  1.21cell/s]Executing:  39%|███▉      | 9/23 [00:15<00:23,  1.69s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:24<09:06, 24.83s/cell]Executing:   9%|▊         | 2/23 [00:56<10:04, 28.80s/cell]Executing:  13%|█▎        | 3/23 [02:18<17:38, 52.93s/cell]Executing:  22%|██▏       | 5/23 [02:18<06:55, 23.07s/cell]Executing:  30%|███       | 7/23 [02:19<03:27, 12.94s/cell]Executing:  39%|███▉      | 9/23 [02:19<01:50,  7.92s/cell]Executing:  48%|████▊     | 11/23 [02:19<01:01,  5.12s/cell]Executing:  57%|█████▋    | 13/23 [02:20<00:34,  3.48s/cell]Executing:  70%|██████▉   | 16/23 [02:20<00:14,  2.06s/cell]Executing:  74%|███████▍  | 17/23 [02:20<00:10,  1.75s/cell]Executing:  78%|███████▊  | 18/23 [02:20<00:07,  1.44s/cell]Executing:  83%|████████▎ | 19/23 [02:31<00:14,  3.54s/cell]Executing:  96%|█████████▌| 22/23 [02:33<00:02,  2.14s/cell]Executing: 100%|██████████| 23/23 [02:36<00:00,  6.82s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:32,  1.47s/cell]Executing:   9%|▊         | 2/23 [00:07<01:31,  4.37s/cell]Executing:  17%|█▋        | 4/23 [00:08<00:31,  1.68s/cell]Executing:  22%|██▏       | 5/23 [00:08<00:21,  1.20s/cell]Executing:  30%|███       | 7/23 [00:08<00:11,  1.45cell/s]Executing:  35%|███▍      | 8/23 [00:08<00:08,  1.85cell/s]Executing:  39%|███▉      | 9/23 [04:40<16:49, 72.13s/cell]Executing:  48%|████▊     | 11/23 [04:41<08:15, 41.32s/cell]Executing:  61%|██████    | 14/23 [04:41<03:14, 21.57s/cell]Executing:  70%|██████▉   | 16/23 [04:41<01:43, 14.83s/cell]Executing:  74%|███████▍  | 17/23 [06:50<03:34, 35.74s/cell]Executing:  74%|███████▍  | 17/23 [06:52<02:25, 24.29s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -37,13 +9,13 @@ Traceback (most recent call last):
     raise error
 papermill.exceptions.PapermillExecutionError: 
 ---------------------------------------------------------------------------
-Exception encountered at "In [7]":
+Exception encountered at "In [13]":
 ---------------------------------------------------------------------------
 FileNotFoundError                         Traceback (most recent call last)
-Cell In[7], line 4
-      3     load_location = Path(settings['path_ERA5']) / "work" / "diagnostic" / "script" 
-----> 4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-      5 except:    
+Cell In[13], line 24
+     23     load_location = path_CMIP6 / "work" / "diagnostic" / "script" 
+---> 24     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+     25 except:
 
 File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
     272     msg = (
@@ -53,21 +25,22 @@ File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in D
 --> 276     raise FileNotFoundError(msg)
     277 metadata = meta.read_text()
 
-FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_07052160/ERA5/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_07052160/CMIP6/MPI-ESM1-2-LR/historical/r1i1p1f1/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
 
 During handling of the above exception, another exception occurred:
 
-RecipeError                               Traceback (most recent call last)
-Cell In[7], line 6
-      4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-      5 except:    
-----> 6     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
-      7        dataset="ERA5",
-      8        start_time=settings['calibration_start_date'],
-      9        end_time=settings['validation_end_date'],
-     10        directory=settings['path_ERA5'],
-     11        shape=settings['path_shape'],
-     12     )
+DownloadError                             Traceback (most recent call last)
+Cell In[13], line 30
+     27         shutil.rmtree(path_CMIP6)
+     28     path_CMIP6.mkdir(exist_ok=True, parents=True)
+---> 30     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
+     31        dataset=cmip_dataset,
+     32        start_time=settings['calibration_start_date'],
+     33        end_time=settings['validation_end_date'],
+     34        directory=path_CMIP6,
+     35        shape=settings['path_shape'],
+     36     )
+     38 display(CMIP_forcing_object)
 
 File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
      47 @classmethod
@@ -131,46 +104,31 @@ File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in
     138 finally:
     139     recipe_path.unlink()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:137, in Recipe.run(self, task, session)
-    135 with log_to_dir(session.run_dir):
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:138, in Recipe.run(self, task, session)
     136     _dask.check_distributed_config()
---> 137     self._engine = self._load(session=session)
-    138     self._engine.run()
+    137     self._engine = self._load(session=session)
+--> 138     self._engine.run()
     140 shutil.copy2(self.path, session.run_dir)
+    142 output = self.get_output()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:97, in Recipe._load(self, session)
-     78 """Load the recipe.
-     79 
-     80 This method loads the recipe into the internal ESMValCore Recipe
-   (...)     93     Return an instance of the Recipe
-     94 """
-     95 logger.info(pprint.pformat(session))
----> 97 return RecipeEngine(raw_recipe=self.data,
-     98                     session=session,
-     99                     recipe_file=self.path)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1093, in Recipe.run(self)
+   1091 # Download required data
+   1092 if self.session['search_esgf'] != 'never':
+-> 1093     esgf.download(self._download_files, self.session['download_dir'])
+   1095 self.tasks.run(max_parallel_tasks=self.session['max_parallel_tasks'])
+   1096 logger.info(
+   1097     "Wrote recipe with version numbers and wildcards "
+   1098     "to:\nfile://%s", filled_recipe)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:740, in Recipe.__init__(self, raw_recipe, session, recipe_file)
-    737 self.entity = self._initialize_provenance(
-    738     raw_recipe.get('documentation', {}))
-    739 try:
---> 740     self.tasks = self.initialize_tasks()
-    741 except RecipeError as exc:
-    742     self._log_recipe_errors(exc)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:582, in download(files, dest_folder, n_jobs)
+    579 if errors:
+    580     msg = ("Failed to download the following files:\n" +
+    581            "\n".join(sorted(str(error) for error in errors)))
+--> 582     raise DownloadError(msg)
+    584 logger.info("Successfully downloaded all requested files.")
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1066, in Recipe.initialize_tasks(self)
-   1064 def initialize_tasks(self):
-   1065     """Define tasks in recipe."""
--> 1066     tasks = self._create_tasks()
-   1067     tasks = tasks.flatten()
-   1068     logger.info("These tasks will be executed: %s",
-   1069                 ', '.join(t.name for t in tasks))
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1054, in Recipe._create_tasks(self)
-   1052     recipe_error = RecipeError('Could not create all tasks')
-   1053     recipe_error.failed_tasks.extend(failed_tasks)
--> 1054     raise recipe_error
-   1056 check.tasks_valid(tasks)
-   1058 # Resolve diagnostic ancestors
-
-RecipeError: Could not create all tasks
+DownloadError: Failed to download the following files:
+Failed to download file /project/ewater/Data/ewatercycleClimateImpact/HBV/downloads/hysets_07052160/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc, errors:
+https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc: ('Connection broken: IncompleteRead(324460035 bytes read, 48672246 more expected)', IncompleteRead(324460035 bytes read, 48672246 more expected))
+http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc: HTTPConnectionPool(host='esgf3.dkrz.de', port=80): Max retries exceeded with url: /thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1cb8d27830>: Failed to establish a new connection: [Errno 111] Connection refused'))
 

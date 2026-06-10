@@ -1,70 +1,136 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/runpy.py", line 198, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/runpy.py", line 88, in _run_code
-    exec(code, run_globals)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel_launcher.py", line 18, in <module>
-    app.launch_new_instance()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/traitlets/config/application.py", line 1074, in launch_instance
-    app.initialize(argv)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/traitlets/config/application.py", line 118, in inner
-    return method(app, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 711, in initialize
-    self.init_sockets()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 333, in init_sockets
-    self.shell_port = self._bind_socket(self.shell_socket, self.shell_port)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 255, in _bind_socket
-    return self._try_bind_socket(s, port)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 231, in _try_bind_socket
-    s.bind("tcp://%s:%i" % (self.ip, port))
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/zmq/sugar/socket.py", line 320, in bind
-    super().bind(addr)
-  File "zmq/backend/cython/_zmq.py", line 1009, in zmq.backend.cython._zmq.Socket.bind
-    _check_rc(rc)
-    ^^^^^^^^^^^
-  File "zmq/backend/cython/_zmq.py", line 190, in zmq.backend.cython._zmq._check_rc
-    raise ZMQError(errno)
-    ^^^^^^^^^^^
-zmq.error.ZMQError: Address already in use (addr='tcp://127.0.0.1:37747')
-Error occurred while starting new kernel client for kernel 6f4224b3-ef75-4cf9-8c47-51407bae7639: Kernel died before replying to kernel_info
-Executing:   0%|          | 0/23 [00:03<?, ?cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:38,  1.77s/cell]Executing:   9%|▊         | 2/23 [00:04<00:46,  2.24s/cell]Executing:  13%|█▎        | 3/23 [00:14<02:00,  6.02s/cell]Executing:  22%|██▏       | 5/23 [00:15<00:49,  2.74s/cell]Executing:  35%|███▍      | 8/23 [00:15<00:18,  1.27s/cell]Executing:  43%|████▎     | 10/23 [00:15<00:11,  1.17cell/s]Executing:  52%|█████▏    | 12/23 [00:15<00:06,  1.65cell/s]Executing:  61%|██████    | 14/23 [00:16<00:04,  2.15cell/s]Executing:  74%|███████▍  | 17/23 [00:16<00:01,  3.37cell/s]Executing:  83%|████████▎ | 19/23 [00:23<00:04,  1.19s/cell]Executing:  96%|█████████▌| 22/23 [00:31<00:01,  1.72s/cell]Executing: 100%|██████████| 23/23 [00:32<00:00,  1.42s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:07<02:43,  7.43s/cell]Executing:   9%|▊         | 2/23 [01:00<12:04, 34.49s/cell]Executing:  22%|██▏       | 5/23 [01:00<02:56,  9.82s/cell]Executing:  30%|███       | 7/23 [01:01<01:34,  5.91s/cell]Executing:  35%|███▍      | 8/23 [01:17<01:28,  5.91s/cell]Executing:  39%|███▉      | 9/23 [04:18<09:18, 39.89s/cell]Executing:  43%|████▎     | 10/23 [04:18<06:51, 31.68s/cell]Executing:  48%|████▊     | 11/23 [04:19<04:55, 24.65s/cell]Executing:  61%|██████    | 14/23 [04:20<01:52, 12.54s/cell]Executing:  65%|██████▌   | 15/23 [04:20<01:21, 10.22s/cell]Executing:  74%|███████▍  | 17/23 [07:41<04:12, 42.05s/cell]Executing:  78%|███████▊  | 18/23 [07:41<02:48, 33.66s/cell]Executing:  87%|████████▋ | 20/23 [07:42<01:04, 21.53s/cell]Executing:  91%|█████████▏| 21/23 [07:43<00:34, 17.13s/cell]Executing:  96%|█████████▌| 22/23 [11:31<01:05, 65.40s/cell]Executing: 100%|██████████| 23/23 [11:32<00:00, 49.53s/cell]Executing: 100%|██████████| 23/23 [11:35<00:00, 30.23s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:01<00:16,  1.26s/cell]Executing:  14%|█▍        | 2/14 [00:05<00:37,  3.16s/cell]Executing:  21%|██▏       | 3/14 [00:05<00:19,  1.81s/cell]Executing:  29%|██▊       | 4/14 [00:06<00:11,  1.15s/cell]Executing:  43%|████▎     | 6/14 [00:06<00:04,  1.61cell/s]Executing:  50%|█████     | 7/14 [00:06<00:03,  1.86cell/s]Executing:  64%|██████▍   | 9/14 [00:06<00:01,  3.01cell/s]Executing:  71%|███████▏  | 10/14 [06:19<05:56, 89.19s/cell]Executing:  71%|███████▏  | 10/14 [06:20<02:32, 38.08s/cell]
 Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
-    nb = papermill_engines.execute_notebook_with_engine(
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
-    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
-    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
-    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
-    with self.setup_kernel(**kwargs):
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py", line 137, in __enter__
-    return next(self.gen)
-           ^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 603, in setup_kernel
-    self.start_new_kernel_client()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
-    return loop.run_until_complete(inner)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
-    return future.result()
-           ^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 566, in async_start_new_kernel_client
-    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
-    result = await obj
-             ^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_client/client.py", line 204, in _async_wait_for_ready
-    raise RuntimeError(msg)
-RuntimeError: Kernel died before replying to kernel_info
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [8]":
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[8], line 25
+     24     load_location = path_CMIP6 / "work" / "diagnostic" / "script" 
+---> 25     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+     26 except:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
+    272     msg = (
+    273         f"Forcing file {meta} not found. "
+    274         f"Perhaps you want to use {cls.__name__}(...)?"
+    275     )
+--> 276     raise FileNotFoundError(msg)
+    277 metadata = meta.read_text()
+
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_07086500/CMIP6/MPI-ESM1-2-LR/ssp126/r3i1p1f1/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+
+During handling of the above exception, another exception occurred:
+
+DownloadError                             Traceback (most recent call last)
+Cell In[8], line 30
+     28         shutil.rmtree(path_CMIP6)
+     29     path_CMIP6.mkdir(exist_ok=True, parents=True)
+---> 30     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
+     31        dataset=cmip_dataset,
+     32        start_time=settings['future_start_date'],
+     33        end_time=settings['future_end_date'],
+     34        directory=path_CMIP6,
+     35        shape=settings['path_shape'],
+     36     )
+     37 display(CMIP_forcing_object)
+     39 # Quick plot of the precipitation and potential evaporation data
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
+     47 @classmethod
+     48 def generate(  # type: ignore[override]
+     49     cls: type["Makkink"],
+   (...)     55     **model_specific_options,
+     56 ) -> "Makkink":
+---> 57     return super().generate(
+     58         dataset,
+     59         start_time,
+     60         end_time,
+     61         shape,
+     62         directory,
+     63         variables=("pr", "tas", "rsds"),
+     64         postprocessor=derive_e_pot,
+     65         **model_specific_options,
+     66     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
+    129 """Generate forcings for a model.
+    130 
+    131 The forcing is generated with help of
+   (...)    151     model_specific_options: Subclass specific options.
+    152 """
+    153 recipe = cls._build_recipe(
+    154     dataset=dataset,
+    155     start_time=get_time(start_time),
+   (...)    159     **model_specific_options,
+    160 )
+--> 162 recipe_output = cls._run_recipe(
+    163     recipe, directory=Path(directory) if directory else None
+    164 )
+    166 derived_variables: tuple[str, ...] = ()
+    167 if postprocessor is not None:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
+    211 @classmethod
+    212 def _run_recipe(
+    213     cls,
+    214     recipe: Recipe,
+    215     directory: Path | None = None,
+    216 ) -> dict[str, str]:
+--> 217     return run_recipe(recipe, directory)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
+    100 warnings.filterwarnings(  # Not relevant for end users.
+    101     action="ignore",
+    102     message="Thank you for trying out the new ESMValCore API",
+    103 )
+    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
+    105     action="ignore",
+    106     message="Saving to netcdf with legacy-style attribute",
+    107 )
+--> 109 output = _save_and_run_recipe(recipe, output_dir)
+    110 return _parse_recipe_output(output)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
+    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
+    136     session = _session(output_dir)
+--> 137     output = esmlvaltool_recipe.run(session=session)
+    138 finally:
+    139     recipe_path.unlink()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:138, in Recipe.run(self, task, session)
+    136     _dask.check_distributed_config()
+    137     self._engine = self._load(session=session)
+--> 138     self._engine.run()
+    140 shutil.copy2(self.path, session.run_dir)
+    142 output = self.get_output()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1093, in Recipe.run(self)
+   1091 # Download required data
+   1092 if self.session['search_esgf'] != 'never':
+-> 1093     esgf.download(self._download_files, self.session['download_dir'])
+   1095 self.tasks.run(max_parallel_tasks=self.session['max_parallel_tasks'])
+   1096 logger.info(
+   1097     "Wrote recipe with version numbers and wildcards "
+   1098     "to:\nfile://%s", filled_recipe)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:582, in download(files, dest_folder, n_jobs)
+    579 if errors:
+    580     msg = ("Failed to download the following files:\n" +
+    581            "\n".join(sorted(str(error) for error in errors)))
+--> 582     raise DownloadError(msg)
+    584 logger.info("Successfully downloaded all requested files.")
+
+DownloadError: Failed to download the following files:
+Failed to download file /project/ewater/Data/ewatercycleClimateImpact/HBV/downloads/hysets_07086500/CMIP6/ScenarioMIP/MPI-M/MPI-ESM1-2-LR/ssp126/r3i1p1f1/fx/areacella/gn/v20190710/areacella_fx_MPI-ESM1-2-LR_ssp126_r3i1p1f1_gn.nc, errors:
+https://esgf.nci.org.au/thredds/fileServer/esgcet/replica/CMIP6/ScenarioMIP/MPI-M/MPI-ESM1-2-LR/ssp126/r3i1p1f1/fx/areacella/gn/v20190710/areacella_fx_MPI-ESM1-2-LR_ssp126_r3i1p1f1_gn.nc: 502 Server Error: Bad Gateway for url: https://esgf.nci.org.au/thredds/fileServer/esgcet/replica/CMIP6/ScenarioMIP/MPI-M/MPI-ESM1-2-LR/ssp126/r3i1p1f1/fx/areacella/gn/v20190710/areacella_fx_MPI-ESM1-2-LR_ssp126_r3i1p1f1_gn.nc
+http://esgf3.dkrz.de/thredds/fileServer/cmip6/ScenarioMIP/MPI-M/MPI-ESM1-2-LR/ssp126/r3i1p1f1/fx/areacella/gn/v20190710/areacella_fx_MPI-ESM1-2-LR_ssp126_r3i1p1f1_gn.nc: HTTPConnectionPool(host='esgf3.dkrz.de', port=80): Max retries exceeded with url: /thredds/fileServer/cmip6/ScenarioMIP/MPI-M/MPI-ESM1-2-LR/ssp126/r3i1p1f1/fx/areacella/gn/v20190710/areacella_fx_MPI-ESM1-2-LR_ssp126_r3i1p1f1_gn.nc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f183c551bb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+

@@ -1,33 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:38,  7.21s/cell]Executing:   9%|▊         | 2/23 [00:08<01:13,  3.48s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:09,  3.48s/cell]Executing:  52%|█████▏    | 12/23 [00:11<00:05,  1.93cell/s]Executing:  74%|███████▍  | 17/23 [00:11<00:01,  3.15cell/s]Executing:  91%|█████████▏| 21/23 [00:12<00:00,  3.60cell/s]Executing: 100%|██████████| 23/23 [00:15<00:00,  1.48cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:06<02:31,  6.89s/cell]Executing:   9%|▊         | 2/23 [00:11<01:52,  5.37s/cell]Executing:  13%|█▎        | 3/23 [00:11<00:59,  2.97s/cell]Executing:  39%|███▉      | 9/23 [00:12<00:10,  1.37cell/s]Executing:  39%|███▉      | 9/23 [00:14<00:23,  1.65s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:48,  2.20s/cell]Executing:   9%|▊         | 2/23 [00:03<00:37,  1.77s/cell]Executing:  13%|█▎        | 3/23 [00:08<01:02,  3.15s/cell]Executing:  22%|██▏       | 5/23 [00:08<00:26,  1.46s/cell]Executing:  26%|██▌       | 6/23 [00:08<00:18,  1.07s/cell]Executing:  30%|███       | 7/23 [00:09<00:14,  1.14cell/s]Executing:  35%|███▍      | 8/23 [00:09<00:09,  1.51cell/s]Executing:  39%|███▉      | 9/23 [00:09<00:07,  1.91cell/s]Executing:  52%|█████▏    | 12/23 [00:09<00:02,  3.98cell/s]Executing:  65%|██████▌   | 15/23 [00:09<00:01,  5.98cell/s]Executing:  74%|███████▍  | 17/23 [00:10<00:00,  6.02cell/s]Executing:  83%|████████▎ | 19/23 [00:11<00:01,  2.95cell/s]Executing:  87%|████████▋ | 20/23 [00:11<00:00,  3.30cell/s]Executing:  96%|█████████▌| 22/23 [00:12<00:00,  3.01cell/s]Executing: 100%|██████████| 23/23 [00:12<00:00,  3.25cell/s]Executing: 100%|██████████| 23/23 [00:15<00:00,  1.48cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:25,  1.14s/cell]Executing:   9%|▊         | 2/23 [00:07<01:24,  4.03s/cell]Executing:  22%|██▏       | 5/23 [00:07<00:21,  1.19s/cell]Executing:  26%|██▌       | 6/23 [00:07<00:16,  1.05cell/s]Executing:  39%|███▉      | 9/23 [04:40<11:09, 47.81s/cell]Executing:  43%|████▎     | 10/23 [04:40<08:18, 38.32s/cell]Executing:  48%|████▊     | 11/23 [04:41<06:00, 30.03s/cell]Executing:  61%|██████    | 14/23 [04:41<02:18, 15.43s/cell]Executing:  70%|██████▉   | 16/23 [04:54<01:48, 15.43s/cell]Executing:  74%|███████▍  | 17/23 [05:54<01:54, 19.07s/cell]Executing:  78%|███████▊  | 18/23 [05:54<01:20, 16.03s/cell]Executing:  87%|████████▋ | 20/23 [05:54<00:32, 10.99s/cell]Executing:  96%|█████████▌| 22/23 [11:42<01:01, 61.83s/cell]Executing: 100%|██████████| 23/23 [11:43<00:00, 50.75s/cell]Executing: 100%|██████████| 23/23 [11:45<00:00, 30.69s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:01<00:20,  1.55s/cell]Executing:  14%|█▍        | 2/14 [00:08<00:58,  4.85s/cell]Executing:  29%|██▊       | 4/14 [00:09<00:19,  1.94s/cell]Executing:  36%|███▌      | 5/14 [00:09<00:12,  1.43s/cell]Executing:  43%|████▎     | 6/14 [00:09<00:08,  1.10s/cell]Executing:  50%|█████     | 7/14 [00:10<00:06,  1.13cell/s]Executing:  64%|██████▍   | 9/14 [00:10<00:03,  1.53cell/s]Executing:  71%|███████▏  | 10/14 [14:20<14:09, 212.36s/cell]Executing:  86%|████████▌ | 12/14 [14:20<04:08, 124.08s/cell]Executing:  93%|█████████▎| 13/14 [14:21<01:35, 95.71s/cell] Executing: 100%|██████████| 14/14 [20:07<00:00, 157.64s/cell]Executing: 100%|██████████| 14/14 [20:10<00:00, 86.48s/cell] 
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -37,140 +10,153 @@ Traceback (most recent call last):
     raise error
 papermill.exceptions.PapermillExecutionError: 
 ---------------------------------------------------------------------------
-Exception encountered at "In [7]":
+Exception encountered at "In [11]":
 ---------------------------------------------------------------------------
 FileNotFoundError                         Traceback (most recent call last)
-Cell In[7], line 4
-      3     load_location = Path(settings['path_ERA5']) / "work" / "diagnostic" / "script" 
-----> 4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-      5 except:    
+Cell In[11], line 3
+      2 try:
+----> 3     DestinE_forcing_object = DestinEFutureForcing.load(settings['path_DestinE'])
+      4 except:
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
-    272     msg = (
-    273         f"Forcing file {meta} not found. "
-    274         f"Perhaps you want to use {cls.__name__}(...)?"
-    275     )
---> 276     raise FileNotFoundError(msg)
-    277 metadata = meta.read_text()
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:670, in DestinEFutureForcing.load(cls, directory)
+    668 directory = str(directory)
+--> 670 with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
+    671     config = yaml.safe_load(f)
 
-FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_07140900/ERA5/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_07140900/DestinE/ewatercycle_forcing.yaml'
 
 During handling of the above exception, another exception occurred:
 
-RecipeError                               Traceback (most recent call last)
-Cell In[7], line 6
-      4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-      5 except:    
-----> 6     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
-      7        dataset="ERA5",
-      8        start_time=settings['calibration_start_date'],
-      9        end_time=settings['validation_end_date'],
-     10        directory=settings['path_ERA5'],
-     11        shape=settings['path_shape'],
-     12     )
+KeyError                                  Traceback (most recent call last)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:219, in CachingFileManager._acquire_with_cache_info(self, needs_lock)
+    218 try:
+--> 219     file = self._cache[self._key]
+    220 except KeyError:
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
-     47 @classmethod
-     48 def generate(  # type: ignore[override]
-     49     cls: type["Makkink"],
-   (...)     55     **model_specific_options,
-     56 ) -> "Makkink":
----> 57     return super().generate(
-     58         dataset,
-     59         start_time,
-     60         end_time,
-     61         shape,
-     62         directory,
-     63         variables=("pr", "tas", "rsds"),
-     64         postprocessor=derive_e_pot,
-     65         **model_specific_options,
-     66     )
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/lru_cache.py:56, in LRUCache.__getitem__(self, key)
+     55 with self._lock:
+---> 56     value = self._cache[key]
+     57     self._cache.move_to_end(key)
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
-    129 """Generate forcings for a model.
-    130 
-    131 The forcing is generated with help of
-   (...)    151     model_specific_options: Subclass specific options.
-    152 """
-    153 recipe = cls._build_recipe(
-    154     dataset=dataset,
-    155     start_time=get_time(start_time),
-   (...)    159     **model_specific_options,
-    160 )
---> 162 recipe_output = cls._run_recipe(
-    163     recipe, directory=Path(directory) if directory else None
-    164 )
-    166 derived_variables: tuple[str, ...] = ()
-    167 if postprocessor is not None:
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_07140900/DestinE/DestinE_future_day_pr_2029_08_01-2049_08_31.nc',), 'a', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '98ac6f51-b5b3-4b53-ae33-26dc25ab072b']
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
-    211 @classmethod
-    212 def _run_recipe(
-    213     cls,
-    214     recipe: Recipe,
-    215     directory: Path | None = None,
-    216 ) -> dict[str, str]:
---> 217     return run_recipe(recipe, directory)
+During handling of the above exception, another exception occurred:
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
-    100 warnings.filterwarnings(  # Not relevant for end users.
-    101     action="ignore",
-    102     message="Thank you for trying out the new ESMValCore API",
-    103 )
-    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
-    105     action="ignore",
-    106     message="Saving to netcdf with legacy-style attribute",
-    107 )
---> 109 output = _save_and_run_recipe(recipe, output_dir)
-    110 return _parse_recipe_output(output)
+PermissionError                           Traceback (most recent call last)
+Cell In[11], line 5
+      3     DestinE_forcing_object = DestinEFutureForcing.load(settings['path_DestinE'])
+      4 except:
+----> 5     DestinE_forcing_object = DestinEFutureForcing.generate(
+      6        start_time=settings['future_start_date'],
+      7        end_time=settings['future_end_date'],
+      8        directory=settings['path_DestinE'],
+      9        shape=settings['path_shape'],
+     10     )
+     12 display(DestinE_forcing_object)
+     14 # Quick plot of the precipitation and potential evaporation data
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
-    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
-    136     session = _session(output_dir)
---> 137     output = esmlvaltool_recipe.run(session=session)
-    138 finally:
-    139     recipe_path.unlink()
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:830, in DestinEFutureForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
+    821 name_string = "DestinE_future_day"
+    823 files = {
+    824     "pr": str(directory + f"/{name_string}_pr_{start_string}-{end_string}.nc"),
+    825     "tas": str(directory + f"/{name_string}_tas_{start_string}-{end_string}.nc"),
+    826     "rsds": str(directory + f"/{name_string}_rsds_{start_string}-{end_string}.nc"),
+    827     "evspsblpot": str(directory + f"/{name_string}_evspsblpot_{start_string}-{end_string}.nc")
+    828 }
+--> 830 ds_total["pr"].to_netcdf(files["pr"])
+    831 ds_total["tas"].to_netcdf(files["tas"])
+    832 ds_total["rsds"].to_netcdf(files["rsds"])
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:137, in Recipe.run(self, task, session)
-    135 with log_to_dir(session.run_dir):
-    136     _dask.check_distributed_config()
---> 137     self._engine = self._load(session=session)
-    138     self._engine.run()
-    140 shutil.copy2(self.path, session.run_dir)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/core/dataarray.py:4238, in DataArray.to_netcdf(self, path, mode, format, group, engine, encoding, unlimited_dims, compute, invalid_netcdf, auto_complex)
+   4234 else:
+   4235     # No problems with the name - so we're fine!
+   4236     dataset = self.to_dataset()
+-> 4238 return to_netcdf(  # type: ignore[return-value]  # mypy cannot resolve the overloads:(
+   4239     dataset,
+   4240     path,
+   4241     mode=mode,
+   4242     format=format,
+   4243     group=group,
+   4244     engine=engine,
+   4245     encoding=encoding,
+   4246     unlimited_dims=unlimited_dims,
+   4247     compute=compute,
+   4248     multifile=False,
+   4249     invalid_netcdf=invalid_netcdf,
+   4250     auto_complex=auto_complex,
+   4251 )
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:97, in Recipe._load(self, session)
-     78 """Load the recipe.
-     79 
-     80 This method loads the recipe into the internal ESMValCore Recipe
-   (...)     93     Return an instance of the Recipe
-     94 """
-     95 logger.info(pprint.pformat(session))
----> 97 return RecipeEngine(raw_recipe=self.data,
-     98                     session=session,
-     99                     recipe_file=self.path)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/writers.py:422, in to_netcdf(dataset, path_or_file, mode, format, group, engine, encoding, unlimited_dims, compute, multifile, invalid_netcdf, auto_complex)
+    419 else:
+    420     target = normalized_path  # type: ignore[assignment]
+--> 422 store = get_writable_netcdf_store(
+    423     target,
+    424     engine,
+    425     mode=mode,
+    426     format=format,
+    427     autoclose=autoclose,
+    428     invalid_netcdf=invalid_netcdf,
+    429     auto_complex=auto_complex,
+    430 )
+    431 if group is not None:
+    432     store = store.get_child_store(group)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:740, in Recipe.__init__(self, raw_recipe, session, recipe_file)
-    737 self.entity = self._initialize_provenance(
-    738     raw_recipe.get('documentation', {}))
-    739 try:
---> 740     self.tasks = self.initialize_tasks()
-    741 except RecipeError as exc:
-    742     self._log_recipe_errors(exc)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/writers.py:78, in get_writable_netcdf_store(target, engine, format, mode, autoclose, invalid_netcdf, auto_complex)
+     75 if auto_complex is not None:
+     76     kwargs["auto_complex"] = auto_complex
+---> 78 return store_open(target, mode=mode, format=format, **kwargs)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1066, in Recipe.initialize_tasks(self)
-   1064 def initialize_tasks(self):
-   1065     """Define tasks in recipe."""
--> 1066     tasks = self._create_tasks()
-   1067     tasks = tasks.flatten()
-   1068     logger.info("These tasks will be executed: %s",
-   1069                 ', '.join(t.name for t in tasks))
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:529, in NetCDF4DataStore.open(cls, filename, mode, format, group, clobber, diskless, persist, auto_complex, lock, lock_maker, autoclose)
+    525 else:
+    526     manager = CachingFileManager(
+    527         netCDF4.Dataset, filename, mode=mode, kwargs=kwargs, lock=lock
+    528     )
+--> 529 return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1054, in Recipe._create_tasks(self)
-   1052     recipe_error = RecipeError('Could not create all tasks')
-   1053     recipe_error.failed_tasks.extend(failed_tasks)
--> 1054     raise recipe_error
-   1056 check.tasks_valid(tasks)
-   1058 # Resolve diagnostic ancestors
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:429, in NetCDF4DataStore.__init__(self, manager, group, mode, lock, autoclose)
+    427 self._group = group
+    428 self._mode = mode
+--> 429 self.format = self.ds.data_model
+    430 self._filename = self.ds.filepath()
+    431 self.is_remote = is_remote_uri(self._filename)
 
-RecipeError: Could not create all tasks
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:538, in NetCDF4DataStore.ds(self)
+    536 @property
+    537 def ds(self):
+--> 538     return self._acquire()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:532, in NetCDF4DataStore._acquire(self, needs_lock)
+    531 def _acquire(self, needs_lock=True):
+--> 532     with self._manager.acquire_context(needs_lock) as root:
+    533         ds = _nc4_require_group(root, self._group, self._mode)
+    534     return ds
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py:137, in _GeneratorContextManager.__enter__(self)
+    135 del self.args, self.kwds, self.func
+    136 try:
+--> 137     return next(self.gen)
+    138 except StopIteration:
+    139     raise RuntimeError("generator didn't yield") from None
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:207, in CachingFileManager.acquire_context(self, needs_lock)
+    204 @contextmanager
+    205 def acquire_context(self, needs_lock: bool = True) -> Iterator[T_File]:
+    206     """Context manager for acquiring a file."""
+--> 207     file, cached = self._acquire_with_cache_info(needs_lock)
+    208     try:
+    209         yield file
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:225, in CachingFileManager._acquire_with_cache_info(self, needs_lock)
+    223     kwargs = kwargs.copy()
+    224     kwargs["mode"] = self._mode
+--> 225 file = self._opener(*self._args, **kwargs)
+    226 if self._mode == "w":
+    227     # ensure file doesn't get overridden when opened again
+    228     self._mode = "a"
+
+File src/netCDF4/_netCDF4.pyx:2521, in netCDF4._netCDF4.Dataset.__init__()
+
+File src/netCDF4/_netCDF4.pyx:2158, in netCDF4._netCDF4._ensure_nc_success()
+
+PermissionError: [Errno 13] Permission denied: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_07140900/DestinE/DestinE_future_day_pr_2029_08_01-2049_08_31.nc'
 
