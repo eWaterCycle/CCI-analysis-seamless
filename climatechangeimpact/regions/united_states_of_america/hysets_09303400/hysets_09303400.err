@@ -1,176 +1,10 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:08<03:05,  8.43s/cell]Executing:   9%|▊         | 2/23 [00:10<01:33,  4.45s/cell]Executing:  13%|█▎        | 3/23 [00:15<01:39,  4.99s/cell]Executing:  17%|█▋        | 4/23 [00:16<00:59,  3.16s/cell]Executing:  26%|██▌       | 6/23 [00:16<00:26,  1.57s/cell]Executing:  30%|███       | 7/23 [00:16<00:20,  1.28s/cell]Executing:  35%|███▍      | 8/23 [00:17<00:14,  1.06cell/s]Executing:  39%|███▉      | 9/23 [00:17<00:10,  1.39cell/s]Executing:  48%|████▊     | 11/23 [00:17<00:05,  2.29cell/s]Executing:  52%|█████▏    | 12/23 [00:17<00:04,  2.22cell/s]Executing:  57%|█████▋    | 13/23 [00:18<00:03,  2.58cell/s]Executing:  70%|██████▉   | 16/23 [00:18<00:01,  4.90cell/s]Executing:  78%|███████▊  | 18/23 [00:18<00:01,  4.58cell/s]Executing:  83%|████████▎ | 19/23 [00:19<00:01,  2.74cell/s]Executing:  91%|█████████▏| 21/23 [00:19<00:00,  3.68cell/s]Executing:  96%|█████████▌| 22/23 [00:20<00:00,  2.93cell/s]Executing: 100%|██████████| 23/23 [00:20<00:00,  3.11cell/s]Executing: 100%|██████████| 23/23 [00:23<00:00,  1.01s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:48,  7.65s/cell]Executing:   9%|▊         | 2/23 [00:14<02:30,  7.17s/cell]Executing:  22%|██▏       | 5/23 [00:14<00:37,  2.07s/cell]Executing:  35%|███▍      | 8/23 [00:14<00:15,  1.04s/cell]Executing:  39%|███▉      | 9/23 [00:18<00:28,  2.06s/cell]
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
-    pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [7]":
----------------------------------------------------------------------------
-FileNotFoundError                         Traceback (most recent call last)
-Cell In[7], line 4
-      3     load_location = Path(settings['path_ERA5']) / "work" / "diagnostic" / "script" 
-----> 4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-      5 except:    
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
-    272     msg = (
-    273         f"Forcing file {meta} not found. "
-    274         f"Perhaps you want to use {cls.__name__}(...)?"
-    275     )
---> 276     raise FileNotFoundError(msg)
-    277 metadata = meta.read_text()
-
-FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_09303400/ERA5/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
-
-During handling of the above exception, another exception occurred:
-
-RecipeError                               Traceback (most recent call last)
-Cell In[7], line 6
-      4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-      5 except:    
-----> 6     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
-      7        dataset="ERA5",
-      8        start_time=settings['calibration_start_date'],
-      9        end_time=settings['validation_end_date'],
-     10        directory=settings['path_ERA5'],
-     11        shape=settings['path_shape'],
-     12     )
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
-     47 @classmethod
-     48 def generate(  # type: ignore[override]
-     49     cls: type["Makkink"],
-   (...)     55     **model_specific_options,
-     56 ) -> "Makkink":
----> 57     return super().generate(
-     58         dataset,
-     59         start_time,
-     60         end_time,
-     61         shape,
-     62         directory,
-     63         variables=("pr", "tas", "rsds"),
-     64         postprocessor=derive_e_pot,
-     65         **model_specific_options,
-     66     )
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
-    129 """Generate forcings for a model.
-    130 
-    131 The forcing is generated with help of
-   (...)    151     model_specific_options: Subclass specific options.
-    152 """
-    153 recipe = cls._build_recipe(
-    154     dataset=dataset,
-    155     start_time=get_time(start_time),
-   (...)    159     **model_specific_options,
-    160 )
---> 162 recipe_output = cls._run_recipe(
-    163     recipe, directory=Path(directory) if directory else None
-    164 )
-    166 derived_variables: tuple[str, ...] = ()
-    167 if postprocessor is not None:
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
-    211 @classmethod
-    212 def _run_recipe(
-    213     cls,
-    214     recipe: Recipe,
-    215     directory: Path | None = None,
-    216 ) -> dict[str, str]:
---> 217     return run_recipe(recipe, directory)
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
-    100 warnings.filterwarnings(  # Not relevant for end users.
-    101     action="ignore",
-    102     message="Thank you for trying out the new ESMValCore API",
-    103 )
-    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
-    105     action="ignore",
-    106     message="Saving to netcdf with legacy-style attribute",
-    107 )
---> 109 output = _save_and_run_recipe(recipe, output_dir)
-    110 return _parse_recipe_output(output)
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
-    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
-    136     session = _session(output_dir)
---> 137     output = esmlvaltool_recipe.run(session=session)
-    138 finally:
-    139     recipe_path.unlink()
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:137, in Recipe.run(self, task, session)
-    135 with log_to_dir(session.run_dir):
-    136     _dask.check_distributed_config()
---> 137     self._engine = self._load(session=session)
-    138     self._engine.run()
-    140 shutil.copy2(self.path, session.run_dir)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:97, in Recipe._load(self, session)
-     78 """Load the recipe.
-     79 
-     80 This method loads the recipe into the internal ESMValCore Recipe
-   (...)     93     Return an instance of the Recipe
-     94 """
-     95 logger.info(pprint.pformat(session))
----> 97 return RecipeEngine(raw_recipe=self.data,
-     98                     session=session,
-     99                     recipe_file=self.path)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:740, in Recipe.__init__(self, raw_recipe, session, recipe_file)
-    737 self.entity = self._initialize_provenance(
-    738     raw_recipe.get('documentation', {}))
-    739 try:
---> 740     self.tasks = self.initialize_tasks()
-    741 except RecipeError as exc:
-    742     self._log_recipe_errors(exc)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1066, in Recipe.initialize_tasks(self)
-   1064 def initialize_tasks(self):
-   1065     """Define tasks in recipe."""
--> 1066     tasks = self._create_tasks()
-   1067     tasks = tasks.flatten()
-   1068     logger.info("These tasks will be executed: %s",
-   1069                 ', '.join(t.name for t in tasks))
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1054, in Recipe._create_tasks(self)
-   1052     recipe_error = RecipeError('Could not create all tasks')
-   1053     recipe_error.failed_tasks.extend(failed_tasks)
--> 1054     raise recipe_error
-   1056 check.tasks_valid(tasks)
-   1058 # Resolve diagnostic ancestors
-
-RecipeError: Could not create all tasks
-
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:33,  1.54s/cell]Executing:   9%|▊         | 2/23 [00:02<00:25,  1.22s/cell]Executing:  13%|█▎        | 3/23 [00:07<01:02,  3.14s/cell]Executing:  22%|██▏       | 5/23 [00:08<00:25,  1.42s/cell]Executing:  30%|███       | 7/23 [00:08<00:13,  1.15cell/s]Executing:  35%|███▍      | 8/23 [00:08<00:10,  1.40cell/s]Executing:  43%|████▎     | 10/23 [00:08<00:05,  2.24cell/s]Executing:  52%|█████▏    | 12/23 [00:09<00:03,  3.30cell/s]Executing:  61%|██████    | 14/23 [00:09<00:01,  4.55cell/s]Executing:  70%|██████▉   | 16/23 [00:09<00:01,  5.43cell/s]Executing:  83%|████████▎ | 19/23 [00:10<00:01,  3.05cell/s]Executing:  96%|█████████▌| 22/23 [00:12<00:00,  2.77cell/s]Executing: 100%|██████████| 23/23 [00:13<00:00,  1.68cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:26,  1.22s/cell]Executing:   9%|▊         | 2/23 [00:07<01:22,  3.94s/cell]Executing:  17%|█▋        | 4/23 [00:07<00:28,  1.51s/cell]Executing:  30%|███       | 7/23 [00:07<00:11,  1.45cell/s]Executing:  39%|███▉      | 9/23 [09:30<23:18, 99.86s/cell]Executing:  48%|████▊     | 11/23 [09:30<13:17, 66.46s/cell]Executing:  65%|██████▌   | 15/23 [09:31<04:31, 33.96s/cell]Executing:  70%|██████▉   | 16/23 [09:46<03:57, 33.96s/cell]Executing:  74%|███████▍  | 17/23 [09:51<02:46, 27.78s/cell]Executing:  78%|███████▊  | 18/23 [09:51<01:57, 23.51s/cell]Executing:  87%|████████▋ | 20/23 [09:52<00:49, 16.44s/cell]Executing:  96%|█████████▌| 22/23 [14:34<00:54, 54.47s/cell]Executing: 100%|██████████| 23/23 [14:35<00:00, 44.87s/cell]Executing: 100%|██████████| 23/23 [14:37<00:00, 38.17s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:00<00:12,  1.06cell/s]Executing:  14%|█▍        | 2/14 [00:05<00:36,  3.07s/cell]Executing:  29%|██▊       | 4/14 [00:05<00:12,  1.20s/cell]Executing:  36%|███▌      | 5/14 [00:05<00:07,  1.14cell/s]Executing:  43%|████▎     | 6/14 [00:05<00:05,  1.55cell/s]Executing:  50%|█████     | 7/14 [00:06<00:03,  1.95cell/s]Executing:  64%|██████▍   | 9/14 [00:06<00:01,  3.33cell/s]Executing:  71%|███████▏  | 10/14 [05:15<05:09, 77.34s/cell]Executing:  86%|████████▌ | 12/14 [05:15<01:30, 45.24s/cell]Executing:  93%|█████████▎| 13/14 [05:16<00:34, 34.92s/cell]Executing: 100%|██████████| 14/14 [09:48<00:00, 93.58s/cell]Executing: 100%|██████████| 14/14 [09:52<00:00, 42.31s/cell]
+Executing:   0%|          | 0/43 [00:00<?, ?cell/s]Executing:   2%|▏         | 1/43 [00:30<21:33, 30.80s/cell]Executing:   5%|▍         | 2/43 [00:57<19:27, 28.47s/cell]Executing:   7%|▋         | 3/43 [02:37<40:41, 61.04s/cell]Executing:  12%|█▏        | 5/43 [02:37<16:51, 26.62s/cell]Executing:  14%|█▍        | 6/43 [02:38<11:44, 19.04s/cell]Executing:  19%|█▊        | 8/43 [02:38<06:07, 10.51s/cell]Executing:  21%|██        | 9/43 [02:38<04:32,  8.01s/cell]Executing:  23%|██▎       | 10/43 [02:38<03:17,  5.99s/cell]Executing:  26%|██▌       | 11/43 [02:39<02:23,  4.49s/cell]Executing:  28%|██▊       | 12/43 [02:39<01:41,  3.29s/cell]Executing:  35%|███▍      | 15/43 [02:39<00:42,  1.52s/cell]Executing:  40%|███▉      | 17/43 [02:39<00:26,  1.02s/cell]Executing:  47%|████▋     | 20/43 [02:40<00:15,  1.49cell/s]Executing:  51%|█████     | 22/43 [02:40<00:10,  1.94cell/s]Executing:  56%|█████▌    | 24/43 [02:40<00:07,  2.58cell/s]Executing:  60%|██████    | 26/43 [02:50<00:29,  1.76s/cell]Executing:  63%|██████▎   | 27/43 [02:51<00:24,  1.50s/cell]Executing:  65%|██████▌   | 28/43 [02:51<00:18,  1.22s/cell]Executing:  70%|██████▉   | 30/43 [02:51<00:11,  1.17cell/s]Executing:  72%|███████▏  | 31/43 [19:26<41:00, 205.02s/cell]Executing:  77%|███████▋  | 33/43 [19:26<21:32, 129.26s/cell]Executing:  79%|███████▉  | 34/43 [19:28<15:22, 102.55s/cell]Executing:  84%|████████▎ | 36/43 [19:28<07:29, 64.27s/cell] Executing:  86%|████████▌ | 37/43 [19:30<05:06, 51.04s/cell]Executing:  91%|█████████ | 39/43 [19:30<02:07, 31.88s/cell]Executing:  93%|█████████▎| 40/43 [19:30<01:15, 25.18s/cell]Executing:  95%|█████████▌| 41/43 [19:31<00:39, 19.51s/cell]Executing: 100%|██████████| 43/43 [19:31<00:00, 11.76s/cell]Executing: 100%|██████████| 43/43 [19:34<00:00, 27.31s/cell]
+Executing:   0%|          | 0/44 [00:00<?, ?cell/s]Executing:   2%|▏         | 1/44 [00:05<04:14,  5.93s/cell]Executing:   5%|▍         | 2/44 [00:41<16:23, 23.41s/cell]Executing:   9%|▉         | 4/44 [00:42<06:02,  9.06s/cell]Executing:  14%|█▎        | 6/44 [00:42<03:03,  4.82s/cell]Executing:  23%|██▎       | 10/44 [00:46<01:28,  2.62s/cell]Executing:  25%|██▌       | 11/44 [00:48<01:19,  2.41s/cell]Executing:  32%|███▏      | 14/44 [00:48<00:42,  1.41s/cell]Executing:  36%|███▋      | 16/44 [00:48<00:30,  1.10s/cell]Executing:  39%|███▊      | 17/44 [00:49<00:27,  1.04s/cell]Executing:  41%|████      | 18/44 [00:52<00:33,  1.30s/cell]Executing:  45%|████▌     | 20/44 [00:52<00:22,  1.08cell/s]Executing:  48%|████▊     | 21/44 [00:52<00:17,  1.32cell/s]Executing:  50%|█████     | 22/44 [00:52<00:14,  1.55cell/s]Executing:  55%|█████▍    | 24/44 [00:54<00:12,  1.65cell/s]Executing:  59%|█████▉    | 26/44 [00:54<00:09,  1.93cell/s]Executing:  66%|██████▌   | 29/44 [00:54<00:04,  3.17cell/s]Executing:  70%|███████   | 31/44 [00:55<00:03,  3.45cell/s]Executing:  75%|███████▌  | 33/44 [00:55<00:02,  4.08cell/s]Executing:  82%|████████▏ | 36/44 [00:55<00:01,  5.02cell/s]Executing:  84%|████████▍ | 37/44 [01:45<00:55,  7.94s/cell]Executing:  86%|████████▋ | 38/44 [01:50<00:43,  7.25s/cell]Executing:  89%|████████▊ | 39/44 [01:50<00:28,  5.80s/cell]Executing:  91%|█████████ | 40/44 [01:50<00:18,  4.52s/cell]Executing:  93%|█████████▎| 41/44 [01:50<00:10,  3.46s/cell]Executing:  95%|█████████▌| 42/44 [01:55<00:07,  3.78s/cell]Executing:  98%|█████████▊| 43/44 [01:55<00:02,  2.79s/cell]Executing: 100%|██████████| 44/44 [01:59<00:00,  3.18s/cell]Executing: 100%|██████████| 44/44 [02:02<00:00,  2.77s/cell]
+Executing:   0%|          | 0/30 [00:00<?, ?cell/s]Executing:   3%|▎         | 1/30 [00:00<00:25,  1.14cell/s]Executing:   7%|▋         | 2/30 [00:04<01:17,  2.77s/cell]Executing:  13%|█▎        | 4/30 [00:05<00:30,  1.16s/cell]Executing:  20%|██        | 6/30 [00:05<00:16,  1.45cell/s]Executing:  30%|███       | 9/30 [00:05<00:07,  2.76cell/s]Executing:  40%|████      | 12/30 [00:05<00:04,  4.43cell/s]Executing:  47%|████▋     | 14/30 [00:06<00:03,  4.02cell/s]Executing:  53%|█████▎    | 16/30 [00:07<00:03,  3.81cell/s]Executing:  60%|██████    | 18/30 [00:35<00:51,  4.26s/cell]Executing:  67%|██████▋   | 20/30 [00:35<00:30,  3.05s/cell]Executing:  70%|███████   | 21/30 [00:37<00:26,  2.95s/cell]Executing:  77%|███████▋  | 23/30 [00:37<00:13,  2.00s/cell]Executing:  83%|████████▎ | 25/30 [00:38<00:07,  1.41s/cell]Executing:  93%|█████████▎| 28/30 [00:38<00:01,  1.18cell/s]Executing: 100%|██████████| 30/30 [00:38<00:00,  1.46cell/s]Executing: 100%|██████████| 30/30 [00:40<00:00,  1.34s/cell]
+Executing:   0%|          | 0/40 [00:00<?, ?cell/s]Executing:   2%|▎         | 1/40 [00:00<00:30,  1.29cell/s]Executing:   5%|▌         | 2/40 [00:05<01:47,  2.83s/cell]Executing:  10%|█         | 4/40 [00:05<00:41,  1.15s/cell]Executing:  12%|█▎        | 5/40 [00:05<00:33,  1.05cell/s]Executing:  18%|█▊        | 7/40 [00:06<00:18,  1.79cell/s]Executing:  22%|██▎       | 9/40 [00:06<00:11,  2.73cell/s]Executing:  28%|██▊       | 11/40 [00:07<00:13,  2.17cell/s]Executing:  30%|███       | 12/40 [00:07<00:12,  2.21cell/s]Executing:  38%|███▊      | 15/40 [00:08<00:07,  3.43cell/s]Executing:  45%|████▌     | 18/40 [00:08<00:04,  5.18cell/s]Executing:  50%|█████     | 20/40 [00:08<00:03,  6.23cell/s]Executing:  55%|█████▌    | 22/40 [00:08<00:02,  6.69cell/s]Executing:  60%|██████    | 24/40 [00:11<00:07,  2.19cell/s]Executing:  62%|██████▎   | 25/40 [00:20<00:28,  1.90s/cell]Executing:  65%|██████▌   | 26/40 [00:21<00:25,  1.79s/cell]Executing:  68%|██████▊   | 27/40 [00:25<00:30,  2.32s/cell]Executing:  72%|███████▎  | 29/40 [00:25<00:15,  1.45s/cell]Executing:  75%|███████▌  | 30/40 [00:25<00:11,  1.17s/cell]Executing:  80%|████████  | 32/40 [00:26<00:06,  1.28cell/s]Executing:  82%|████████▎ | 33/40 [00:26<00:04,  1.53cell/s]Executing:  85%|████████▌ | 34/40 [00:26<00:03,  1.78cell/s]Executing:  88%|████████▊ | 35/40 [00:26<00:02,  2.21cell/s]Executing:  90%|█████████ | 36/40 [00:27<00:02,  1.90cell/s]Executing:  95%|█████████▌| 38/40 [00:28<00:00,  2.07cell/s]Executing:  98%|█████████▊| 39/40 [00:28<00:00,  1.98cell/s]Executing: 100%|██████████| 40/40 [00:30<00:00,  1.31cell/s]
+Executing:   0%|          | 0/24 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/24 [00:00<00:18,  1.27cell/s]Executing:   8%|▊         | 2/24 [00:05<01:04,  2.93s/cell]Executing:  17%|█▋        | 4/24 [00:05<00:25,  1.29s/cell]Executing:  21%|██        | 5/24 [00:05<00:17,  1.08cell/s]Executing:  33%|███▎      | 8/24 [00:06<00:06,  2.38cell/s]Executing:  42%|████▏     | 10/24 [00:06<00:04,  3.23cell/s]Executing:  42%|████▏     | 10/24 [00:17<00:04,  3.23cell/s]Executing:  46%|████▌     | 11/24 [00:21<00:43,  3.37s/cell]Executing:  50%|█████     | 12/24 [01:13<02:49, 14.13s/cell]Executing:  58%|█████▊    | 14/24 [01:14<01:28,  8.89s/cell]Executing:  62%|██████▎   | 15/24 [01:18<01:10,  7.83s/cell]Executing:  75%|███████▌  | 18/24 [01:19<00:24,  4.09s/cell]Executing:  83%|████████▎ | 20/24 [01:21<00:12,  3.12s/cell]Executing:  88%|████████▊ | 21/24 [01:22<00:08,  2.89s/cell]Executing:  96%|█████████▌| 23/24 [01:23<00:02,  2.00s/cell]Executing: 100%|██████████| 24/24 [01:26<00:00,  3.59s/cell]
+Executing:   0%|          | 0/30 [00:00<?, ?cell/s]Executing:   3%|▎         | 1/30 [00:00<00:23,  1.22cell/s]Executing:   7%|▋         | 2/30 [00:01<00:27,  1.01cell/s]Executing:  10%|█         | 3/30 [00:05<00:54,  2.04s/cell]Executing:  17%|█▋        | 5/30 [00:05<00:23,  1.06cell/s]Executing:  27%|██▋       | 8/30 [00:05<00:09,  2.23cell/s]Executing:  33%|███▎      | 10/30 [00:06<00:07,  2.62cell/s]Executing:  37%|███▋      | 11/30 [00:06<00:06,  2.93cell/s]Executing:  43%|████▎     | 13/30 [00:07<00:06,  2.70cell/s]Executing:  47%|████▋     | 14/30 [00:08<00:08,  1.95cell/s]Executing:  53%|█████▎    | 16/30 [00:11<00:14,  1.03s/cell]Executing:  57%|█████▋    | 17/30 [00:14<00:16,  1.30s/cell]Executing:  63%|██████▎   | 19/30 [00:14<00:09,  1.17cell/s]Executing:  70%|███████   | 21/30 [00:16<00:07,  1.15cell/s]Executing:  73%|███████▎  | 22/30 [00:18<00:08,  1.08s/cell]Executing:  77%|███████▋  | 23/30 [00:32<00:27,  3.90s/cell]Executing:  80%|████████  | 24/30 [00:44<00:36,  6.04s/cell]Executing:  83%|████████▎ | 25/30 [00:47<00:25,  5.05s/cell]Executing:  87%|████████▋ | 26/30 [00:48<00:16,  4.21s/cell]Executing:  90%|█████████ | 27/30 [00:49<00:09,  3.20s/cell]Executing:  97%|█████████▋| 29/30 [00:49<00:01,  1.83s/cell]Executing: 100%|██████████| 30/30 [00:51<00:00,  1.70s/cell]
+Executing:   0%|          | 0/11 [00:00<?, ?cell/s]Executing:   9%|▉         | 1/11 [00:00<00:08,  1.22cell/s]Executing:  18%|█▊        | 2/11 [00:01<00:05,  1.79cell/s]Executing:  27%|██▋       | 3/11 [00:01<00:04,  1.75cell/s]Executing:  36%|███▋      | 4/11 [00:02<00:03,  2.06cell/s]Executing:  64%|██████▎   | 7/11 [00:02<00:00,  4.95cell/s]Executing:  82%|████████▏ | 9/11 [00:11<00:03,  1.92s/cell]Executing:  91%|█████████ | 10/11 [00:11<00:01,  1.54s/cell]Executing: 100%|██████████| 11/11 [00:13<00:00,  1.19s/cell]
