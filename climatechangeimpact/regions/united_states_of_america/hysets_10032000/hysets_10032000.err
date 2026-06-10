@@ -1,33 +1,5 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
-    with conn:
-         ^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:06<02:32,  6.93s/cell]Executing:   9%|▊         | 2/23 [00:08<01:16,  3.66s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:26,  4.31s/cell]Executing:  39%|███▉      | 9/23 [00:13<00:12,  1.12cell/s]Executing:  65%|██████▌   | 15/23 [00:13<00:03,  2.34cell/s]Executing:  83%|████████▎ | 19/23 [00:14<00:01,  2.67cell/s]Executing:  96%|█████████▌| 22/23 [00:15<00:00,  3.12cell/s]Executing: 100%|██████████| 23/23 [00:17<00:00,  1.29cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:46,  7.56s/cell]Executing:   9%|▊         | 2/23 [00:13<02:24,  6.90s/cell]Executing:  30%|███       | 7/23 [00:14<00:21,  1.35s/cell]Executing:  39%|███▉      | 9/23 [00:15<00:15,  1.12s/cell]Executing:  39%|███▉      | 9/23 [00:18<00:28,  2.00s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:24<09:03, 24.72s/cell]Executing:   9%|▊         | 2/23 [00:44<07:32, 21.57s/cell]Executing:  13%|█▎        | 3/23 [01:43<12:55, 38.79s/cell]Executing:  22%|██▏       | 5/23 [01:43<05:05, 16.99s/cell]Executing:  30%|███       | 7/23 [01:44<02:32,  9.55s/cell]Executing:  35%|███▍      | 8/23 [01:45<01:50,  7.37s/cell]Executing:  39%|███▉      | 9/23 [01:45<01:19,  5.67s/cell]Executing:  48%|████▊     | 11/23 [01:46<00:39,  3.29s/cell]Executing:  52%|█████▏    | 12/23 [01:47<00:30,  2.76s/cell]Executing:  57%|█████▋    | 13/23 [01:47<00:21,  2.10s/cell]Executing:  61%|██████    | 14/23 [01:47<00:15,  1.68s/cell]Executing:  65%|██████▌   | 15/23 [01:47<00:10,  1.26s/cell]Executing:  70%|██████▉   | 16/23 [01:48<00:08,  1.21s/cell]Executing:  74%|███████▍  | 17/23 [01:49<00:06,  1.00s/cell]Executing:  78%|███████▊  | 18/23 [01:49<00:04,  1.18cell/s]Executing:  83%|████████▎ | 19/23 [01:59<00:14,  3.54s/cell]Executing:  87%|████████▋ | 20/23 [01:59<00:07,  2.53s/cell]Executing:  91%|█████████▏| 21/23 [02:00<00:03,  1.82s/cell]Executing:  96%|█████████▌| 22/23 [02:02<00:01,  1.87s/cell]Executing: 100%|██████████| 23/23 [02:02<00:00,  1.36s/cell]Executing: 100%|██████████| 23/23 [02:05<00:00,  5.45s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:40,  1.84s/cell]Executing:   9%|▊         | 2/23 [00:08<01:39,  4.75s/cell]Executing:  13%|█▎        | 3/23 [00:08<00:52,  2.64s/cell]Executing:  17%|█▋        | 4/23 [00:09<00:34,  1.82s/cell]Executing:  22%|██▏       | 5/23 [00:09<00:25,  1.41s/cell]Executing:  26%|██▌       | 6/23 [00:10<00:19,  1.14s/cell]Executing:  30%|███       | 7/23 [00:11<00:18,  1.18s/cell]Executing:  39%|███▉      | 9/23 [07:01<23:13, 99.52s/cell]Executing:  43%|████▎     | 10/23 [07:01<16:02, 74.02s/cell]Executing:  48%|████▊     | 11/23 [07:02<10:52, 54.36s/cell]Executing:  61%|██████    | 14/23 [07:02<03:48, 25.38s/cell]Executing:  65%|██████▌   | 15/23 [07:03<02:42, 20.37s/cell]Executing:  74%|███████▍  | 17/23 [07:28<01:45, 17.58s/cell]Executing:  78%|███████▊  | 18/23 [07:29<01:10, 14.02s/cell]Executing:  87%|████████▋ | 20/23 [11:51<02:52, 57.59s/cell]Executing:  96%|█████████▌| 22/23 [12:05<00:40, 40.07s/cell]Executing:  96%|█████████▌| 22/23 [12:08<00:33, 33.11s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -37,140 +9,189 @@ Traceback (most recent call last):
     raise error
 papermill.exceptions.PapermillExecutionError: 
 ---------------------------------------------------------------------------
-Exception encountered at "In [7]":
+Exception encountered at "In [17]":
 ---------------------------------------------------------------------------
 FileNotFoundError                         Traceback (most recent call last)
-Cell In[7], line 4
-      3     load_location = Path(settings['path_ERA5']) / "work" / "diagnostic" / "script" 
-----> 4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-      5 except:    
+File <timed exec>:3
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
-    272     msg = (
-    273         f"Forcing file {meta} not found. "
-    274         f"Perhaps you want to use {cls.__name__}(...)?"
-    275     )
---> 276     raise FileNotFoundError(msg)
-    277 metadata = meta.read_text()
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:369, in DestinEHistoricalForcing.load(cls, directory)
+    367 directory = str(directory)
+--> 369 with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
+    370     config = yaml.safe_load(f)
 
-FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_10032000/ERA5/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_10032000/DestinE_historical/ewatercycle_forcing.yaml'
 
 During handling of the above exception, another exception occurred:
 
-RecipeError                               Traceback (most recent call last)
-Cell In[7], line 6
-      4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-      5 except:    
-----> 6     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
-      7        dataset="ERA5",
-      8        start_time=settings['calibration_start_date'],
-      9        end_time=settings['validation_end_date'],
-     10        directory=settings['path_ERA5'],
-     11        shape=settings['path_shape'],
-     12     )
+HTTPResponseError                         Traceback (most recent call last)
+Cell In[17], line 1
+----> 1 get_ipython().run_cell_magic('time', '', '\n# Generate forcing for the calibration + validation period\ntry:\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.load(settings["path_DestinE_historical"])\n    print("Loading")\nexcept FileNotFoundError:\n# DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n    print("Generating")\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n        start_time=settings["calibration_start_date"],\n        end_time=settings["validation_end_date"],\n        directory=settings["path_DestinE_historical"],\n        shape=settings["path_shape"],\n    )\n\ndisplay(DestinE_hist_forcing_object)\n')
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
-     47 @classmethod
-     48 def generate(  # type: ignore[override]
-     49     cls: type["Makkink"],
-   (...)     55     **model_specific_options,
-     56 ) -> "Makkink":
----> 57     return super().generate(
-     58         dataset,
-     59         start_time,
-     60         end_time,
-     61         shape,
-     62         directory,
-     63         variables=("pr", "tas", "rsds"),
-     64         postprocessor=derive_e_pot,
-     65         **model_specific_options,
-     66     )
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/interactiveshell.py:2593, in InteractiveShell.run_cell_magic(self, magic_name, line, cell)
+   2591 with self.builtin_trap:
+   2592     args = (magic_arg_s, cell)
+-> 2593     result = fn(*args, **kwargs)
+   2595 # The code below prevents the output from being displayed
+   2596 # when using magics with decorator @output_can_be_silenced
+   2597 # when the last Python token in the expression is a ';'.
+   2598 if getattr(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, False):
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
-    129 """Generate forcings for a model.
-    130 
-    131 The forcing is generated with help of
-   (...)    151     model_specific_options: Subclass specific options.
-    152 """
-    153 recipe = cls._build_recipe(
-    154     dataset=dataset,
-    155     start_time=get_time(start_time),
-   (...)    159     **model_specific_options,
-    160 )
---> 162 recipe_output = cls._run_recipe(
-    163     recipe, directory=Path(directory) if directory else None
-    164 )
-    166 derived_variables: tuple[str, ...] = ()
-    167 if postprocessor is not None:
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1448, in ExecutionMagics.time(self, line, cell, local_ns)
+   1446 if interrupt_occured:
+   1447     if exit_on_interrupt and captured_exception:
+-> 1448         raise captured_exception
+   1449     return
+   1450 return out
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
-    211 @classmethod
-    212 def _run_recipe(
-    213     cls,
-    214     recipe: Recipe,
-    215     directory: Path | None = None,
-    216 ) -> dict[str, str]:
---> 217     return run_recipe(recipe, directory)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1412, in ExecutionMagics.time(self, line, cell, local_ns)
+   1410 st = clock2()
+   1411 try:
+-> 1412     exec(code, glob, local_ns)
+   1413     out = None
+   1414     # multi-line %%time case
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
-    100 warnings.filterwarnings(  # Not relevant for end users.
-    101     action="ignore",
-    102     message="Thank you for trying out the new ESMValCore API",
-    103 )
-    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
-    105     action="ignore",
-    106     message="Saving to netcdf with legacy-style attribute",
-    107 )
---> 109 output = _save_and_run_recipe(recipe, output_dir)
-    110 return _parse_recipe_output(output)
+File <timed exec>:8
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
-    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
-    136     session = _session(output_dir)
---> 137     output = esmlvaltool_recipe.run(session=session)
-    138 finally:
-    139     recipe_path.unlink()
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:445, in DestinEHistoricalForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
+    442 LIVE_REQUEST = os.getenv("LIVE_REQUEST", "true").lower() == "true"
+    444 if LIVE_REQUEST:
+--> 445     data = earthkit.data.from_source("polytope", "destination-earth", request, address=polytope_address, stream=False)
+    447 ds = data.to_xarray()
+    448 ds = ds.rename({
+    449     "2t": "tas",
+    450     "ssrd": "rsds",
+    451     "tprate": "pr"
+    452 })
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:137, in Recipe.run(self, task, session)
-    135 with log_to_dir(session.run_dir):
-    136     _dask.check_distributed_config()
---> 137     self._engine = self._load(session=session)
-    138     self._engine.run()
-    140 shutil.copy2(self.path, session.run_dir)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:145, in from_source(name, lazily, *args, **kwargs)
+    143 while src is not prev:
+    144     prev = src
+--> 145     src = src.mutate()
+    146 return src
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:97, in Recipe._load(self, session)
-     78 """Load the recipe.
-     79 
-     80 This method loads the recipe into the internal ESMValCore Recipe
-   (...)     93     Return an instance of the Recipe
-     94 """
-     95 logger.info(pprint.pformat(session))
----> 97 return RecipeEngine(raw_recipe=self.data,
-     98                     session=session,
-     99                     recipe_file=self.path)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:106, in Polytope.mutate(self)
+    104     return self._mutate_stream()
+    105 else:
+--> 106     return self._retrieve()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:740, in Recipe.__init__(self, raw_recipe, session, recipe_file)
-    737 self.entity = self._initialize_provenance(
-    738     raw_recipe.get('documentation', {}))
-    739 try:
---> 740     self.tasks = self.initialize_tasks()
-    741 except RecipeError as exc:
-    742     self._log_recipe_errors(exc)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:163, in Polytope._retrieve(self)
+    161 # Download each request in parallel when the config allows it
+    162 retriever = FileRequestRetriever(self, retriever=_retrieve_one)
+--> 163 path = retriever.retrieve(self.request, self.dataset)
+    165 # TODO: for simplicity we assume all retrieved files have the same content-type. Revisit if needed.
+    166 content_type = None
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1066, in Recipe.initialize_tasks(self)
-   1064 def initialize_tasks(self):
-   1065     """Define tasks in recipe."""
--> 1066     tasks = self._create_tasks()
-   1067     tasks = tasks.flatten()
-   1068     logger.info("These tasks will be executed: %s",
-   1069                 ', '.join(t.name for t in tasks))
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/utils/request.py:135, in FileRequestRetriever.retrieve(self, requests, *extra_args)
+    132 nthreads = min(self.owner.config("number-of-download-threads"), len(requests))
+    134 if nthreads < 2:
+--> 135     path = [self.retriever(r, *extra_args) for r in requests]
+    136 else:
+    137     from earthkit.data.utils.progbar import tqdm
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1054, in Recipe._create_tasks(self)
-   1052     recipe_error = RecipeError('Could not create all tasks')
-   1053     recipe_error.failed_tasks.extend(failed_tasks)
--> 1054     raise recipe_error
-   1056 check.tasks_valid(tasks)
-   1058 # Resolve diagnostic ancestors
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:156, in Polytope._retrieve.<locals>._retrieve_one(request, dataset)
+    152     return download_to_target(url, target)
+    154 # The cache file path/data is constructed by using the request only. We cannot simply base
+    155 # it on the URL since the URL may change every time we ask for the pointers.
+--> 156 return self.cache_file(
+    157     retrieve,
+    158     (dataset, request),
+    159 )
 
-RecipeError: Could not create all tasks
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:65, in Source.cache_file(self, create, args, **kwargs)
+     62 if owner is None:
+     63     owner = re.sub(r"(?!^)([A-Z]+)", r"-\1", self.__class__.__name__).lower()
+---> 65 return cache_file(owner, create, args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/core/caching.py:1099, in cache_file(owner, create, args, hash_extra, extension, force, replace)
+   1097 with FileLock(lock):
+   1098     if not os.path.exists(path):  # Check again, another thread/process may have created the file
+-> 1099         owner_data = create(path + ".tmp", args)
+   1100         os.rename(path + ".tmp", path)
+   1101 try:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:140, in Polytope._retrieve.<locals>._retrieve_one.<locals>.retrieve(target, args)
+    135 """
+    136 Caching callback method to retrieve data into target file. Only called if
+    137 the data is not already cached.
+    138 """
+    139 # get the pointer and the url to download
+--> 140 pointers = self.client.retrieve(
+    141     args[0],
+    142     args[1],
+    143     pointer=True,
+    144     asynchronous=False,
+    145 )
+    147 url = pointers[0]["location"]
+    149 # download the file and return the associated HTTP header info.
+    150 # This might contain useful info such as content-type. It will be
+    151 # stored in the cache database.
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
+    196 def decorated(self, *args, **kwargs):
+--> 197     return fun(self, *args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:229, in authenticated.<locals>.decorated(self, *args, **kwargs)
+    227     raise e
+    228 # try:
+--> 229 return method(self, *args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
+    196 def decorated(self, *args, **kwargs):
+--> 197     return fun(self, *args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Client.py:202, in Client.retrieve(self, *args, **kwargs)
+    199 @authenticated
+    200 @wraps(RequestManager.retrieve)
+    201 def retrieve(self, *args, **kwargs):
+--> 202     return self.request_manager.retrieve(*args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/RequestManager.py:354, in RequestManager.retrieve(self, name, request, output_file, inline_request, asynchronous, max_attempts, attempt_period, append, pointer)
+    350 expected_responses = [requests.codes.ok, requests.codes.accepted, requests.codes.no_content]
+    351 # also requests.codes.other, implicitly handled by requests
+    352 # when POSTing to a URL with redirection, requests will do a GET
+    353 # against the new URL
+--> 354 response, response_messages = helpers.try_request(
+    355     method,
+    356     situation=situation,
+    357     expected=expected_responses,
+    358     logger=self._logger,
+    359     url=url,
+    360     headers=headers,
+    361     json=request_object,
+    362     stream=True,
+    363     skip_tls=self.config.get()["skip_tls"],
+    364 )
+    365 # According to 'REST API, Copernicus CDS, 02/06/2019':
+    366 # 303 see other: redirection to direct download endpoint
+    367 # 202 accepted: redirection to polling endpoint
+    368 # 200 ok: direct Json or binary data
+    369 if response.status_code == requests.codes.ok:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:604, in try_request(method, situation, expected, logger, stream, skip_tls, session, **kwargs)
+    601     logger.warning("Maximum HTTP request retries reached")
+    602     raise e
+--> 604 response_title, response_messages = process_response(
+    605     response, situation, url, method, stream, request_content, expected
+    606 )
+    608 logger.debug("Polytope client received HTTP " + response_title)
+    610 return response, response_messages
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:530, in process_response(response, situation, url, method, stream, request_content, expected)
+    528     if response.status_code == 401 and "expired" in response_messages[0]:
+    529         e.__class__ = "ExpiredCredentialsError"
+--> 530     raise e
+    531 elif response.status_code not in expected:
+    532     e.description = "Unexpected HTTP response from the server."
+
+HTTPResponseError: Polytope error
+Situation: trying to submit a retrieval request
+Description: HTTP CLIENT ERROR (401)
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/destination-earth
+HTTP method: POST
+Request header/body contents:
+{'headers': {'Authorization': 'Bearer **********xrfw'}, 'json': {'verb': 'retrieve', 'request': "activity: CMIP6\nclass: ng\ndate: 19940801/to/19981231\nexperiment: hist\nexpver: '0001'\nfeature:\n  shape:\n  - - 42.56160741966201\n    - -110.78785630181294\n  - - 42.56160741966201\n    - -110.78785630181294\n  - - 42.56620829512352\n    - -110.78326289641575\n  - - 42.568323864363734\n    - -110.77664654961832\n  - - 42.571359174649416\n    - -110.76911081354294\n  - - 42.57257951629475\n    - -110.7608129847833\n  - - 42.57628489812454\n    - -110.75453649121326\n  - - 42.58379230625978\n    - -110.75540207785177\n  - - 42.589990088565955\n    - -110.75822043575648\n  - - 42.595491453538614\n    - -110.76237899619208\n  - - 42.602328099180156\n    - -110.76198470432098\n  - - 42.60438503923737\n    - -110.75349025460169\n  - - 42.6020075968939\n    - -110.74814024877404\n  - - 42.59711900831604\n    - -110.74336931209322\n  - - 42.59192365143049\n    - -110.73890560644213\n  - - 42.58611494907791\n    - -110.73505567175312\n  - - 42.57907975873994\n    - -110.73243251917147\n  - - 42.572268316841296\n    - -110.73022993116574\n  - - 42.56515031131499\n    - -110.72833426249119\n  - - 42.55786665292789\n    - -110.72789177501981\n  - - 42.55058306618402\n    - -110.72744938044302\n  - - 42.54368897055639\n    - -110.72597443515\n  - - 42.53726714235094\n    - -110.72274103796447\n  - - 42.53176495463552\n    - -110.7185891080399\n  - - 42.52687575829703\n    - -110.71382508069195\n  - - 42.52051204030785\n    - -110.71246529631213\n  - - 42.51484416760867\n    - -110.70976711807639\n  - - 42.51048506839079\n    - -110.70511810476224\n  - - 42.503873250671035\n    - -110.70593701429111\n  - - 42.496590127237795\n    - -110.70549726648134\n  - - 42.489754647253605\n    - -110.70589651830394\n  - - 42.4832500877398\n    - -110.70339313264026\n  - - 42.483099022206694\n    - -110.69518472566915\n  - - 42.47974161139042\n    - -110.6888943045228\n  - - 42.473601879046726\n    - -110.687957026604\n  - - 42.466849283999764\n    - -110.68763238250902\n  - - 42.46095746349923\n    - -110.68451909947831\n  - - 42.45637392010801\n    - -110.6794561052519\n  - - 42.45148379084366\n    - -110.67470000109378\n  - - 42.44556806414806\n    - -110.67418344470428\n  - - 42.439676089687566\n    - -110.67107225543195\n  - - 42.434785762913265\n    - -110.66631788403339\n  - - 42.429506445500046\n    - -110.66259549525479\n  - - 42.42461587492381\n    - -110.65784241597852\n  - - 42.422093562131934\n    - -110.65136557840782\n  - - 42.41589488510259\n    - -110.64856355444304\n  - - 42.409778573421406\n    - -110.64503708547875\n  - - 42.40319117943539\n    - -110.64326715334346\n  - - 42.39590882729344\n    - -110.64283460617249\n  - - 42.388791247159524\n    - -110.6409526898363\n  - - 42.38304055906382\n    - -110.63899012521782\n  - - 42.37753684034982\n    - -110.63485402827514\n  - - 42.371374590115025\n    - -110.63651508377004\n  - - 42.365765630089264\n    - -110.63569635583768\n  - - 42.36329223894345\n    - -110.6407362739876\n  - - 42.36757040934269\n    - -110.6460959198371\n  - - 42.367971791597846\n    - -110.65211708956964\n  - - 42.363376772683544\n    - -110.656706073816\n  - - 42.358557728478345\n    - -110.6608759299439\n  - - 42.359547532710195\n    - -110.66887643841918\n  - - 42.35880486605535\n    - -110.67539591336934\n  - - 42.35577584753958\n    - -110.68291271189855\n  - - 42.35509103543612\n    - -110.69129892103226\n  - - 42.35289774584772\n    - -110.69862187314544\n  - - 42.34874867556228\n    - -110.70404398640315\n  - - 42.344599401233516\n    - -110.70946545295581\n  - - 42.34022621029936\n    - -110.71446768892373\n  - - 42.336971314493645\n    - -110.7215621916834\n  - - 42.334246207075786\n    - -110.72876915577507\n  - - 42.332274504108454\n    - -110.73650733690971\n  - - 42.331917904780454\n    - -110.74199412139022\n  - - 42.333292168563815\n    - -110.74896332454722\n  - - 42.33817881783109\n    - -110.75371656731325\n  - - 42.343537879714326\n    - -110.75671685994504\n  - - 42.34850732373213\n    - -110.76074717857406\n  - - 42.347760054969214\n    - -110.76726463502041\n  - - 42.343384619541\n    - -110.77226346424716\n  - - 42.33878550554212\n    - -110.77684288902543\n  - - 42.33418625744305\n    - -110.7814217084513\n  - - 42.33048078254132\n    - -110.78767493797388\n  - - 42.3259643848563\n    - -110.79152859767382\n  - - 42.32069435606491\n    - -110.79484942082685\n  - - 42.31475396424006\n    - -110.79691364622134\n  - - 42.30892299406914\n    - -110.79566400490117\n  - - 42.30387640460019\n    - -110.79940233751869\n  - - 42.29798852534184\n    - -110.79628688667985\n  - - 42.292048284060414\n    - -110.79835031624341\n  - - 42.28655489335692\n    - -110.80125046557255\n  - - 42.28061466002791\n    - -110.80331313290043\n  - - 42.279168702580805\n    - -110.81115690402214\n  - - 42.28237926541313\n    - -110.81629311639487\n  - - 42.28854309430097\n    - -110.81465009642675\n  - - 42.29560046953544\n    - -110.81468130837462\n  - - 42.298644280418145\n    - -110.82126605633422\n  - - 42.29571722462795\n    - -110.82545716537511\n  - - 42.29968066429743\n    - -110.83112781494376\n  - - 42.295749655478154\n    - -110.83695658899673\n  - - 42.294831669245674\n    - -110.84491531130473\n  - - 42.294666474767396\n    - -110.85340658319843\n  - - 42.29779187389643\n    - -110.8592694119783\n  - - 42.29519887025664\n    - -110.86760921085776\n  - - 42.29475311163233\n    - -110.87381587257934\n  - - 42.29871443197563\n    - -110.87948919598014\n  - - 42.306357709457735\n    - -110.8815073015129\n  - - 42.31001189203542\n    - -110.88748667086189\n  - - 42.30789142276821\n    - -110.89407509670376\n  - - 42.30797438454388\n    - -110.90039710971217\n  - - 42.31341364197486\n    - -110.90268375638269\n  - - 42.31921525946297\n    - -110.90653258792584\n  - - 42.32183682933262\n    - -110.90969512706087\n  - - 42.31820910899587\n    - -110.91521674355494\n  - - 42.32473673261885\n    - -110.91514363678908\n  - - 42.329786789207326\n    - -110.91141258009918\n  - - 42.33609143104628\n    - -110.910919914491\n  - - 42.338519743976235\n    - -110.9040246202417\n  - - 42.343123339431656\n    - -110.89945362389057\n  - - 42.348842451264126\n    - -110.89697809186819\n  - - 42.35305522021416\n    - -110.89343483794553\n  - - 42.35899743962959\n    - -110.89137772008802\n  - - 42.36544165158247\n    - -110.89202652251045\n  - - 42.371830254131744\n    - -110.89080759126091\n  - - 42.37821889869399\n    - -110.88958843605702\n  - - 42.38407752798821\n    - -110.88825463312872\n  - - 42.390689421695086\n    - -110.88745446958495\n  - - 42.39707819313971\n    - -110.88623467556204\n  - - 42.40346700696869\n    - -110.88501465734636\n  - - 42.41007904982076\n    - -110.88421396243595\n  - - 42.41691433541502\n    - -110.88383270278408\n  - - 42.423749681863306\n    - -110.88345136814088\n  - - 42.4305850892847\n    - -110.88306995848423\n  - - 42.4367509551882\n    - -110.88142935867168\n  - - 42.442247232772345\n    - -110.88558849813914\n  - - 42.4450929176506\n    - -110.8891756220513\n  - - 42.45148216684133\n    - -110.88795503112262\n  - - 42.45496985460897\n    - -110.88127645035031\n  - - 42.458680446233515\n    - -110.87501701056242\n  - - 42.46350699574092\n    - -110.87085601175254\n  - - 42.46788692111766\n    - -110.8658547511519\n  - - 42.47218309406475\n    - -110.86157819890074\n  - - 42.47834903225801\n    - -110.85993470839321\n  - - 42.48510129066295\n    - -110.8602761596078\n  - - 42.491267319965516\n    - -110.85863224774262\n  - - 42.49743337996508\n    - -110.85698804391018\n  - - 42.50002639173686\n    - -110.84862355426532\n  - - 42.50462902238501\n    - -110.8440382502771\n  - - 42.51057165788297\n    - -110.8419724120315\n  - - 42.51486729337038\n    - -110.83769175221985\n  - - 42.51782249387443\n    - -110.83089034232351\n  - - 42.523988425579454\n    - -110.82924304502828\n  - - 42.52993098291291\n    - -110.82717536376607\n  - - 42.533472601489066\n    - -110.82235832664088\n  - - 42.53701405891079\n    - -110.81754079787983\n  - - 42.53770719306871\n    - -110.80913385547262\n  - - 42.53839978477134\n    - -110.80072674519924\n  - - 42.5418833997717\n    - -110.79403541761567\n  - - 42.54738325479137\n    - -110.79819393404847\n  - - 42.5519844048064\n    - -110.79360215575986\n  - - 42.55725602859093\n    - -110.79027016579863\n  - - 42.56160741966201\n    - -110.78785630181294\n  type: polygon\ngeneration: '1'\nlevtype: sfc\nmodel: IFS-FESOM\nparam: 167/260048/169\nrealization: '1'\nresolution: high\nstream: clte\ntime: 0000/0100/0200/0300/0400/0500/0600/0700/0800/0900/1000/1100/1200/1300/1400/1500/1600/1700/1800/1900/2000/2100/2200/2300\ntype: fc\n"}}
+Expected responses: 200, 202, 204
+Received response: CLIENT ERROR (401)
+Details:
+Authentication failed
 
