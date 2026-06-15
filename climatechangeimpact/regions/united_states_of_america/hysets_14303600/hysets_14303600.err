@@ -1,36 +1,8 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/04/29 21:29:23 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 21:29:23 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 21:29:23 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": EOF
-[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:54,  7.92s/cell]Executing:   9%|▊         | 2/23 [00:08<01:19,  3.81s/cell]Executing:  13%|█▎        | 3/23 [00:12<01:17,  3.88s/cell]Executing:  39%|███▉      | 9/23 [00:12<00:11,  1.24cell/s]Executing:  70%|██████▉   | 16/23 [00:13<00:02,  2.73cell/s]Executing:  83%|████████▎ | 19/23 [00:13<00:01,  2.95cell/s]Executing:  96%|█████████▌| 22/23 [00:14<00:00,  3.42cell/s]Executing: 100%|██████████| 23/23 [00:17<00:00,  1.35cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:37,  7.17s/cell]Executing:   9%|▊         | 2/23 [00:11<01:57,  5.57s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:01,  3.08s/cell]Executing:  39%|███▉      | 9/23 [00:12<00:10,  1.32cell/s]Executing:  39%|███▉      | 9/23 [00:15<00:23,  1.71s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/10 21:46:35 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/10 21:46:35 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/10 21:46:35 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:   4%|▍         | 1/23 [00:03<01:16,  3.46s/cell]Executing:   9%|▊         | 2/23 [00:06<01:02,  2.96s/cell]Executing:  13%|█▎        | 3/23 [00:15<02:00,  6.04s/cell]Executing:  17%|█▋        | 4/23 [00:15<01:10,  3.71s/cell]Executing:  22%|██▏       | 5/23 [00:16<00:45,  2.55s/cell]Executing:  26%|██▌       | 6/23 [00:16<00:30,  1.76s/cell]Executing:  30%|███       | 7/23 [00:17<00:22,  1.43s/cell]Executing:  35%|███▍      | 8/23 [00:18<00:18,  1.21s/cell]Executing:  39%|███▉      | 9/23 [00:18<00:13,  1.05cell/s]Executing:  43%|████▎     | 10/23 [00:18<00:09,  1.32cell/s]Executing:  48%|████▊     | 11/23 [00:19<00:07,  1.62cell/s]Executing:  52%|█████▏    | 12/23 [00:19<00:06,  1.75cell/s]Executing:  57%|█████▋    | 13/23 [00:20<00:05,  1.79cell/s]Executing:  61%|██████    | 14/23 [00:21<00:07,  1.26cell/s]Executing:  65%|██████▌   | 15/23 [00:21<00:05,  1.51cell/s]Executing:  70%|██████▉   | 16/23 [00:22<00:03,  1.84cell/s]Executing:  74%|███████▍  | 17/23 [00:29<00:15,  2.50s/cell]Executing:  78%|███████▊  | 18/23 [00:29<00:09,  1.92s/cell]Executing:  83%|████████▎ | 19/23 [00:31<00:07,  1.91s/cell]Executing:  87%|████████▋ | 20/23 [00:32<00:04,  1.51s/cell]Executing:  91%|█████████▏| 21/23 [00:32<00:02,  1.15s/cell]Executing:  96%|█████████▌| 22/23 [00:33<00:01,  1.16s/cell]Executing: 100%|██████████| 23/23 [00:33<00:00,  1.11cell/s]Executing: 100%|██████████| 23/23 [00:36<00:00,  1.60s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:03<01:18,  3.57s/cell]Executing:   9%|▊         | 2/23 [00:14<02:48,  8.01s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:28,  4.42s/cell]Executing:  17%|█▋        | 4/23 [00:18<01:18,  4.11s/cell]Executing:  22%|██▏       | 5/23 [00:18<00:50,  2.79s/cell]Executing:  26%|██▌       | 6/23 [00:19<00:34,  2.00s/cell]Executing:  30%|███       | 7/23 [00:20<00:27,  1.73s/cell]Executing:  35%|███▍      | 8/23 [00:20<00:18,  1.22s/cell]Executing:  39%|███▉      | 9/23 [00:22<00:19,  1.37s/cell]Executing:  39%|███▉      | 9/23 [00:25<00:39,  2.79s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
