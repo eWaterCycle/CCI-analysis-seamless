@@ -1,36 +1,8 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/04/29 21:23:56 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 21:23:56 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 21:23:56 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": EOF
-[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:48,  7.65s/cell]Executing:   9%|▊         | 2/23 [00:08<01:22,  3.94s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:29,  4.48s/cell]Executing:  39%|███▉      | 9/23 [00:14<00:12,  1.08cell/s]Executing:  61%|██████    | 14/23 [00:14<00:04,  2.05cell/s]Executing:  74%|███████▍  | 17/23 [00:14<00:02,  2.82cell/s]Executing:  87%|████████▋ | 20/23 [00:15<00:01,  2.56cell/s]Executing:  96%|█████████▌| 22/23 [00:16<00:00,  2.86cell/s]Executing: 100%|██████████| 23/23 [00:19<00:00,  1.21cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:08<03:00,  8.23s/cell]Executing:   9%|▊         | 2/23 [00:14<02:30,  7.15s/cell]Executing:  35%|███▍      | 8/23 [00:14<00:18,  1.20s/cell]Executing:  39%|███▉      | 9/23 [00:18<00:28,  2.06s/cell]
+2026/06/10 15:45:06 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/10 15:45:06 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/10 15:45:06 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:03<01:09,  3.17s/cell]Executing:   9%|▊         | 2/23 [00:05<00:56,  2.67s/cell]Executing:  13%|█▎        | 3/23 [00:12<01:36,  4.84s/cell]Executing:  17%|█▋        | 4/23 [00:13<00:58,  3.09s/cell]Executing:  22%|██▏       | 5/23 [00:18<01:08,  3.83s/cell]Executing:  26%|██▌       | 6/23 [00:18<00:45,  2.66s/cell]Executing:  30%|███       | 7/23 [00:19<00:32,  2.03s/cell]Executing:  35%|███▍      | 8/23 [00:20<00:23,  1.60s/cell]Executing:  39%|███▉      | 9/23 [00:20<00:16,  1.20s/cell]Executing:  43%|████▎     | 10/23 [00:21<00:12,  1.04cell/s]Executing:  48%|████▊     | 11/23 [00:21<00:09,  1.29cell/s]Executing:  52%|█████▏    | 12/23 [00:21<00:07,  1.48cell/s]Executing:  57%|█████▋    | 13/23 [00:22<00:05,  1.80cell/s]Executing:  61%|██████    | 14/23 [00:22<00:04,  1.89cell/s]Executing:  65%|██████▌   | 15/23 [00:22<00:03,  2.27cell/s]Executing:  70%|██████▉   | 16/23 [00:23<00:03,  2.24cell/s]Executing:  74%|███████▍  | 17/23 [00:23<00:03,  1.93cell/s]Executing:  78%|███████▊  | 18/23 [00:24<00:03,  1.56cell/s]Executing:  83%|████████▎ | 19/23 [00:27<00:04,  1.24s/cell]Executing:  87%|████████▋ | 20/23 [00:28<00:03,  1.03s/cell]Executing:  91%|█████████▏| 21/23 [00:28<00:01,  1.25cell/s]Executing:  96%|█████████▌| 22/23 [00:29<00:01,  1.06s/cell]Executing: 100%|██████████| 23/23 [00:31<00:00,  1.05s/cell]Executing: 100%|██████████| 23/23 [00:33<00:00,  1.47s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:55,  2.53s/cell]Executing:   9%|▊         | 2/23 [00:11<02:12,  6.32s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:12,  3.63s/cell]Executing:  17%|█▋        | 4/23 [00:12<00:47,  2.51s/cell]Executing:  22%|██▏       | 5/23 [00:13<00:36,  2.01s/cell]Executing:  26%|██▌       | 6/23 [00:14<00:26,  1.57s/cell]Executing:  30%|███       | 7/23 [00:15<00:20,  1.27s/cell]Executing:  35%|███▍      | 8/23 [00:15<00:14,  1.05cell/s]Executing:  39%|███▉      | 9/23 [00:17<00:16,  1.19s/cell]Executing:  39%|███▉      | 9/23 [00:19<00:30,  2.21s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
