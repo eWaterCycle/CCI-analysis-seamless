@@ -1,21 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/04/29 21:27:12 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 21:27:13 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 21:27:13 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": EOF
-[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:08<03:05,  8.42s/cell]Executing:   9%|▊         | 2/23 [00:09<01:29,  4.28s/cell]Executing:  13%|█▎        | 3/23 [00:15<01:35,  4.80s/cell]Executing:  30%|███       | 7/23 [00:15<00:21,  1.36s/cell]Executing:  61%|██████    | 14/23 [00:15<00:04,  2.00cell/s]Executing:  74%|███████▍  | 17/23 [00:15<00:02,  2.69cell/s]Executing:  87%|████████▋ | 20/23 [00:16<00:01,  2.73cell/s]Executing:  96%|█████████▌| 22/23 [00:17<00:00,  2.91cell/s]Executing: 100%|██████████| 23/23 [00:19<00:00,  1.15cell/s]
+2026/06/10 19:33:25 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/10 19:33:25 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/10 19:33:25 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
 Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
@@ -30,7 +15,22 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:41,  7.32s/cell]Executing:   9%|▊         | 2/23 [00:14<02:26,  7.00s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:18,  3.91s/cell]Executing:  26%|██▌       | 6/23 [00:14<00:22,  1.35s/cell]Executing:  39%|███▉      | 9/23 [00:15<00:12,  1.11cell/s]Executing:  39%|███▉      | 9/23 [00:18<00:28,  2.04s/cell]
+Executing:   4%|▍         | 1/23 [00:17<06:15, 17.07s/cell]Executing:   9%|▊         | 2/23 [00:19<03:01,  8.67s/cell]Executing:  13%|█▎        | 3/23 [00:30<03:13,  9.66s/cell]Executing:  17%|█▋        | 4/23 [00:31<01:56,  6.14s/cell]Executing:  22%|██▏       | 5/23 [00:31<01:14,  4.13s/cell]Executing:  26%|██▌       | 6/23 [00:32<00:50,  2.96s/cell]Executing:  30%|███       | 7/23 [00:33<00:34,  2.15s/cell]Executing:  35%|███▍      | 8/23 [00:34<00:27,  1.84s/cell]Executing:  39%|███▉      | 9/23 [00:34<00:19,  1.40s/cell]Executing:  43%|████▎     | 10/23 [00:35<00:15,  1.20s/cell]Executing:  48%|████▊     | 11/23 [00:36<00:12,  1.07s/cell]Executing:  52%|█████▏    | 12/23 [00:36<00:09,  1.18cell/s]Executing:  57%|█████▋    | 13/23 [00:37<00:08,  1.17cell/s]Executing:  61%|██████    | 14/23 [00:41<00:15,  1.74s/cell]Executing:  65%|██████▌   | 15/23 [00:41<00:10,  1.28s/cell]Executing:  70%|██████▉   | 16/23 [00:42<00:07,  1.07s/cell]Executing:  78%|███████▊  | 18/23 [00:42<00:03,  1.46cell/s]Executing:  83%|████████▎ | 19/23 [00:44<00:04,  1.06s/cell]Executing:  87%|████████▋ | 20/23 [00:45<00:02,  1.07cell/s]Executing:  91%|█████████▏| 21/23 [00:45<00:01,  1.19cell/s]Executing:  96%|█████████▌| 22/23 [00:47<00:01,  1.06s/cell]Executing: 100%|██████████| 23/23 [00:47<00:00,  1.19cell/s]Executing: 100%|██████████| 23/23 [00:50<00:00,  2.20s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<03:09,  8.64s/cell]Executing:   9%|▊         | 2/23 [00:20<03:44, 10.69s/cell]Executing:  13%|█▎        | 3/23 [00:21<01:59,  5.99s/cell]Executing:  17%|█▋        | 4/23 [00:21<01:11,  3.76s/cell]Executing:  22%|██▏       | 5/23 [00:22<00:47,  2.65s/cell]Executing:  26%|██▌       | 6/23 [00:22<00:32,  1.90s/cell]Executing:  30%|███       | 7/23 [00:22<00:21,  1.34s/cell]Executing:  35%|███▍      | 8/23 [00:23<00:15,  1.02s/cell]Executing:  39%|███▉      | 9/23 [00:25<00:19,  1.36s/cell]Executing:  39%|███▉      | 9/23 [00:28<00:43,  3.11s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
