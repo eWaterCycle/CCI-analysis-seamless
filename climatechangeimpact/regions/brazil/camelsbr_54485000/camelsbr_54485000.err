@@ -1,3 +1,7 @@
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/24 10:37:07 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 10:37:07 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 10:37:07 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:   4%|▍         | 1/23 [00:05<02:00,  5.46s/cell]Executing:   9%|▊         | 2/23 [00:07<01:06,  3.17s/cell]Executing:  13%|█▎        | 3/23 [02:26<21:44, 65.23s/cell]Executing:  17%|█▋        | 4/23 [02:26<12:32, 39.62s/cell]Executing:  22%|██▏       | 5/23 [02:32<08:12, 27.35s/cell]Executing:  30%|███       | 7/23 [02:32<03:36, 13.51s/cell]Executing:  35%|███▍      | 8/23 [02:32<02:29,  9.97s/cell]Executing:  39%|███▉      | 9/23 [02:33<01:43,  7.39s/cell]Executing:  43%|████▎     | 10/23 [02:33<01:09,  5.36s/cell]Executing:  48%|████▊     | 11/23 [02:33<00:46,  3.89s/cell]Executing:  52%|█████▏    | 12/23 [02:33<00:31,  2.82s/cell]Executing:  61%|██████    | 14/23 [02:33<00:14,  1.56s/cell]Executing:  70%|██████▉   | 16/23 [02:33<00:06,  1.03cell/s]Executing:  83%|████████▎ | 19/23 [02:49<00:11,  2.90s/cell]Executing:  87%|████████▋ | 20/23 [02:49<00:07,  2.47s/cell]Executing:  91%|█████████▏| 21/23 [02:50<00:04,  2.02s/cell]Executing:  96%|█████████▌| 22/23 [02:52<00:01,  1.98s/cell]Executing: 100%|██████████| 23/23 [02:52<00:00,  1.53s/cell]Executing: 100%|██████████| 23/23 [02:54<00:00,  7.60s/cell]
 Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
@@ -12,8 +16,8 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:38,  7.19s/cell]Executing:   9%|▊         | 2/23 [00:08<01:15,  3.58s/cell]Executing:  13%|█▎        | 3/23 [00:12<01:16,  3.83s/cell]Executing:  43%|████▎     | 10/23 [00:12<00:09,  1.43cell/s]Executing:  70%|██████▉   | 16/23 [00:12<00:02,  2.68cell/s]Executing:  83%|████████▎ | 19/23 [00:13<00:01,  2.63cell/s]Executing:  96%|█████████▌| 22/23 [00:14<00:00,  3.02cell/s]Executing: 100%|██████████| 23/23 [00:17<00:00,  1.34cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Executing:   4%|▍         | 1/23 [00:10<03:45, 10.23s/cell]Executing:   9%|▊         | 2/23 [00:28<05:13, 14.94s/cell]Executing:  13%|█▎        | 3/23 [00:28<02:44,  8.22s/cell]Executing:  35%|███▍      | 8/23 [00:28<00:29,  1.94s/cell]Executing:  52%|█████▏    | 12/23 [00:30<00:14,  1.29s/cell]Executing:  61%|██████    | 14/23 [00:31<00:08,  1.02cell/s]Executing:  70%|██████▉   | 16/23 [00:31<00:05,  1.35cell/s]Executing:  78%|███████▊  | 18/23 [00:32<00:03,  1.45cell/s]Executing:  87%|████████▋ | 20/23 [00:33<00:01,  1.64cell/s]Executing:  96%|█████████▌| 22/23 [00:33<00:00,  2.19cell/s]Executing: 100%|██████████| 23/23 [00:34<00:00,  1.63cell/s]Executing: 100%|██████████| 23/23 [00:37<00:00,  1.62s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
     self.new_session()
@@ -27,7 +31,7 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:08<03:01,  8.26s/cell]Executing:   9%|▊         | 2/23 [00:13<02:14,  6.39s/cell]Executing:  35%|███▍      | 8/23 [00:13<00:16,  1.07s/cell]Executing:  48%|████▊     | 11/23 [00:14<00:09,  1.25cell/s]Executing:  74%|███████▍  | 17/23 [00:14<00:02,  2.48cell/s]Executing:  87%|████████▋ | 20/23 [00:15<00:01,  2.59cell/s]Executing:  96%|█████████▌| 22/23 [00:23<00:01,  1.15s/cell]Executing:  96%|█████████▌| 22/23 [00:26<00:01,  1.20s/cell]
+Executing:   7%|▋         | 1/14 [00:08<01:53,  8.73s/cell]Executing:  14%|█▍        | 2/14 [00:20<02:05, 10.43s/cell]Executing:  21%|██▏       | 3/14 [00:20<01:03,  5.74s/cell]Executing:  36%|███▌      | 5/14 [00:20<00:22,  2.53s/cell]Executing:  43%|████▎     | 6/14 [00:20<00:14,  1.83s/cell]Executing:  64%|██████▍   | 9/14 [00:20<00:04,  1.19cell/s]Executing:  64%|██████▍   | 9/14 [00:37<00:04,  1.19cell/s]Executing:  71%|███████▏  | 10/14 [01:25<00:56, 14.14s/cell]Executing:  71%|███████▏  | 10/14 [01:27<00:35,  8.78s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -37,173 +41,223 @@ Traceback (most recent call last):
     raise error
 papermill.exceptions.PapermillExecutionError: 
 ---------------------------------------------------------------------------
-Exception encountered at "In [17]":
+Exception encountered at "In [8]":
 ---------------------------------------------------------------------------
-JSONDecodeError                           Traceback (most recent call last)
-Cell In[17], line 1
-----> 1 get_ipython().run_cell_magic('time', '', '\n# Generate forcing for the calibration + validation period\ntry:\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.load(settings["path_DestinE_historical"])\n    print("Loading")\nexcept FileNotFoundError:\n# DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n    print("Generating")\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n        start_time=settings["calibration_start_date"],\n        end_time=settings["validation_end_date"],\n        directory=settings["path_DestinE_historical"],\n        shape=settings["path_shape"],\n    )\n\ndisplay(DestinE_hist_forcing_object)\n')
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[8], line 25
+     24     load_location = path_CMIP6 / "work" / "diagnostic" / "script" 
+---> 25     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+     26 except:
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/interactiveshell.py:2593, in InteractiveShell.run_cell_magic(self, magic_name, line, cell)
-   2591 with self.builtin_trap:
-   2592     args = (magic_arg_s, cell)
--> 2593     result = fn(*args, **kwargs)
-   2595 # The code below prevents the output from being displayed
-   2596 # when using magics with decorator @output_can_be_silenced
-   2597 # when the last Python token in the expression is a ';'.
-   2598 if getattr(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, False):
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
+    272     msg = (
+    273         f"Forcing file {meta} not found. "
+    274         f"Perhaps you want to use {cls.__name__}(...)?"
+    275     )
+--> 276     raise FileNotFoundError(msg)
+    277 metadata = meta.read_text()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1448, in ExecutionMagics.time(self, line, cell, local_ns)
-   1446 if interrupt_occured:
-   1447     if exit_on_interrupt and captured_exception:
--> 1448         raise captured_exception
-   1449     return
-   1450 return out
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/brazil/camelsbr_54485000/CMIP6/MPI-ESM1-2-LR/ssp126/r1i1p1f1/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1412, in ExecutionMagics.time(self, line, cell, local_ns)
-   1410 st = clock2()
-   1411 try:
--> 1412     exec(code, glob, local_ns)
-   1413     out = None
-   1414     # multi-line %%time case
+During handling of the above exception, another exception occurred:
 
-File <timed exec>:8
+OSError                                   Traceback (most recent call last)
+Cell In[8], line 30
+     28         shutil.rmtree(path_CMIP6)
+     29     path_CMIP6.mkdir(exist_ok=True, parents=True)
+---> 30     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
+     31        dataset=cmip_dataset,
+     32        start_time=settings['future_start_date'],
+     33        end_time=settings['future_end_date'],
+     34        directory=path_CMIP6,
+     35        shape=settings['path_shape'],
+     36     )
+     37 display(CMIP_forcing_object)
+     39 # Quick plot of the precipitation and potential evaporation data
 
-File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:445, in DestinEHistoricalForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
-    442 LIVE_REQUEST = os.getenv("LIVE_REQUEST", "true").lower() == "true"
-    444 if LIVE_REQUEST:
---> 445     data = earthkit.data.from_source("polytope", "destination-earth", request, address=polytope_address, stream=False)
-    447 ds = data.to_xarray()
-    448 ds = ds.rename({
-    449     "2t": "tas",
-    450     "ssrd": "rsds",
-    451     "tprate": "pr"
-    452 })
+File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
+     47 @classmethod
+     48 def generate(  # type: ignore[override]
+     49     cls: type["Makkink"],
+   (...)     55     **model_specific_options,
+     56 ) -> "Makkink":
+---> 57     return super().generate(
+     58         dataset,
+     59         start_time,
+     60         end_time,
+     61         shape,
+     62         directory,
+     63         variables=("pr", "tas", "rsds"),
+     64         postprocessor=derive_e_pot,
+     65         **model_specific_options,
+     66     )
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:145, in from_source(name, lazily, *args, **kwargs)
-    143 while src is not prev:
-    144     prev = src
---> 145     src = src.mutate()
-    146 return src
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
+    129 """Generate forcings for a model.
+    130 
+    131 The forcing is generated with help of
+   (...)    151     model_specific_options: Subclass specific options.
+    152 """
+    153 recipe = cls._build_recipe(
+    154     dataset=dataset,
+    155     start_time=get_time(start_time),
+   (...)    159     **model_specific_options,
+    160 )
+--> 162 recipe_output = cls._run_recipe(
+    163     recipe, directory=Path(directory) if directory else None
+    164 )
+    166 derived_variables: tuple[str, ...] = ()
+    167 if postprocessor is not None:
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:106, in Polytope.mutate(self)
-    104     return self._mutate_stream()
-    105 else:
---> 106     return self._retrieve()
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
+    211 @classmethod
+    212 def _run_recipe(
+    213     cls,
+    214     recipe: Recipe,
+    215     directory: Path | None = None,
+    216 ) -> dict[str, str]:
+--> 217     return run_recipe(recipe, directory)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:163, in Polytope._retrieve(self)
-    161 # Download each request in parallel when the config allows it
-    162 retriever = FileRequestRetriever(self, retriever=_retrieve_one)
---> 163 path = retriever.retrieve(self.request, self.dataset)
-    165 # TODO: for simplicity we assume all retrieved files have the same content-type. Revisit if needed.
-    166 content_type = None
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
+    100 warnings.filterwarnings(  # Not relevant for end users.
+    101     action="ignore",
+    102     message="Thank you for trying out the new ESMValCore API",
+    103 )
+    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
+    105     action="ignore",
+    106     message="Saving to netcdf with legacy-style attribute",
+    107 )
+--> 109 output = _save_and_run_recipe(recipe, output_dir)
+    110 return _parse_recipe_output(output)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/utils/request.py:135, in FileRequestRetriever.retrieve(self, requests, *extra_args)
-    132 nthreads = min(self.owner.config("number-of-download-threads"), len(requests))
-    134 if nthreads < 2:
---> 135     path = [self.retriever(r, *extra_args) for r in requests]
-    136 else:
-    137     from earthkit.data.utils.progbar import tqdm
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
+    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
+    136     session = _session(output_dir)
+--> 137     output = esmlvaltool_recipe.run(session=session)
+    138 finally:
+    139     recipe_path.unlink()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:156, in Polytope._retrieve.<locals>._retrieve_one(request, dataset)
-    152     return download_to_target(url, target)
-    154 # The cache file path/data is constructed by using the request only. We cannot simply base
-    155 # it on the URL since the URL may change every time we ask for the pointers.
---> 156 return self.cache_file(
-    157     retrieve,
-    158     (dataset, request),
-    159 )
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:138, in Recipe.run(self, task, session)
+    136     _dask.check_distributed_config()
+    137     self._engine = self._load(session=session)
+--> 138     self._engine.run()
+    140 shutil.copy2(self.path, session.run_dir)
+    142 output = self.get_output()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:65, in Source.cache_file(self, create, args, **kwargs)
-     62 if owner is None:
-     63     owner = re.sub(r"(?!^)([A-Z]+)", r"-\1", self.__class__.__name__).lower()
----> 65 return cache_file(owner, create, args, **kwargs)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1093, in Recipe.run(self)
+   1091 # Download required data
+   1092 if self.session['search_esgf'] != 'never':
+-> 1093     esgf.download(self._download_files, self.session['download_dir'])
+   1095 self.tasks.run(max_parallel_tasks=self.session['max_parallel_tasks'])
+   1096 logger.info(
+   1097     "Wrote recipe with version numbers and wildcards "
+   1098     "to:\nfile://%s", filled_recipe)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/core/caching.py:1099, in cache_file(owner, create, args, hash_extra, extension, force, replace)
-   1097 with FileLock(lock):
-   1098     if not os.path.exists(path):  # Check again, another thread/process may have created the file
--> 1099         owner_data = create(path + ".tmp", args)
-   1100         os.rename(path + ".tmp", path)
-   1101 try:
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:563, in download(files, dest_folder, n_jobs)
+    561 file = future_to_file[future]
+    562 try:
+--> 563     future.result()
+    564 except DownloadError as error:
+    565     logger.error("Failed to download %s, error message %s", file,
+    566                  error)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:140, in Polytope._retrieve.<locals>._retrieve_one.<locals>.retrieve(target, args)
-    135 """
-    136 Caching callback method to retrieve data into target file. Only called if
-    137 the data is not already cached.
-    138 """
-    139 # get the pointer and the url to download
---> 140 pointers = self.client.retrieve(
-    141     args[0],
-    142     args[1],
-    143     pointer=True,
-    144     asynchronous=False,
-    145 )
-    147 url = pointers[0]["location"]
-    149 # download the file and return the associated HTTP header info.
-    150 # This might contain useful info such as content-type. It will be
-    151 # stored in the cache database.
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/concurrent/futures/_base.py:449, in Future.result(self, timeout)
+    447     raise CancelledError()
+    448 elif self._state == FINISHED:
+--> 449     return self.__get_result()
+    451 self._condition.wait(timeout)
+    453 if self._state in [CANCELLED, CANCELLED_AND_NOTIFIED]:
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
-    196 def decorated(self, *args, **kwargs):
---> 197     return fun(self, *args, **kwargs)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/concurrent/futures/_base.py:401, in Future.__get_result(self)
+    399 if self._exception:
+    400     try:
+--> 401         raise self._exception
+    402     finally:
+    403         # Break a reference cycle with the exception in self._exception
+    404         self = None
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:217, in authenticated.<locals>.decorated(self, *args, **kwargs)
-    215 @wraps(method, assign=default_assign + default_update, update=[])
-    216 def decorated(self, *args, **kwargs):
---> 217     auth_headers = self.auth.get_auth_headers()
-    218     if len(auth_headers) < 1:
-    219         e = PolytopeError(situation=("trying to run a Polytope command " + "which requires authentication"))
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/concurrent/futures/thread.py:58, in _WorkItem.run(self)
+     55     return
+     57 try:
+---> 58     result = self.fn(*self.args, **self.kwargs)
+     59 except BaseException as exc:
+     60     self.future.set_exception(exc)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Auth.py:50, in Auth.get_auth_headers(self)
-     48 def get_auth_headers(self):
-     49     auth_headers = []
----> 50     user_key, user_email, _ = self.fetch_key(login=False)
-     51     if user_key and user_email:
-     52         auth_headers.append("EmailKey %s:%s" % (user_email, user_key))
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:547, in download.<locals>._download(file)
+    545 def _download(file: ESGFFile):
+    546     """Download file to dest_folder."""
+--> 547     file.download(dest_folder)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Auth.py:153, in Auth.fetch_key(self, login)
-    151 try:
-    152     with open(str(key_file), "r") as infile:
---> 153         info = json.load(infile)
-    154         key = info.get("user_key", None)
-    155         email = info.get("user_email", None)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:427, in ESGFFile.download(self, dest_folder)
+    425 for url in sort_hosts(self.urls):
+    426     try:
+--> 427         self._download(local_file, url)
+    428     except (DownloadError,
+    429             requests.exceptions.RequestException) as error:
+    430         logger.debug("Not able to download %s. Error message: %s", url,
+    431                      error)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/__init__.py:293, in load(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)
-    274 def load(fp, *, cls=None, object_hook=None, parse_float=None,
-    275         parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
-    276     """Deserialize ``fp`` (a ``.read()``-supporting file-like object containing
-    277     a JSON document) to a Python object.
-    278 
-   (...)    291     kwarg; otherwise ``JSONDecoder`` is used.
-    292     """
---> 293     return loads(fp.read(),
-    294         cls=cls, object_hook=object_hook,
-    295         parse_float=parse_float, parse_int=parse_int,
-    296         parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:466, in ESGFFile._download(self, local_file, url)
+    461 logger.debug("Downloading %s to %s", url, tmp_file)
+    462 start_time = datetime.datetime.now()
+    463 response = requests.get(url,
+    464                         stream=True,
+    465                         timeout=TIMEOUT,
+--> 466                         cert=get_credentials())
+    467 response.raise_for_status()
+    468 with tmp_file.open("wb") as file:
+    469     # Specify chunk_size to avoid
+    470     # https://github.com/psf/requests/issues/5536
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/__init__.py:346, in loads(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)
-    341     s = s.decode(detect_encoding(s), 'surrogatepass')
-    343 if (cls is None and object_hook is None and
-    344         parse_int is None and parse_float is None and
-    345         parse_constant is None and object_pairs_hook is None and not kw):
---> 346     return _default_decoder.decode(s)
-    347 if cls is None:
-    348     cls = JSONDecoder
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_logon.py:40, in get_credentials()
+     38 def get_credentials():
+     39     """Return ESGF credentials."""
+---> 40     manager = logon()
+     41     if manager.is_logged_on():
+     42         credentials = manager.esgf_credentials
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/decoder.py:337, in JSONDecoder.decode(self, s, _w)
-    332 def decode(self, s, _w=WHITESPACE.match):
-    333     """Return the Python representation of ``s`` (a ``str`` instance
-    334     containing a JSON document).
-    335 
-    336     """
---> 337     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-    338     end = _w(s, end).end()
-    339     if end != len(s):
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_logon.py:22, in logon()
+     20 """Log on to ESGF and return a LogonManager."""
+     21 cfg = get_esgf_config()
+---> 22 manager = get_manager()
+     24 if not manager.is_logged_on():
+     25     keys = ['interactive', 'hostname', 'username', 'password']
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/decoder.py:355, in JSONDecoder.raw_decode(self, s, idx)
-    353     obj, end = self.scan_once(s, idx)
-    354 except StopIteration as err:
---> 355     raise JSONDecodeError("Expecting value", s, err.value) from None
-    356 return obj, end
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_logon.py:16, in get_manager()
+     13 @lru_cache(None)
+     14 def get_manager():
+     15     """Return a logon manager."""
+---> 16     return pyesgf.logon.LogonManager()
 
-JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/logon.py:111, in LogonManager.__init__(self, esgf_dir, dap_config, verify)
+    108 self.dap_config = dap_config
+    109 self.verify = verify
+--> 111 self._write_dap_config()
 
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/logon.py:240, in LogonManager._write_dap_config(self, verbose, validate)
+    239 def _write_dap_config(self, verbose=False, validate=False):
+--> 240     preamble, managed, postamble = self._parse_dap_config()
+    242     with open(self.dap_config, 'w') as fh:
+    243         fh.write(('{preamble}\n'
+    244                   '# BEGIN {marker}\n'
+    245                   'HTTP.VERBOSE={verbose}\n'
+   (...)    258                          preamble=preamble,
+    259                          postamble=postamble))
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/pyesgf/logon.py:274, in LogonManager._parse_dap_config(self, config_str)
+    272     if not op.exists(self.dap_config):
+    273         return ('', '', '')
+--> 274     config_str = open(self.dap_config).read()
+    276 # !NOTE: The flags keyword argument to re.split was introduced
+    277 #        in Python2.7
+    278 #        Keep with call non-keyword arguments for compatibility with
+    279 #        Python2.6
+    280 sections = re.split(r'^# (?:BEGIN|END) {0}$\n'
+    281                     .format(DAP_CONFIG_MARKER),
+    282                     config_str, re.M)
+
+OSError: [Errno 0] Error
+
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab

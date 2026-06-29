@@ -1,162 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:46,  2.10s/cell]Executing:   9%|▊         | 2/23 [00:03<00:37,  1.78s/cell]Executing:  13%|█▎        | 3/23 [00:08<01:08,  3.40s/cell]Executing:  17%|█▋        | 4/23 [00:09<00:40,  2.12s/cell]Executing:  22%|██▏       | 5/23 [00:09<00:25,  1.43s/cell]Executing:  26%|██▌       | 6/23 [00:09<00:16,  1.02cell/s]Executing:  30%|███       | 7/23 [00:09<00:11,  1.45cell/s]Executing:  43%|████▎     | 10/23 [00:09<00:04,  3.20cell/s]Executing:  65%|██████▌   | 15/23 [00:09<00:01,  6.85cell/s]Executing:  78%|███████▊  | 18/23 [00:10<00:00,  8.07cell/s]Executing:  87%|████████▋ | 20/23 [00:11<00:00,  4.30cell/s]Executing:  96%|█████████▌| 22/23 [00:12<00:00,  3.46cell/s]Executing: 100%|██████████| 23/23 [00:12<00:00,  3.74cell/s]Executing: 100%|██████████| 23/23 [00:14<00:00,  1.59cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:59,  2.72s/cell]Executing:   9%|▊         | 2/23 [00:09<01:46,  5.07s/cell]Executing:  13%|█▎        | 3/23 [00:09<00:56,  2.82s/cell]Executing:  17%|█▋        | 4/23 [00:09<00:33,  1.76s/cell]Executing:  22%|██▏       | 5/23 [00:09<00:21,  1.18s/cell]Executing:  26%|██▌       | 6/23 [00:10<00:14,  1.17cell/s]Executing:  30%|███       | 7/23 [00:10<00:13,  1.20cell/s]Executing:  35%|███▍      | 8/23 [00:11<00:09,  1.57cell/s]Executing:  39%|███▉      | 9/23 [00:11<00:08,  1.61cell/s]Executing:  43%|████▎     | 10/23 [00:11<00:06,  1.98cell/s]Executing:  48%|████▊     | 11/23 [00:13<00:09,  1.30cell/s]Executing:  52%|█████▏    | 12/23 [00:13<00:07,  1.52cell/s]Executing:  61%|██████    | 14/23 [00:14<00:05,  1.75cell/s]Executing:  65%|██████▌   | 15/23 [00:14<00:03,  2.19cell/s]Executing:  74%|███████▍  | 17/23 [00:14<00:01,  3.21cell/s]Executing:  78%|███████▊  | 18/23 [00:15<00:01,  2.57cell/s]Executing:  83%|████████▎ | 19/23 [00:15<00:01,  3.09cell/s]Executing:  87%|████████▋ | 20/23 [00:16<00:01,  2.34cell/s]Executing:  96%|█████████▌| 22/23 [47:34<10:05, 605.71s/cell]Executing: 100%|██████████| 23/23 [47:35<00:00, 464.46s/cell]Executing: 100%|██████████| 23/23 [47:38<00:00, 124.28s/cell]
-Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:01<00:17,  1.36s/cell]Executing:  14%|█▍        | 2/14 [00:07<00:50,  4.20s/cell]Executing:  29%|██▊       | 4/14 [00:07<00:16,  1.64s/cell]Executing:  43%|████▎     | 6/14 [00:08<00:07,  1.03cell/s]Executing:  57%|█████▋    | 8/14 [00:08<00:03,  1.64cell/s]Executing:  71%|███████▏  | 10/14 [20:38<15:00, 225.13s/cell]Executing:  86%|████████▌ | 12/14 [20:39<04:55, 147.99s/cell]Executing: 100%|██████████| 14/14 [1:24:38<00:00, 730.53s/cell]Executing: 100%|██████████| 14/14 [1:24:41<00:00, 362.96s/cell]
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
-    pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [11]":
----------------------------------------------------------------------------
-FileNotFoundError                         Traceback (most recent call last)
-Cell In[11], line 3
-      2 try:
-----> 3     DestinE_forcing_object = DestinEFutureForcing.load(settings['path_DestinE'])
-      4 except:
-
-File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:670, in DestinEFutureForcing.load(cls, directory)
-    668 directory = str(directory)
---> 670 with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
-    671     config = yaml.safe_load(f)
-
-FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/brazil/camelsbr_54730005/DestinE/ewatercycle_forcing.yaml'
-
-During handling of the above exception, another exception occurred:
-
-KeyError                                  Traceback (most recent call last)
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:219, in CachingFileManager._acquire_with_cache_info(self, needs_lock)
-    218 try:
---> 219     file = self._cache[self._key]
-    220 except KeyError:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/lru_cache.py:56, in LRUCache.__getitem__(self, key)
-     55 with self._lock:
----> 56     value = self._cache[key]
-     57     self._cache.move_to_end(key)
-
-KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/brazil/camelsbr_54730005/DestinE/DestinE_future_day_pr_2029_08_01-2049_08_31.nc',), 'a', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '368fdc89-45d5-4983-9309-b09379ed0a89']
-
-During handling of the above exception, another exception occurred:
-
-PermissionError                           Traceback (most recent call last)
-Cell In[11], line 5
-      3     DestinE_forcing_object = DestinEFutureForcing.load(settings['path_DestinE'])
-      4 except:
-----> 5     DestinE_forcing_object = DestinEFutureForcing.generate(
-      6        start_time=settings['future_start_date'],
-      7        end_time=settings['future_end_date'],
-      8        directory=settings['path_DestinE'],
-      9        shape=settings['path_shape'],
-     10     )
-     12 display(DestinE_forcing_object)
-     14 # Quick plot of the precipitation and potential evaporation data
-
-File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:830, in DestinEFutureForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
-    821 name_string = "DestinE_future_day"
-    823 files = {
-    824     "pr": str(directory + f"/{name_string}_pr_{start_string}-{end_string}.nc"),
-    825     "tas": str(directory + f"/{name_string}_tas_{start_string}-{end_string}.nc"),
-    826     "rsds": str(directory + f"/{name_string}_rsds_{start_string}-{end_string}.nc"),
-    827     "evspsblpot": str(directory + f"/{name_string}_evspsblpot_{start_string}-{end_string}.nc")
-    828 }
---> 830 ds_total["pr"].to_netcdf(files["pr"])
-    831 ds_total["tas"].to_netcdf(files["tas"])
-    832 ds_total["rsds"].to_netcdf(files["rsds"])
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/core/dataarray.py:4238, in DataArray.to_netcdf(self, path, mode, format, group, engine, encoding, unlimited_dims, compute, invalid_netcdf, auto_complex)
-   4234 else:
-   4235     # No problems with the name - so we're fine!
-   4236     dataset = self.to_dataset()
--> 4238 return to_netcdf(  # type: ignore[return-value]  # mypy cannot resolve the overloads:(
-   4239     dataset,
-   4240     path,
-   4241     mode=mode,
-   4242     format=format,
-   4243     group=group,
-   4244     engine=engine,
-   4245     encoding=encoding,
-   4246     unlimited_dims=unlimited_dims,
-   4247     compute=compute,
-   4248     multifile=False,
-   4249     invalid_netcdf=invalid_netcdf,
-   4250     auto_complex=auto_complex,
-   4251 )
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/writers.py:422, in to_netcdf(dataset, path_or_file, mode, format, group, engine, encoding, unlimited_dims, compute, multifile, invalid_netcdf, auto_complex)
-    419 else:
-    420     target = normalized_path  # type: ignore[assignment]
---> 422 store = get_writable_netcdf_store(
-    423     target,
-    424     engine,
-    425     mode=mode,
-    426     format=format,
-    427     autoclose=autoclose,
-    428     invalid_netcdf=invalid_netcdf,
-    429     auto_complex=auto_complex,
-    430 )
-    431 if group is not None:
-    432     store = store.get_child_store(group)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/writers.py:78, in get_writable_netcdf_store(target, engine, format, mode, autoclose, invalid_netcdf, auto_complex)
-     75 if auto_complex is not None:
-     76     kwargs["auto_complex"] = auto_complex
----> 78 return store_open(target, mode=mode, format=format, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:529, in NetCDF4DataStore.open(cls, filename, mode, format, group, clobber, diskless, persist, auto_complex, lock, lock_maker, autoclose)
-    525 else:
-    526     manager = CachingFileManager(
-    527         netCDF4.Dataset, filename, mode=mode, kwargs=kwargs, lock=lock
-    528     )
---> 529 return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:429, in NetCDF4DataStore.__init__(self, manager, group, mode, lock, autoclose)
-    427 self._group = group
-    428 self._mode = mode
---> 429 self.format = self.ds.data_model
-    430 self._filename = self.ds.filepath()
-    431 self.is_remote = is_remote_uri(self._filename)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:538, in NetCDF4DataStore.ds(self)
-    536 @property
-    537 def ds(self):
---> 538     return self._acquire()
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/netCDF4_.py:532, in NetCDF4DataStore._acquire(self, needs_lock)
-    531 def _acquire(self, needs_lock=True):
---> 532     with self._manager.acquire_context(needs_lock) as root:
-    533         ds = _nc4_require_group(root, self._group, self._mode)
-    534     return ds
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py:137, in _GeneratorContextManager.__enter__(self)
-    135 del self.args, self.kwds, self.func
-    136 try:
---> 137     return next(self.gen)
-    138 except StopIteration:
-    139     raise RuntimeError("generator didn't yield") from None
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:207, in CachingFileManager.acquire_context(self, needs_lock)
-    204 @contextmanager
-    205 def acquire_context(self, needs_lock: bool = True) -> Iterator[T_File]:
-    206     """Context manager for acquiring a file."""
---> 207     file, cached = self._acquire_with_cache_info(needs_lock)
-    208     try:
-    209         yield file
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/backends/file_manager.py:225, in CachingFileManager._acquire_with_cache_info(self, needs_lock)
-    223     kwargs = kwargs.copy()
-    224     kwargs["mode"] = self._mode
---> 225 file = self._opener(*self._args, **kwargs)
-    226 if self._mode == "w":
-    227     # ensure file doesn't get overridden when opened again
-    228     self._mode = "a"
-
-File src/netCDF4/_netCDF4.pyx:2521, in netCDF4._netCDF4.Dataset.__init__()
-
-File src/netCDF4/_netCDF4.pyx:2158, in netCDF4._netCDF4._ensure_nc_success()
-
-PermissionError: [Errno 13] Permission denied: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/brazil/camelsbr_54730005/DestinE/DestinE_future_day_pr_2029_08_01-2049_08_31.nc'
-
+2026/06/24 15:48:42 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 15:48:42 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 15:48:42 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
