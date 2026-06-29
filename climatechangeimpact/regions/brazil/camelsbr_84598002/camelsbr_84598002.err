@@ -1,84 +1,154 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/runpy.py", line 198, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/runpy.py", line 88, in _run_code
-    exec(code, run_globals)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel_launcher.py", line 18, in <module>
-    app.launch_new_instance()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/traitlets/config/application.py", line 1074, in launch_instance
-    app.initialize(argv)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/traitlets/config/application.py", line 118, in inner
-    return method(app, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 711, in initialize
-    self.init_sockets()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 348, in init_sockets
-    self.init_iopub(context)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 382, in init_iopub
-    self.iopub_port = self._bind_socket(self.iopub_socket, self.iopub_port)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 255, in _bind_socket
-    return self._try_bind_socket(s, port)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 231, in _try_bind_socket
-    s.bind("tcp://%s:%i" % (self.ip, port))
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/zmq/sugar/socket.py", line 320, in bind
-    super().bind(addr)
-  File "zmq/backend/cython/_zmq.py", line 1009, in zmq.backend.cython._zmq.Socket.bind
-    _check_rc(rc)
-    ^^^^^^^^^^^
-  File "zmq/backend/cython/_zmq.py", line 190, in zmq.backend.cython._zmq._check_rc
-    raise ZMQError(errno)
-    ^^^^^^^^^^^
-zmq.error.ZMQError: Address already in use (addr='tcp://127.0.0.1:60277')
-2026/04/29 17:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 17:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 17:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": EOF
-Error occurred while starting new kernel client for kernel 3e57cfaf-39e5-44bb-bc39-1fb0bdd0264b: Kernel didn't respond in 60 seconds
-Exception ignored in atexit callback: <bound method IPKernelApp.close of <ipykernel.kernelapp.IPKernelApp object at 0x7f18fe79df10>>
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/24 16:51:07 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 16:51:07 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 16:51:07 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:   4%|▍         | 1/23 [00:03<01:12,  3.27s/cell]Executing:   9%|▊         | 2/23 [00:04<00:49,  2.35s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:47,  5.36s/cell]Executing:  22%|██▏       | 5/23 [00:15<00:47,  2.66s/cell]Executing:  30%|███       | 7/23 [00:16<00:26,  1.68s/cell]Executing:  35%|███▍      | 8/23 [00:16<00:19,  1.32s/cell]Executing:  43%|████▎     | 10/23 [00:16<00:10,  1.21cell/s]Executing:  52%|█████▏    | 12/23 [00:16<00:06,  1.83cell/s]Executing:  65%|██████▌   | 15/23 [00:16<00:02,  3.11cell/s]Executing:  74%|███████▍  | 17/23 [00:17<00:01,  3.03cell/s]Executing:  83%|████████▎ | 19/23 [00:22<00:03,  1.02cell/s]Executing:  96%|█████████▌| 22/23 [00:23<00:00,  1.27cell/s]Executing: 100%|██████████| 23/23 [00:25<00:00,  1.11s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:04<01:44,  4.76s/cell]Executing:   9%|▊         | 2/23 [00:09<01:43,  4.92s/cell]Executing:  13%|█▎        | 3/23 [00:09<00:55,  2.75s/cell]Executing:  17%|█▋        | 4/23 [00:14<01:03,  3.32s/cell]Executing:  22%|██▏       | 5/23 [00:14<00:40,  2.26s/cell]Executing:  30%|███       | 7/23 [00:19<00:39,  2.49s/cell]Executing:  35%|███▍      | 8/23 [00:20<00:28,  1.88s/cell]Executing:  39%|███▉      | 9/23 [00:21<00:23,  1.68s/cell]Executing:  39%|███▉      | 9/23 [00:23<00:37,  2.66s/cell]
 Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/ipykernel/kernelapp.py", line 433, in close
-    self.context.term()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/zmq/sugar/context.py", line 264, in term
-    super().term()
-  File "zmq/backend/cython/_zmq.py", line 596, in zmq.backend.cython._zmq.Context.term
-  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
-KeyboardInterrupt: 
-Executing:   0%|          | 0/23 [01:01<?, ?cell/s]
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
+  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
-    nb = papermill_engines.execute_notebook_with_engine(
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
-    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
-    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
-    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
-    with self.setup_kernel(**kwargs):
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py", line 137, in __enter__
-    return next(self.gen)
-           ^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 603, in setup_kernel
-    self.start_new_kernel_client()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
-    return loop.run_until_complete(inner)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
-    return future.result()
-           ^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 566, in async_start_new_kernel_client
-    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
-    result = await obj
-             ^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_client/client.py", line 208, in _async_wait_for_ready
-    raise RuntimeError("Kernel didn't respond in %d seconds" % timeout)
-RuntimeError: Kernel didn't respond in 60 seconds
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [7]":
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[7], line 4
+      3     load_location = Path(settings['path_ERA5']) / "work" / "diagnostic" / "script" 
+----> 4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+      5 except:    
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
+    272     msg = (
+    273         f"Forcing file {meta} not found. "
+    274         f"Perhaps you want to use {cls.__name__}(...)?"
+    275     )
+--> 276     raise FileNotFoundError(msg)
+    277 metadata = meta.read_text()
+
+FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/brazil/camelsbr_84598002/ERA5/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+
+During handling of the above exception, another exception occurred:
+
+RecipeError                               Traceback (most recent call last)
+Cell In[7], line 6
+      4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+      5 except:    
+----> 6     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
+      7        dataset="ERA5",
+      8        start_time=settings['calibration_start_date'],
+      9        end_time=settings['validation_end_date'],
+     10        directory=settings['path_ERA5'],
+     11        shape=settings['path_shape'],
+     12     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
+     47 @classmethod
+     48 def generate(  # type: ignore[override]
+     49     cls: type["Makkink"],
+   (...)     55     **model_specific_options,
+     56 ) -> "Makkink":
+---> 57     return super().generate(
+     58         dataset,
+     59         start_time,
+     60         end_time,
+     61         shape,
+     62         directory,
+     63         variables=("pr", "tas", "rsds"),
+     64         postprocessor=derive_e_pot,
+     65         **model_specific_options,
+     66     )
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
+    129 """Generate forcings for a model.
+    130 
+    131 The forcing is generated with help of
+   (...)    151     model_specific_options: Subclass specific options.
+    152 """
+    153 recipe = cls._build_recipe(
+    154     dataset=dataset,
+    155     start_time=get_time(start_time),
+   (...)    159     **model_specific_options,
+    160 )
+--> 162 recipe_output = cls._run_recipe(
+    163     recipe, directory=Path(directory) if directory else None
+    164 )
+    166 derived_variables: tuple[str, ...] = ()
+    167 if postprocessor is not None:
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
+    211 @classmethod
+    212 def _run_recipe(
+    213     cls,
+    214     recipe: Recipe,
+    215     directory: Path | None = None,
+    216 ) -> dict[str, str]:
+--> 217     return run_recipe(recipe, directory)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
+    100 warnings.filterwarnings(  # Not relevant for end users.
+    101     action="ignore",
+    102     message="Thank you for trying out the new ESMValCore API",
+    103 )
+    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
+    105     action="ignore",
+    106     message="Saving to netcdf with legacy-style attribute",
+    107 )
+--> 109 output = _save_and_run_recipe(recipe, output_dir)
+    110 return _parse_recipe_output(output)
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
+    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
+    136     session = _session(output_dir)
+--> 137     output = esmlvaltool_recipe.run(session=session)
+    138 finally:
+    139     recipe_path.unlink()
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:137, in Recipe.run(self, task, session)
+    135 with log_to_dir(session.run_dir):
+    136     _dask.check_distributed_config()
+--> 137     self._engine = self._load(session=session)
+    138     self._engine.run()
+    140 shutil.copy2(self.path, session.run_dir)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:97, in Recipe._load(self, session)
+     78 """Load the recipe.
+     79 
+     80 This method loads the recipe into the internal ESMValCore Recipe
+   (...)     93     Return an instance of the Recipe
+     94 """
+     95 logger.info(pprint.pformat(session))
+---> 97 return RecipeEngine(raw_recipe=self.data,
+     98                     session=session,
+     99                     recipe_file=self.path)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:740, in Recipe.__init__(self, raw_recipe, session, recipe_file)
+    737 self.entity = self._initialize_provenance(
+    738     raw_recipe.get('documentation', {}))
+    739 try:
+--> 740     self.tasks = self.initialize_tasks()
+    741 except RecipeError as exc:
+    742     self._log_recipe_errors(exc)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1066, in Recipe.initialize_tasks(self)
+   1064 def initialize_tasks(self):
+   1065     """Define tasks in recipe."""
+-> 1066     tasks = self._create_tasks()
+   1067     tasks = tasks.flatten()
+   1068     logger.info("These tasks will be executed: %s",
+   1069                 ', '.join(t.name for t in tasks))
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1054, in Recipe._create_tasks(self)
+   1052     recipe_error = RecipeError('Could not create all tasks')
+   1053     recipe_error.failed_tasks.extend(failed_tasks)
+-> 1054     raise recipe_error
+   1056 check.tasks_valid(tasks)
+   1058 # Resolve diagnostic ancestors
+
+RecipeError: Could not create all tasks
+
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
