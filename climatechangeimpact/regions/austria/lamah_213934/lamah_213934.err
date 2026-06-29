@@ -1,16 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
-    with conn:
-         ^^^^
-sqlite3.OperationalError: disk I/O error
-Executing:   4%|▍         | 1/23 [00:04<01:44,  4.75s/cell]Executing:   9%|▊         | 2/23 [00:06<00:58,  2.78s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:19,  3.97s/cell]Executing:  17%|█▋        | 4/23 [00:11<00:46,  2.45s/cell]Executing:  22%|██▏       | 5/23 [00:11<00:28,  1.60s/cell]Executing:  35%|███▍      | 8/23 [00:11<00:10,  1.50cell/s]Executing:  39%|███▉      | 9/23 [00:12<00:08,  1.75cell/s]Executing:  61%|██████    | 14/23 [00:12<00:02,  4.29cell/s]Executing:  74%|███████▍  | 17/23 [00:12<00:01,  5.73cell/s]Executing:  83%|████████▎ | 19/23 [00:13<00:01,  3.89cell/s]Executing:  91%|█████████▏| 21/23 [00:13<00:00,  4.72cell/s]Executing: 100%|██████████| 23/23 [00:14<00:00,  4.35cell/s]Executing: 100%|██████████| 23/23 [00:16<00:00,  1.37cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:03<01:13,  3.34s/cell]Executing:   9%|▊         | 2/23 [00:09<01:49,  5.20s/cell]Executing:  22%|██▏       | 5/23 [00:10<00:27,  1.55s/cell]Executing:  26%|██▌       | 6/23 [00:10<00:20,  1.20s/cell]Executing:  35%|███▍      | 8/23 [00:10<00:10,  1.38cell/s]Executing:  39%|███▉      | 9/23 [08:56<28:28, 122.02s/cell]Executing:  43%|████▎     | 10/23 [08:56<19:52, 91.76s/cell]Executing:  48%|████▊     | 11/23 [09:04<14:00, 70.03s/cell]Executing:  65%|██████▌   | 15/23 [09:05<03:44, 28.08s/cell]Executing:  70%|██████▉   | 16/23 [09:23<03:16, 28.08s/cell]Executing:  74%|███████▍  | 17/23 [13:06<05:35, 55.90s/cell]Executing:  78%|███████▊  | 18/23 [13:07<03:50, 46.14s/cell]Executing:  87%|████████▋ | 20/23 [13:14<01:35, 31.92s/cell][2026-04-30T00:42:50.009] error: *** JOB 35347016 ON wn-la-12 CANCELLED AT 2026-04-30T00:42:50 DUE TO TIME LIMIT ***
+2026/06/24 16:23:12 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 16:23:17 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 16:23:17 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
