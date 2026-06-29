@@ -1,11 +1,36 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to open SQLite history /home/ewater-mmelotto/.ipython/profile_default/history.sqlite (database is locked).
-[IPKernelApp] ERROR | History file was moved to /home/ewater-mmelotto/.ipython/profile_default/history-corrupt-2026-04-30T11.14.18.948636+00.00.sqlite and a new file created.
-[IPKernelApp] ERROR | Failed to open SQLite history /home/ewater-mmelotto/.ipython/profile_default/history.sqlite (attempt to write a readonly database).
-[IPKernelApp] ERROR | History file was moved to /home/ewater-mmelotto/.ipython/profile_default/history-corrupt-2026-04-30T11.14.19.493896+00.00.sqlite and a new file created.
-[IPKernelApp] ERROR | Failed to open SQLite history /home/ewater-mmelotto/.ipython/profile_default/history.sqlite (attempt to write a readonly database).
-[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
-Executing:   4%|▍         | 1/23 [00:44<16:21, 44.61s/cell]Executing:   9%|▊         | 2/23 [01:22<14:12, 40.62s/cell]Executing:  13%|█▎        | 3/23 [03:41<28:27, 85.35s/cell]Executing:  35%|███▍      | 8/23 [03:41<05:00, 20.05s/cell]Executing:  57%|█████▋    | 13/23 [03:41<01:35,  9.59s/cell]Executing:  78%|███████▊  | 18/23 [03:41<00:27,  5.54s/cell]Executing:  78%|███████▊  | 18/23 [04:00<00:27,  5.54s/cell]Executing:  83%|████████▎ | 19/23 [04:05<00:29,  7.47s/cell]Executing:  87%|████████▋ | 20/23 [04:05<00:19,  6.49s/cell]Executing:  96%|█████████▌| 22/23 [04:07<00:05,  5.01s/cell]Executing: 100%|██████████| 23/23 [04:10<00:00, 10.89s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:13<05:07, 13.96s/cell]Executing:   9%|▊         | 2/23 [00:20<03:19,  9.52s/cell]Executing:  13%|█▎        | 3/23 [00:20<01:45,  5.26s/cell]Executing:  17%|█▋        | 4/23 [00:20<01:03,  3.36s/cell]Executing:  26%|██▌       | 6/23 [00:21<00:27,  1.64s/cell]Executing:  39%|███▉      | 9/23 [00:21<00:11,  1.19cell/s]Executing:  43%|████▎     | 10/23 [00:21<00:09,  1.44cell/s]Executing:  48%|████▊     | 11/23 [00:22<00:09,  1.31cell/s]Executing:  61%|██████    | 14/23 [00:23<00:04,  1.81cell/s]Executing:  65%|██████▌   | 15/23 [00:24<00:04,  1.98cell/s]Executing:  70%|██████▉   | 16/23 [00:24<00:03,  2.25cell/s]Executing:  74%|███████▍  | 17/23 [00:24<00:02,  2.23cell/s]Executing:  78%|███████▊  | 18/23 [00:25<00:02,  1.84cell/s]Executing:  83%|████████▎ | 19/23 [00:25<00:01,  2.30cell/s]Executing:  87%|████████▋ | 20/23 [00:26<00:01,  1.59cell/s]Executing:  96%|█████████▌| 22/23 [20:51<04:28, 268.81s/cell]Executing:  96%|█████████▌| 22/23 [20:53<00:56, 56.98s/cell] 
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/24 10:35:52 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 10:35:52 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 10:35:52 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:27<10:13, 27.90s/cell]Executing:   9%|▊         | 2/23 [01:15<13:49, 39.48s/cell]Executing:  13%|█▎        | 3/23 [03:41<29:19, 87.96s/cell]Executing:  17%|█▋        | 4/23 [03:41<16:52, 53.30s/cell]Executing:  30%|███       | 7/23 [03:41<05:17, 19.82s/cell]Executing:  48%|████▊     | 11/23 [03:41<01:48,  9.04s/cell]Executing:  65%|██████▌   | 15/23 [03:41<00:40,  5.10s/cell]Executing:  78%|███████▊  | 18/23 [03:41<00:17,  3.50s/cell]Executing:  78%|███████▊  | 18/23 [04:00<00:17,  3.50s/cell]Executing:  83%|████████▎ | 19/23 [04:04<00:24,  6.02s/cell]Executing:  91%|█████████▏| 21/23 [04:04<00:08,  4.39s/cell]Executing: 100%|██████████| 23/23 [04:07<00:00,  3.49s/cell]Executing: 100%|██████████| 23/23 [04:08<00:00, 10.81s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:11<04:06, 11.22s/cell]Executing:   9%|▊         | 2/23 [00:17<03:00,  8.60s/cell]Executing:  13%|█▎        | 3/23 [00:18<01:36,  4.82s/cell]Executing:  22%|██▏       | 5/23 [00:18<00:38,  2.13s/cell]Executing:  30%|███       | 7/23 [00:18<00:19,  1.23s/cell]Executing:  39%|███▉      | 9/23 [00:18<00:11,  1.27cell/s]Executing:  43%|████▎     | 10/23 [00:19<00:08,  1.54cell/s]Executing:  48%|████▊     | 11/23 [00:20<00:09,  1.28cell/s]Executing:  52%|█████▏    | 12/23 [00:20<00:06,  1.61cell/s]Executing:  65%|██████▌   | 15/23 [00:20<00:02,  3.08cell/s]Executing:  78%|███████▊  | 18/23 [00:21<00:01,  3.40cell/s]Executing:  83%|████████▎ | 19/23 [00:21<00:01,  3.24cell/s]Executing:  87%|████████▋ | 20/23 [00:21<00:00,  3.28cell/s]Executing:  96%|█████████▌| 22/23 [04:11<00:41, 41.11s/cell]Executing:  96%|█████████▌| 22/23 [04:14<00:11, 11.55s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -198,10 +223,10 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
 HTTPResponseError: Polytope error
 Situation: trying to download data
 Description: HTTP CLIENT ERROR (400)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/d536e413-a6cf-4da9-ab81-8c4aaff7c575
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/09d1646f-9173-4c9f-b972-5a42d4356b5d
 HTTP method: GET
 Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********KnRw'}, 'json': None}
+{'headers': {'Authorization': 'Bearer **********F6vQ'}, 'json': None}
 Expected responses: 200, 202
 Received response: CLIENT ERROR (400)
 Details:
@@ -210,3 +235,6 @@ Matched datasource polytope-ng
 
 No data was returned.
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
