@@ -1,46 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: attempt to write a readonly database
-Executing:   4%|▍         | 1/23 [00:07<02:47,  7.63s/cell]Executing:   9%|▊         | 2/23 [00:09<01:24,  4.02s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:33,  4.69s/cell]Executing:  35%|███▍      | 8/23 [00:14<00:16,  1.12s/cell]Executing:  61%|██████    | 14/23 [00:14<00:04,  2.02cell/s]Executing:  78%|███████▊  | 18/23 [00:14<00:01,  3.02cell/s]Executing:  96%|█████████▌| 22/23 [00:16<00:00,  2.78cell/s]Executing: 100%|██████████| 23/23 [00:18<00:00,  1.25cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:09<03:26,  9.40s/cell]Executing:   9%|▊         | 2/23 [00:15<02:41,  7.67s/cell]Executing:  17%|█▋        | 4/23 [00:16<00:55,  2.95s/cell]Executing:  26%|██▌       | 6/23 [00:16<00:26,  1.58s/cell]Executing:  30%|███       | 7/23 [00:16<00:19,  1.23s/cell]Executing:  35%|███▍      | 8/23 [00:16<00:14,  1.05cell/s]2026/04/29 17:35:10 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 17:35:10 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": EOF
-2026/04/29 17:35:22 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_1994-1994.nc": EOF
-2026/04/29 17:35:24 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc": EOF
-2026/04/29 17:36:32 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1994-1994.nc": net/http: TLS handshake timeout
-2026/04/29 17:39:18 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1994-1994.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1994-1994.nc": EOF
-2026/04/29 17:39:20 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc": EOF
-2026/04/29 17:39:28 ERROR : IO error: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_pr_1994-1994.nc": EOF
-2026/04/29 17:40:18 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1994-1994.nc: ReadFileHandle.Read error: low level retry 2/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1994-1994.nc": EOF
-2026/04/29 17:40:20 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc: ReadFileHandle.Read error: low level retry 2/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1994-1994.nc": EOF
-2026/04/29 17:46:16 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1997-1997.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1997-1997.nc": EOF
-2026/04/29 17:46:30 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1997-1997.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_rsds_1997-1997.nc": EOF
-2026/04/29 17:46:56 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1997-1997.nc: ReadFileHandle.Read error: low level retry 2/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_1997-1997.nc": EOF
-2026/04/29 17:50:27 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2004-2004.nc: ReadFileHandle.Read error: low level retry 1/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2004-2004.nc": EOF
-2026/04/29 17:50:47 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2004-2004.nc: ReadFileHandle.Read error: low level retry 2/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2004-2004.nc": EOF
-2026/04/29 17:51:07 ERROR : Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2004-2004.nc: ReadFileHandle.Read error: low level retry 3/10: Get "https://webdav.grid.surfsara.nl:2880/climate-data/obs6/Tier3/ERA5/OBS6_ERA5_reanaly_1_day_tas_2004-2004.nc": EOF
-Executing:  39%|███▉      | 9/23 [28:23<1:48:16, 464.00s/cell]Executing:  48%|████▊     | 11/23 [28:24<52:01, 260.15s/cell] Executing:  52%|█████▏    | 12/23 [28:24<36:18, 198.04s/cell]Executing:  57%|█████▋    | 13/23 [28:25<24:37, 147.72s/cell]Executing:  61%|██████    | 14/23 [28:25<16:15, 108.37s/cell]Executing:  65%|██████▌   | 15/23 [28:25<10:28, 78.52s/cell] Executing:  74%|███████▍  | 17/23 [32:56<10:21, 103.56s/cell]Executing:  78%|███████▊  | 18/23 [32:56<06:34, 78.88s/cell] Executing:  87%|████████▋ | 20/23 [32:56<02:20, 46.90s/cell]Executing:  91%|█████████▏| 21/23 [32:57<01:12, 36.38s/cell][2026-04-30T01:34:23.009] error: *** JOB 35347296 ON wn-la-10 CANCELLED AT 2026-04-30T01:34:23 DUE TO TIME LIMIT ***
+2026/06/24 21:57:15 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 21:57:15 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 21:57:15 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
