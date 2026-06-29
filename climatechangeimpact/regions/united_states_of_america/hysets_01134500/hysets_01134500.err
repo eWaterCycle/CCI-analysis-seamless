@@ -1,5 +1,8 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:30,  1.39s/cell]Executing:   9%|▊         | 2/23 [00:02<00:25,  1.22s/cell]Executing:  13%|█▎        | 3/23 [00:06<00:53,  2.67s/cell]Executing:  22%|██▏       | 5/23 [00:07<00:22,  1.24s/cell]Executing:  35%|███▍      | 8/23 [00:07<00:08,  1.73cell/s]Executing:  61%|██████    | 14/23 [00:07<00:02,  4.17cell/s]Executing:  78%|███████▊  | 18/23 [00:07<00:00,  6.22cell/s]Executing:  91%|█████████▏| 21/23 [00:08<00:00,  5.13cell/s]Executing: 100%|██████████| 23/23 [00:10<00:00,  2.27cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:20,  1.09cell/s]Executing:   9%|▊         | 2/23 [00:06<01:15,  3.61s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:18,  1.05s/cell]Executing:  30%|███       | 7/23 [00:06<00:10,  1.48cell/s]Executing:  35%|███▍      | 8/23 [00:19<00:10,  1.48cell/s]Executing:  39%|███▉      | 9/23 [03:22<08:29, 36.39s/cell]Executing:  48%|████▊     | 11/23 [03:23<04:47, 23.94s/cell]Executing:  74%|███████▍  | 17/23 [04:28<01:37, 16.20s/cell]Executing:  74%|███████▍  | 17/23 [04:30<01:35, 15.90s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:45,  2.07s/cell]Executing:   9%|▊         | 2/23 [00:02<00:27,  1.32s/cell]2026/06/25 06:10:08 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/25 06:10:08 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/25 06:10:08 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:  13%|█▎        | 3/23 [00:06<00:43,  2.15s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:17,  1.04cell/s]Executing:  35%|███▍      | 8/23 [00:06<00:07,  2.05cell/s]Executing:  52%|█████▏    | 12/23 [00:06<00:02,  3.88cell/s]Executing:  61%|██████    | 14/23 [00:06<00:01,  4.88cell/s]Executing:  70%|██████▉   | 16/23 [00:06<00:01,  5.53cell/s]Executing:  78%|███████▊  | 18/23 [00:07<00:00,  6.04cell/s]Executing:  87%|████████▋ | 20/23 [00:08<00:00,  4.16cell/s]Executing:  96%|█████████▌| 22/23 [00:09<00:00,  2.67cell/s]Executing: 100%|██████████| 23/23 [00:10<00:00,  2.18cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:18,  1.22cell/s]Executing:   9%|▊         | 2/23 [00:04<00:54,  2.62s/cell]Executing:  17%|█▋        | 4/23 [00:05<00:22,  1.18s/cell]Executing:  26%|██▌       | 6/23 [00:05<00:12,  1.38cell/s]Executing:  30%|███       | 7/23 [00:05<00:09,  1.75cell/s]Executing:  43%|████▎     | 10/23 [00:06<00:04,  2.70cell/s]Executing:  48%|████▊     | 11/23 [00:07<00:05,  2.18cell/s]Executing:  57%|█████▋    | 13/23 [00:07<00:03,  3.17cell/s]Executing:  61%|██████    | 14/23 [00:07<00:02,  3.04cell/s]Executing:  65%|██████▌   | 15/23 [00:07<00:02,  3.46cell/s]Executing:  74%|███████▍  | 17/23 [00:29<00:27,  4.51s/cell]Executing:  78%|███████▊  | 18/23 [00:30<00:18,  3.61s/cell]Executing:  83%|████████▎ | 19/23 [00:30<00:11,  2.80s/cell]Executing:  87%|████████▋ | 20/23 [00:30<00:06,  2.16s/cell]Executing:  96%|█████████▌| 22/23 [05:51<01:08, 68.77s/cell]Executing:  96%|█████████▌| 22/23 [05:53<00:16, 16.07s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -9,134 +12,201 @@ Traceback (most recent call last):
     raise error
 papermill.exceptions.PapermillExecutionError: 
 ---------------------------------------------------------------------------
-Exception encountered at "In [13]":
+Exception encountered at "In [17]":
 ---------------------------------------------------------------------------
 FileNotFoundError                         Traceback (most recent call last)
-Cell In[13], line 24
-     23     load_location = path_CMIP6 / "work" / "diagnostic" / "script" 
----> 24     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-     25 except:
+File <timed exec>:3
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
-    272     msg = (
-    273         f"Forcing file {meta} not found. "
-    274         f"Perhaps you want to use {cls.__name__}(...)?"
-    275     )
---> 276     raise FileNotFoundError(msg)
-    277 metadata = meta.read_text()
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:369, in DestinEHistoricalForcing.load(cls, directory)
+    367 directory = str(directory)
+--> 369 with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
+    370     config = yaml.safe_load(f)
 
-FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_01134500/CMIP6/MPI-ESM1-2-LR/historical/r1i1p1f1/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
+FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_01134500/DestinE_historical/ewatercycle_forcing.yaml'
 
 During handling of the above exception, another exception occurred:
 
-DownloadError                             Traceback (most recent call last)
-Cell In[13], line 30
-     27         shutil.rmtree(path_CMIP6)
-     28     path_CMIP6.mkdir(exist_ok=True, parents=True)
----> 30     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
-     31        dataset=cmip_dataset,
-     32        start_time=settings['calibration_start_date'],
-     33        end_time=settings['validation_end_date'],
-     34        directory=path_CMIP6,
-     35        shape=settings['path_shape'],
-     36     )
-     38 display(CMIP_forcing_object)
+HTTPResponseError                         Traceback (most recent call last)
+Cell In[17], line 1
+----> 1 get_ipython().run_cell_magic('time', '', '\n# Generate forcing for the calibration + validation period\ntry:\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.load(settings["path_DestinE_historical"])\n    print("Loading")\nexcept FileNotFoundError:\n# DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n    print("Generating")\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n        start_time=settings["calibration_start_date"],\n        end_time=settings["validation_end_date"],\n        directory=settings["path_DestinE_historical"],\n        shape=settings["path_shape"],\n    )\n\ndisplay(DestinE_hist_forcing_object)\n')
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
-     47 @classmethod
-     48 def generate(  # type: ignore[override]
-     49     cls: type["Makkink"],
-   (...)     55     **model_specific_options,
-     56 ) -> "Makkink":
----> 57     return super().generate(
-     58         dataset,
-     59         start_time,
-     60         end_time,
-     61         shape,
-     62         directory,
-     63         variables=("pr", "tas", "rsds"),
-     64         postprocessor=derive_e_pot,
-     65         **model_specific_options,
-     66     )
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/interactiveshell.py:2593, in InteractiveShell.run_cell_magic(self, magic_name, line, cell)
+   2591 with self.builtin_trap:
+   2592     args = (magic_arg_s, cell)
+-> 2593     result = fn(*args, **kwargs)
+   2595 # The code below prevents the output from being displayed
+   2596 # when using magics with decorator @output_can_be_silenced
+   2597 # when the last Python token in the expression is a ';'.
+   2598 if getattr(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, False):
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
-    129 """Generate forcings for a model.
-    130 
-    131 The forcing is generated with help of
-   (...)    151     model_specific_options: Subclass specific options.
-    152 """
-    153 recipe = cls._build_recipe(
-    154     dataset=dataset,
-    155     start_time=get_time(start_time),
-   (...)    159     **model_specific_options,
-    160 )
---> 162 recipe_output = cls._run_recipe(
-    163     recipe, directory=Path(directory) if directory else None
-    164 )
-    166 derived_variables: tuple[str, ...] = ()
-    167 if postprocessor is not None:
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1448, in ExecutionMagics.time(self, line, cell, local_ns)
+   1446 if interrupt_occured:
+   1447     if exit_on_interrupt and captured_exception:
+-> 1448         raise captured_exception
+   1449     return
+   1450 return out
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
-    211 @classmethod
-    212 def _run_recipe(
-    213     cls,
-    214     recipe: Recipe,
-    215     directory: Path | None = None,
-    216 ) -> dict[str, str]:
---> 217     return run_recipe(recipe, directory)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1412, in ExecutionMagics.time(self, line, cell, local_ns)
+   1410 st = clock2()
+   1411 try:
+-> 1412     exec(code, glob, local_ns)
+   1413     out = None
+   1414     # multi-line %%time case
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
-    100 warnings.filterwarnings(  # Not relevant for end users.
-    101     action="ignore",
-    102     message="Thank you for trying out the new ESMValCore API",
-    103 )
-    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
-    105     action="ignore",
-    106     message="Saving to netcdf with legacy-style attribute",
-    107 )
---> 109 output = _save_and_run_recipe(recipe, output_dir)
-    110 return _parse_recipe_output(output)
+File <timed exec>:8
 
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
-    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
-    136     session = _session(output_dir)
---> 137     output = esmlvaltool_recipe.run(session=session)
-    138 finally:
-    139     recipe_path.unlink()
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:445, in DestinEHistoricalForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
+    442 LIVE_REQUEST = os.getenv("LIVE_REQUEST", "true").lower() == "true"
+    444 if LIVE_REQUEST:
+--> 445     data = earthkit.data.from_source("polytope", "destination-earth", request, address=polytope_address, stream=False)
+    447 ds = data.to_xarray()
+    448 ds = ds.rename({
+    449     "2t": "tas",
+    450     "ssrd": "rsds",
+    451     "tprate": "pr"
+    452 })
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:138, in Recipe.run(self, task, session)
-    136     _dask.check_distributed_config()
-    137     self._engine = self._load(session=session)
---> 138     self._engine.run()
-    140 shutil.copy2(self.path, session.run_dir)
-    142 output = self.get_output()
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:145, in from_source(name, lazily, *args, **kwargs)
+    143 while src is not prev:
+    144     prev = src
+--> 145     src = src.mutate()
+    146 return src
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1093, in Recipe.run(self)
-   1091 # Download required data
-   1092 if self.session['search_esgf'] != 'never':
--> 1093     esgf.download(self._download_files, self.session['download_dir'])
-   1095 self.tasks.run(max_parallel_tasks=self.session['max_parallel_tasks'])
-   1096 logger.info(
-   1097     "Wrote recipe with version numbers and wildcards "
-   1098     "to:\nfile://%s", filled_recipe)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:106, in Polytope.mutate(self)
+    104     return self._mutate_stream()
+    105 else:
+--> 106     return self._retrieve()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:582, in download(files, dest_folder, n_jobs)
-    579 if errors:
-    580     msg = ("Failed to download the following files:\n" +
-    581            "\n".join(sorted(str(error) for error in errors)))
---> 582     raise DownloadError(msg)
-    584 logger.info("Successfully downloaded all requested files.")
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:163, in Polytope._retrieve(self)
+    161 # Download each request in parallel when the config allows it
+    162 retriever = FileRequestRetriever(self, retriever=_retrieve_one)
+--> 163 path = retriever.retrieve(self.request, self.dataset)
+    165 # TODO: for simplicity we assume all retrieved files have the same content-type. Revisit if needed.
+    166 content_type = None
 
-DownloadError: Failed to download the following files:
-Failed to download file /project/ewater/Data/ewatercycleClimateImpact/HBV/downloads/hysets_01134500/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc, errors:
-https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc: ('Connection broken: IncompleteRead(156491733 bytes read, 216640548 more expected)', IncompleteRead(156491733 bytes read, 216640548 more expected))
-http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc: 502 Server Error: Bad Gateway for url: https://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc
-Failed to download file /project/ewater/Data/ewatercycleClimateImpact/HBV/downloads/hysets_01134500/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc, errors:
-https://esgf.nci.org.au/thredds/fileServer/esgcet/replica/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc: ('Connection broken: IncompleteRead(6108126 bytes read, 87187355 more expected)', IncompleteRead(6108126 bytes read, 87187355 more expected))
-https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc: 503 Server Error: Service Unavailable for url: https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc
-http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc: 502 Server Error: Bad Gateway for url: https://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/pr/gn/v20190710/pr_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc
-Failed to download file /project/ewater/Data/ewatercycleClimateImpact/HBV/downloads/hysets_01134500/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/rsds/gn/v20190710/rsds_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc, errors:
-https://esgf.nci.org.au/thredds/fileServer/esgcet/replica/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/rsds/gn/v20190710/rsds_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc: ('Connection broken: IncompleteRead(3817710 bytes read, 69473450 more expected)', IncompleteRead(3817710 bytes read, 69473450 more expected))
-https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/rsds/gn/v20190710/rsds_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc: 503 Server Error: Service Unavailable for url: https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/rsds/gn/v20190710/rsds_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc
-http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/rsds/gn/v20190710/rsds_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc: 502 Server Error: Bad Gateway for url: https://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/rsds/gn/v20190710/rsds_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_20100101-20141231.nc
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/utils/request.py:135, in FileRequestRetriever.retrieve(self, requests, *extra_args)
+    132 nthreads = min(self.owner.config("number-of-download-threads"), len(requests))
+    134 if nthreads < 2:
+--> 135     path = [self.retriever(r, *extra_args) for r in requests]
+    136 else:
+    137     from earthkit.data.utils.progbar import tqdm
 
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:156, in Polytope._retrieve.<locals>._retrieve_one(request, dataset)
+    152     return download_to_target(url, target)
+    154 # The cache file path/data is constructed by using the request only. We cannot simply base
+    155 # it on the URL since the URL may change every time we ask for the pointers.
+--> 156 return self.cache_file(
+    157     retrieve,
+    158     (dataset, request),
+    159 )
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:65, in Source.cache_file(self, create, args, **kwargs)
+     62 if owner is None:
+     63     owner = re.sub(r"(?!^)([A-Z]+)", r"-\1", self.__class__.__name__).lower()
+---> 65 return cache_file(owner, create, args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/core/caching.py:1099, in cache_file(owner, create, args, hash_extra, extension, force, replace)
+   1097 with FileLock(lock):
+   1098     if not os.path.exists(path):  # Check again, another thread/process may have created the file
+-> 1099         owner_data = create(path + ".tmp", args)
+   1100         os.rename(path + ".tmp", path)
+   1101 try:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:140, in Polytope._retrieve.<locals>._retrieve_one.<locals>.retrieve(target, args)
+    135 """
+    136 Caching callback method to retrieve data into target file. Only called if
+    137 the data is not already cached.
+    138 """
+    139 # get the pointer and the url to download
+--> 140 pointers = self.client.retrieve(
+    141     args[0],
+    142     args[1],
+    143     pointer=True,
+    144     asynchronous=False,
+    145 )
+    147 url = pointers[0]["location"]
+    149 # download the file and return the associated HTTP header info.
+    150 # This might contain useful info such as content-type. It will be
+    151 # stored in the cache database.
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
+    196 def decorated(self, *args, **kwargs):
+--> 197     return fun(self, *args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:229, in authenticated.<locals>.decorated(self, *args, **kwargs)
+    227     raise e
+    228 # try:
+--> 229 return method(self, *args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
+    196 def decorated(self, *args, **kwargs):
+--> 197     return fun(self, *args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Client.py:202, in Client.retrieve(self, *args, **kwargs)
+    199 @authenticated
+    200 @wraps(RequestManager.retrieve)
+    201 def retrieve(self, *args, **kwargs):
+--> 202     return self.request_manager.retrieve(*args, **kwargs)
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/RequestManager.py:438, in RequestManager.retrieve(self, name, request, output_file, inline_request, asynchronous, max_attempts, attempt_period, append, pointer)
+    436         request_results[i] = Result(request_url, output_file, append, self)
+    437     else:
+--> 438         request_results[i] = self.download(
+    439             request_id, output_file, asynchronous, max_attempts, attempt_period, append, pointer
+    440         )
+    442     append = True
+    444 for warning in warnings:
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/RequestManager.py:683, in RequestManager.download(self, request_id, output_file, asynchronous, max_attempts, attempt_period, append, pointer)
+    679     e = helpers.RetriesExceededError(
+    680         attempts=describe_max_attempts, situation=situation, url=url, method=method, request_content=headers
+    681     )
+    682     raise e
+--> 683 response, response_messages = helpers.try_request(
+    684     method,
+    685     situation=situation,
+    686     expected=expected_responses,
+    687     logger=self._logger,
+    688     stream=True,
+    689     url=url,
+    690     headers=headers,
+    691     skip_tls=self.config.get()["skip_tls"],
+    692     session=s,
+    693 )
+    694 if response.status_code == requests.codes.ok:
+    695     last_status = "processed"
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:604, in try_request(method, situation, expected, logger, stream, skip_tls, session, **kwargs)
+    601     logger.warning("Maximum HTTP request retries reached")
+    602     raise e
+--> 604 response_title, response_messages = process_response(
+    605     response, situation, url, method, stream, request_content, expected
+    606 )
+    608 logger.debug("Polytope client received HTTP " + response_title)
+    610 return response, response_messages
+
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:530, in process_response(response, situation, url, method, stream, request_content, expected)
+    528     if response.status_code == 401 and "expired" in response_messages[0]:
+    529         e.__class__ = "ExpiredCredentialsError"
+--> 530     raise e
+    531 elif response.status_code not in expected:
+    532     e.description = "Unexpected HTTP response from the server."
+
+HTTPResponseError: Polytope error
+Situation: trying to download data
+Description: HTTP CLIENT ERROR (400)
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/6a1e12f0-887b-4754-9a77-160e5fe9a8c2
+HTTP method: GET
+Request header/body contents:
+{'headers': {'Authorization': 'Bearer **********1xEA'}, 'json': None}
+Expected responses: 200, 202
+Received response: CLIENT ERROR (400)
+Details:
+Request failed with error:
+Matched datasource polytope-ng
+
+No data was returned.
+
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
