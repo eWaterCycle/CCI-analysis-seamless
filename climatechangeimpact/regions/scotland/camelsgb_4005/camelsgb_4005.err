@@ -1,74 +1,3 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:30,  1.38s/cell]Executing:   9%|▊         | 2/23 [00:08<01:39,  4.75s/cell]Executing:  13%|█▎        | 3/23 [00:30<04:11, 12.58s/cell]Executing:  22%|██▏       | 5/23 [00:31<01:41,  5.66s/cell]Executing:  26%|██▌       | 6/23 [00:31<01:09,  4.08s/cell]Executing:  35%|███▍      | 8/23 [00:31<00:34,  2.33s/cell]Executing:  43%|████▎     | 10/23 [00:31<00:18,  1.44s/cell]Executing:  70%|██████▉   | 16/23 [00:31<00:03,  1.81cell/s]Executing:  78%|███████▊  | 18/23 [00:32<00:02,  1.96cell/s]Executing:  87%|████████▋ | 20/23 [00:38<00:03,  1.15s/cell]Executing:  96%|█████████▌| 22/23 [00:41<00:01,  1.19s/cell]Executing: 100%|██████████| 23/23 [00:43<00:00,  1.91s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:33,  1.51s/cell]Executing:   9%|▊         | 2/23 [00:05<01:05,  3.12s/cell]Executing:  17%|█▋        | 4/23 [00:07<00:32,  1.72s/cell]Executing:  30%|███       | 7/23 [00:07<00:12,  1.30cell/s]Executing:  39%|███▉      | 9/23 [00:07<00:07,  1.88cell/s]Executing:  43%|████▎     | 10/23 [00:08<00:07,  1.74cell/s]Executing:  48%|████▊     | 11/23 [00:09<00:07,  1.58cell/s]Executing:  61%|██████    | 14/23 [00:11<00:05,  1.61cell/s]Executing:  74%|███████▍  | 17/23 [00:11<00:02,  2.51cell/s]Executing:  78%|███████▊  | 18/23 [00:12<00:02,  2.31cell/s]Executing:  83%|████████▎ | 19/23 [00:12<00:01,  2.69cell/s]Executing:  87%|████████▋ | 20/23 [00:12<00:01,  2.49cell/s]Executing:  91%|█████████▏| 21/23 [00:14<00:01,  1.54cell/s]Executing:  96%|█████████▌| 22/23 [1:18:01<19:27, 1167.62s/cell]Executing: 100%|██████████| 23/23 [1:18:02<00:00, 860.49s/cell] Executing: 100%|██████████| 23/23 [1:18:03<00:00, 203.63s/cell]
-Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:02<00:31,  2.45s/cell]Executing:  14%|█▍        | 2/14 [34:22<4:02:33, 1212.83s/cell]Executing:  29%|██▊       | 4/14 [34:22<1:15:24, 452.49s/cell] Executing:  43%|████▎     | 6/14 [34:22<31:49, 238.73s/cell]  Executing:  64%|██████▍   | 9/14 [34:23<09:54, 118.82s/cell]Executing:  71%|███████▏  | 10/14 [34:24<06:24, 96.02s/cell]Executing:  71%|███████▏  | 10/14 [34:26<13:46, 206.62s/cell]
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
-    pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [8]":
----------------------------------------------------------------------------
-PermissionError                           Traceback (most recent call last)
-Cell In[8], line 25
-     24     load_location = path_CMIP6 / "work" / "diagnostic" / "script" 
----> 25     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-     26 except:
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:271, in DefaultForcing.load(cls, directory)
-    269 yaml = YAML(typ="safe")
---> 271 if not meta.exists():
-    272     msg = (
-    273         f"Forcing file {meta} not found. "
-    274         f"Perhaps you want to use {cls.__name__}(...)?"
-    275     )
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/pathlib.py:860, in Path.exists(self, follow_symlinks)
-    859 try:
---> 860     self.stat(follow_symlinks=follow_symlinks)
-    861 except OSError as e:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/pathlib.py:840, in Path.stat(self, follow_symlinks)
-    836 """
-    837 Return the result of the stat() system call on this path, like
-    838 os.stat() does.
-    839 """
---> 840 return os.stat(self, follow_symlinks=follow_symlinks)
-
-PermissionError: [Errno 13] Permission denied: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/scotland/camelsgb_4005/CMIP6/MPI-ESM1-2-LR/ssp126/r1i1p1f1/work/diagnostic/script/ewatercycle_forcing.yaml'
-
-During handling of the above exception, another exception occurred:
-
-PermissionError                           Traceback (most recent call last)
-Cell In[8], line 27
-     25     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-     26 except:
----> 27     if path_CMIP6.exists():
-     28         shutil.rmtree(path_CMIP6)
-     29     path_CMIP6.mkdir(exist_ok=True, parents=True)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/pathlib.py:860, in Path.exists(self, follow_symlinks)
-    853 """
-    854 Whether this path exists.
-    855 
-    856 This method normally follows symlinks; to check whether a symlink exists,
-    857 add the argument follow_symlinks=False.
-    858 """
-    859 try:
---> 860     self.stat(follow_symlinks=follow_symlinks)
-    861 except OSError as e:
-    862     if not _ignore_error(e):
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/pathlib.py:840, in Path.stat(self, follow_symlinks)
-    835 def stat(self, *, follow_symlinks=True):
-    836     """
-    837     Return the result of the stat() system call on this path, like
-    838     os.stat() does.
-    839     """
---> 840     return os.stat(self, follow_symlinks=follow_symlinks)
-
-PermissionError: [Errno 13] Permission denied: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/scotland/camelsgb_4005/CMIP6/MPI-ESM1-2-LR/ssp126/r1i1p1f1'
-
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
