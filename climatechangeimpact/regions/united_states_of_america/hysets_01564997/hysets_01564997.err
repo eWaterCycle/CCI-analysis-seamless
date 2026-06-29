@@ -1,5 +1,8 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:26,  1.21s/cell]Executing:   9%|▊         | 2/23 [00:02<00:21,  1.03s/cell]Executing:  13%|█▎        | 3/23 [00:05<00:42,  2.12s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:17,  1.02cell/s]Executing:  30%|███       | 7/23 [00:06<00:10,  1.58cell/s]Executing:  35%|███▍      | 8/23 [00:06<00:08,  1.76cell/s]Executing:  43%|████▎     | 10/23 [00:06<00:04,  2.79cell/s]Executing:  61%|██████    | 14/23 [00:06<00:01,  5.36cell/s]Executing:  70%|██████▉   | 16/23 [00:07<00:01,  5.49cell/s]Executing:  78%|███████▊  | 18/23 [00:07<00:00,  5.81cell/s]Executing:  83%|████████▎ | 19/23 [00:08<00:01,  3.40cell/s]Executing:  96%|█████████▌| 22/23 [00:08<00:00,  3.77cell/s]Executing: 100%|██████████| 23/23 [00:10<00:00,  2.25cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:46,  2.09s/cell]Executing:   9%|▊         | 2/23 [00:06<01:09,  3.31s/cell]Executing:  17%|█▋        | 4/23 [00:06<00:25,  1.32s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:18,  1.01s/cell]Executing:  26%|██▌       | 6/23 [00:07<00:13,  1.28cell/s]Executing:  30%|███       | 7/23 [00:07<00:09,  1.65cell/s]Executing:  35%|███▍      | 8/23 [00:07<00:06,  2.18cell/s]Executing:  39%|███▉      | 9/23 [03:15<13:19, 57.14s/cell]Executing:  48%|████▊     | 11/23 [03:15<06:09, 30.76s/cell]Executing:  52%|█████▏    | 12/23 [03:16<04:14, 23.15s/cell]Executing:  61%|██████    | 14/23 [03:16<02:02, 13.63s/cell]Executing:  74%|███████▍  | 17/23 [04:05<01:29, 14.92s/cell]Executing:  78%|███████▊  | 18/23 [04:06<01:01, 12.27s/cell]Executing:  87%|████████▋ | 20/23 [04:06<00:24,  8.11s/cell]Executing:  96%|█████████▌| 22/23 [04:25<00:08,  8.52s/cell]Executing:  96%|█████████▌| 22/23 [04:26<00:12, 12.12s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:25,  1.14s/cell]Executing:   9%|▊         | 2/23 [00:02<00:20,  1.02cell/s]2026/06/25 11:05:20 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/25 11:05:20 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/25 11:05:20 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:  13%|█▎        | 3/23 [00:05<00:42,  2.12s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:17,  1.00cell/s]Executing:  43%|████▎     | 10/23 [00:05<00:04,  2.87cell/s]Executing:  61%|██████    | 14/23 [00:06<00:01,  4.79cell/s]Executing:  74%|███████▍  | 17/23 [00:06<00:00,  6.12cell/s]Executing:  87%|████████▋ | 20/23 [00:06<00:00,  5.31cell/s]Executing:  96%|█████████▌| 22/23 [00:07<00:00,  4.90cell/s]Executing: 100%|██████████| 23/23 [00:08<00:00,  2.61cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:28,  1.31s/cell]Executing:   9%|▊         | 2/23 [00:05<01:01,  2.93s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:16,  1.12cell/s]Executing:  30%|███       | 7/23 [00:05<00:08,  1.79cell/s]Executing:  48%|████▊     | 11/23 [00:06<00:04,  2.70cell/s]Executing:  65%|██████▌   | 15/23 [00:06<00:01,  4.52cell/s]Executing:  74%|███████▍  | 17/23 [00:06<00:01,  5.29cell/s]Executing:  83%|████████▎ | 19/23 [00:08<00:01,  2.70cell/s]Executing:  91%|█████████▏| 21/23 [00:09<00:00,  3.12cell/s]Executing:  96%|█████████▌| 22/23 [00:25<00:02,  2.94s/cell]Executing:  96%|█████████▌| 22/23 [00:27<00:01,  1.25s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -192,10 +195,10 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
 HTTPResponseError: Polytope error
 Situation: trying to download data
 Description: HTTP CLIENT ERROR (400)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/422272cb-66b8-4818-8f19-1a5ac2729e04
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/2ea45479-38a0-470d-af7f-59bc89e4fb8e
 HTTP method: GET
 Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********xU7A'}, 'json': None}
+{'headers': {'Authorization': 'Bearer **********x0zw'}, 'json': None}
 Expected responses: 200, 202
 Received response: CLIENT ERROR (400)
 Details:
@@ -204,3 +207,6 @@ Matched datasource polytope-ng
 
 No data was returned.
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
