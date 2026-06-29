@@ -1,5 +1,8 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:25,  1.15s/cell]Executing:   9%|▊         | 2/23 [00:01<00:20,  1.04cell/s]Executing:  13%|█▎        | 3/23 [00:05<00:38,  1.92s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:15,  1.15cell/s]Executing:  43%|████▎     | 10/23 [00:05<00:03,  3.25cell/s]Executing:  52%|█████▏    | 12/23 [00:05<00:02,  4.19cell/s]Executing:  70%|██████▉   | 16/23 [00:05<00:01,  6.75cell/s]Executing:  83%|████████▎ | 19/23 [00:07<00:01,  3.10cell/s]Executing:  96%|█████████▌| 22/23 [00:08<00:00,  3.78cell/s]Executing: 100%|██████████| 23/23 [00:09<00:00,  2.48cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:17,  1.28cell/s]Executing:   9%|▊         | 2/23 [00:04<00:54,  2.59s/cell]Executing:  30%|███       | 7/23 [00:04<00:08,  1.94cell/s]Executing:  35%|███▍      | 8/23 [00:20<00:07,  1.94cell/s]Executing:  39%|███▉      | 9/23 [07:59<17:34, 75.34s/cell]Executing:  48%|████▊     | 11/23 [08:00<10:23, 51.98s/cell]Executing:  57%|█████▋    | 13/23 [08:00<06:00, 36.01s/cell]Executing:  65%|██████▌   | 15/23 [08:00<03:20, 25.07s/cell]Executing:  70%|██████▉   | 16/23 [08:10<02:55, 25.07s/cell]Executing:  74%|███████▍  | 17/23 [08:17<02:00, 20.02s/cell]Executing:  78%|███████▊  | 18/23 [08:17<01:22, 16.51s/cell]Executing:  87%|████████▋ | 20/23 [08:17<00:32, 10.99s/cell]Executing:  96%|█████████▌| 22/23 [08:32<00:09,  9.81s/cell]Executing:  96%|█████████▌| 22/23 [08:35<00:23, 23.42s/cell]
+2026/06/26 09:00:33 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/26 09:00:33 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/26 09:00:33 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:25,  1.18s/cell]Executing:   9%|▊         | 2/23 [00:02<00:21,  1.03s/cell]Executing:  13%|█▎        | 3/23 [00:05<00:41,  2.07s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:17,  1.06cell/s]Executing:  43%|████▎     | 10/23 [00:05<00:04,  3.06cell/s]Executing:  61%|██████    | 14/23 [00:05<00:01,  5.09cell/s]Executing:  78%|███████▊  | 18/23 [00:06<00:00,  6.46cell/s]Executing:  91%|█████████▏| 21/23 [00:06<00:00,  5.41cell/s]Executing: 100%|██████████| 23/23 [00:07<00:00,  4.96cell/s]Executing: 100%|██████████| 23/23 [00:08<00:00,  2.57cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:16,  1.35cell/s]Executing:   9%|▊         | 2/23 [00:05<00:59,  2.85s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:15,  1.18cell/s]Executing:  30%|███       | 7/23 [00:05<00:08,  1.89cell/s]Executing:  48%|████▊     | 11/23 [00:06<00:04,  2.59cell/s]Executing:  65%|██████▌   | 15/23 [00:06<00:01,  4.35cell/s]Executing:  78%|███████▊  | 18/23 [00:07<00:01,  4.73cell/s]Executing:  87%|████████▋ | 20/23 [00:07<00:00,  4.79cell/s]Executing:  91%|█████████▏| 21/23 [00:20<00:00,  4.79cell/s]Executing:  96%|█████████▌| 22/23 [00:35<00:03,  3.71s/cell]Executing:  96%|█████████▌| 22/23 [00:39<00:01,  1.77s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -192,10 +195,10 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
 HTTPResponseError: Polytope error
 Situation: trying to download data
 Description: HTTP CLIENT ERROR (400)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/e865e280-202d-4d75-bd6a-21b6e8e9f711
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/0a9b4929-3781-48e3-ab61-354f11a489ea
 HTTP method: GET
 Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********mygw'}, 'json': None}
+{'headers': {'Authorization': 'Bearer **********ZTfw'}, 'json': None}
 Expected responses: 200, 202
 Received response: CLIENT ERROR (400)
 Details:
@@ -204,3 +207,6 @@ Matched datasource polytope-ng
 
 No data was returned.
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
