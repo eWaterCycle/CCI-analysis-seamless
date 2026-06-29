@@ -1,5 +1,8 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:33<12:06, 33.01s/cell]Executing:   9%|▊         | 2/23 [01:17<13:49, 39.50s/cell]Executing:  13%|█▎        | 3/23 [03:25<26:40, 80.00s/cell]Executing:  22%|██▏       | 5/23 [03:26<10:32, 35.12s/cell]Executing:  35%|███▍      | 8/23 [03:26<03:58, 15.89s/cell]Executing:  48%|████▊     | 11/23 [03:26<01:47,  8.93s/cell]Executing:  61%|██████    | 14/23 [03:27<00:50,  5.56s/cell]Executing:  74%|███████▍  | 17/23 [03:27<00:21,  3.63s/cell]Executing:  78%|███████▊  | 18/23 [03:40<00:18,  3.63s/cell]Executing:  83%|████████▎ | 19/23 [03:44<00:19,  4.86s/cell]Executing:  91%|█████████▏| 21/23 [03:44<00:07,  3.59s/cell]Executing: 100%|██████████| 23/23 [03:47<00:00,  2.97s/cell]Executing: 100%|██████████| 23/23 [03:49<00:00,  9.97s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:41,  1.87s/cell]Executing:   9%|▊         | 2/23 [00:12<02:32,  7.24s/cell]Executing:  17%|█▋        | 4/23 [00:33<02:54,  9.17s/cell]Executing:  30%|███       | 7/23 [00:33<01:02,  3.94s/cell]Executing:  35%|███▍      | 8/23 [00:50<00:59,  3.94s/cell]Executing:  39%|███▉      | 9/23 [04:27<10:14, 43.91s/cell]Executing:  39%|███▉      | 9/23 [04:31<07:01, 30.13s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/25 12:12:32 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/25 12:12:32 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/25 12:12:32 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   4%|▍         | 1/23 [00:06<02:32,  6.93s/cell]Executing:   9%|▊         | 2/23 [00:08<01:19,  3.80s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:39,  4.99s/cell]Executing:  17%|█▋        | 4/23 [00:15<00:59,  3.13s/cell]Executing:  22%|██▏       | 5/23 [00:20<01:07,  3.77s/cell]Executing:  26%|██▌       | 6/23 [00:20<00:43,  2.55s/cell]Executing:  39%|███▉      | 9/23 [00:20<00:14,  1.06s/cell]Executing:  57%|█████▋    | 13/23 [00:20<00:05,  1.94cell/s]Executing:  65%|██████▌   | 15/23 [00:20<00:03,  2.53cell/s]Executing:  74%|███████▍  | 17/23 [00:20<00:01,  3.28cell/s]Executing:  83%|████████▎ | 19/23 [00:22<00:01,  2.59cell/s]Executing:  91%|█████████▏| 21/23 [00:22<00:00,  3.32cell/s]Executing: 100%|██████████| 23/23 [00:23<00:00,  3.05cell/s]Executing: 100%|██████████| 23/23 [00:25<00:00,  1.11s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:04<01:29,  4.08s/cell]Executing:   9%|▊         | 2/23 [00:10<01:58,  5.63s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:03,  3.17s/cell]Executing:  17%|█▋        | 4/23 [00:11<00:38,  2.03s/cell]Executing:  22%|██▏       | 5/23 [00:11<00:27,  1.53s/cell]Executing:  26%|██▌       | 6/23 [00:12<00:18,  1.07s/cell]Executing:  30%|███       | 7/23 [00:12<00:12,  1.30cell/s]Executing:  35%|███▍      | 8/23 [00:12<00:08,  1.76cell/s]Executing:  39%|███▉      | 9/23 [00:13<00:11,  1.18cell/s]Executing:  39%|███▉      | 9/23 [00:16<00:25,  1.83s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -11,58 +14,25 @@ papermill.exceptions.PapermillExecutionError:
 ---------------------------------------------------------------------------
 Exception encountered at "In [7]":
 ---------------------------------------------------------------------------
-RemoteTraceback                           Traceback (most recent call last)
-RemoteTraceback: 
-"""
-Traceback (most recent call last):
-  File "/tmp/ipykernel_2881279/2963463459.py", line 4, in <module>
-    ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py", line 276, in load
-    raise FileNotFoundError(msg)
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[7], line 4
+      3     load_location = Path(settings['path_ERA5']) / "work" / "diagnostic" / "script" 
+----> 4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
+      5 except:    
+
+File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
+    272     msg = (
+    273         f"Forcing file {meta} not found. "
+    274         f"Perhaps you want to use {cls.__name__}(...)?"
+    275     )
+--> 276     raise FileNotFoundError(msg)
+    277 metadata = meta.read_text()
+
 FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_03364200/ERA5/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
 
 During handling of the above exception, another exception occurred:
 
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py", line 816, in _run_task
-    output_files = task.run()
-                   ^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py", line 264, in run
-    self.output_files = self._run(input_files)
-                        ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 687, in _run
-    product.close()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 520, in close
-    self.save()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 511, in save
-    preprocess(self._cubes,
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 397, in preprocess
-    result.append(_run_preproc_function(function, items, settings,
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py", line 346, in _run_preproc_function
-    return function(items, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/_io.py", line 398, in save
-    os.makedirs(dirname)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/os.py", line 215, in makedirs
-    makedirs(head, exist_ok=exist_ok)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/os.py", line 215, in makedirs
-    makedirs(head, exist_ok=exist_ok)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/os.py", line 215, in makedirs
-    makedirs(head, exist_ok=exist_ok)
-  [Previous line repeated 7 more times]
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/os.py", line 225, in makedirs
-    mkdir(name, mode)
-PermissionError: [Errno 13] Permission denied: '/project/ewater'
-"""
-
-The above exception was the direct cause of the following exception:
-
-PermissionError                           Traceback (most recent call last)
+RecipeError                               Traceback (most recent call last)
 Cell In[7], line 6
       4     ERA5_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
       5 except:    
@@ -136,152 +106,49 @@ File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in
     138 finally:
     139     recipe_path.unlink()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:138, in Recipe.run(self, task, session)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:137, in Recipe.run(self, task, session)
+    135 with log_to_dir(session.run_dir):
     136     _dask.check_distributed_config()
-    137     self._engine = self._load(session=session)
---> 138     self._engine.run()
+--> 137     self._engine = self._load(session=session)
+    138     self._engine.run()
     140 shutil.copy2(self.path, session.run_dir)
-    142 output = self.get_output()
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1095, in Recipe.run(self)
-   1092 if self.session['search_esgf'] != 'never':
-   1093     esgf.download(self._download_files, self.session['download_dir'])
--> 1095 self.tasks.run(max_parallel_tasks=self.session['max_parallel_tasks'])
-   1096 logger.info(
-   1097     "Wrote recipe with version numbers and wildcards "
-   1098     "to:\nfile://%s", filled_recipe)
-   1099 self.write_html_summary()
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:97, in Recipe._load(self, session)
+     78 """Load the recipe.
+     79 
+     80 This method loads the recipe into the internal ESMValCore Recipe
+   (...)     93     Return an instance of the Recipe
+     94 """
+     95 logger.info(pprint.pformat(session))
+---> 97 return RecipeEngine(raw_recipe=self.data,
+     98                     session=session,
+     99                     recipe_file=self.path)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:738, in TaskSet.run(self, max_parallel_tasks)
-    736     self._run_sequential()
-    737 else:
---> 738     self._run_parallel(address, max_parallel_tasks)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:740, in Recipe.__init__(self, raw_recipe, session, recipe_file)
+    737 self.entity = self._initialize_provenance(
+    738     raw_recipe.get('documentation', {}))
+    739 try:
+--> 740     self.tasks = self.initialize_tasks()
+    741 except RecipeError as exc:
+    742     self._log_recipe_errors(exc)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:782, in TaskSet._run_parallel(self, scheduler_address, max_parallel_tasks)
-    780 ready = {t for t in running if running[t].ready()}
-    781 for task in ready:
---> 782     _copy_results(task, running[task])
-    783     running.pop(task)
-    785 # Wait if there are still tasks running
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1066, in Recipe.initialize_tasks(self)
+   1064 def initialize_tasks(self):
+   1065     """Define tasks in recipe."""
+-> 1066     tasks = self._create_tasks()
+   1067     tasks = tasks.flatten()
+   1068     logger.info("These tasks will be executed: %s",
+   1069                 ', '.join(t.name for t in tasks))
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:805, in _copy_results(task, future)
-    803 def _copy_results(task, future):
-    804     """Update task with the results from the remote process."""
---> 805     task.output_files, task.products = future.get()
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1054, in Recipe._create_tasks(self)
+   1052     recipe_error = RecipeError('Could not create all tasks')
+   1053     recipe_error.failed_tasks.extend(failed_tasks)
+-> 1054     raise recipe_error
+   1056 check.tasks_valid(tasks)
+   1058 # Resolve diagnostic ancestors
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py:774, in ApplyResult.get(self, timeout)
-    772     return self._value
-    773 else:
---> 774     raise self._value
+RecipeError: Could not create all tasks
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/multiprocessing/pool.py:125, in worker()
-    123 job, i, func, args, kwds = task
-    124 try:
---> 125     result = (True, func(*args, **kwds))
-    126 except Exception as e:
-    127     if wrap_exception and func is not _helper_reraises_exception:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:816, in _run_task()
-    813     client = Client(scheduler_address)
-    815 with client:
---> 816     output_files = task.run()
-    818 return output_files, task.products
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_task.py:264, in run()
-    261 logger.info("Starting task %s in process [%s]", self.name,
-    262             os.getpid())
-    263 start = datetime.datetime.now()
---> 264 self.output_files = self._run(input_files)
-    265 runtime = datetime.datetime.now() - start
-    266 logger.info("Successfully completed task %s (priority %s) in %s",
-    267             self.name, self.priority, runtime)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:687, in _run()
-    685             if block == blocks[-1]:
-    686                 product.cubes  # pylint: disable=pointless-statement
---> 687                 product.close()
-    688                 saved.add(product.filename)
-    690 for product in self.products:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:520, in close()
-    518 if self._cubes is not None:
-    519     self._update_attributes()
---> 520     self.save()
-    521     self._cubes = None
-    522     self.save_provenance()
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:511, in save()
-    509 def save(self):
-    510     """Save cubes to disk."""
---> 511     preprocess(self._cubes,
-    512                'save',
-    513                input_files=self._input_files,
-    514                **self.settings['save'])
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:397, in preprocess()
-    395 result = []
-    396 if itype.endswith('s'):
---> 397     result.append(_run_preproc_function(function, items, settings,
-    398                                         input_files=input_files))
-    399 else:
-    400     for item in items:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/__init__.py:346, in _run_preproc_function()
-    341 logger.debug(
-    342     "Running preprocessor function '%s' on the data\n%s%s\nwith function "
-    343     "argument(s)\n%s", function.__name__, pformat(items), file_msg,
-    344     kwargs_str)
-    345 try:
---> 346     return function(items, **kwargs)
-    347 except Exception:
-    348     # To avoid very long error messages, we truncate the arguments and
-    349     # input files here at a given threshold
-    350     n_shown_args = 4
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/preprocessor/_io.py:398, in save()
-    396 dirname = os.path.dirname(filename)
-    397 if not os.path.exists(dirname):
---> 398     os.makedirs(dirname)
-    400 if (os.path.exists(filename)
-    401         and all(cube.has_lazy_data() for cube in cubes)):
-    402     logger.debug(
-    403         "Not saving cubes %s to %s to avoid data loss. "
-    404         "The cube is probably unchanged.", cubes, filename)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/os.py:215, in makedirs()
-    213 if head and tail and not path.exists(head):
-    214     try:
---> 215         makedirs(head, exist_ok=exist_ok)
-    216     except FileExistsError:
-    217         # Defeats race condition when another thread created the path
-    218         pass
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/os.py:215, in makedirs()
-    213 if head and tail and not path.exists(head):
-    214     try:
---> 215         makedirs(head, exist_ok=exist_ok)
-    216     except FileExistsError:
-    217         # Defeats race condition when another thread created the path
-    218         pass
-
-    [... skipping similar frames: makedirs at line 215 (7 times)]
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/os.py:215, in makedirs()
-    213 if head and tail and not path.exists(head):
-    214     try:
---> 215         makedirs(head, exist_ok=exist_ok)
-    216     except FileExistsError:
-    217         # Defeats race condition when another thread created the path
-    218         pass
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/os.py:225, in makedirs()
-    223         return
-    224 try:
---> 225     mkdir(name, mode)
-    226 except OSError:
-    227     # Cannot rely on checking for EEXIST, since the operating system
-    228     # could give priority to other errors like EACCES or EROFS
-    229     if not exist_ok or not path.isdir(name):
-
-PermissionError: [Errno 13] Permission denied: '/project/ewater'
-
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab

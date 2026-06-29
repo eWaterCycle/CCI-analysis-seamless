@@ -1,204 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:32<12:04, 32.93s/cell]Executing:   9%|▊         | 2/23 [01:17<13:49, 39.51s/cell]Executing:  13%|█▎        | 3/23 [03:25<26:40, 80.01s/cell]Executing:  22%|██▏       | 5/23 [03:26<10:29, 35.00s/cell]Executing:  43%|████▎     | 10/23 [03:26<02:30, 11.60s/cell]Executing:  61%|██████    | 14/23 [03:26<00:59,  6.59s/cell]Executing:  74%|███████▍  | 17/23 [03:26<00:27,  4.54s/cell]Executing:  78%|███████▊  | 18/23 [03:40<00:22,  4.54s/cell]Executing:  83%|████████▎ | 19/23 [03:44<00:22,  5.57s/cell]Executing:  91%|█████████▏| 21/23 [03:44<00:08,  4.20s/cell]Executing: 100%|██████████| 23/23 [03:47<00:00,  3.45s/cell]Executing: 100%|██████████| 23/23 [03:49<00:00,  9.97s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:45,  2.05s/cell]Executing:   9%|▊         | 2/23 [00:12<02:27,  7.03s/cell]Executing:  13%|█▎        | 3/23 [00:12<01:18,  3.91s/cell]Executing:  30%|███       | 7/23 [00:19<00:35,  2.24s/cell]Executing:  39%|███▉      | 9/23 [04:27<10:13, 43.82s/cell]Executing:  48%|████▊     | 11/23 [04:28<05:55, 29.63s/cell]Executing:  57%|█████▋    | 13/23 [04:29<03:22, 20.23s/cell]Executing:  65%|██████▌   | 15/23 [04:29<01:51, 13.93s/cell]Executing:  74%|███████▍  | 17/23 [07:18<03:34, 35.74s/cell]Executing:  74%|███████▍  | 17/23 [07:20<02:35, 25.93s/cell]
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
-    pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [13]":
----------------------------------------------------------------------------
-FileNotFoundError                         Traceback (most recent call last)
-Cell In[13], line 24
-     23     load_location = path_CMIP6 / "work" / "diagnostic" / "script" 
----> 24     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].load(directory=load_location)
-     25 except:
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:276, in DefaultForcing.load(cls, directory)
-    272     msg = (
-    273         f"Forcing file {meta} not found. "
-    274         f"Perhaps you want to use {cls.__name__}(...)?"
-    275     )
---> 276     raise FileNotFoundError(msg)
-    277 metadata = meta.read_text()
-
-FileNotFoundError: Forcing file /project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_03334500/CMIP6/MPI-ESM1-2-LR/historical/r1i1p1f1/work/diagnostic/script/ewatercycle_forcing.yaml not found. Perhaps you want to use LumpedMakkinkForcing(...)?
-
-During handling of the above exception, another exception occurred:
-
-PermissionError                           Traceback (most recent call last)
-Cell In[13], line 30
-     27         shutil.rmtree(path_CMIP6)
-     28     path_CMIP6.mkdir(exist_ok=True, parents=True)
----> 30     CMIP_forcing_object = ewatercycle.forcing.sources["LumpedMakkinkForcing"].generate(
-     31        dataset=cmip_dataset,
-     32        start_time=settings['calibration_start_date'],
-     33        end_time=settings['validation_end_date'],
-     34        directory=path_CMIP6,
-     35        shape=settings['path_shape'],
-     36     )
-     38 display(CMIP_forcing_object)
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/_forcings/makkink.py:57, in Makkink.generate(cls, dataset, start_time, end_time, shape, directory, **model_specific_options)
-     47 @classmethod
-     48 def generate(  # type: ignore[override]
-     49     cls: type["Makkink"],
-   (...)     55     **model_specific_options,
-     56 ) -> "Makkink":
----> 57     return super().generate(
-     58         dataset,
-     59         start_time,
-     60         end_time,
-     61         shape,
-     62         directory,
-     63         variables=("pr", "tas", "rsds"),
-     64         postprocessor=derive_e_pot,
-     65         **model_specific_options,
-     66     )
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:162, in DefaultForcing.generate(cls, dataset, start_time, end_time, shape, directory, variables, postprocessor, **model_specific_options)
-    129 """Generate forcings for a model.
-    130 
-    131 The forcing is generated with help of
-   (...)    151     model_specific_options: Subclass specific options.
-    152 """
-    153 recipe = cls._build_recipe(
-    154     dataset=dataset,
-    155     start_time=get_time(start_time),
-   (...)    159     **model_specific_options,
-    160 )
---> 162 recipe_output = cls._run_recipe(
-    163     recipe, directory=Path(directory) if directory else None
-    164 )
-    166 derived_variables: tuple[str, ...] = ()
-    167 if postprocessor is not None:
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/base/forcing.py:217, in DefaultForcing._run_recipe(cls, recipe, directory)
-    211 @classmethod
-    212 def _run_recipe(
-    213     cls,
-    214     recipe: Recipe,
-    215     directory: Path | None = None,
-    216 ) -> dict[str, str]:
---> 217     return run_recipe(recipe, directory)
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:109, in run_recipe(recipe, output_dir)
-    100 warnings.filterwarnings(  # Not relevant for end users.
-    101     action="ignore",
-    102     message="Thank you for trying out the new ESMValCore API",
-    103 )
-    104 warnings.filterwarnings(  # Hide Iris warning (upstream issue)
-    105     action="ignore",
-    106     message="Saving to netcdf with legacy-style attribute",
-    107 )
---> 109 output = _save_and_run_recipe(recipe, output_dir)
-    110 return _parse_recipe_output(output)
-
-File ~/.local/lib/python3.12/site-packages/ewatercycle/esmvaltool/run.py:137, in _save_and_run_recipe(recipe, output_dir)
-    135     esmlvaltool_recipe = ESMValToolRecipe(recipe_path)
-    136     session = _session(output_dir)
---> 137     output = esmlvaltool_recipe.run(session=session)
-    138 finally:
-    139     recipe_path.unlink()
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/experimental/recipe.py:138, in Recipe.run(self, task, session)
-    136     _dask.check_distributed_config()
-    137     self._engine = self._load(session=session)
---> 138     self._engine.run()
-    140 shutil.copy2(self.path, session.run_dir)
-    142 output = self.get_output()
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/_recipe/recipe.py:1093, in Recipe.run(self)
-   1091 # Download required data
-   1092 if self.session['search_esgf'] != 'never':
--> 1093     esgf.download(self._download_files, self.session['download_dir'])
-   1095 self.tasks.run(max_parallel_tasks=self.session['max_parallel_tasks'])
-   1096 logger.info(
-   1097     "Wrote recipe with version numbers and wildcards "
-   1098     "to:\nfile://%s", filled_recipe)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:563, in download(files, dest_folder, n_jobs)
-    561 file = future_to_file[future]
-    562 try:
---> 563     future.result()
-    564 except DownloadError as error:
-    565     logger.error("Failed to download %s, error message %s", file,
-    566                  error)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/concurrent/futures/_base.py:449, in Future.result(self, timeout)
-    447     raise CancelledError()
-    448 elif self._state == FINISHED:
---> 449     return self.__get_result()
-    451 self._condition.wait(timeout)
-    453 if self._state in [CANCELLED, CANCELLED_AND_NOTIFIED]:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/concurrent/futures/_base.py:401, in Future.__get_result(self)
-    399 if self._exception:
-    400     try:
---> 401         raise self._exception
-    402     finally:
-    403         # Break a reference cycle with the exception in self._exception
-    404         self = None
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/concurrent/futures/thread.py:58, in _WorkItem.run(self)
-     55     return
-     57 try:
----> 58     result = self.fn(*self.args, **self.kwargs)
-     59 except BaseException as exc:
-     60     self.future.set_exception(exc)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:547, in download.<locals>._download(file)
-    545 def _download(file: ESGFFile):
-    546     """Download file to dest_folder."""
---> 547     file.download(dest_folder)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:427, in ESGFFile.download(self, dest_folder)
-    425 for url in sort_hosts(self.urls):
-    426     try:
---> 427         self._download(local_file, url)
-    428     except (DownloadError,
-    429             requests.exceptions.RequestException) as error:
-    430         logger.debug("Not able to download %s. Error message: %s", url,
-    431                      error)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcore/esgf/_download.py:491, in ESGFFile._download(self, local_file, url)
-    485     if local_checksum != checksum:
-    486         raise DownloadError(
-    487             f"Wrong {checksum_type} checksum for file {tmp_file},"
-    488             f" downloaded from {url}: expected {checksum}, but got"
-    489             f" {local_checksum}. Try downloading the file again.")
---> 491 shutil.move(tmp_file, local_file)
-    492 log_speed(url, self.size, duration.total_seconds())
-    493 logger.info("Downloaded %s (%s) in %s (%s/s) from %s", local_file,
-    494             format_size(self.size),
-    495             format_timespan(duration.total_seconds()),
-    496             format_size(self.size / duration.total_seconds()),
-    497             urlparse(url).hostname)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/shutil.py:867, in move(src, dst, copy_function)
-    865         rmtree(src)
-    866     else:
---> 867         copy_function(src, real_dst)
-    868         os.unlink(src)
-    869 return real_dst
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/shutil.py:475, in copy2(src, dst, follow_symlinks)
-    472         else:
-    473             raise
---> 475 copyfile(src, dst, follow_symlinks=follow_symlinks)
-    476 copystat(src, dst, follow_symlinks=follow_symlinks)
-    477 return dst
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/shutil.py:260, in copyfile(src, dst, follow_symlinks)
-    258     os.symlink(os.readlink(src), dst)
-    259 else:
---> 260     with open(src, 'rb') as fsrc:
-    261         try:
-    262             with open(dst, 'wb') as fdst:
-    263                 # macOS
-
-PermissionError: [Errno 13] Permission denied: '/project/ewater/Data/ewatercycleClimateImpact/HBV/downloads/hysets_03334500/CMIP6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/day/rsds/gn/v20190710/rsds_day_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_19900101-20091231.nc.zc_utjvv'
-
+2026/06/25 12:33:53 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/25 12:33:53 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/25 12:33:53 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
