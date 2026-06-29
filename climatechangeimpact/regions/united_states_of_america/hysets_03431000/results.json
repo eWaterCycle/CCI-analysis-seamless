@@ -7,5 +7,121 @@
         "KGE": 0.023,
         "NSE": -0.2417,
         "period": "1994-08-01 / 2004-07-31"
+    },
+    "calibration_leakybucket": {
+        "Distance Metric": 4.34,
+        "Nelder-Mead": 3.3525,
+        "KGE": -1.0717,
+        "NSE": -0.8178,
+        "leakiness": 0.171517,
+        "period": "1994-08-01 / 2004-07-31"
+    },
+    "return_periods_HBV": {
+        "observed_reference": {
+            "q100_mm_d": 10.5391,
+            "q1000_mm_d": 20.7783
+        },
+        "modelled historic discharge, forcing: CMIP6,MPI-ESM1-2-LR,r1i1p1f1": {
+            "rp_at_obs_q100": 17.45,
+            "rp_at_obs_q1000": 36.99
+        },
+        "ERA5": {
+            "rp_at_obs_q100": 41.17,
+            "rp_at_obs_q1000": 159.72
+        },
+        "DestinE_historical": {
+            "rp_at_obs_q100": 16.94,
+            "rp_at_obs_q1000": 36.04
+        },
+        "ssp126": {
+            "rp_at_obs_q100": "16.97 \u00b1 2.99",
+            "rp_at_obs_q1000": "41.27 \u00b1 9.78"
+        },
+        "ssp245": {
+            "rp_at_obs_q100": "14.01 \u00b1 0.21",
+            "rp_at_obs_q1000": "32.64 \u00b1 1.36"
+        },
+        "ssp370": {
+            "rp_at_obs_q100": "18.63 \u00b1 2.34",
+            "rp_at_obs_q1000": "49.69 \u00b1 7.1"
+        },
+        "ssp585": {
+            "rp_at_obs_q100": "13.17 \u00b1 0.81",
+            "rp_at_obs_q1000": "27.8 \u00b1 3.62"
+        },
+        "DestinE_future": {
+            "rp_at_obs_q100": "14.45 \u00b1 0.0",
+            "rp_at_obs_q1000": "36.01 \u00b1 0.0"
+        }
+    },
+    "return_periods_leakybucket": {
+        "observed_reference": {
+            "q100_mm_d": 10.5391,
+            "q1000_mm_d": 20.7783
+        },
+        "ERA5": {
+            "rp_at_obs_q100": 54.54,
+            "rp_at_obs_q1000": 5504.98
+        },
+        "LB historic, forcing: CMIP6,MPI-ESM1-2-LR,r1i1p1f1": {
+            "rp_at_obs_q100": 26.25,
+            "rp_at_obs_q1000": 212.79
+        },
+        "DestinE_historical": {
+            "rp_at_obs_q100": 33.97,
+            "rp_at_obs_q1000": 1578.35
+        },
+        "ssp126": {
+            "rp_at_obs_q100": "19.56 \u00b1 0.42",
+            "rp_at_obs_q1000": "71.77 \u00b1 0.73"
+        },
+        "ssp245": {
+            "rp_at_obs_q100": "18.84 \u00b1 0.77",
+            "rp_at_obs_q1000": "70.12 \u00b1 1.28"
+        },
+        "ssp370": {
+            "rp_at_obs_q100": "18.97 \u00b1 1.21",
+            "rp_at_obs_q1000": "70.32 \u00b1 0.63"
+        },
+        "ssp585": {
+            "rp_at_obs_q100": "20.24 \u00b1 2.33",
+            "rp_at_obs_q1000": "107.18 \u00b1 52.03"
+        },
+        "DestinE_future": {
+            "rp_at_obs_q100": "25.01 \u00b1 0.0",
+            "rp_at_obs_q1000": "711.28 \u00b1 0.0"
+        }
+    },
+    "koppen_geiger": {
+        "Af": 0.0,
+        "Am": 0.0,
+        "Aw": 0.0,
+        "BWh": 0.0,
+        "BWk": 0.0,
+        "BSh": 0.0,
+        "BSk": 0.0,
+        "Csa": 0.0,
+        "Csb": 0.0,
+        "Csc": 0.0,
+        "Cwa": 0.0,
+        "Cwb": 0.0,
+        "Cwc": 0.0,
+        "Cfa": 100.0,
+        "Cfb": 0.0,
+        "Cfc": 0.0,
+        "Dsa": 0.0,
+        "Dsb": 0.0,
+        "Dsc": 0.0,
+        "Dsd": 0.0,
+        "Dwa": 0.0,
+        "Dwb": 0.0,
+        "Dwc": 0.0,
+        "Dwd": 0.0,
+        "Dfa": 0.0,
+        "Dfb": 0.0,
+        "Dfc": 0.0,
+        "Dfd": 0.0,
+        "ET": 0.0,
+        "EF": 0.0
     }
 }

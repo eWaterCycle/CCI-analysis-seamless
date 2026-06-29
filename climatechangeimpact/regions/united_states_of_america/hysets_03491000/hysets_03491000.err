@@ -1,41 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:20<07:23, 20.16s/cell]Executing:   9%|▊         | 2/23 [00:36<06:17, 17.97s/cell]Executing:  13%|█▎        | 3/23 [01:38<12:39, 37.95s/cell]Executing:  22%|██▏       | 5/23 [01:38<04:59, 16.62s/cell]Executing:  26%|██▌       | 6/23 [01:38<03:21, 11.87s/cell]Executing:  35%|███▍      | 8/23 [01:39<01:38,  6.54s/cell]Executing:  43%|████▎     | 10/23 [01:39<00:53,  4.08s/cell]Executing:  52%|█████▏    | 12/23 [01:40<00:29,  2.69s/cell]Executing:  61%|██████    | 14/23 [01:40<00:16,  1.81s/cell]Executing:  70%|██████▉   | 16/23 [01:40<00:08,  1.24s/cell]Executing:  78%|███████▊  | 18/23 [01:40<00:04,  1.16cell/s]Executing:  78%|███████▊  | 18/23 [02:00<00:04,  1.16cell/s]Executing:  83%|████████▎ | 19/23 [02:04<00:20,  5.20s/cell]Executing:  91%|█████████▏| 21/23 [02:04<00:06,  3.42s/cell]Executing: 100%|██████████| 23/23 [02:07<00:00,  2.78s/cell]Executing: 100%|██████████| 23/23 [02:10<00:00,  5.69s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:11<04:03, 11.09s/cell]Executing:   9%|▊         | 2/23 [00:20<03:31, 10.05s/cell]Executing:  17%|█▋        | 4/23 [00:20<01:12,  3.84s/cell]Executing:  22%|██▏       | 5/23 [00:20<00:48,  2.70s/cell]Executing:  26%|██▌       | 6/23 [00:20<00:32,  1.90s/cell]Executing:  30%|███       | 7/23 [00:21<00:21,  1.36s/cell]Executing:  39%|███▉      | 9/23 [04:34<13:56, 59.78s/cell]Executing:  48%|████▊     | 11/23 [04:35<07:12, 36.04s/cell]Executing:  70%|██████▉   | 16/23 [04:35<01:44, 14.87s/cell]Executing:  70%|██████▉   | 16/23 [04:48<01:44, 14.87s/cell]Executing:  74%|███████▍  | 17/23 [05:37<02:09, 21.56s/cell]Executing:  78%|███████▊  | 18/23 [05:37<01:30, 18.01s/cell]Executing:  87%|████████▋ | 20/23 [05:40<00:37, 12.51s/cell]Executing:  91%|█████████▏| 21/23 [05:40<00:20, 10.17s/cell]Executing:  96%|█████████▌| 22/23 [11:20<01:20, 80.40s/cell]Executing: 100%|██████████| 23/23 [11:21<00:00, 61.95s/cell]Executing: 100%|██████████| 23/23 [11:24<00:00, 29.76s/cell]
-Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:01<00:22,  1.72s/cell]Executing:  14%|█▍        | 2/14 [00:08<00:59,  4.93s/cell]Executing:  29%|██▊       | 4/14 [00:09<00:19,  1.92s/cell]Executing:  36%|███▌      | 5/14 [00:09<00:12,  1.37s/cell]Executing:  50%|█████     | 7/14 [00:09<00:05,  1.31cell/s]Executing:  64%|██████▍   | 9/14 [00:09<00:02,  2.00cell/s]Executing:  71%|███████▏  | 10/14 [08:07<07:07, 106.91s/cell]Executing:  86%|████████▌ | 12/14 [08:08<02:10, 65.45s/cell] Executing:  93%|█████████▎| 13/14 [08:08<00:51, 51.29s/cell]Executing: 100%|██████████| 14/14 [13:49<00:00, 119.86s/cell]Executing: 100%|██████████| 14/14 [13:52<00:00, 59.43s/cell] 
-Executing:   0%|          | 0/43 [00:00<?, ?cell/s]Error occurred while starting new kernel client for kernel fab734c5-2311-405a-acab-fc40a003b719: Kernel didn't respond in 60 seconds
-Executing:   0%|          | 0/43 [01:03<?, ?cell/s]
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
-    pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
-    nb = papermill_engines.execute_notebook_with_engine(
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
-    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
-    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
-    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
-    with self.setup_kernel(**kwargs):
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/contextlib.py", line 137, in __enter__
-    return next(self.gen)
-           ^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 603, in setup_kernel
-    self.start_new_kernel_client()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
-    return loop.run_until_complete(inner)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
-    return future.result()
-           ^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/nbclient/client.py", line 566, in async_start_new_kernel_client
-    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
-    result = await obj
-             ^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/jupyter_client/client.py", line 208, in _async_wait_for_ready
-    raise RuntimeError("Kernel didn't respond in %d seconds" % timeout)
-RuntimeError: Kernel didn't respond in 60 seconds
+2026/06/25 15:27:43 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/25 15:27:43 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/25 15:27:43 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
