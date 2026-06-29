@@ -1,4 +1,7 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/24 11:07:38 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 11:07:38 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 11:07:38 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
     self.new_session()
@@ -12,7 +15,7 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:37,  7.16s/cell]Executing:   9%|▊         | 2/23 [00:08<01:18,  3.76s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:27,  4.39s/cell]Executing:  39%|███▉      | 9/23 [00:13<00:12,  1.10cell/s]Executing:  65%|██████▌   | 15/23 [00:13<00:03,  2.30cell/s]Executing:  83%|████████▎ | 19/23 [00:15<00:01,  2.51cell/s]Executing:  96%|█████████▌| 22/23 [00:15<00:00,  2.89cell/s]Executing: 100%|██████████| 23/23 [00:18<00:00,  1.25cell/s]
+Executing:   4%|▍         | 1/23 [00:07<02:37,  7.18s/cell]Executing:   9%|▊         | 2/23 [00:08<01:19,  3.80s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:32,  4.62s/cell]Executing:  17%|█▋        | 4/23 [00:14<00:54,  2.86s/cell]Executing:  43%|████▎     | 10/23 [00:14<00:08,  1.50cell/s]Executing:  70%|██████▉   | 16/23 [00:14<00:02,  3.02cell/s]Executing:  83%|████████▎ | 19/23 [00:15<00:01,  2.79cell/s]Executing:  96%|█████████▌| 22/23 [00:16<00:00,  3.13cell/s]Executing: 100%|██████████| 23/23 [00:19<00:00,  1.17cell/s]
 Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
@@ -23,11 +26,11 @@ Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
     return f(self, *a, **kw)
            ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
+    with conn:
+         ^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:06<02:25,  6.62s/cell]Executing:   9%|▊         | 2/23 [00:12<02:15,  6.47s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:12,  3.61s/cell]Executing:  35%|███▍      | 8/23 [00:13<00:12,  1.15cell/s]Executing:  39%|███▉      | 9/23 [00:17<00:26,  1.90s/cell]
+Executing:   4%|▍         | 1/23 [00:10<03:51, 10.54s/cell]Executing:   9%|▊         | 2/23 [00:17<02:57,  8.44s/cell]Executing:  22%|██▏       | 5/23 [00:17<00:43,  2.42s/cell]Executing:  39%|███▉      | 9/23 [00:18<00:16,  1.21s/cell]Executing:  39%|███▉      | 9/23 [00:21<00:33,  2.39s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -174,3 +177,6 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcor
 
 RecipeError: Could not create all tasks
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
