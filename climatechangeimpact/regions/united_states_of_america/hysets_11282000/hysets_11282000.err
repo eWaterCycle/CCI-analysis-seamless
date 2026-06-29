@@ -1,22 +1,8 @@
-2026/06/10 17:01:33 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/10 17:01:33 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/10 17:01:33 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:21<07:57, 21.70s/cell]Executing:   9%|▊         | 2/23 [00:52<09:30, 27.17s/cell]Executing:  13%|█▎        | 3/23 [02:26<19:11, 57.57s/cell]Executing:  17%|█▋        | 4/23 [02:26<11:04, 35.00s/cell]Executing:  22%|██▏       | 5/23 [02:27<06:48, 22.70s/cell]Executing:  26%|██▌       | 6/23 [02:28<04:17, 15.17s/cell]Executing:  30%|███       | 7/23 [02:28<02:44, 10.31s/cell]Executing:  35%|███▍      | 8/23 [02:30<01:56,  7.78s/cell]Executing:  39%|███▉      | 9/23 [02:31<01:18,  5.63s/cell]Executing:  43%|████▎     | 10/23 [02:32<00:54,  4.18s/cell]Executing:  48%|████▊     | 11/23 [02:33<00:37,  3.10s/cell]Executing:  52%|█████▏    | 12/23 [02:34<00:28,  2.57s/cell]Executing:  57%|█████▋    | 13/23 [02:35<00:19,  1.98s/cell]Executing:  61%|██████    | 14/23 [02:36<00:15,  1.67s/cell]Executing:  65%|██████▌   | 15/23 [02:36<00:10,  1.30s/cell]Executing:  70%|██████▉   | 16/23 [02:37<00:07,  1.13s/cell]Executing:  74%|███████▍  | 17/23 [02:39<00:07,  1.29s/cell]Executing:  78%|███████▊  | 18/23 [02:40<00:06,  1.21s/cell]Executing:  83%|████████▎ | 19/23 [02:56<00:23,  5.87s/cell]Executing:  87%|████████▋ | 20/23 [02:58<00:13,  4.52s/cell]Executing:  91%|█████████▏| 21/23 [02:59<00:06,  3.37s/cell]Executing:  96%|█████████▌| 22/23 [03:03<00:03,  3.55s/cell]Executing: 100%|██████████| 23/23 [03:03<00:00,  2.60s/cell]Executing: 100%|██████████| 23/23 [03:06<00:00,  8.09s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:22<08:13, 22.44s/cell]Executing:   9%|▊         | 2/23 [00:33<05:35, 15.98s/cell]Executing:  13%|█▎        | 3/23 [00:34<02:56,  8.83s/cell]Executing:  17%|█▋        | 4/23 [00:34<01:42,  5.42s/cell]Executing:  22%|██▏       | 5/23 [00:34<01:03,  3.53s/cell]Executing:  26%|██▌       | 6/23 [00:34<00:41,  2.42s/cell]Executing:  30%|███       | 7/23 [00:35<00:29,  1.83s/cell]Executing:  35%|███▍      | 8/23 [00:35<00:20,  1.40s/cell]Executing:  39%|███▉      | 9/23 [00:37<00:18,  1.29s/cell]Executing:  39%|███▉      | 9/23 [00:40<01:02,  4.46s/cell]
+2026/06/26 09:06:05 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/26 09:06:05 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/26 09:06:05 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:23,  1.08s/cell]Executing:   9%|▊         | 2/23 [00:01<00:19,  1.07cell/s]Executing:  13%|█▎        | 3/23 [00:05<00:41,  2.05s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:17,  1.05cell/s]Executing:  52%|█████▏    | 12/23 [00:05<00:02,  3.84cell/s]Executing:  70%|██████▉   | 16/23 [00:05<00:01,  5.69cell/s]Executing:  83%|████████▎ | 19/23 [00:06<00:00,  4.85cell/s]Executing:  91%|█████████▏| 21/23 [00:06<00:00,  5.59cell/s]Executing: 100%|██████████| 23/23 [00:07<00:00,  5.55cell/s]Executing: 100%|██████████| 23/23 [00:08<00:00,  2.66cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:17,  1.27cell/s]Executing:   9%|▊         | 2/23 [00:04<00:58,  2.76s/cell]Executing:  26%|██▌       | 6/23 [00:05<00:11,  1.53cell/s]Executing:  39%|███▉      | 9/23 [00:05<00:06,  2.11cell/s]Executing:  39%|███▉      | 9/23 [00:07<00:11,  1.25cell/s]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -163,3 +149,6 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/esmvalcor
 
 RecipeError: Could not create all tasks
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
