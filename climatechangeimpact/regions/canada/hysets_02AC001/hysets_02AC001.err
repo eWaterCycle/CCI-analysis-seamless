@@ -1,7 +1,7 @@
-2026/04/29 17:36:18 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 17:36:18 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": EOF
-2026/04/29 17:36:18 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": EOF
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/24 10:36:56 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 10:36:56 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 10:36:56 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
     self.new_session()
@@ -11,11 +11,11 @@ Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
     return f(self, *a, **kw)
            ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
-    with conn:
-         ^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:21<07:52, 21.48s/cell]Executing:   9%|▊         | 2/23 [00:33<05:33, 15.90s/cell]Executing:  13%|█▎        | 3/23 [01:27<11:08, 33.42s/cell]Executing:  35%|███▍      | 8/23 [01:27<01:58,  7.87s/cell]Executing:  70%|██████▉   | 16/23 [01:28<00:20,  2.88s/cell]Executing:  87%|████████▋ | 20/23 [01:36<00:07,  2.63s/cell]Executing:  96%|█████████▌| 22/23 [01:37<00:02,  2.24s/cell]Executing: 100%|██████████| 23/23 [01:40<00:00,  4.35s/cell]
+Executing:   4%|▍         | 1/23 [00:07<02:37,  7.17s/cell]Executing:   9%|▊         | 2/23 [00:11<01:55,  5.52s/cell]Executing:  13%|█▎        | 3/23 [02:37<23:10, 69.52s/cell]Executing:  26%|██▌       | 6/23 [02:37<06:40, 23.53s/cell]Executing:  39%|███▉      | 9/23 [02:37<02:49, 12.12s/cell]Executing:  57%|█████▋    | 13/23 [02:37<01:03,  6.32s/cell]Executing:  70%|██████▉   | 16/23 [02:37<00:29,  4.19s/cell]Executing:  78%|███████▊  | 18/23 [02:38<00:16,  3.21s/cell]Executing:  78%|███████▊  | 18/23 [02:50<00:16,  3.21s/cell]Executing:  83%|████████▎ | 19/23 [03:00<00:24,  6.06s/cell]Executing:  87%|████████▋ | 20/23 [03:00<00:15,  5.03s/cell]Executing:  96%|█████████▌| 22/23 [03:03<00:03,  3.75s/cell]Executing: 100%|██████████| 23/23 [03:05<00:00,  8.08s/cell]
 Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
@@ -30,4 +30,85 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:50,  7.75s/cell]Executing:   9%|▊         | 2/23 [00:12<02:07,  6.08s/cell]Executing:  39%|███▉      | 9/23 [00:12<00:12,  1.11cell/s]Executing:  52%|█████▏    | 12/23 [00:13<00:07,  1.47cell/s]Executing:  74%|███████▍  | 17/23 [00:13<00:02,  2.58cell/s]Executing:  87%|████████▋ | 20/23 [00:15<00:01,  2.50cell/s]Executing:  91%|█████████▏| 21/23 [00:29<00:00,  2.50cell/s][2026-04-30T01:36:22.013] error: *** JOB 35347477 ON wn-dc-05 CANCELLED AT 2026-04-30T01:36:22 DUE TO TIME LIMIT ***
+Executing:   4%|▍         | 1/23 [00:10<03:46, 10.31s/cell]Executing:   9%|▊         | 2/23 [00:28<05:11, 14.86s/cell]Executing:  26%|██▌       | 6/23 [00:28<00:58,  3.43s/cell]Executing:  43%|████▎     | 10/23 [00:28<00:21,  1.67s/cell]Executing:  57%|█████▋    | 13/23 [00:30<00:13,  1.31s/cell]Executing:  65%|██████▌   | 15/23 [00:30<00:07,  1.01cell/s]Executing:  78%|███████▊  | 18/23 [00:31<00:03,  1.35cell/s]Executing:  87%|████████▋ | 20/23 [00:32<00:01,  1.63cell/s]Executing: 100%|██████████| 23/23 [00:33<00:00,  1.74cell/s]Executing: 100%|██████████| 23/23 [00:37<00:00,  1.61s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   7%|▋         | 1/14 [00:09<01:57,  9.07s/cell]Executing:  14%|█▍        | 2/14 [00:21<02:13, 11.11s/cell]Executing:  43%|████▎     | 6/14 [00:21<00:20,  2.58s/cell]Executing:  64%|██████▍   | 9/14 [00:21<00:07,  1.43s/cell]Executing:  86%|████████▌ | 12/14 [00:31<00:04,  2.13s/cell]Executing: 100%|██████████| 14/14 [00:32<00:00,  1.71s/cell]Executing: 100%|██████████| 14/14 [00:34<00:00,  2.49s/cell]
+Executing:   0%|          | 0/43 [00:00<?, ?cell/s]Executing:   2%|▏         | 1/43 [00:45<31:47, 45.41s/cell]Executing:   5%|▍         | 2/43 [01:08<21:58, 32.17s/cell]Executing:   7%|▋         | 3/43 [02:15<32:01, 48.04s/cell]Executing:  14%|█▍        | 6/43 [02:15<10:02, 16.29s/cell]Executing:  21%|██        | 9/43 [02:15<04:45,  8.39s/cell]Executing:  28%|██▊       | 12/43 [02:15<02:34,  4.98s/cell]Executing:  33%|███▎      | 14/43 [02:16<01:44,  3.62s/cell]Executing:  42%|████▏     | 18/43 [02:16<00:50,  2.02s/cell]Executing:  49%|████▉     | 21/43 [02:16<00:30,  1.39s/cell]Executing:  53%|█████▎    | 23/43 [02:16<00:21,  1.08s/cell]Executing:  58%|█████▊    | 25/43 [02:32<00:19,  1.08s/cell]Executing:  60%|██████    | 26/43 [02:34<00:46,  2.73s/cell]Executing:  70%|██████▉   | 30/43 [02:34<00:21,  1.68s/cell]Executing:  70%|██████▉   | 30/43 [02:52<00:21,  1.68s/cell]Executing:  72%|███████▏  | 31/43 [24:13<32:01, 160.17s/cell]Executing:  79%|███████▉  | 34/43 [24:14<15:47, 105.27s/cell]Executing:  84%|████████▎ | 36/43 [24:15<09:15, 79.34s/cell] Executing:  88%|████████▊ | 38/43 [24:16<04:54, 58.81s/cell]Executing:  93%|█████████▎| 40/43 [24:16<02:08, 42.88s/cell]Executing:  98%|█████████▊| 42/43 [24:17<00:31, 31.02s/cell]Executing: 100%|██████████| 43/43 [24:19<00:00, 33.95s/cell]
+Executing:   0%|          | 0/44 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
+    with conn:
+         ^^^^
+sqlite3.OperationalError: database is locked
+Executing:   2%|▏         | 1/44 [00:13<09:38, 13.46s/cell]Executing:   5%|▍         | 2/44 [00:19<06:31,  9.32s/cell]Executing:   7%|▋         | 3/44 [00:20<03:30,  5.14s/cell]Executing:  14%|█▎        | 6/44 [00:20<01:07,  1.76s/cell]Executing:  20%|██        | 9/44 [00:20<00:32,  1.08cell/s]Executing:  25%|██▌       | 11/44 [00:22<00:31,  1.04cell/s]Executing:  34%|███▍      | 15/44 [00:22<00:15,  1.92cell/s]Executing:  39%|███▊      | 17/44 [00:22<00:11,  2.28cell/s]Executing:  43%|████▎     | 19/44 [00:25<00:18,  1.36cell/s]Executing:  45%|████▌     | 20/44 [00:26<00:17,  1.41cell/s]Executing:  50%|█████     | 22/44 [00:26<00:12,  1.82cell/s]Executing:  55%|█████▍    | 24/44 [00:28<00:11,  1.78cell/s]Executing:  59%|█████▉    | 26/44 [00:28<00:07,  2.45cell/s]Executing:  61%|██████▏   | 27/44 [00:28<00:06,  2.79cell/s]Executing:  66%|██████▌   | 29/44 [00:28<00:03,  3.82cell/s]Executing:  73%|███████▎  | 32/44 [00:28<00:02,  5.93cell/s]Executing:  77%|███████▋  | 34/44 [00:28<00:01,  7.19cell/s]Executing:  82%|████████▏ | 36/44 [00:28<00:00,  8.81cell/s]Executing:  82%|████████▏ | 36/44 [00:42<00:00,  8.81cell/s]Executing:  84%|████████▍ | 37/44 [01:33<01:18, 11.15s/cell]Executing:  86%|████████▋ | 38/44 [01:38<00:59,  9.96s/cell]Executing:  91%|█████████ | 40/44 [01:38<00:25,  6.46s/cell]Executing:  93%|█████████▎| 41/44 [01:39<00:15,  5.18s/cell]Executing:  95%|█████████▌| 42/44 [01:44<00:10,  5.29s/cell]Executing:  98%|█████████▊| 43/44 [01:44<00:04,  4.05s/cell]Executing: 100%|██████████| 44/44 [01:50<00:00,  4.39s/cell]Executing: 100%|██████████| 44/44 [01:53<00:00,  2.57s/cell]
+Executing:   0%|          | 0/30 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider_calibration/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   3%|▎         | 1/30 [00:07<03:38,  7.54s/cell]Executing:   7%|▋         | 2/30 [00:13<03:11,  6.83s/cell]Executing:  10%|█         | 3/30 [00:13<01:41,  3.77s/cell]Executing:  20%|██        | 6/30 [00:14<00:31,  1.32s/cell]Executing:  23%|██▎       | 7/30 [00:14<00:25,  1.11s/cell]Executing:  33%|███▎      | 10/30 [00:14<00:11,  1.72cell/s]Executing:  50%|█████     | 15/30 [00:15<00:05,  2.84cell/s]Executing:  60%|██████    | 18/30 [01:15<01:19,  6.66s/cell]Executing:  67%|██████▋   | 20/30 [01:16<00:51,  5.12s/cell]Executing:  70%|███████   | 21/30 [01:19<00:43,  4.82s/cell]Executing:  73%|███████▎  | 22/30 [01:19<00:32,  4.03s/cell]Executing:  83%|████████▎ | 25/30 [01:19<00:11,  2.39s/cell]Executing:  93%|█████████▎| 28/30 [01:19<00:03,  1.51s/cell]Executing: 100%|██████████| 30/30 [01:20<00:00,  1.14s/cell]Executing: 100%|██████████| 30/30 [01:22<00:00,  2.75s/cell]
+Executing:   0%|          | 0/40 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
+    with conn:
+         ^^^^
+sqlite3.OperationalError: database is locked
+Executing:   2%|▎         | 1/40 [00:09<06:11,  9.51s/cell]Executing:   5%|▌         | 2/40 [00:15<04:48,  7.60s/cell]Executing:  18%|█▊        | 7/40 [00:15<00:49,  1.49s/cell]Executing:  25%|██▌       | 10/40 [00:16<00:26,  1.12cell/s]Executing:  30%|███       | 12/40 [00:17<00:22,  1.27cell/s]Executing:  40%|████      | 16/40 [00:17<00:10,  2.23cell/s]Executing:  50%|█████     | 20/40 [00:17<00:05,  3.51cell/s]Executing:  57%|█████▊    | 23/40 [00:17<00:03,  4.62cell/s]Executing:  65%|██████▌   | 26/40 [00:33<00:23,  1.70s/cell]Executing:  68%|██████▊   | 27/40 [00:38<00:28,  2.19s/cell]Executing:  78%|███████▊  | 31/40 [00:38<00:11,  1.30s/cell]Executing:  85%|████████▌ | 34/40 [00:39<00:05,  1.09cell/s]Executing:  92%|█████████▎| 37/40 [00:40<00:02,  1.35cell/s]Executing:  98%|█████████▊| 39/40 [00:41<00:00,  1.43cell/s]Executing: 100%|██████████| 40/40 [00:44<00:00,  1.11s/cell]
+Executing:   0%|          | 0/24 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/24 [00:14<05:32, 14.47s/cell]Executing:   8%|▊         | 2/24 [00:20<03:31,  9.60s/cell]Executing:  17%|█▋        | 4/24 [00:20<01:12,  3.65s/cell]Executing:  29%|██▉       | 7/24 [00:21<00:27,  1.59s/cell]Executing:  42%|████▏     | 10/24 [00:21<00:12,  1.10cell/s]Executing:  42%|████▏     | 10/24 [00:31<00:12,  1.10cell/s]Executing:  46%|████▌     | 11/24 [00:35<00:41,  3.21s/cell]Executing:  50%|█████     | 12/24 [01:46<03:23, 16.96s/cell]Executing:  58%|█████▊    | 14/24 [01:47<01:49, 10.99s/cell]Executing:  62%|██████▎   | 15/24 [01:53<01:29,  9.89s/cell]Executing:  75%|███████▌  | 18/24 [01:53<00:31,  5.26s/cell]Executing:  83%|████████▎ | 20/24 [01:55<00:15,  3.97s/cell]Executing:  88%|████████▊ | 21/24 [01:57<00:10,  3.61s/cell]Executing:  92%|█████████▏| 22/24 [01:58<00:05,  2.94s/cell]Executing:  96%|█████████▌| 23/24 [01:58<00:02,  2.37s/cell]Executing: 100%|██████████| 24/24 [02:00<00:00,  5.04s/cell]
+Executing:   0%|          | 0/30 [00:00<?, ?cell/s]Executing:   3%|▎         | 1/30 [00:03<01:30,  3.12s/cell]Executing:   7%|▋         | 2/30 [00:04<01:02,  2.21s/cell]Executing:  10%|█         | 3/30 [00:09<01:27,  3.25s/cell]Executing:  13%|█▎        | 4/30 [00:09<00:57,  2.21s/cell]Executing:  27%|██▋       | 8/30 [00:09<00:15,  1.43cell/s]Executing:  33%|███▎      | 10/30 [00:10<00:11,  1.77cell/s]Executing:  43%|████▎     | 13/30 [00:11<00:08,  2.11cell/s]Executing:  47%|████▋     | 14/30 [00:12<00:08,  1.93cell/s]Executing:  53%|█████▎    | 16/30 [00:16<00:13,  1.01cell/s]Executing:  57%|█████▋    | 17/30 [00:18<00:16,  1.23s/cell]Executing:  67%|██████▋   | 20/30 [00:18<00:07,  1.41cell/s]Executing:  70%|███████   | 21/30 [00:20<00:08,  1.06cell/s]Executing:  73%|███████▎  | 22/30 [00:22<00:09,  1.15s/cell]Executing:  77%|███████▋  | 23/30 [00:35<00:25,  3.63s/cell]Executing:  80%|████████  | 24/30 [00:41<00:25,  4.20s/cell]Executing:  83%|████████▎ | 25/30 [00:43<00:18,  3.77s/cell]Executing:  87%|████████▋ | 26/30 [00:45<00:13,  3.28s/cell]Executing:  93%|█████████▎| 28/30 [00:45<00:03,  1.90s/cell]Executing:  97%|█████████▋| 29/30 [00:45<00:01,  1.48s/cell]Executing: 100%|██████████| 30/30 [00:48<00:00,  1.62s/cell]
+Executing:   0%|          | 0/11 [00:00<?, ?cell/s]Executing:   9%|▉         | 1/11 [00:02<00:24,  2.49s/cell]Executing:  18%|█▊        | 2/11 [00:03<00:14,  1.58s/cell]Executing:  27%|██▋       | 3/11 [00:04<00:10,  1.26s/cell]Executing:  36%|███▋      | 4/11 [00:42<01:49, 15.67s/cell]Executing:  45%|████▌     | 5/11 [00:43<01:02, 10.44s/cell]Executing:  55%|█████▍    | 6/11 [00:44<00:36,  7.38s/cell]Executing:  64%|██████▎   | 7/11 [00:49<00:26,  6.61s/cell]Executing:  73%|███████▎  | 8/11 [00:59<00:23,  7.74s/cell]Executing:  82%|████████▏ | 9/11 [01:00<00:10,  5.42s/cell]Executing:  91%|█████████ | 10/11 [01:00<00:03,  3.90s/cell]Executing: 100%|██████████| 11/11 [01:01<00:00,  2.89s/cell]Executing: 100%|██████████| 11/11 [01:03<00:00,  5.81s/cell]
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
