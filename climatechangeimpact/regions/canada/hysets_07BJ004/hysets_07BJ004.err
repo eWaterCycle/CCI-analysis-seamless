@@ -1,5 +1,8 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:25,  1.18s/cell]Executing:   9%|▊         | 2/23 [00:02<00:21,  1.03s/cell]Executing:  13%|█▎        | 3/23 [00:05<00:43,  2.18s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:17,  1.02cell/s]Executing:  26%|██▌       | 6/23 [00:05<00:12,  1.33cell/s]Executing:  39%|███▉      | 9/23 [00:06<00:05,  2.77cell/s]Executing:  65%|██████▌   | 15/23 [00:06<00:01,  6.62cell/s]Executing:  78%|███████▊  | 18/23 [00:06<00:00,  7.82cell/s]Executing:  91%|█████████▏| 21/23 [00:07<00:00,  5.25cell/s]Executing: 100%|██████████| 23/23 [00:07<00:00,  4.75cell/s]Executing: 100%|██████████| 23/23 [00:09<00:00,  2.47cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:19,  1.11cell/s]Executing:   9%|▊         | 2/23 [00:05<01:06,  3.16s/cell]Executing:  17%|█▋        | 4/23 [00:05<00:23,  1.24s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:18,  1.03s/cell]Executing:  35%|███▍      | 8/23 [00:06<00:06,  2.16cell/s]Executing:  35%|███▍      | 8/23 [00:20<00:06,  2.16cell/s]Executing:  39%|███▉      | 9/23 [05:13<15:23, 65.95s/cell]Executing:  48%|████▊     | 11/23 [05:14<08:13, 41.09s/cell]Executing:  61%|██████    | 14/23 [05:14<03:24, 22.71s/cell]Executing:  70%|██████▉   | 16/23 [05:14<01:51, 15.95s/cell]Executing:  78%|███████▊  | 18/23 [05:30<01:07, 13.49s/cell]Executing:  87%|████████▋ | 20/23 [05:30<00:28,  9.49s/cell]Executing:  96%|█████████▌| 22/23 [06:34<00:16, 16.22s/cell]Executing:  96%|█████████▌| 22/23 [06:37<00:18, 18.05s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:22,  1.01s/cell]Executing:   9%|▊         | 2/23 [00:01<00:18,  1.15cell/s]2026/06/25 06:37:16 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/25 06:37:16 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/25 06:37:16 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:  13%|█▎        | 3/23 [00:04<00:37,  1.87s/cell]Executing:  22%|██▏       | 5/23 [00:04<00:15,  1.19cell/s]Executing:  35%|███▍      | 8/23 [00:05<00:05,  2.50cell/s]Executing:  43%|████▎     | 10/23 [00:05<00:03,  3.54cell/s]Executing:  52%|█████▏    | 12/23 [00:05<00:02,  4.74cell/s]Executing:  61%|██████    | 14/23 [00:05<00:01,  6.23cell/s]Executing:  74%|███████▍  | 17/23 [00:05<00:00,  8.16cell/s]Executing:  83%|████████▎ | 19/23 [00:06<00:00,  5.16cell/s]Executing:  96%|█████████▌| 22/23 [00:06<00:00,  5.39cell/s]Executing: 100%|██████████| 23/23 [00:08<00:00,  2.87cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:16,  1.37cell/s]Executing:   9%|▊         | 2/23 [00:04<00:53,  2.54s/cell]Executing:  17%|█▋        | 4/23 [00:04<00:18,  1.01cell/s]Executing:  30%|███       | 7/23 [00:05<00:07,  2.06cell/s]Executing:  48%|████▊     | 11/23 [00:06<00:04,  2.72cell/s]Executing:  61%|██████    | 14/23 [00:06<00:02,  4.02cell/s]Executing:  74%|███████▍  | 17/23 [00:06<00:01,  5.44cell/s]Executing:  83%|████████▎ | 19/23 [00:06<00:00,  5.28cell/s]Executing:  91%|█████████▏| 21/23 [00:07<00:00,  5.40cell/s]Executing:  96%|█████████▌| 22/23 [05:45<00:52, 52.86s/cell]Executing:  96%|█████████▌| 22/23 [05:46<00:15, 15.76s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -192,10 +195,10 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
 HTTPResponseError: Polytope error
 Situation: trying to download data
 Description: HTTP CLIENT ERROR (400)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/4fa8108f-92c3-4632-b9a0-6781fa882c2a
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/c14a18b8-3daa-4341-8b1f-d068ddd5e6c9
 HTTP method: GET
 Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********NXtg'}, 'json': None}
+{'headers': {'Authorization': 'Bearer **********-D6A'}, 'json': None}
 Expected responses: 200, 202
 Received response: CLIENT ERROR (400)
 Details:
@@ -204,3 +207,6 @@ Matched datasource polytope-ng
 
 No data was returned.
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
