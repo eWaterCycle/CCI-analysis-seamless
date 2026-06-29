@@ -1,5 +1,36 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:49,  2.24s/cell]Executing:   9%|▊         | 2/23 [00:03<00:30,  1.44s/cell]Executing:  13%|█▎        | 3/23 [00:06<00:46,  2.35s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:19,  1.09s/cell]Executing:  35%|███▍      | 8/23 [00:07<00:08,  1.77cell/s]Executing:  43%|████▎     | 10/23 [00:07<00:05,  2.32cell/s]Executing:  52%|█████▏    | 12/23 [00:07<00:03,  3.18cell/s]Executing:  61%|██████    | 14/23 [00:07<00:02,  3.88cell/s]Executing:  70%|██████▉   | 16/23 [00:08<00:01,  3.75cell/s]Executing:  74%|███████▍  | 17/23 [00:08<00:01,  3.89cell/s]Executing:  83%|████████▎ | 19/23 [00:09<00:01,  3.19cell/s]Executing:  96%|█████████▌| 22/23 [00:11<00:00,  2.29cell/s]Executing: 100%|██████████| 23/23 [00:12<00:00,  1.81cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<01:02,  2.84s/cell]Executing:   9%|▊         | 2/23 [00:07<01:16,  3.65s/cell]Executing:  26%|██▌       | 6/23 [00:07<00:14,  1.16cell/s]Executing:  35%|███▍      | 8/23 [00:07<00:08,  1.68cell/s]Executing:  43%|████▎     | 10/23 [00:08<00:06,  1.96cell/s]Executing:  48%|████▊     | 11/23 [00:08<00:06,  1.75cell/s]Executing:  57%|█████▋    | 13/23 [00:09<00:03,  2.58cell/s]Executing:  65%|██████▌   | 15/23 [00:09<00:02,  2.85cell/s]Executing:  74%|███████▍  | 17/23 [00:09<00:01,  3.55cell/s]Executing:  78%|███████▊  | 18/23 [00:10<00:01,  3.23cell/s]Executing:  87%|████████▋ | 20/23 [00:11<00:01,  2.25cell/s]Executing:  96%|█████████▌| 22/23 [10:36<01:44, 104.47s/cell]Executing:  96%|█████████▌| 22/23 [10:39<00:29, 29.06s/cell] 
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/24 11:03:56 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 11:03:56 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 11:03:56 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:17<06:34, 17.94s/cell]Executing:   9%|▊         | 2/23 [00:40<07:16, 20.81s/cell]Executing:  13%|█▎        | 3/23 [01:41<12:57, 38.90s/cell]Executing:  17%|█▋        | 4/23 [01:41<07:32, 23.80s/cell]Executing:  26%|██▌       | 6/23 [01:42<03:11, 11.25s/cell]Executing:  61%|██████    | 14/23 [01:42<00:25,  2.80s/cell]Executing:  78%|███████▊  | 18/23 [01:42<00:09,  1.85s/cell]Executing:  91%|█████████▏| 21/23 [01:51<00:04,  2.15s/cell]Executing: 100%|██████████| 23/23 [01:52<00:00,  1.82s/cell]Executing: 100%|██████████| 23/23 [01:55<00:00,  5.00s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
+    with conn:
+         ^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:10<03:59, 10.90s/cell]Executing:   9%|▊         | 2/23 [00:21<03:39, 10.47s/cell]Executing:  30%|███       | 7/23 [00:21<00:32,  2.03s/cell]Executing:  52%|█████▏    | 12/23 [00:22<00:11,  1.05s/cell]Executing:  65%|██████▌   | 15/23 [00:22<00:05,  1.36cell/s]Executing:  78%|███████▊  | 18/23 [00:22<00:02,  1.74cell/s]Executing:  87%|████████▋ | 20/23 [00:23<00:01,  1.91cell/s]Executing:  91%|█████████▏| 21/23 [00:34<00:01,  1.91cell/s]Executing:  96%|█████████▌| 22/23 [19:40<02:22, 142.57s/cell]Executing:  96%|█████████▌| 22/23 [19:43<00:53, 53.80s/cell] 
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -192,10 +223,10 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
 HTTPResponseError: Polytope error
 Situation: trying to download data
 Description: HTTP CLIENT ERROR (400)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/1f97b474-0bb3-4322-9194-12c13fa6ba55
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/992703a4-1ca1-4b68-b597-7193dfe55db9
 HTTP method: GET
 Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********8gQQ'}, 'json': None}
+{'headers': {'Authorization': 'Bearer **********OTzA'}, 'json': None}
 Expected responses: 200, 202
 Received response: CLIENT ERROR (400)
 Details:
@@ -204,3 +235,6 @@ Matched datasource polytope-ng
 
 No data was returned.
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
