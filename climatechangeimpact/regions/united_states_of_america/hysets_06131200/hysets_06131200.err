@@ -1,203 +1,16 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:52,  2.37s/cell]Executing:   9%|▊         | 2/23 [00:04<00:43,  2.07s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:24,  4.24s/cell]Executing:  17%|█▋        | 4/23 [00:11<00:50,  2.65s/cell]Executing:  30%|███       | 7/23 [00:11<00:16,  1.02s/cell]Executing:  35%|███▍      | 8/23 [00:11<00:12,  1.22cell/s]Executing:  43%|████▎     | 10/23 [00:11<00:07,  1.79cell/s]Executing:  52%|█████▏    | 12/23 [00:12<00:04,  2.45cell/s]Executing:  61%|██████    | 14/23 [00:12<00:02,  3.37cell/s]Executing:  74%|███████▍  | 17/23 [00:12<00:01,  5.30cell/s]Executing:  83%|████████▎ | 19/23 [00:13<00:01,  2.91cell/s]Executing:  87%|████████▋ | 20/23 [00:14<00:00,  3.07cell/s]Executing:  96%|█████████▌| 22/23 [00:16<00:00,  1.73cell/s]Executing: 100%|██████████| 23/23 [00:19<00:00,  1.16cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:33,  1.54s/cell]Executing:   9%|▊         | 2/23 [00:11<02:15,  6.45s/cell]Executing:  22%|██▏       | 5/23 [00:11<00:33,  1.87s/cell]Executing:  26%|██▌       | 6/23 [00:12<00:25,  1.51s/cell]Executing:  39%|███▉      | 9/23 [14:38<35:19, 151.41s/cell]Executing:  48%|████▊     | 11/23 [14:41<20:18, 101.55s/cell]Executing:  61%|██████    | 14/23 [14:41<08:54, 59.37s/cell] Executing:  70%|██████▉   | 16/23 [14:41<04:57, 42.55s/cell]Executing:  70%|██████▉   | 16/23 [14:59<04:57, 42.55s/cell]Executing:  74%|███████▍  | 17/23 [15:47<04:39, 46.57s/cell]Executing:  78%|███████▊  | 18/23 [15:48<03:08, 37.75s/cell]Executing:  87%|████████▋ | 20/23 [15:50<01:13, 24.49s/cell]Executing:  96%|█████████▌| 22/23 [18:07<00:39, 39.47s/cell]Executing:  96%|█████████▌| 22/23 [18:11<00:49, 49.60s/cell]
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
-    pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [17]":
----------------------------------------------------------------------------
-FileNotFoundError                         Traceback (most recent call last)
-File <timed exec>:3
-
-File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:369, in DestinEHistoricalForcing.load(cls, directory)
-    367 directory = str(directory)
---> 369 with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
-    370     config = yaml.safe_load(f)
-
-FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_06131200/DestinE_historical/ewatercycle_forcing.yaml'
-
-During handling of the above exception, another exception occurred:
-
-HTTPResponseError                         Traceback (most recent call last)
-Cell In[17], line 1
-----> 1 get_ipython().run_cell_magic('time', '', '\n# Generate forcing for the calibration + validation period\ntry:\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.load(settings["path_DestinE_historical"])\n    print("Loading")\nexcept FileNotFoundError:\n# DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n    print("Generating")\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n        start_time=settings["calibration_start_date"],\n        end_time=settings["validation_end_date"],\n        directory=settings["path_DestinE_historical"],\n        shape=settings["path_shape"],\n    )\n\ndisplay(DestinE_hist_forcing_object)\n')
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/interactiveshell.py:2593, in InteractiveShell.run_cell_magic(self, magic_name, line, cell)
-   2591 with self.builtin_trap:
-   2592     args = (magic_arg_s, cell)
--> 2593     result = fn(*args, **kwargs)
-   2595 # The code below prevents the output from being displayed
-   2596 # when using magics with decorator @output_can_be_silenced
-   2597 # when the last Python token in the expression is a ';'.
-   2598 if getattr(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, False):
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1448, in ExecutionMagics.time(self, line, cell, local_ns)
-   1446 if interrupt_occured:
-   1447     if exit_on_interrupt and captured_exception:
--> 1448         raise captured_exception
-   1449     return
-   1450 return out
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1412, in ExecutionMagics.time(self, line, cell, local_ns)
-   1410 st = clock2()
-   1411 try:
--> 1412     exec(code, glob, local_ns)
-   1413     out = None
-   1414     # multi-line %%time case
-
-File <timed exec>:8
-
-File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:445, in DestinEHistoricalForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
-    442 LIVE_REQUEST = os.getenv("LIVE_REQUEST", "true").lower() == "true"
-    444 if LIVE_REQUEST:
---> 445     data = earthkit.data.from_source("polytope", "destination-earth", request, address=polytope_address, stream=False)
-    447 ds = data.to_xarray()
-    448 ds = ds.rename({
-    449     "2t": "tas",
-    450     "ssrd": "rsds",
-    451     "tprate": "pr"
-    452 })
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:145, in from_source(name, lazily, *args, **kwargs)
-    143 while src is not prev:
-    144     prev = src
---> 145     src = src.mutate()
-    146 return src
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:106, in Polytope.mutate(self)
-    104     return self._mutate_stream()
-    105 else:
---> 106     return self._retrieve()
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:163, in Polytope._retrieve(self)
-    161 # Download each request in parallel when the config allows it
-    162 retriever = FileRequestRetriever(self, retriever=_retrieve_one)
---> 163 path = retriever.retrieve(self.request, self.dataset)
-    165 # TODO: for simplicity we assume all retrieved files have the same content-type. Revisit if needed.
-    166 content_type = None
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/utils/request.py:135, in FileRequestRetriever.retrieve(self, requests, *extra_args)
-    132 nthreads = min(self.owner.config("number-of-download-threads"), len(requests))
-    134 if nthreads < 2:
---> 135     path = [self.retriever(r, *extra_args) for r in requests]
-    136 else:
-    137     from earthkit.data.utils.progbar import tqdm
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:156, in Polytope._retrieve.<locals>._retrieve_one(request, dataset)
-    152     return download_to_target(url, target)
-    154 # The cache file path/data is constructed by using the request only. We cannot simply base
-    155 # it on the URL since the URL may change every time we ask for the pointers.
---> 156 return self.cache_file(
-    157     retrieve,
-    158     (dataset, request),
-    159 )
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:65, in Source.cache_file(self, create, args, **kwargs)
-     62 if owner is None:
-     63     owner = re.sub(r"(?!^)([A-Z]+)", r"-\1", self.__class__.__name__).lower()
----> 65 return cache_file(owner, create, args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/core/caching.py:1099, in cache_file(owner, create, args, hash_extra, extension, force, replace)
-   1097 with FileLock(lock):
-   1098     if not os.path.exists(path):  # Check again, another thread/process may have created the file
--> 1099         owner_data = create(path + ".tmp", args)
-   1100         os.rename(path + ".tmp", path)
-   1101 try:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:140, in Polytope._retrieve.<locals>._retrieve_one.<locals>.retrieve(target, args)
-    135 """
-    136 Caching callback method to retrieve data into target file. Only called if
-    137 the data is not already cached.
-    138 """
-    139 # get the pointer and the url to download
---> 140 pointers = self.client.retrieve(
-    141     args[0],
-    142     args[1],
-    143     pointer=True,
-    144     asynchronous=False,
-    145 )
-    147 url = pointers[0]["location"]
-    149 # download the file and return the associated HTTP header info.
-    150 # This might contain useful info such as content-type. It will be
-    151 # stored in the cache database.
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
-    196 def decorated(self, *args, **kwargs):
---> 197     return fun(self, *args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:229, in authenticated.<locals>.decorated(self, *args, **kwargs)
-    227     raise e
-    228 # try:
---> 229 return method(self, *args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
-    196 def decorated(self, *args, **kwargs):
---> 197     return fun(self, *args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Client.py:202, in Client.retrieve(self, *args, **kwargs)
-    199 @authenticated
-    200 @wraps(RequestManager.retrieve)
-    201 def retrieve(self, *args, **kwargs):
---> 202     return self.request_manager.retrieve(*args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/RequestManager.py:438, in RequestManager.retrieve(self, name, request, output_file, inline_request, asynchronous, max_attempts, attempt_period, append, pointer)
-    436         request_results[i] = Result(request_url, output_file, append, self)
-    437     else:
---> 438         request_results[i] = self.download(
-    439             request_id, output_file, asynchronous, max_attempts, attempt_period, append, pointer
-    440         )
-    442     append = True
-    444 for warning in warnings:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/RequestManager.py:683, in RequestManager.download(self, request_id, output_file, asynchronous, max_attempts, attempt_period, append, pointer)
-    679     e = helpers.RetriesExceededError(
-    680         attempts=describe_max_attempts, situation=situation, url=url, method=method, request_content=headers
-    681     )
-    682     raise e
---> 683 response, response_messages = helpers.try_request(
-    684     method,
-    685     situation=situation,
-    686     expected=expected_responses,
-    687     logger=self._logger,
-    688     stream=True,
-    689     url=url,
-    690     headers=headers,
-    691     skip_tls=self.config.get()["skip_tls"],
-    692     session=s,
-    693 )
-    694 if response.status_code == requests.codes.ok:
-    695     last_status = "processed"
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:604, in try_request(method, situation, expected, logger, stream, skip_tls, session, **kwargs)
-    601     logger.warning("Maximum HTTP request retries reached")
-    602     raise e
---> 604 response_title, response_messages = process_response(
-    605     response, situation, url, method, stream, request_content, expected
-    606 )
-    608 logger.debug("Polytope client received HTTP " + response_title)
-    610 return response, response_messages
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:530, in process_response(response, situation, url, method, stream, request_content, expected)
-    528     if response.status_code == 401 and "expired" in response_messages[0]:
-    529         e.__class__ = "ExpiredCredentialsError"
---> 530     raise e
-    531 elif response.status_code not in expected:
-    532     e.description = "Unexpected HTTP response from the server."
-
-HTTPResponseError: Polytope error
-Situation: trying to download data
-Description: HTTP CLIENT ERROR (401)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/4d765798-5c33-4219-a701-8ea422f93604
-HTTP method: GET
-Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********1Uaw'}, 'json': None}
-Expected responses: 200, 202
-Received response: CLIENT ERROR (401)
-Details:
-Authentication failed
-
+2026/06/25 19:10:23 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/25 19:10:23 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/25 19:10:23 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:29,  1.35s/cell]Executing:   9%|▊         | 2/23 [00:02<00:23,  1.10s/cell]Executing:  13%|█▎        | 3/23 [00:06<00:46,  2.31s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:18,  1.04s/cell]Executing:  30%|███       | 7/23 [00:06<00:10,  1.58cell/s]Executing:  35%|███▍      | 8/23 [00:06<00:08,  1.82cell/s]Executing:  43%|████▎     | 10/23 [00:06<00:04,  2.89cell/s]Executing:  52%|█████▏    | 12/23 [00:07<00:02,  3.75cell/s]Executing:  70%|██████▉   | 16/23 [00:07<00:01,  6.19cell/s]Executing:  78%|███████▊  | 18/23 [00:07<00:00,  6.73cell/s]Executing:  87%|████████▋ | 20/23 [00:08<00:00,  4.76cell/s]Executing:  96%|█████████▌| 22/23 [00:08<00:00,  4.17cell/s]Executing: 100%|██████████| 23/23 [00:10<00:00,  2.24cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:21,  1.02cell/s]Executing:   9%|▊         | 2/23 [00:05<00:59,  2.85s/cell]Executing:  17%|█▋        | 4/23 [00:05<00:21,  1.14s/cell]Executing:  26%|██▌       | 6/23 [00:05<00:10,  1.56cell/s]Executing:  39%|███▉      | 9/23 [00:05<00:04,  2.94cell/s]Executing:  48%|████▊     | 11/23 [00:06<00:04,  2.79cell/s]Executing:  61%|██████    | 14/23 [00:06<00:02,  4.33cell/s]Executing:  74%|███████▍  | 17/23 [00:06<00:00,  6.13cell/s]Executing:  83%|████████▎ | 19/23 [00:07<00:00,  4.78cell/s]Executing:  91%|█████████▏| 21/23 [00:07<00:00,  4.87cell/s]Executing:  96%|█████████▌| 22/23 [05:51<00:55, 55.95s/cell]Executing: 100%|██████████| 23/23 [05:52<00:00, 45.60s/cell]Executing: 100%|██████████| 23/23 [05:54<00:00, 15.43s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s]Executing:   7%|▋         | 1/14 [00:00<00:12,  1.03cell/s]Executing:  14%|█▍        | 2/14 [00:09<01:06,  5.52s/cell]Executing:  29%|██▊       | 4/14 [00:10<00:22,  2.27s/cell]Executing:  36%|███▌      | 5/14 [00:10<00:14,  1.65s/cell]Executing:  43%|████▎     | 6/14 [00:10<00:09,  1.19s/cell]Executing:  64%|██████▍   | 9/14 [00:10<00:02,  1.87cell/s]Executing:  64%|██████▍   | 9/14 [00:24<00:02,  1.87cell/s]Executing:  71%|███████▏  | 10/14 [03:42<03:01, 45.45s/cell]Executing:  79%|███████▊  | 11/14 [03:42<01:44, 34.88s/cell]Executing:  93%|█████████▎| 13/14 [03:42<00:21, 21.01s/cell]Executing: 100%|██████████| 14/14 [07:27<00:00, 66.18s/cell]Executing: 100%|██████████| 14/14 [07:29<00:00, 32.08s/cell]
+Executing:   0%|          | 0/43 [00:00<?, ?cell/s]Executing:   2%|▏         | 1/43 [00:00<00:37,  1.12cell/s]Executing:   5%|▍         | 2/43 [00:01<00:33,  1.22cell/s]Executing:   7%|▋         | 3/43 [00:04<01:14,  1.87s/cell]Executing:  12%|█▏        | 5/43 [00:05<00:33,  1.12cell/s]Executing:  14%|█▍        | 6/43 [00:05<00:26,  1.41cell/s]Executing:  19%|█▊        | 8/43 [00:05<00:15,  2.25cell/s]Executing:  21%|██        | 9/43 [00:05<00:12,  2.69cell/s]Executing:  26%|██▌       | 11/43 [00:05<00:08,  3.98cell/s]Executing:  28%|██▊       | 12/43 [00:05<00:06,  4.58cell/s]Executing:  30%|███       | 13/43 [00:06<00:06,  4.98cell/s]Executing:  35%|███▍      | 15/43 [00:06<00:05,  5.47cell/s]Executing:  42%|████▏     | 18/43 [00:06<00:02,  8.70cell/s]Executing:  49%|████▉     | 21/43 [00:06<00:01, 11.46cell/s]Executing:  56%|█████▌    | 24/43 [00:06<00:01, 11.38cell/s]Executing:  60%|██████    | 26/43 [00:07<00:02,  7.61cell/s]Executing:  65%|██████▌   | 28/43 [00:07<00:02,  6.66cell/s]Executing:  72%|███████▏  | 31/43 [28:22<41:19, 206.59s/cell]Executing:  77%|███████▋  | 33/43 [28:22<25:32, 153.26s/cell]Executing:  79%|███████▉  | 34/43 [28:23<19:26, 129.57s/cell]Executing:  84%|████████▎ | 36/43 [28:23<10:27, 89.69s/cell] Executing:  86%|████████▌ | 37/43 [28:25<07:23, 73.83s/cell]Executing:  93%|█████████▎| 40/43 [28:26<02:05, 41.74s/cell]Executing:  95%|█████████▌| 41/43 [28:26<01:09, 34.69s/cell]Executing: 100%|██████████| 43/43 [28:29<00:00, 39.76s/cell]
+Executing:   0%|          | 0/44 [00:00<?, ?cell/s]Executing:   2%|▏         | 1/44 [00:00<00:38,  1.11cell/s]Executing:   5%|▍         | 2/44 [00:05<02:04,  2.97s/cell]Executing:   7%|▋         | 3/44 [00:05<01:09,  1.70s/cell]Executing:   9%|▉         | 4/44 [00:05<00:44,  1.10s/cell]Executing:  11%|█▏        | 5/44 [00:05<00:29,  1.30cell/s]Executing:  14%|█▎        | 6/44 [00:06<00:23,  1.63cell/s]Executing:  16%|█▌        | 7/44 [00:06<00:18,  1.98cell/s]Executing:  18%|█▊        | 8/44 [00:06<00:15,  2.38cell/s]Executing:  20%|██        | 9/44 [00:06<00:13,  2.67cell/s]Executing:  23%|██▎       | 10/44 [00:07<00:17,  2.00cell/s]Executing:  25%|██▌       | 11/44 [00:08<00:23,  1.42cell/s]Executing:  27%|██▋       | 12/44 [00:09<00:17,  1.83cell/s]Executing:  30%|██▉       | 13/44 [00:09<00:15,  2.05cell/s]Executing:  32%|███▏      | 14/44 [00:14<00:55,  1.85s/cell]Executing:  36%|███▋      | 16/44 [00:14<00:29,  1.05s/cell]Executing:  39%|███▊      | 17/44 [00:15<00:25,  1.06cell/s]Executing:  41%|████      | 18/44 [00:20<00:55,  2.13s/cell]Executing:  45%|████▌     | 20/44 [00:21<00:32,  1.35s/cell]Executing:  48%|████▊     | 21/44 [00:21<00:24,  1.07s/cell]Executing:  50%|█████     | 22/44 [00:21<00:19,  1.15cell/s]Executing:  52%|█████▏    | 23/44 [00:22<00:14,  1.42cell/s]Executing:  55%|█████▍    | 24/44 [00:23<00:15,  1.30cell/s]Executing:  57%|█████▋    | 25/44 [00:23<00:11,  1.64cell/s]Executing:  59%|█████▉    | 26/44 [00:23<00:11,  1.59cell/s]Executing:  61%|██████▏   | 27/44 [00:24<00:09,  1.89cell/s]Executing:  64%|██████▎   | 28/44 [00:24<00:07,  2.14cell/s]Executing:  66%|██████▌   | 29/44 [00:27<00:18,  1.21s/cell]Executing:  68%|██████▊   | 30/44 [00:27<00:13,  1.06cell/s]Executing:  70%|███████   | 31/44 [00:28<00:09,  1.32cell/s]Executing:  75%|███████▌  | 33/44 [00:30<00:10,  1.06cell/s]Executing:  77%|███████▋  | 34/44 [00:30<00:08,  1.20cell/s]Executing:  82%|████████▏ | 36/44 [00:31<00:05,  1.53cell/s]Executing:  84%|████████▍ | 37/44 [01:19<01:19, 11.37s/cell]Executing:  86%|████████▋ | 38/44 [01:23<00:57,  9.57s/cell]Executing:  89%|████████▊ | 39/44 [01:23<00:36,  7.23s/cell]Executing:  91%|█████████ | 40/44 [01:24<00:21,  5.31s/cell]Executing:  93%|█████████▎| 41/44 [01:24<00:11,  3.87s/cell]Executing:  95%|█████████▌| 42/44 [01:28<00:08,  4.02s/cell]Executing:  98%|█████████▊| 43/44 [01:28<00:02,  2.90s/cell]Executing: 100%|██████████| 44/44 [01:32<00:00,  3.18s/cell]Executing: 100%|██████████| 44/44 [01:34<00:00,  2.15s/cell]
+Executing:   0%|          | 0/30 [00:00<?, ?cell/s]Executing:   3%|▎         | 1/30 [00:07<03:25,  7.09s/cell]Executing:   7%|▋         | 2/30 [00:10<02:25,  5.21s/cell]Executing:  13%|█▎        | 4/30 [00:12<00:59,  2.29s/cell]Executing:  20%|██        | 6/30 [00:12<00:29,  1.25s/cell]Executing:  23%|██▎       | 7/30 [00:12<00:25,  1.10s/cell]Executing:  30%|███       | 9/30 [00:13<00:15,  1.40cell/s]Executing:  33%|███▎      | 10/30 [00:13<00:12,  1.59cell/s]Executing:  40%|████      | 12/30 [00:13<00:07,  2.46cell/s]Executing:  43%|████▎     | 13/30 [00:14<00:08,  1.92cell/s]Executing:  50%|█████     | 15/30 [00:15<00:06,  2.14cell/s]Executing:  60%|██████    | 18/30 [00:55<01:16,  6.35s/cell]Executing:  67%|██████▋   | 20/30 [00:55<00:44,  4.46s/cell]Executing:  70%|███████   | 21/30 [00:58<00:36,  4.04s/cell]Executing:  77%|███████▋  | 23/30 [00:58<00:18,  2.71s/cell]Executing:  83%|████████▎ | 25/30 [00:58<00:09,  1.89s/cell]Executing:  93%|█████████▎| 28/30 [00:59<00:02,  1.18s/cell]Executing:  97%|█████████▋| 29/30 [00:59<00:01,  1.03s/cell]Executing: 100%|██████████| 30/30 [01:00<00:00,  2.03s/cell]
+Executing:   0%|          | 0/40 [00:00<?, ?cell/s]Executing:   2%|▎         | 1/40 [00:01<00:43,  1.13s/cell]Executing:   5%|▌         | 2/40 [00:10<03:42,  5.86s/cell]Executing:   8%|▊         | 3/40 [00:10<01:59,  3.24s/cell]Executing:  10%|█         | 4/40 [00:13<01:51,  3.09s/cell]Executing:  12%|█▎        | 5/40 [00:13<01:10,  2.01s/cell]Executing:  15%|█▌        | 6/40 [00:14<01:01,  1.80s/cell]Executing:  18%|█▊        | 7/40 [00:15<00:45,  1.37s/cell]Executing:  22%|██▎       | 9/40 [00:17<00:35,  1.14s/cell]Executing:  25%|██▌       | 10/40 [00:17<00:28,  1.06cell/s]Executing:  28%|██▊       | 11/40 [00:18<00:25,  1.12cell/s]Executing:  30%|███       | 12/40 [00:18<00:19,  1.44cell/s]Executing:  32%|███▎      | 13/40 [00:18<00:15,  1.70cell/s]Executing:  35%|███▌      | 14/40 [00:18<00:11,  2.22cell/s]Executing:  42%|████▎     | 17/40 [00:19<00:07,  3.09cell/s]Executing:  48%|████▊     | 19/40 [00:19<00:05,  3.78cell/s]Executing:  50%|█████     | 20/40 [00:19<00:04,  4.27cell/s]Executing:  52%|█████▎    | 21/40 [00:19<00:04,  4.67cell/s]Executing:  55%|█████▌    | 22/40 [00:20<00:05,  3.10cell/s]Executing:  57%|█████▊    | 23/40 [00:20<00:04,  3.61cell/s]Executing:  60%|██████    | 24/40 [00:23<00:15,  1.05cell/s]Executing:  62%|██████▎   | 25/40 [00:31<00:43,  2.92s/cell]Executing:  65%|██████▌   | 26/40 [00:32<00:33,  2.40s/cell]Executing:  68%|██████▊   | 27/40 [00:36<00:36,  2.81s/cell]Executing:  75%|███████▌  | 30/40 [00:37<00:13,  1.33s/cell]Executing:  78%|███████▊  | 31/40 [00:37<00:09,  1.10s/cell]Executing:  80%|████████  | 32/40 [00:37<00:07,  1.03cell/s]Executing:  82%|████████▎ | 33/40 [00:38<00:05,  1.20cell/s]Executing:  85%|████████▌ | 34/40 [00:39<00:05,  1.08cell/s]Executing:  88%|████████▊ | 35/40 [00:39<00:03,  1.33cell/s]Executing:  90%|█████████ | 36/40 [00:40<00:02,  1.34cell/s]Executing:  95%|█████████▌| 38/40 [00:41<00:01,  1.42cell/s]Executing:  98%|█████████▊| 39/40 [00:42<00:00,  1.61cell/s]Executing: 100%|██████████| 40/40 [00:44<00:00,  1.11s/cell]
+Executing:   0%|          | 0/24 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/24 [00:00<00:20,  1.11cell/s]Executing:   8%|▊         | 2/24 [00:04<00:59,  2.72s/cell]Executing:  17%|█▋        | 4/24 [00:05<00:21,  1.08s/cell]Executing:  21%|██        | 5/24 [00:05<00:16,  1.18cell/s]Executing:  25%|██▌       | 6/24 [00:05<00:11,  1.54cell/s]Executing:  33%|███▎      | 8/24 [00:05<00:06,  2.43cell/s]Executing:  38%|███▊      | 9/24 [00:06<00:05,  2.71cell/s]Executing:  46%|████▌     | 11/24 [00:20<00:40,  3.14s/cell]Executing:  50%|█████     | 12/24 [01:08<02:41, 13.45s/cell]Executing:  58%|█████▊    | 14/24 [01:09<01:23,  8.34s/cell]Executing:  62%|██████▎   | 15/24 [01:13<01:06,  7.37s/cell]Executing:  67%|██████▋   | 16/24 [01:13<00:45,  5.64s/cell]Executing:  75%|███████▌  | 18/24 [01:13<00:20,  3.37s/cell]Executing:  79%|███████▉  | 19/24 [01:13<00:13,  2.65s/cell]Executing:  83%|████████▎ | 20/24 [01:15<00:09,  2.43s/cell]Executing:  88%|████████▊ | 21/24 [01:17<00:06,  2.22s/cell]Executing:  92%|█████████▏| 22/24 [01:17<00:03,  1.66s/cell]Executing:  96%|█████████▌| 23/24 [01:17<00:01,  1.32s/cell]Executing: 100%|██████████| 24/24 [01:20<00:00,  3.34s/cell]
+Executing:   0%|          | 0/30 [00:00<?, ?cell/s]Executing:   3%|▎         | 1/30 [00:01<00:31,  1.08s/cell]Executing:   7%|▋         | 2/30 [00:02<00:28,  1.01s/cell]Executing:  10%|█         | 3/30 [00:04<00:50,  1.87s/cell]Executing:  17%|█▋        | 5/30 [00:05<00:24,  1.02cell/s]Executing:  20%|██        | 6/30 [00:05<00:19,  1.25cell/s]Executing:  23%|██▎       | 7/30 [00:06<00:14,  1.58cell/s]Executing:  27%|██▋       | 8/30 [00:06<00:13,  1.66cell/s]Executing:  30%|███       | 9/30 [00:07<00:12,  1.71cell/s]Executing:  33%|███▎      | 10/30 [00:08<00:18,  1.09cell/s]Executing:  37%|███▋      | 11/30 [00:09<00:14,  1.36cell/s]Executing:  40%|████      | 12/30 [00:09<00:10,  1.76cell/s]Executing:  43%|████▎     | 13/30 [00:10<00:10,  1.56cell/s]Executing:  47%|████▋     | 14/30 [00:10<00:10,  1.59cell/s]Executing:  53%|█████▎    | 16/30 [00:16<00:23,  1.65s/cell]Executing:  57%|█████▋    | 17/30 [00:19<00:25,  1.96s/cell]Executing:  63%|██████▎   | 19/30 [00:19<00:12,  1.18s/cell]Executing:  67%|██████▋   | 20/30 [00:19<00:09,  1.05cell/s]Executing:  70%|███████   | 21/30 [00:21<00:11,  1.27s/cell]Executing:  73%|███████▎  | 22/30 [00:23<00:10,  1.34s/cell]Executing:  77%|███████▋  | 23/30 [00:36<00:30,  4.42s/cell]Executing:  80%|████████  | 24/30 [00:43<00:31,  5.27s/cell]Executing:  83%|████████▎ | 25/30 [00:46<00:22,  4.47s/cell]Executing:  87%|████████▋ | 26/30 [00:47<00:14,  3.70s/cell]Executing:  93%|█████████▎| 28/30 [00:48<00:04,  2.06s/cell]Executing:  97%|█████████▋| 29/30 [00:48<00:01,  1.61s/cell]Executing: 100%|██████████| 30/30 [00:48<00:00,  1.26s/cell]Executing: 100%|██████████| 30/30 [00:49<00:00,  1.67s/cell]
+Executing:   0%|          | 0/11 [00:00<?, ?cell/s]Executing:   9%|▉         | 1/11 [00:00<00:09,  1.10cell/s]Executing:  18%|█▊        | 2/11 [00:01<00:05,  1.73cell/s]Executing:  27%|██▋       | 3/11 [00:01<00:05,  1.60cell/s]Executing:  45%|████▌     | 5/11 [00:02<00:02,  2.70cell/s]Executing:  55%|█████▍    | 6/11 [00:02<00:01,  2.93cell/s]Executing:  73%|███████▎  | 8/11 [00:11<00:06,  2.28s/cell]Executing:  82%|████████▏ | 9/11 [00:12<00:03,  1.78s/cell]Executing: 100%|██████████| 11/11 [00:13<00:00,  1.20s/cell]
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
