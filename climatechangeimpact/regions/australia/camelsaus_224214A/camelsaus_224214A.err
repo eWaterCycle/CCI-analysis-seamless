@@ -1,4 +1,7 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:40,  1.83s/cell]Executing:   9%|▊         | 2/23 [00:02<00:30,  1.43s/cell]Executing:  13%|█▎        | 3/23 [00:07<00:58,  2.91s/cell]Executing:  22%|██▏       | 5/23 [00:08<00:26,  1.45s/cell]Executing:  26%|██▌       | 6/23 [00:09<00:22,  1.30s/cell]Executing:  35%|███▍      | 8/23 [00:09<00:11,  1.28cell/s]Executing:  39%|███▉      | 9/23 [00:09<00:08,  1.62cell/s]Executing:  48%|████▊     | 11/23 [00:09<00:04,  2.49cell/s]Executing:  52%|█████▏    | 12/23 [00:10<00:05,  1.95cell/s]Executing:  57%|█████▋    | 13/23 [00:10<00:04,  2.34cell/s]Executing:  61%|██████    | 14/23 [00:15<00:13,  1.45s/cell]Executing:  70%|██████▉   | 16/23 [00:16<00:08,  1.17s/cell]Executing:  70%|██████▉   | 16/23 [00:19<00:08,  1.21s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:24,  1.10s/cell]Executing:   9%|▊         | 2/23 [00:01<00:19,  1.07cell/s]2026/06/24 10:35:05 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 10:35:05 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/24 10:35:05 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:  13%|█▎        | 3/23 [00:05<00:38,  1.95s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:16,  1.12cell/s]Executing:  43%|████▎     | 10/23 [00:05<00:04,  3.24cell/s]Executing:  57%|█████▋    | 13/23 [00:05<00:02,  4.33cell/s]Executing:  70%|██████▉   | 16/23 [00:06<00:02,  3.28cell/s]Executing:  70%|██████▉   | 16/23 [00:08<00:03,  1.96cell/s]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
     pm.execute_notebook(
@@ -39,7 +42,7 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/ba
 ---> 56     value = self._cache[key]
      57     self._cache.move_to_end(key)
 
-KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224214A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), 'dbb4a24f-87de-44b5-ba6c-18fd00d7c0b0']
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224214A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '0bff960a-a75b-467e-b892-03151d58376d']
 
 During handling of the above exception, another exception occurred:
 
@@ -170,3 +173,6 @@ File src/netCDF4/_netCDF4.pyx:2158, in netCDF4._netCDF4._ensure_nc_success()
 
 FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224214A.nc'
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab

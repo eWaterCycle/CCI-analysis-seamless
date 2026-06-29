@@ -1,8 +1,22 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:06<02:20,  6.40s/cell]Executing:   9%|▊         | 2/23 [00:08<01:18,  3.75s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:31,  4.58s/cell]Executing:  17%|█▋        | 4/23 [00:13<00:53,  2.82s/cell]Executing:  22%|██▏       | 5/23 [00:14<00:36,  2.04s/cell]Executing:  26%|██▌       | 6/23 [00:14<00:23,  1.39s/cell]Executing:  30%|███       | 7/23 [00:14<00:15,  1.00cell/s]Executing:  35%|███▍      | 8/23 [00:15<00:11,  1.35cell/s]Executing:  39%|███▉      | 9/23 [00:15<00:07,  1.77cell/s]Executing:  61%|██████    | 14/23 [00:15<00:01,  4.70cell/s]Executing:  65%|██████▌   | 15/23 [00:15<00:01,  5.01cell/s]Executing:  70%|██████▉   | 16/23 [00:18<00:04,  1.62cell/s]Executing:  78%|███████▊  | 18/23 [00:18<00:02,  2.23cell/s]Executing:  83%|████████▎ | 19/23 [00:19<00:02,  1.66cell/s]Executing:  96%|█████████▌| 22/23 [00:21<00:00,  1.64cell/s]Executing: 100%|██████████| 23/23 [00:23<00:00,  1.01s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:28,  1.29s/cell]Executing:   9%|▊         | 2/23 [00:09<01:46,  5.07s/cell]Executing:  26%|██▌       | 6/23 [00:09<00:20,  1.19s/cell]Executing:  35%|███▍      | 8/23 [00:09<00:13,  1.14cell/s]Executing:  43%|████▎     | 10/23 [00:10<00:09,  1.41cell/s]Executing:  48%|████▊     | 11/23 [00:11<00:09,  1.21cell/s]Executing:  57%|█████▋    | 13/23 [00:12<00:05,  1.78cell/s]Executing:  61%|██████    | 14/23 [00:16<00:12,  1.39s/cell]Executing:  74%|███████▍  | 17/23 [00:17<00:04,  1.24cell/s]Executing:  78%|███████▊  | 18/23 [00:17<00:03,  1.32cell/s]Executing:  83%|████████▎ | 19/23 [00:18<00:02,  1.40cell/s]Executing:  87%|████████▋ | 20/23 [00:19<00:02,  1.15cell/s]2026/04/30 11:09:09 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/caravan": net/http: TLS handshake timeout
-2026/04/30 11:09:09 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": net/http: TLS handshake timeout
-2026/04/30 11:09:09 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Propfind "https://webdav.grid.surfsara.nl:2880/climate-data/obs6": net/http: TLS handshake timeout
-Executing:  96%|█████████▌| 22/23 [2:23:09<28:07, 1687.01s/cell]Executing:  96%|█████████▌| 22/23 [2:23:12<06:30, 390.56s/cell] 
+2026/06/24 10:40:35 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 10:40:35 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/24 10:40:39 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<02:57,  8.09s/cell]Executing:   9%|▊         | 2/23 [00:09<01:33,  4.43s/cell]Executing:  13%|█▎        | 3/23 [00:19<02:12,  6.63s/cell]Executing:  17%|█▋        | 4/23 [00:19<01:17,  4.06s/cell]Executing:  22%|██▏       | 5/23 [00:19<00:47,  2.65s/cell]Executing:  35%|███▍      | 8/23 [00:19<00:15,  1.06s/cell]Executing:  61%|██████    | 14/23 [00:19<00:03,  2.50cell/s]Executing:  74%|███████▍  | 17/23 [00:20<00:01,  3.10cell/s]Executing:  83%|████████▎ | 19/23 [00:21<00:01,  2.60cell/s]Executing:  96%|█████████▌| 22/23 [00:22<00:00,  3.01cell/s]Executing: 100%|██████████| 23/23 [00:24<00:00,  1.07s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:42,  1.93s/cell]Executing:   9%|▊         | 2/23 [00:10<02:02,  5.82s/cell]Executing:  17%|█▋        | 4/23 [00:13<01:01,  3.25s/cell]Executing:  22%|██▏       | 5/23 [00:14<00:41,  2.28s/cell]Executing:  26%|██▌       | 6/23 [00:19<00:54,  3.19s/cell]Executing:  39%|███▉      | 9/23 [00:19<00:19,  1.40s/cell]Executing:  43%|████▎     | 10/23 [00:19<00:14,  1.14s/cell]Executing:  48%|████▊     | 11/23 [00:20<00:14,  1.18s/cell]Executing:  52%|█████▏    | 12/23 [00:21<00:10,  1.09cell/s]Executing:  65%|██████▌   | 15/23 [00:21<00:03,  2.09cell/s]Executing:  78%|███████▊  | 18/23 [00:21<00:01,  2.67cell/s]Executing:  87%|████████▋ | 20/23 [00:23<00:01,  1.86cell/s]Executing:  91%|█████████▏| 21/23 [00:23<00:00,  2.11cell/s]Executing:  96%|█████████▌| 22/23 [14:11<02:42, 162.65s/cell]Executing:  96%|█████████▌| 22/23 [14:14<00:38, 38.84s/cell] 
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -195,10 +209,10 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
 HTTPResponseError: Polytope error
 Situation: trying to download data
 Description: HTTP CLIENT ERROR (400)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/9aafe940-e079-4c8c-a0b5-91a9986b78f2
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/0271a898-853f-458d-8dfc-0f701f508118
 HTTP method: GET
 Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********F5sQ'}, 'json': None}
+{'headers': {'Authorization': 'Bearer **********PxqA'}, 'json': None}
 Expected responses: 200, 202
 Received response: CLIENT ERROR (400)
 Details:
@@ -207,3 +221,6 @@ Matched datasource polytope-ng
 
 No data was returned.
 
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
