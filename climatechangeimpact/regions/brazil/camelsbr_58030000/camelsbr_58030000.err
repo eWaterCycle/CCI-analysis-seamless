@@ -1,16 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:04<01:29,  4.09s/cell]Executing:   9%|▊         | 2/23 [00:05<00:53,  2.54s/cell]Executing:  13%|█▎        | 3/23 [00:15<01:54,  5.73s/cell]Executing:  43%|████▎     | 10/23 [00:15<00:13,  1.04s/cell]Executing:  57%|█████▋    | 13/23 [00:15<00:07,  1.41cell/s]Executing:  70%|██████▉   | 16/23 [00:15<00:03,  1.93cell/s]Executing:  83%|████████▎ | 19/23 [00:16<00:01,  2.17cell/s]Executing:  91%|█████████▏| 21/23 [00:16<00:00,  2.72cell/s]Executing: 100%|██████████| 23/23 [00:17<00:00,  2.76cell/s]Executing: 100%|██████████| 23/23 [00:20<00:00,  1.14cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:54,  7.94s/cell]Executing:   9%|▊         | 2/23 [00:14<02:25,  6.92s/cell]Executing:  30%|███       | 7/23 [00:14<00:21,  1.35s/cell]Executing:  43%|████▎     | 10/23 [00:14<00:10,  1.21cell/s]Executing:  52%|█████▏    | 12/23 [00:15<00:08,  1.30cell/s]Executing:  70%|██████▉   | 16/23 [00:15<00:03,  2.28cell/s]Executing:  83%|████████▎ | 19/23 [00:16<00:01,  2.59cell/s]Executing:  91%|█████████▏| 21/23 [00:17<00:00,  2.92cell/s]Executing:  91%|█████████▏| 21/23 [00:29<00:00,  2.92cell/s][2026-04-30T00:57:50.011] error: *** JOB 35347164 ON wn-la-17 CANCELLED AT 2026-04-30T00:57:50 DUE TO TIME LIMIT ***
+2026/06/24 23:30:47 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 23:30:47 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 23:30:47 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
