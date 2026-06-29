@@ -1,30 +1,6 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
-    with conn:
-         ^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:11<04:13, 11.53s/cell]Executing:   9%|▊         | 2/23 [00:13<01:57,  5.62s/cell]Executing:  13%|█▎        | 3/23 [00:18<01:46,  5.34s/cell]Executing:  17%|█▋        | 4/23 [00:18<01:02,  3.30s/cell]Executing:  35%|███▍      | 8/23 [00:18<00:15,  1.03s/cell]Executing:  57%|█████▋    | 13/23 [00:18<00:04,  2.10cell/s]Executing:  70%|██████▉   | 16/23 [00:18<00:02,  2.95cell/s]Executing:  83%|████████▎ | 19/23 [00:19<00:01,  2.83cell/s]Executing:  91%|█████████▏| 21/23 [00:19<00:00,  3.45cell/s]Executing: 100%|██████████| 23/23 [00:20<00:00,  3.35cell/s]Executing: 100%|██████████| 23/23 [00:23<00:00,  1.01s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:37,  7.17s/cell]Executing:   9%|▊         | 2/23 [00:13<02:19,  6.66s/cell]Executing:  26%|██▌       | 6/23 [00:13<00:26,  1.55s/cell]Executing:  43%|████▎     | 10/23 [00:13<00:09,  1.33cell/s]Executing:  57%|█████▋    | 13/23 [00:14<00:06,  1.66cell/s]Executing:  74%|███████▍  | 17/23 [00:14<00:02,  2.69cell/s]Executing:  87%|████████▋ | 20/23 [00:16<00:01,  2.66cell/s]Executing:  91%|█████████▏| 21/23 [00:26<00:00,  2.66cell/s][2026-04-30T04:19:58.007] error: *** JOB 35349363 ON wn-la-17 CANCELLED AT 2026-04-30T04:19:58 DUE TO TIME LIMIT ***
+2026/06/24 16:40:58 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 16:40:58 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/06/24 16:40:58 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
