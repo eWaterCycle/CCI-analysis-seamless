@@ -1,197 +1,44 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:05<02:07,  5.81s/cell]Executing:   9%|▊         | 2/23 [00:09<01:35,  4.52s/cell]Executing:  13%|█▎        | 3/23 [00:16<01:52,  5.62s/cell]Executing:  17%|█▋        | 4/23 [00:16<01:05,  3.46s/cell]Executing:  22%|██▏       | 5/23 [00:16<00:40,  2.26s/cell]Executing:  26%|██▌       | 6/23 [00:17<00:28,  1.67s/cell]Executing:  30%|███       | 7/23 [00:17<00:21,  1.35s/cell]Executing:  35%|███▍      | 8/23 [00:18<00:17,  1.18s/cell]Executing:  39%|███▉      | 9/23 [00:18<00:12,  1.13cell/s]Executing:  43%|████▎     | 10/23 [00:19<00:09,  1.32cell/s]Executing:  48%|████▊     | 11/23 [00:19<00:07,  1.67cell/s]Executing:  52%|█████▏    | 12/23 [00:19<00:05,  1.94cell/s]Executing:  61%|██████    | 14/23 [00:20<00:02,  3.18cell/s]Executing:  65%|██████▌   | 15/23 [00:20<00:02,  2.96cell/s]Executing:  70%|██████▉   | 16/23 [00:20<00:02,  2.78cell/s]Executing:  74%|███████▍  | 17/23 [00:21<00:02,  2.37cell/s]Executing:  78%|███████▊  | 18/23 [00:21<00:01,  2.50cell/s]Executing:  83%|████████▎ | 19/23 [00:23<00:02,  1.53cell/s]Executing:  87%|████████▋ | 20/23 [00:23<00:01,  1.69cell/s]Executing:  96%|█████████▌| 22/23 [00:24<00:00,  1.76cell/s]Executing: 100%|██████████| 23/23 [00:27<00:00,  1.19s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:49,  2.27s/cell]Executing:   9%|▊         | 2/23 [00:07<01:27,  4.19s/cell]Executing:  13%|█▎        | 3/23 [00:07<00:46,  2.33s/cell]Executing:  17%|█▋        | 4/23 [00:08<00:28,  1.51s/cell]Executing:  22%|██▏       | 5/23 [00:08<00:19,  1.11s/cell]Executing:  26%|██▌       | 6/23 [00:09<00:16,  1.02cell/s]Executing:  30%|███       | 7/23 [00:10<00:15,  1.02cell/s]Executing:  39%|███▉      | 9/23 [07:24<24:33, 105.26s/cell]Executing:  43%|████▎     | 10/23 [07:24<16:57, 78.30s/cell]Executing:  48%|████▊     | 11/23 [07:24<11:29, 57.42s/cell]Executing:  57%|█████▋    | 13/23 [07:25<05:25, 32.59s/cell]Executing:  61%|██████    | 14/23 [07:25<03:44, 24.99s/cell]Executing:  65%|██████▌   | 15/23 [07:25<02:30, 18.80s/cell]Executing:  74%|███████▍  | 17/23 [07:46<01:31, 15.27s/cell]Executing:  78%|███████▊  | 18/23 [07:47<00:59, 11.84s/cell]Executing:  87%|████████▋ | 20/23 [12:11<02:58, 59.61s/cell]Executing:  96%|█████████▌| 22/23 [12:25<00:40, 40.54s/cell]Executing:  96%|█████████▌| 22/23 [12:27<00:33, 34.00s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/26 04:53:25 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/26 04:53:26 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/06/26 04:53:26 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
-  File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
-    pm.execute_notebook(
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [17]":
----------------------------------------------------------------------------
-FileNotFoundError                         Traceback (most recent call last)
-File <timed exec>:3
-
-File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:369, in DestinEHistoricalForcing.load(cls, directory)
-    367 directory = str(directory)
---> 369 with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
-    370     config = yaml.safe_load(f)
-
-FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/united_states_of_america/hysets_09504430/DestinE_historical/ewatercycle_forcing.yaml'
-
-During handling of the above exception, another exception occurred:
-
-HTTPResponseError                         Traceback (most recent call last)
-Cell In[17], line 1
-----> 1 get_ipython().run_cell_magic('time', '', '\n# Generate forcing for the calibration + validation period\ntry:\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.load(settings["path_DestinE_historical"])\n    print("Loading")\nexcept FileNotFoundError:\n# DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n    print("Generating")\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n        start_time=settings["calibration_start_date"],\n        end_time=settings["validation_end_date"],\n        directory=settings["path_DestinE_historical"],\n        shape=settings["path_shape"],\n    )\n\ndisplay(DestinE_hist_forcing_object)\n')
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/interactiveshell.py:2593, in InteractiveShell.run_cell_magic(self, magic_name, line, cell)
-   2591 with self.builtin_trap:
-   2592     args = (magic_arg_s, cell)
--> 2593     result = fn(*args, **kwargs)
-   2595 # The code below prevents the output from being displayed
-   2596 # when using magics with decorator @output_can_be_silenced
-   2597 # when the last Python token in the expression is a ';'.
-   2598 if getattr(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, False):
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1448, in ExecutionMagics.time(self, line, cell, local_ns)
-   1446 if interrupt_occured:
-   1447     if exit_on_interrupt and captured_exception:
--> 1448         raise captured_exception
-   1449     return
-   1450 return out
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/magics/execution.py:1412, in ExecutionMagics.time(self, line, cell, local_ns)
-   1410 st = clock2()
-   1411 try:
--> 1412     exec(code, glob, local_ns)
-   1413     out = None
-   1414     # multi-line %%time case
-
-File <timed exec>:8
-
-File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:445, in DestinEHistoricalForcing.generate(cls, start_time, end_time, directory, variables, shape, polytope_address, **kwargs)
-    442 LIVE_REQUEST = os.getenv("LIVE_REQUEST", "true").lower() == "true"
-    444 if LIVE_REQUEST:
---> 445     data = earthkit.data.from_source("polytope", "destination-earth", request, address=polytope_address, stream=False)
-    447 ds = data.to_xarray()
-    448 ds = ds.rename({
-    449     "2t": "tas",
-    450     "ssrd": "rsds",
-    451     "tprate": "pr"
-    452 })
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:145, in from_source(name, lazily, *args, **kwargs)
-    143 while src is not prev:
-    144     prev = src
---> 145     src = src.mutate()
-    146 return src
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:106, in Polytope.mutate(self)
-    104     return self._mutate_stream()
-    105 else:
---> 106     return self._retrieve()
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:163, in Polytope._retrieve(self)
-    161 # Download each request in parallel when the config allows it
-    162 retriever = FileRequestRetriever(self, retriever=_retrieve_one)
---> 163 path = retriever.retrieve(self.request, self.dataset)
-    165 # TODO: for simplicity we assume all retrieved files have the same content-type. Revisit if needed.
-    166 content_type = None
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/utils/request.py:135, in FileRequestRetriever.retrieve(self, requests, *extra_args)
-    132 nthreads = min(self.owner.config("number-of-download-threads"), len(requests))
-    134 if nthreads < 2:
---> 135     path = [self.retriever(r, *extra_args) for r in requests]
-    136 else:
-    137     from earthkit.data.utils.progbar import tqdm
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:156, in Polytope._retrieve.<locals>._retrieve_one(request, dataset)
-    152     return download_to_target(url, target)
-    154 # The cache file path/data is constructed by using the request only. We cannot simply base
-    155 # it on the URL since the URL may change every time we ask for the pointers.
---> 156 return self.cache_file(
-    157     retrieve,
-    158     (dataset, request),
-    159 )
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/__init__.py:65, in Source.cache_file(self, create, args, **kwargs)
-     62 if owner is None:
-     63     owner = re.sub(r"(?!^)([A-Z]+)", r"-\1", self.__class__.__name__).lower()
----> 65 return cache_file(owner, create, args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/core/caching.py:1099, in cache_file(owner, create, args, hash_extra, extension, force, replace)
-   1097 with FileLock(lock):
-   1098     if not os.path.exists(path):  # Check again, another thread/process may have created the file
--> 1099         owner_data = create(path + ".tmp", args)
-   1100         os.rename(path + ".tmp", path)
-   1101 try:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/earthkit/data/sources/polytope.py:140, in Polytope._retrieve.<locals>._retrieve_one.<locals>.retrieve(target, args)
-    135 """
-    136 Caching callback method to retrieve data into target file. Only called if
-    137 the data is not already cached.
-    138 """
-    139 # get the pointer and the url to download
---> 140 pointers = self.client.retrieve(
-    141     args[0],
-    142     args[1],
-    143     pointer=True,
-    144     asynchronous=False,
-    145 )
-    147 url = pointers[0]["location"]
-    149 # download the file and return the associated HTTP header info.
-    150 # This might contain useful info such as content-type. It will be
-    151 # stored in the cache database.
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
-    196 def decorated(self, *args, **kwargs):
---> 197     return fun(self, *args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:229, in authenticated.<locals>.decorated(self, *args, **kwargs)
-    227     raise e
-    228 # try:
---> 229 return method(self, *args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
-    196 def decorated(self, *args, **kwargs):
---> 197     return fun(self, *args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Client.py:202, in Client.retrieve(self, *args, **kwargs)
-    199 @authenticated
-    200 @wraps(RequestManager.retrieve)
-    201 def retrieve(self, *args, **kwargs):
---> 202     return self.request_manager.retrieve(*args, **kwargs)
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/RequestManager.py:354, in RequestManager.retrieve(self, name, request, output_file, inline_request, asynchronous, max_attempts, attempt_period, append, pointer)
-    350 expected_responses = [requests.codes.ok, requests.codes.accepted, requests.codes.no_content]
-    351 # also requests.codes.other, implicitly handled by requests
-    352 # when POSTing to a URL with redirection, requests will do a GET
-    353 # against the new URL
---> 354 response, response_messages = helpers.try_request(
-    355     method,
-    356     situation=situation,
-    357     expected=expected_responses,
-    358     logger=self._logger,
-    359     url=url,
-    360     headers=headers,
-    361     json=request_object,
-    362     stream=True,
-    363     skip_tls=self.config.get()["skip_tls"],
-    364 )
-    365 # According to 'REST API, Copernicus CDS, 02/06/2019':
-    366 # 303 see other: redirection to direct download endpoint
-    367 # 202 accepted: redirection to polling endpoint
-    368 # 200 ok: direct Json or binary data
-    369 if response.status_code == requests.codes.ok:
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:604, in try_request(method, situation, expected, logger, stream, skip_tls, session, **kwargs)
-    601     logger.warning("Maximum HTTP request retries reached")
-    602     raise e
---> 604 response_title, response_messages = process_response(
-    605     response, situation, url, method, stream, request_content, expected
-    606 )
-    608 logger.debug("Polytope client received HTTP " + response_title)
-    610 return response, response_messages
-
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:530, in process_response(response, situation, url, method, stream, request_content, expected)
-    528     if response.status_code == 401 and "expired" in response_messages[0]:
-    529         e.__class__ = "ExpiredCredentialsError"
---> 530     raise e
-    531 elif response.status_code not in expected:
-    532     e.description = "Unexpected HTTP response from the server."
-
-HTTPResponseError: Polytope error
-Situation: trying to submit a retrieval request
-Description: HTTP CLIENT ERROR (401)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/destination-earth
-HTTP method: POST
-Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********xrfw'}, 'json': {'verb': 'retrieve', 'request': "activity: CMIP6\nclass: ng\ndate: 19940801/to/19981231\nexperiment: hist\nexpver: '0001'\nfeature:\n  shape:\n  - - 35.033108516791195\n    - -111.63120849003276\n  - - 35.033108516791195\n    - -111.63120849003276\n  - - 35.02940759090502\n    - -111.63448198867614\n  - - 35.023764129765155\n    - -111.63197924605214\n  - - 35.018341192727185\n    - -111.6298581810661\n  - - 35.01605164768163\n    - -111.63476492565589\n  - - 35.01283260210643\n    - -111.6324241177501\n  - - 35.00851043450095\n    - -111.62817719038352\n  - - 35.00458425625693\n    - -111.62300404925203\n  - - 35.00343327100712\n    - -111.61537665904935\n  - - 35.004001921615895\n    - -111.60910978947298\n  - - 35.00254168677516\n    - -111.60175548064453\n  - - 35.00015599447299\n    - -111.59521995740643\n  - - 34.995702790902484\n    - -111.59397259208968\n  - - 34.990636302397036\n    - -111.59730250044343\n  - - 34.98591683634267\n    - -111.59398539873172\n  - - 34.98436806498246\n    - -111.58728693605543\n  - - 34.98264384626611\n    - -111.58189638613997\n  - - 34.979994488111366\n    - -111.57732458478992\n  - - 34.97637424461146\n    - -111.57188311845543\n  - - 34.97429509862842\n    - -111.56507788573775\n  - - 34.96974948578695\n    - -111.5604559997528\n  - - 34.96449976793029\n    - -111.55703408241239\n  - - 34.96387357243438\n    - -111.54951957944556\n  - - 34.96179310415091\n    - -111.5427160573303\n  - - 34.96024137099416\n    - -111.53602072863639\n  - - 34.95992201787926\n    - -111.52823385619617\n  - - 34.961410565654184\n    - -111.52115092534564\n  - - 34.96060775036393\n    - -111.51494443726185\n  - - 34.954787047254044\n    - -111.5137600285638\n  - - 34.9490596497215\n    - -111.51595151461635\n  - - 34.94399513527703\n    - -111.51928454093807\n  - - 34.939459657193225\n    - -111.52272483335105\n  - - 34.9354997051891\n    - -111.52796001249284\n  - - 34.93126063906428\n    - -111.52306977364488\n  - - 34.9293995653353\n    - -111.51665039467554\n  - - 34.92406119546614\n    - -111.51388666004755\n  - - 34.918943746696776\n    - -111.5115037869241\n  - - 34.91454221197209\n    - -111.51597720298041\n  - - 34.91177458206976\n    - -111.5224601060682\n  - - 34.90966946178808\n    - -111.53008399333889\n  - - 34.91064608650932\n    - -111.53498001174717\n  - - 34.90588906220137\n    - -111.53803739708458\n  - - 34.90347466872853\n    - -111.54593296336083\n  - - 34.907096384387145\n    - -111.55136805613887\n  - - 34.91322525235347\n    - -111.55228187995974\n  - - 34.91468401481647\n    - -111.55559918288705\n  - - 34.910059920225926\n    - -111.55968925487983\n  - - 34.90883132538448\n    - -111.56480708430621\n  - - 34.91337704989963\n    - -111.56942556945326\n  - - 34.91638101556476\n    - -111.57540770000186\n  - - 34.917843028150976\n    - -111.58275327614156\n  - - 34.92040477018521\n    - -111.58797485766657\n  - - 34.922570313814184\n    - -111.59412264872765\n  - - 34.92720245186567\n    - -111.5980903597813\n  - - 34.92768936195641\n    - -111.60053934200198\n  - - 34.92240162193635\n    - -111.60348511401212\n  - - 34.916893071348575\n    - -111.60604973981836\n  - - 34.912221917927766\n    - -111.60844978964673\n  - - 34.90825803300978\n    - -111.61367870438956\n  - - 34.90363188397918\n    - -111.61776494570452\n  - - 34.89966754881647\n    - -111.62299279741441\n  - - 34.895610372351314\n    - -111.62082006281835\n  - - 34.89054260506338\n    - -111.62414387562731\n  - - 34.8855625127076\n    - -111.62681430716638\n  - - 34.88093579762558\n    - -111.63089855510243\n  - - 34.875955501869576\n    - -111.63356821675266\n  - - 34.87357760774759\n    - -111.6391186089208\n  - - 34.875652676852496\n    - -111.64591693857906\n  - - 34.87680182956595\n    - -111.65353212905603\n  - - 34.878876056043126\n    - -111.66033113156969\n  - - 34.88112591405424\n    - -111.66582477850307\n  - - 34.88073100092301\n    - -111.67480128549975\n  - - 34.8757053605015\n    - -111.67578175320796\n  - - 34.86953350590748\n    - -111.67719751266563\n  - - 34.866227794060485\n    - -111.68356211607701\n  - - 34.86724221900874\n    - -111.69014348122633\n  - - 34.8631422518812\n    - -111.69433172990784\n  - - 34.86340662794326\n    - -111.70042340237083\n  - - 34.861598479011356\n    - -111.70776573559158\n  - - 34.85736574587223\n    - -111.71091938186639\n  - - 34.855733532409936\n    - -111.71695571853816\n  - - 34.85489402568189\n    - -111.72516744894168\n  - - 34.85612644088407\n    - -111.73212919282767\n  - - 34.85819615423455\n    - -111.73892848434276\n  - - 34.86088291962399\n    - -111.74518466926324\n  - - 34.860218434554334\n    - -111.75209147074987\n  - - 34.8616694677216\n    - -111.75943503154515\n  - - 34.865370001539155\n    - -111.76422458394457\n  - - 34.87149746086145\n    - -111.76515484868628\n  - - 34.876653015723384\n    - -111.7692395195731\n  - - 34.88304352762216\n    - -111.77223792330142\n  - - 34.88983132169502\n    - -111.77431229419653\n  - - 34.89383993190305\n    - -111.77883259479768\n  - - 34.899040714090404\n    - -111.78057956849334\n  - - 34.90367254958606\n    - -111.77650336022792\n  - - 34.90874455926463\n    - -111.77318901447103\n  - - 34.914388379149884\n    - -111.77167084854906\n  - - 34.91580311892328\n    - -111.76524988129955\n  - - 34.91889288146484\n    - -111.75850350094994\n  - - 34.92281789563869\n    - -111.75562186682252\n  - - 34.92815056156374\n    - -111.75840231562334\n  - - 34.932645453629206\n    - -111.76134574174142\n  - - 34.93718794348393\n    - -111.75791982897292\n  - - 34.94181446682124\n    - -111.76189814811504\n  - - 34.94489709731177\n    - -111.76723670474442\n  - - 34.95173009757464\n    - -111.76697089331248\n  - - 34.95605005176283\n    - -111.76719277860613\n  - - 34.960501587031835\n    - -111.76844952685545\n  - - 34.966453788149316\n    - -111.76665796791256\n  - - 34.971345621219065\n    - -111.76867780284363\n  - - 34.97522255727832\n    - -111.77216755448468\n  - - 34.977598460522515\n    - -111.778706436231\n  - - 34.978430086061415\n    - -111.78660568510377\n  - - 34.981113975012235\n    - -111.79287331511915\n  - - 34.981593266230625\n    - -111.79935628058469\n  - - 34.98396764007184\n    - -111.80589654370884\n  - - 34.98277079761571\n    - -111.81270411138696\n  - - 34.98228012775453\n    - -111.81831418548651\n  - - 34.981920289179286\n    - -111.82495941074939\n  - - 34.98301557917702\n    - -111.83089899707694\n  - - 34.9878593609034\n    - -111.83526582385149\n  - - 34.992394054500394\n    - -111.83990502436333\n  - - 34.99507506050551\n    - -111.84617565199471\n  - - 34.995771291725305\n    - -111.8530419632428\n  - - 34.99347238068434\n    - -111.85794060785814\n  - - 34.99139311722554\n    - -111.86322080442852\n  - - 34.99314596672387\n    - -111.87030728195218\n  - - 34.99644331844841\n    - -111.87603565174615\n  - - 35.00004937647182\n    - -111.88149283153163\n  - - 35.00303715088292\n    - -111.88749386534063\n  - - 35.008235732757825\n    - -111.88925066964322\n  - - 35.01392177018353\n    - -111.88942855724851\n  - - 35.018941752558035\n    - -111.89249328726616\n  - - 35.02484747692993\n    - -111.8930535359531\n  - - 35.02845264155456\n    - -111.89851353100104\n  - - 35.03205753949854\n    - -111.9039740383113\n  - - 35.03504406957252\n    - -111.9099784454887\n  - - 35.039266535263344\n    - -111.91489658986298\n  - - 35.04459479271948\n    - -111.9176923012938\n  - - 35.04948363792658\n    - -111.91972380354179\n  - - 35.054339269217834\n    - -111.9160303145187\n  - - 35.057828248176236\n    - -111.91238701328157\n  - - 35.062244220082874\n    - -111.90792800278804\n  - - 35.063878735222254\n    - -111.9059148575829\n  - - 35.05903794941292\n    - -111.90153925639426\n  - - 35.06195655117277\n    - -111.89609405504693\n  - - 35.06337788710531\n    - -111.88966304996707\n  - - 35.06563660486837\n    - -111.88307026441322\n  - - 35.070965479792214\n    - -111.88586472773834\n  - - 35.076211637719425\n    - -111.88527784400993\n  - - 35.07626588847253\n    - -111.87889670789176\n  - - 35.07327789259487\n    - -111.87289028708253\n  - - 35.07786454412469\n    - -111.87115559374435\n  - - 35.08420963973807\n    - -111.87247929500165\n  - - 35.08813679769504\n    - -111.86959728445723\n  - - 35.0936856785105\n    - -111.8727740125147\n  - - 35.098539622442985\n    - -111.86907542851667\n  - - 35.10163478495947\n    - -111.86231717347418\n  - - 35.097719290116665\n    - -111.85712580143418\n  - - 35.10120629383791\n    - -111.85347776564029\n  - - 35.10209647348735\n    - -111.84693251654413\n  - - 35.104174776020336\n    - -111.84164426541798\n  - - 35.107918124932596\n    - -111.8441067803521\n  - - 35.11202242314157\n    - -111.83991318085297\n  - - 35.114676012048996\n    - -111.8323878170686\n  - - 35.11899980743873\n    - -111.82857560217249\n  - - 35.122696556439294\n    - -111.83338454212168\n  - - 35.12926171713697\n    - -111.83508834403949\n  - - 35.13256034196211\n    - -111.8408253601918\n  - - 35.1385546149822\n    - -111.84072761230757\n  - - 35.13710907614384\n    - -111.8333560231103\n  - - 35.13601407713926\n    - -111.82740447548771\n  - - 35.133950072806066\n    - -111.82057818908521\n  - - 35.1348383934398\n    - -111.81402976605771\n  - - 35.13276967741102\n    - -111.81124292242532\n  - - 35.13409750869473\n    - -111.8054592686812\n  - - 35.12880956327724\n    - -111.80436006967936\n  - - 35.12736173309356\n    - -111.79699010216228\n  - - 35.127631252632604\n    - -111.7909869694471\n  - - 35.12525638635589\n    - -111.78443492592731\n  - - 35.12477633948171\n    - -111.77793991943399\n  - - 35.12649982685851\n    - -111.77122889516463\n  - - 35.12350648053883\n    - -111.76522273869863\n  - - 35.1214819907883\n    - -111.76009103157571\n  - - 35.12699277359999\n    - -111.7575306272525\n  - - 35.13183859078332\n    - -111.76190101472048\n  - - 35.137260846458354\n    - -111.75999532856329\n  - - 35.140349623367015\n    - -111.75322926812476\n  - - 35.14431880335097\n    - -111.7479917516753\n  - - 35.14286746499213\n    - -111.74062135956606\n  - - 35.145514622088974\n    - -111.73308954108596\n  - - 35.150363923880704\n    - -111.72937962576148\n  - - 35.14979254285623\n    - -111.72353792220215\n  - - 35.15023485320552\n    - -111.71622259298768\n  - - 35.14860507194504\n    - -111.71016241148706\n  - - 35.14380131404354\n    - -111.70748659255642\n  - - 35.139879152429806\n    - -111.70230027522759\n  - - 35.13780790139587\n    - -111.69547701624491\n  - - 35.138689257071015\n    - -111.68892682172617\n  - - 35.1415535305295\n    - -111.68177570280393\n  - - 35.13868804839025\n    - -111.67680894357233\n  - - 35.13287001586891\n    - -111.67560951316402\n  - - 35.13004865662357\n    - -111.67233547800907\n  - - 35.13159012772549\n    - -111.6669316116438\n  - - 35.12912040440196\n    - -111.66103805296166\n  - - 35.12665166506864\n    - -111.6591835324873\n  - - 35.12224542064082\n    - -111.66366058051564\n  - - 35.1177934830936\n    - -111.66240726130071\n  - - 35.11677775726617\n    - -111.6558047828408\n  - - 35.1119279319996\n    - -111.65144195334125\n  - - 35.10747581956425\n    - -111.65018951117924\n  - - 35.10747249351133\n    - -111.642114211616\n  - - 35.107425721896625\n    - -111.63638514783369\n  - - 35.112051572913145\n    - -111.63228918128667\n  - - 35.11561932712\n    - -111.62797536184104\n  - - 35.11927466463091\n    - -111.62300620531057\n  - - 35.11508550158609\n    - -111.61979058511984\n  - - 35.109798270020114\n    - -111.62274222171098\n  - - 35.10437809753057\n    - -111.62465691851457\n  - - 35.099973071311354\n    - -111.62913464898804\n  - - 35.09856604180444\n    - -111.63557351855992\n  - - 35.095968031152736\n    - -111.6407582102029\n  - - 35.09429504792546\n    - -111.64512366227918\n  - - 35.091035021129514\n    - -111.64916254955126\n  - - 35.087511060290204\n    - -111.6551649879438\n  - - 35.08314680638142\n    - -111.65325813482158\n  - - 35.078740599938705\n    - -111.65773298660436\n  - - 35.0767139409187\n    - -111.6606791732287\n  - - 35.07032183414022\n    - -111.65768249190472\n  - - 35.06512012649045\n    - -111.65593994409043\n  - - 35.05943404266657\n    - -111.65577922004192\n  - - 35.05427549637543\n    - -111.65169244749809\n  - - 35.04872044360016\n    - -111.64853332529125\n  - - 35.0423278502394\n    - -111.64553874620898\n  - - 35.03778571624931\n    - -111.64090801058389\n  - - 35.03447704485065\n    - -111.63518666556308\n  - - 35.033108516791195\n    - -111.63120849003276\n  type: polygon\ngeneration: '1'\nlevtype: sfc\nmodel: IFS-FESOM\nparam: 167/260048/169\nrealization: '1'\nresolution: high\nstream: clte\ntime: 0000/0100/0200/0300/0400/0500/0600/0700/0800/0900/1000/1100/1200/1300/1400/1500/1600/1700/1800/1900/2000/2100/2200/2300\ntype: fc\n"}}
-Expected responses: 200, 202, 204
-Received response: CLIENT ERROR (401)
-Details:
-Authentication failed
-
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
+    with conn:
+         ^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:08<02:58,  8.11s/cell]Executing:   9%|▊         | 2/23 [00:08<01:20,  3.85s/cell]Executing:  13%|█▎        | 3/23 [00:12<01:11,  3.57s/cell]Executing:  30%|███       | 7/23 [00:12<00:16,  1.01s/cell]Executing:  61%|██████    | 14/23 [00:12<00:03,  2.70cell/s]Executing:  78%|███████▊  | 18/23 [00:12<00:01,  3.97cell/s]Executing:  96%|█████████▌| 22/23 [00:13<00:00,  3.69cell/s]Executing: 100%|██████████| 23/23 [00:16<00:00,  1.40cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:44,  2.01s/cell]Executing:   9%|▊         | 2/23 [00:06<01:07,  3.21s/cell]Executing:  17%|█▋        | 4/23 [00:06<00:24,  1.31s/cell]Executing:  22%|██▏       | 5/23 [00:06<00:17,  1.04cell/s]Executing:  26%|██▌       | 6/23 [00:06<00:11,  1.42cell/s]Executing:  30%|███       | 7/23 [00:06<00:08,  1.89cell/s]Executing:  43%|████▎     | 10/23 [00:07<00:03,  3.55cell/s]Executing:  48%|████▊     | 11/23 [00:07<00:04,  2.67cell/s]Executing:  61%|██████    | 14/23 [00:08<00:02,  4.49cell/s]Executing:  65%|██████▌   | 15/23 [00:08<00:01,  4.28cell/s]Executing:  74%|███████▍  | 17/23 [00:08<00:01,  5.61cell/s]Executing:  78%|███████▊  | 18/23 [00:08<00:01,  4.65cell/s]Executing:  87%|████████▋ | 20/23 [00:09<00:00,  5.13cell/s]Executing:  96%|█████████▌| 22/23 [08:04<01:21, 81.01s/cell]Executing: 100%|██████████| 23/23 [08:04<00:00, 65.31s/cell]Executing: 100%|██████████| 23/23 [08:06<00:00, 21.16s/cell]
+Executing:   0%|          | 0/14 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 754, in new_session
+    with conn:
+         ^^^^
+sqlite3.OperationalError: database is locked
+Executing:   7%|▋         | 1/14 [00:05<01:15,  5.79s/cell]Executing:  14%|█▍        | 2/14 [00:09<00:57,  4.75s/cell]Executing:  71%|███████▏  | 10/14 [04:59<02:08, 32.10s/cell]Executing:  79%|███████▊  | 11/14 [04:59<01:23, 27.81s/cell]Executing:  86%|████████▌ | 12/14 [04:59<00:46, 23.38s/cell]Executing: 100%|██████████| 14/14 [11:57<00:00, 81.84s/cell]Executing: 100%|██████████| 14/14 [11:58<00:00, 51.36s/cell]
+Executing:   0%|          | 0/43 [00:00<?, ?cell/s]Executing:   2%|▏         | 1/43 [00:00<00:33,  1.27cell/s]Executing:   5%|▍         | 2/43 [00:01<00:31,  1.30cell/s]Executing:   7%|▋         | 3/43 [00:04<01:13,  1.83s/cell]Executing:  12%|█▏        | 5/43 [00:04<00:31,  1.20cell/s]Executing:  16%|█▋        | 7/43 [00:04<00:18,  1.97cell/s]Executing:  26%|██▌       | 11/43 [00:05<00:07,  4.20cell/s]Executing:  37%|███▋      | 16/43 [00:05<00:03,  7.67cell/s]Executing:  47%|████▋     | 20/43 [00:05<00:02, 10.34cell/s]Executing:  53%|█████▎    | 23/43 [00:05<00:01, 12.15cell/s]Executing:  60%|██████    | 26/43 [00:06<00:01,  9.17cell/s]Executing:  67%|██████▋   | 29/43 [00:06<00:01, 11.18cell/s]Executing:  70%|██████▉   | 30/43 [00:17<00:01, 11.18cell/s]Executing:  72%|███████▏  | 31/43 [30:37<39:39, 198.28s/cell]Executing:  77%|███████▋  | 33/43 [30:37<25:14, 151.47s/cell]Executing:  81%|████████▏ | 35/43 [30:39<15:07, 113.44s/cell]Executing:  86%|████████▌ | 37/43 [30:40<08:21, 83.55s/cell] Executing:  91%|█████████ | 39/43 [30:40<04:02, 60.62s/cell]Executing:  95%|█████████▌| 41/43 [30:40<01:27, 43.62s/cell]Executing: 100%|██████████| 43/43 [30:41<00:00, 31.16s/cell]Executing: 100%|██████████| 43/43 [30:42<00:00, 42.85s/cell]
+Executing:   0%|          | 0/44 [00:00<?, ?cell/s]Executing:   2%|▏         | 1/44 [00:00<00:41,  1.03cell/s]Executing:   5%|▍         | 2/44 [00:04<01:52,  2.68s/cell]Executing:   9%|▉         | 4/44 [00:05<00:43,  1.08s/cell]Executing:  16%|█▌        | 7/44 [00:05<00:18,  2.03cell/s]Executing:  23%|██▎       | 10/44 [00:05<00:12,  2.76cell/s]Executing:  25%|██▌       | 11/44 [00:06<00:15,  2.10cell/s]Executing:  27%|██▋       | 12/44 [00:07<00:13,  2.38cell/s]Executing:  34%|███▍      | 15/44 [00:07<00:07,  4.12cell/s]Executing:  39%|███▊      | 17/44 [00:08<00:09,  2.91cell/s]Executing:  41%|████      | 18/44 [00:09<00:12,  2.02cell/s]Executing:  45%|████▌     | 20/44 [00:09<00:09,  2.56cell/s]Executing:  50%|█████     | 22/44 [00:10<00:06,  3.34cell/s]Executing:  55%|█████▍    | 24/44 [00:10<00:06,  3.17cell/s]Executing:  61%|██████▏   | 27/44 [00:10<00:03,  4.91cell/s]Executing:  68%|██████▊   | 30/44 [00:11<00:02,  6.97cell/s]Executing:  75%|███████▌  | 33/44 [00:11<00:01,  9.23cell/s]Executing:  82%|████████▏ | 36/44 [00:25<00:00,  9.23cell/s]Executing:  84%|████████▍ | 37/44 [00:54<00:30,  4.39s/cell]Executing:  86%|████████▋ | 38/44 [00:58<00:25,  4.28s/cell]Executing:  91%|█████████ | 40/44 [00:58<00:12,  3.20s/cell]Executing:  95%|█████████▌| 42/44 [01:02<00:05,  2.87s/cell]Executing:  98%|█████████▊| 43/44 [01:02<00:02,  2.45s/cell]Executing: 100%|██████████| 44/44 [01:06<00:00,  2.66s/cell]Executing: 100%|██████████| 44/44 [01:08<00:00,  1.55s/cell]
+Executing:   0%|          | 0/30 [00:00<?, ?cell/s]Executing:   3%|▎         | 1/30 [00:00<00:24,  1.19cell/s]Executing:   7%|▋         | 2/30 [00:04<01:10,  2.52s/cell]Executing:  17%|█▋        | 5/30 [00:04<00:18,  1.35cell/s]Executing:  23%|██▎       | 7/30 [00:04<00:11,  2.00cell/s]Executing:  37%|███▋      | 11/30 [00:05<00:04,  4.06cell/s]Executing:  50%|█████     | 15/30 [00:05<00:03,  4.99cell/s]Executing:  57%|█████▋    | 17/30 [00:06<00:03,  3.95cell/s]Executing:  57%|█████▋    | 17/30 [00:16<00:03,  3.95cell/s]Executing:  60%|██████    | 18/30 [00:27<00:39,  3.31s/cell]Executing:  67%|██████▋   | 20/30 [00:28<00:23,  2.37s/cell]Executing:  73%|███████▎  | 22/30 [00:30<00:15,  1.97s/cell]Executing:  77%|███████▋  | 23/30 [00:30<00:11,  1.66s/cell]Executing:  83%|████████▎ | 25/30 [00:30<00:05,  1.16s/cell]Executing:  90%|█████████ | 27/30 [00:30<00:02,  1.23cell/s]Executing:  93%|█████████▎| 28/30 [00:31<00:01,  1.32cell/s]Executing:  97%|█████████▋| 29/30 [00:31<00:00,  1.56cell/s]Executing: 100%|██████████| 30/30 [00:31<00:00,  1.93cell/s]Executing: 100%|██████████| 30/30 [00:32<00:00,  1.09s/cell]
+Executing:   0%|          | 0/40 [00:00<?, ?cell/s]Executing:   2%|▎         | 1/40 [00:00<00:36,  1.06cell/s]Executing:   5%|▌         | 2/40 [00:04<01:39,  2.61s/cell]Executing:  12%|█▎        | 5/40 [00:04<00:26,  1.30cell/s]Executing:  18%|█▊        | 7/40 [00:05<00:16,  1.99cell/s]Executing:  22%|██▎       | 9/40 [00:05<00:10,  2.93cell/s]Executing:  28%|██▊       | 11/40 [00:06<00:11,  2.62cell/s]Executing:  40%|████      | 16/40 [00:06<00:04,  5.46cell/s]Executing:  52%|█████▎    | 21/40 [00:06<00:02,  8.94cell/s]Executing:  60%|██████    | 24/40 [00:08<00:04,  3.50cell/s]Executing:  68%|██████▊   | 27/40 [00:21<00:17,  1.38s/cell]Executing:  72%|███████▎  | 29/40 [00:21<00:12,  1.10s/cell]Executing:  80%|████████  | 32/40 [00:21<00:06,  1.30cell/s]Executing:  88%|████████▊ | 35/40 [00:21<00:02,  1.77cell/s]Executing:  92%|█████████▎| 37/40 [00:22<00:01,  1.95cell/s]Executing:  98%|█████████▊| 39/40 [00:23<00:00,  1.93cell/s]Executing: 100%|██████████| 40/40 [00:24<00:00,  1.62cell/s]
+Executing:   0%|          | 0/24 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/24 [00:00<00:16,  1.39cell/s]Executing:   8%|▊         | 2/24 [00:04<00:55,  2.52s/cell]Executing:  21%|██        | 5/24 [00:04<00:14,  1.33cell/s]Executing:  38%|███▊      | 9/24 [00:04<00:05,  2.97cell/s]Executing:  46%|████▌     | 11/24 [00:17<00:26,  2.07s/cell]Executing:  50%|█████     | 12/24 [01:02<01:54,  9.55s/cell]Executing:  54%|█████▍    | 13/24 [01:02<01:24,  7.69s/cell]Executing:  62%|██████▎   | 15/24 [01:07<00:51,  5.76s/cell]Executing:  71%|███████   | 17/24 [01:07<00:26,  3.82s/cell]Executing:  79%|███████▉  | 19/24 [01:08<00:13,  2.62s/cell]Executing:  88%|████████▊ | 21/24 [01:11<00:06,  2.28s/cell]Executing:  92%|█████████▏| 22/24 [01:11<00:03,  1.89s/cell]Executing:  96%|█████████▌| 23/24 [01:11<00:01,  1.62s/cell]Executing: 100%|██████████| 24/24 [01:12<00:00,  1.29s/cell]Executing: 100%|██████████| 24/24 [01:13<00:00,  3.06s/cell]
+Executing:   0%|          | 0/30 [00:00<?, ?cell/s]Executing:   3%|▎         | 1/30 [00:00<00:22,  1.31cell/s]Executing:   7%|▋         | 2/30 [00:01<00:24,  1.13cell/s]Executing:  10%|█         | 3/30 [00:04<00:48,  1.80s/cell]Executing:  13%|█▎        | 4/30 [00:04<00:30,  1.16s/cell]Executing:  23%|██▎       | 7/30 [00:04<00:10,  2.20cell/s]Executing:  30%|███       | 9/30 [00:05<00:07,  2.83cell/s]Executing:  37%|███▋      | 11/30 [00:05<00:04,  3.98cell/s]Executing:  43%|████▎     | 13/30 [00:06<00:05,  3.18cell/s]Executing:  47%|████▋     | 14/30 [00:06<00:06,  2.65cell/s]Executing:  53%|█████▎    | 16/30 [00:10<00:12,  1.15cell/s]Executing:  57%|█████▋    | 17/30 [00:14<00:18,  1.44s/cell]Executing:  67%|██████▋   | 20/30 [00:14<00:08,  1.21cell/s]Executing:  70%|███████   | 21/30 [00:16<00:08,  1.03cell/s]Executing:  73%|███████▎  | 22/30 [00:17<00:08,  1.09s/cell]Executing:  77%|███████▋  | 23/30 [00:29<00:24,  3.51s/cell]Executing:  80%|████████  | 24/30 [00:43<00:36,  6.06s/cell]Executing:  83%|████████▎ | 25/30 [00:45<00:25,  5.05s/cell]Executing:  87%|████████▋ | 26/30 [00:47<00:16,  4.23s/cell]Executing:  93%|█████████▎| 28/30 [00:47<00:04,  2.41s/cell]Executing: 100%|██████████| 30/30 [00:47<00:00,  1.53s/cell]Executing: 100%|██████████| 30/30 [00:49<00:00,  1.65s/cell]
+Executing:   0%|          | 0/11 [00:00<?, ?cell/s]Executing:   9%|▉         | 1/11 [00:00<00:06,  1.46cell/s]Executing:  18%|█▊        | 2/11 [00:01<00:04,  2.11cell/s]Executing:  27%|██▋       | 3/11 [00:01<00:03,  2.06cell/s]Executing:  45%|████▌     | 5/11 [00:01<00:01,  3.77cell/s]Executing:  55%|█████▍    | 6/11 [00:01<00:01,  4.12cell/s]Executing:  73%|███████▎  | 8/11 [00:09<00:05,  1.75s/cell]Executing:  91%|█████████ | 10/11 [00:09<00:01,  1.09s/cell]Executing: 100%|██████████| 11/11 [00:10<00:00,  1.10cell/s]
+fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
+fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
+fusermount: entry for /project/ewater/Data/caravan_data not found in /etc/mtab
