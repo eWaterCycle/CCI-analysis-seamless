@@ -1,7 +1,21 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:28,  1.29s/cell]Executing:   9%|▊         | 2/23 [00:02<00:21,  1.03s/cell]2026/06/24 10:35:20 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/24 10:35:20 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/24 10:35:20 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-Executing:  13%|█▎        | 3/23 [00:05<00:40,  2.05s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:17,  1.05cell/s]Executing:  35%|███▍      | 8/23 [00:05<00:07,  2.05cell/s]Executing:  39%|███▉      | 9/23 [00:06<00:05,  2.36cell/s]Executing:  52%|█████▏    | 12/23 [00:06<00:02,  3.69cell/s]Executing:  61%|██████    | 14/23 [00:06<00:02,  4.37cell/s]Executing:  70%|██████▉   | 16/23 [00:07<00:02,  2.92cell/s]Executing:  70%|██████▉   | 16/23 [00:10<00:04,  1.58cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: attempt to write a readonly database
+Executing:   4%|▍         | 1/23 [00:01<00:42,  1.94s/cell]2026/07/02 20:32:10 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 20:32:10 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 20:32:10 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   9%|▊         | 2/23 [00:03<00:31,  1.51s/cell]Executing:  13%|█▎        | 3/23 [00:07<00:55,  2.76s/cell]Executing:  26%|██▌       | 6/23 [00:07<00:16,  1.03cell/s]Executing:  52%|█████▏    | 12/23 [00:07<00:03,  2.90cell/s]Executing:  70%|██████▉   | 16/23 [00:09<00:02,  2.87cell/s]Executing:  70%|██████▉   | 16/23 [00:10<00:04,  1.50cell/s]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
     pm.execute_notebook(
@@ -42,7 +56,7 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/ba
 ---> 56     value = self._cache[key]
      57     self._cache.move_to_end(key)
 
-KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224213A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '5c9bfa9f-8ca4-4636-ad61-0afb865b51e4']
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224213A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), 'a652ca2d-29c2-4d93-babe-3858e53bec8e']
 
 During handling of the above exception, another exception occurred:
 

@@ -1,7 +1,7 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:24,  1.10s/cell]Executing:   9%|▊         | 2/23 [00:01<00:19,  1.07cell/s]2026/06/24 10:35:05 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/24 10:35:05 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/24 10:35:05 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-Executing:  13%|█▎        | 3/23 [00:05<00:38,  1.95s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:16,  1.12cell/s]Executing:  43%|████▎     | 10/23 [00:05<00:04,  3.24cell/s]Executing:  57%|█████▋    | 13/23 [00:05<00:02,  4.33cell/s]Executing:  70%|██████▉   | 16/23 [00:06<00:02,  3.28cell/s]Executing:  70%|██████▉   | 16/23 [00:08<00:03,  1.96cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/07/02 20:30:26 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:30:26 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:30:26 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:   4%|▍         | 1/23 [00:03<01:19,  3.63s/cell]Executing:   9%|▊         | 2/23 [00:04<00:41,  1.99s/cell]Executing:  13%|█▎        | 3/23 [01:04<09:27, 28.38s/cell]Executing:  17%|█▋        | 4/23 [01:04<05:27, 17.24s/cell]Executing:  22%|██▏       | 5/23 [01:09<03:52, 12.92s/cell]Executing:  30%|███       | 7/23 [01:09<01:42,  6.39s/cell]Executing:  43%|████▎     | 10/23 [01:10<00:40,  3.15s/cell]Executing:  65%|██████▌   | 15/23 [01:10<00:11,  1.42s/cell]Executing:  70%|██████▉   | 16/23 [01:15<00:33,  4.72s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
     pm.execute_notebook(
@@ -42,7 +42,7 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/ba
 ---> 56     value = self._cache[key]
      57     self._cache.move_to_end(key)
 
-KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224214A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '0bff960a-a75b-467e-b892-03151d58376d']
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_224214A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '5958c65f-ebfc-4f55-a97f-3a0f48683ccc']
 
 During handling of the above exception, another exception occurred:
 
