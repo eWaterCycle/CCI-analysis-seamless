@@ -1,22 +1,8 @@
-2026/06/25 18:07:53 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/25 18:07:58 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/25 18:07:58 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-Executing:   4%|▍         | 1/23 [00:02<00:52,  2.40s/cell]Executing:   9%|▊         | 2/23 [00:03<00:32,  1.53s/cell]Executing:  13%|█▎        | 3/23 [00:06<00:49,  2.47s/cell]Executing:  17%|█▋        | 4/23 [00:07<00:29,  1.56s/cell]Executing:  22%|██▏       | 5/23 [00:10<00:37,  2.10s/cell]Executing:  26%|██▌       | 6/23 [00:10<00:24,  1.47s/cell]Executing:  30%|███       | 7/23 [00:10<00:16,  1.05s/cell]Executing:  35%|███▍      | 8/23 [00:11<00:13,  1.09cell/s]Executing:  43%|████▎     | 10/23 [00:11<00:07,  1.68cell/s]Executing:  48%|████▊     | 11/23 [00:11<00:06,  1.89cell/s]Executing:  52%|█████▏    | 12/23 [00:12<00:05,  2.13cell/s]Executing:  57%|█████▋    | 13/23 [00:12<00:03,  2.67cell/s]Executing:  61%|██████    | 14/23 [00:12<00:02,  3.15cell/s]Executing:  65%|██████▌   | 15/23 [00:12<00:02,  3.14cell/s]Executing:  70%|██████▉   | 16/23 [00:13<00:03,  2.27cell/s]Executing:  74%|███████▍  | 17/23 [00:14<00:03,  1.87cell/s]Executing:  78%|███████▊  | 18/23 [00:15<00:02,  1.69cell/s]Executing:  83%|████████▎ | 19/23 [00:16<00:03,  1.25cell/s]Executing:  87%|████████▋ | 20/23 [00:16<00:01,  1.52cell/s]Executing:  91%|█████████▏| 21/23 [00:17<00:01,  1.76cell/s]Executing:  96%|█████████▌| 22/23 [00:24<00:02,  2.73s/cell]Executing: 100%|██████████| 23/23 [00:27<00:00,  1.20s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:36,  7.09s/cell]Executing:   9%|▊         | 2/23 [00:12<02:02,  5.81s/cell]Executing:  13%|█▎        | 3/23 [00:12<01:05,  3.28s/cell]Executing:  26%|██▌       | 6/23 [00:12<00:19,  1.13s/cell]Executing:  35%|███▍      | 8/23 [00:12<00:11,  1.27cell/s]Executing:  39%|███▉      | 9/23 [00:14<00:13,  1.06cell/s]Executing:  39%|███▉      | 9/23 [00:16<00:26,  1.89s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:27,  1.26s/cell]Executing:   9%|▊         | 2/23 [00:02<00:21,  1.00s/cell]2026/07/02 23:44:00 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 23:44:00 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 23:44:00 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:  13%|█▎        | 3/23 [00:05<00:39,  1.98s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:16,  1.12cell/s]Executing:  35%|███▍      | 8/23 [00:05<00:06,  2.34cell/s]Executing:  61%|██████    | 14/23 [00:05<00:01,  5.11cell/s]Executing:  78%|███████▊  | 18/23 [00:06<00:00,  6.74cell/s]Executing:  87%|████████▋ | 20/23 [00:06<00:00,  4.99cell/s]Executing:  96%|█████████▌| 22/23 [00:07<00:00,  4.79cell/s]Executing: 100%|██████████| 23/23 [00:08<00:00,  2.58cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:15,  1.38cell/s]Executing:   9%|▊         | 2/23 [00:04<00:53,  2.56s/cell]Executing:  17%|█▋        | 4/23 [00:04<00:19,  1.00s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:15,  1.16cell/s]Executing:  39%|███▉      | 9/23 [00:06<00:06,  2.30cell/s]Executing:  39%|███▉      | 9/23 [00:07<00:11,  1.24cell/s]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
