@@ -1,6 +1,10 @@
-2026/06/24 10:35:50 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/24 10:35:50 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/24 10:35:50 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 20:29:11 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/07/02 20:29:16 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:29:16 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+[IPKernelApp] ERROR | Failed to open SQLite history /home/ewater-mmelotto/.ipython/profile_default/history.sqlite (database is locked).
+[IPKernelApp] ERROR | History file was moved to /home/ewater-mmelotto/.ipython/profile_default/history-corrupt-2026-07-02T18.29.40.029749+00.00.sqlite and a new file created.
+Executing:   4%|▍         | 1/23 [00:26<09:37, 26.23s/cell]Executing:   9%|▊         | 2/23 [00:50<08:52, 25.37s/cell]Executing:  13%|█▎        | 3/23 [02:13<17:08, 51.42s/cell]Executing:  22%|██▏       | 5/23 [02:13<06:43, 22.40s/cell]Executing:  35%|███▍      | 8/23 [02:13<02:32, 10.15s/cell]Executing:  52%|█████▏    | 12/23 [02:13<00:54,  4.98s/cell]Executing:  65%|██████▌   | 15/23 [02:14<00:25,  3.24s/cell]Executing:  74%|███████▍  | 17/23 [02:14<00:14,  2.45s/cell]Executing:  83%|████████▎ | 19/23 [02:25<00:13,  3.26s/cell]Executing:  87%|████████▋ | 20/23 [02:25<00:08,  2.76s/cell]Executing:  96%|█████████▌| 22/23 [02:26<00:02,  2.07s/cell][IPKernelApp] ERROR | KeyboardInterrupt caught in kernel.
+Executing: 100%|██████████| 23/23 [02:28<00:00,  6.48s/cell]
 Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
@@ -15,8 +19,7 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:26<09:48, 26.77s/cell]Executing:   9%|▊         | 2/23 [01:13<13:31, 38.62s/cell]Executing:  13%|█▎        | 3/23 [03:39<29:09, 87.49s/cell]Executing:  17%|█▋        | 4/23 [03:39<16:49, 53.12s/cell]Executing:  22%|██▏       | 5/23 [03:40<10:13, 34.08s/cell]Executing:  26%|██▌       | 6/23 [03:40<06:23, 22.53s/cell]Executing:  30%|███       | 7/23 [03:40<04:03, 15.21s/cell]Executing:  48%|████▊     | 11/23 [03:40<01:04,  5.34s/cell]Executing:  57%|█████▋    | 13/23 [03:40<00:36,  3.66s/cell]Executing:  70%|██████▉   | 16/23 [03:40<00:15,  2.20s/cell]Executing:  78%|███████▊  | 18/23 [03:41<00:08,  1.74s/cell]Executing:  78%|███████▊  | 18/23 [04:00<00:08,  1.74s/cell]Executing:  83%|████████▎ | 19/23 [04:02<00:19,  4.91s/cell]Executing:  87%|████████▋ | 20/23 [04:03<00:12,  4.02s/cell]Executing:  96%|█████████▌| 22/23 [04:05<00:02,  2.96s/cell]Executing: 100%|██████████| 23/23 [04:07<00:00, 10.74s/cell]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:10<04:00, 10.92s/cell]Executing:   9%|▊         | 2/23 [00:17<02:56,  8.40s/cell]Executing:  17%|█▋        | 4/23 [00:22<01:31,  4.83s/cell]Executing:  30%|███       | 7/23 [00:23<00:33,  2.08s/cell]Executing:  39%|███▉      | 9/23 [00:23<00:19,  1.42s/cell]Executing:  48%|████▊     | 11/23 [00:24<00:13,  1.13s/cell]Executing:  52%|█████▏    | 12/23 [00:24<00:10,  1.04cell/s]Executing:  61%|██████    | 14/23 [00:24<00:05,  1.57cell/s]Executing:  74%|███████▍  | 17/23 [00:25<00:02,  2.60cell/s]Executing:  83%|████████▎ | 19/23 [00:25<00:01,  2.59cell/s]Executing:  87%|████████▋ | 20/23 [00:26<00:01,  2.54cell/s]Executing:  96%|█████████▌| 22/23 [00:36<00:02,  2.00s/cell]Executing:  96%|█████████▌| 22/23 [00:39<00:01,  1.79s/cell]
+Executing:   4%|▍         | 1/23 [00:07<02:53,  7.90s/cell]Executing:   9%|▊         | 2/23 [00:14<02:25,  6.91s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:17,  3.87s/cell]Executing:  26%|██▌       | 6/23 [00:14<00:22,  1.33s/cell]Executing:  39%|███▉      | 9/23 [00:14<00:10,  1.37cell/s]Executing:  48%|████▊     | 11/23 [00:15<00:07,  1.52cell/s]Executing:  70%|██████▉   | 16/23 [00:15<00:02,  3.07cell/s]Executing:  78%|███████▊  | 18/23 [00:16<00:01,  2.93cell/s]Executing:  87%|████████▋ | 20/23 [00:17<00:00,  3.16cell/s]Executing:  91%|█████████▏| 21/23 [00:17<00:00,  3.51cell/s]Executing:  96%|█████████▌| 22/23 [06:47<01:09, 69.54s/cell]Executing:  96%|█████████▌| 22/23 [06:50<00:18, 18.65s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -28,7 +31,19 @@ papermill.exceptions.PapermillExecutionError:
 ---------------------------------------------------------------------------
 Exception encountered at "In [17]":
 ---------------------------------------------------------------------------
-JSONDecodeError                           Traceback (most recent call last)
+FileNotFoundError                         Traceback (most recent call last)
+File <timed exec>:3
+
+File ~/seamless_spider/climatechangeimpact/scripts/forcing_destine.py:369, in DestinEHistoricalForcing.load(cls, directory)
+    367 directory = str(directory)
+--> 369 with open(Path(directory) / "ewatercycle_forcing.yaml", "r") as f:
+    370     config = yaml.safe_load(f)
+
+FileNotFoundError: [Errno 2] No such file or directory: '/project/ewater/Data/ewatercycleClimateImpact/HBV/forcing_data/austria/lamah_201566/DestinE_historical/ewatercycle_forcing.yaml'
+
+During handling of the above exception, another exception occurred:
+
+HTTPResponseError                         Traceback (most recent call last)
 Cell In[17], line 1
 ----> 1 get_ipython().run_cell_magic('time', '', '\n# Generate forcing for the calibration + validation period\ntry:\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.load(settings["path_DestinE_historical"])\n    print("Loading")\nexcept FileNotFoundError:\n# DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n    print("Generating")\n    DestinE_hist_forcing_object = DestinEHistoricalForcing.generate(\n        start_time=settings["calibration_start_date"],\n        end_time=settings["validation_end_date"],\n        directory=settings["path_DestinE_historical"],\n        shape=settings["path_shape"],\n    )\n\ndisplay(DestinE_hist_forcing_object)\n')
 
@@ -135,66 +150,79 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
     196 def decorated(self, *args, **kwargs):
 --> 197     return fun(self, *args, **kwargs)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:217, in authenticated.<locals>.decorated(self, *args, **kwargs)
-    215 @wraps(method, assign=default_assign + default_update, update=[])
-    216 def decorated(self, *args, **kwargs):
---> 217     auth_headers = self.auth.get_auth_headers()
-    218     if len(auth_headers) < 1:
-    219         e = PolytopeError(situation=("trying to run a Polytope command " + "which requires authentication"))
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:229, in authenticated.<locals>.decorated(self, *args, **kwargs)
+    227     raise e
+    228 # try:
+--> 229 return method(self, *args, **kwargs)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Auth.py:50, in Auth.get_auth_headers(self)
-     48 def get_auth_headers(self):
-     49     auth_headers = []
----> 50     user_key, user_email, _ = self.fetch_key(login=False)
-     51     if user_key and user_email:
-     52         auth_headers.append("EmailKey %s:%s" % (user_email, user_key))
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:197, in wraps.<locals>.wrapper.<locals>.decorated(self, *args, **kwargs)
+    196 def decorated(self, *args, **kwargs):
+--> 197     return fun(self, *args, **kwargs)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Auth.py:153, in Auth.fetch_key(self, login)
-    151 try:
-    152     with open(str(key_file), "r") as infile:
---> 153         info = json.load(infile)
-    154         key = info.get("user_key", None)
-    155         email = info.get("user_email", None)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/Client.py:202, in Client.retrieve(self, *args, **kwargs)
+    199 @authenticated
+    200 @wraps(RequestManager.retrieve)
+    201 def retrieve(self, *args, **kwargs):
+--> 202     return self.request_manager.retrieve(*args, **kwargs)
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/__init__.py:293, in load(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)
-    274 def load(fp, *, cls=None, object_hook=None, parse_float=None,
-    275         parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
-    276     """Deserialize ``fp`` (a ``.read()``-supporting file-like object containing
-    277     a JSON document) to a Python object.
-    278 
-   (...)    291     kwarg; otherwise ``JSONDecoder`` is used.
-    292     """
---> 293     return loads(fp.read(),
-    294         cls=cls, object_hook=object_hook,
-    295         parse_float=parse_float, parse_int=parse_int,
-    296         parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/RequestManager.py:438, in RequestManager.retrieve(self, name, request, output_file, inline_request, asynchronous, max_attempts, attempt_period, append, pointer)
+    436         request_results[i] = Result(request_url, output_file, append, self)
+    437     else:
+--> 438         request_results[i] = self.download(
+    439             request_id, output_file, asynchronous, max_attempts, attempt_period, append, pointer
+    440         )
+    442     append = True
+    444 for warning in warnings:
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/__init__.py:346, in loads(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)
-    341     s = s.decode(detect_encoding(s), 'surrogatepass')
-    343 if (cls is None and object_hook is None and
-    344         parse_int is None and parse_float is None and
-    345         parse_constant is None and object_pairs_hook is None and not kw):
---> 346     return _default_decoder.decode(s)
-    347 if cls is None:
-    348     cls = JSONDecoder
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/RequestManager.py:683, in RequestManager.download(self, request_id, output_file, asynchronous, max_attempts, attempt_period, append, pointer)
+    679     e = helpers.RetriesExceededError(
+    680         attempts=describe_max_attempts, situation=situation, url=url, method=method, request_content=headers
+    681     )
+    682     raise e
+--> 683 response, response_messages = helpers.try_request(
+    684     method,
+    685     situation=situation,
+    686     expected=expected_responses,
+    687     logger=self._logger,
+    688     stream=True,
+    689     url=url,
+    690     headers=headers,
+    691     skip_tls=self.config.get()["skip_tls"],
+    692     session=s,
+    693 )
+    694 if response.status_code == requests.codes.ok:
+    695     last_status = "processed"
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/decoder.py:337, in JSONDecoder.decode(self, s, _w)
-    332 def decode(self, s, _w=WHITESPACE.match):
-    333     """Return the Python representation of ``s`` (a ``str`` instance
-    334     containing a JSON document).
-    335 
-    336     """
---> 337     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-    338     end = _w(s, end).end()
-    339     if end != len(s):
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:604, in try_request(method, situation, expected, logger, stream, skip_tls, session, **kwargs)
+    601     logger.warning("Maximum HTTP request retries reached")
+    602     raise e
+--> 604 response_title, response_messages = process_response(
+    605     response, situation, url, method, stream, request_content, expected
+    606 )
+    608 logger.debug("Polytope client received HTTP " + response_title)
+    610 return response, response_messages
 
-File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/json/decoder.py:355, in JSONDecoder.raw_decode(self, s, idx)
-    353     obj, end = self.scan_once(s, idx)
-    354 except StopIteration as err:
---> 355     raise JSONDecodeError("Expecting value", s, err.value) from None
-    356 return obj, end
+File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/api/helpers.py:530, in process_response(response, situation, url, method, stream, request_content, expected)
+    528     if response.status_code == 401 and "expired" in response_messages[0]:
+    529         e.__class__ = "ExpiredCredentialsError"
+--> 530     raise e
+    531 elif response.status_code not in expected:
+    532     e.description = "Unexpected HTTP response from the server."
 
-JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+HTTPResponseError: Polytope error
+Situation: trying to download data
+Description: HTTP CLIENT ERROR (400)
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/95c9b281-5898-46c6-bdbf-3b19cc4d7cd3
+HTTP method: GET
+Request header/body contents:
+{'headers': {'Authorization': 'Bearer **********RXCQ'}, 'json': None}
+Expected responses: 200, 202
+Received response: CLIENT ERROR (400)
+Details:
+Request failed with error:
+Matched datasource polytope-ng
+
+No data was returned.
 
 fusermount: entry for /project/ewater/Data/climate_data not found in /etc/mtab
 fusermount: entry for /home/ewater-mmelotto/climate_data not found in /etc/mtab
