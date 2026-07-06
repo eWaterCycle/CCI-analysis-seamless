@@ -1,12 +1,22 @@
-2026/06/24 20:29:22 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/24 20:29:22 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/24 20:29:22 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to open SQLite history /home/ewater-mmelotto/.ipython/profile_default/history.sqlite (database is locked).
-[IPKernelApp] ERROR | History file was moved to /home/ewater-mmelotto/.ipython/profile_default/history-corrupt-2026-06-24T18.29.32.019400+00.00.sqlite and a new file created.
-[IPKernelApp] ERROR | Failed to open SQLite history /home/ewater-mmelotto/.ipython/profile_default/history.sqlite (disk I/O error).
-[IPKernelApp] ERROR | History file was moved to /home/ewater-mmelotto/.ipython/profile_default/history-corrupt.sqlite and a new file created.
-Executing:   4%|▍         | 1/23 [00:07<02:50,  7.75s/cell]Executing:   9%|▊         | 2/23 [00:09<01:24,  4.04s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:32,  4.65s/cell]Executing:  17%|█▋        | 4/23 [00:14<00:54,  2.86s/cell]Executing:  22%|██▏       | 5/23 [00:15<00:35,  1.97s/cell]Executing:  30%|███       | 7/23 [00:15<00:16,  1.02s/cell]Executing:  35%|███▍      | 8/23 [00:15<00:11,  1.29cell/s]Executing:  43%|████▎     | 10/23 [00:15<00:07,  1.85cell/s]Executing:  52%|█████▏    | 12/23 [00:15<00:03,  2.82cell/s]Executing:  61%|██████    | 14/23 [00:16<00:02,  3.94cell/s]Executing:  70%|██████▉   | 16/23 [00:16<00:01,  5.03cell/s]Executing:  78%|███████▊  | 18/23 [00:16<00:00,  6.50cell/s]Executing:  87%|████████▋ | 20/23 [00:17<00:00,  3.06cell/s]Executing:  96%|█████████▌| 22/23 [00:18<00:00,  3.28cell/s]Executing: 100%|██████████| 23/23 [00:20<00:00,  1.13cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:32,  1.48s/cell]Executing:   9%|▊         | 2/23 [00:08<01:35,  4.53s/cell]Executing:  17%|█▋        | 4/23 [00:09<00:38,  2.02s/cell]Executing:  22%|██▏       | 5/23 [00:09<00:26,  1.46s/cell]Executing:  35%|███▍      | 8/23 [00:09<00:09,  1.55cell/s]Executing:  39%|███▉      | 9/23 [00:14<00:21,  1.56s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/07/02 20:33:32 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:33:32 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:33:32 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:07<02:38,  7.20s/cell]Executing:   9%|▊         | 2/23 [00:08<01:15,  3.60s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:10,  3.55s/cell]Executing:  43%|████▎     | 10/23 [00:11<00:08,  1.54cell/s]Executing:  65%|██████▌   | 15/23 [00:12<00:02,  2.72cell/s]Executing:  78%|███████▊  | 18/23 [00:12<00:01,  3.51cell/s]Executing:  91%|█████████▏| 21/23 [00:14<00:00,  2.68cell/s]Executing: 100%|██████████| 23/23 [00:14<00:00,  3.03cell/s]Executing: 100%|██████████| 23/23 [00:16<00:00,  1.35cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:03<01:11,  3.26s/cell]Executing:   9%|▊         | 2/23 [00:07<01:23,  3.96s/cell]Executing:  17%|█▋        | 4/23 [00:11<00:52,  2.78s/cell]Executing:  39%|███▉      | 9/23 [00:12<00:13,  1.03cell/s]Executing:  39%|███▉      | 9/23 [00:13<00:21,  1.55s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
