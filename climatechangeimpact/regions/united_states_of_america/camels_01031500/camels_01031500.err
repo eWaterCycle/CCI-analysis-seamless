@@ -1,6 +1,6 @@
-2026/06/24 10:34:53 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/24 10:34:53 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/24 10:34:53 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:29:14 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:29:14 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:29:14 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
 Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
@@ -15,7 +15,7 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:41<15:09, 41.32s/cell]Executing:   9%|▊         | 2/23 [01:28<15:36, 44.62s/cell]Executing:  13%|█▎        | 3/23 [03:53<30:15, 90.76s/cell]Executing:  17%|█▋        | 4/23 [03:54<17:24, 54.98s/cell]Executing:  26%|██▌       | 6/23 [03:54<07:19, 25.87s/cell]Executing:  39%|███▉      | 9/23 [03:54<02:49, 12.13s/cell]Executing:  52%|█████▏    | 12/23 [03:54<01:16,  6.99s/cell]Executing:  61%|██████    | 14/23 [03:55<00:44,  4.98s/cell]Executing:  70%|██████▉   | 16/23 [03:55<00:24,  3.55s/cell]Executing:  78%|███████▊  | 18/23 [03:56<00:13,  2.61s/cell]Executing:  83%|████████▎ | 19/23 [04:17<00:23,  5.85s/cell]Executing:  91%|█████████▏| 21/23 [04:17<00:07,  3.93s/cell]Executing: 100%|██████████| 23/23 [04:19<00:00,  3.03s/cell]Executing: 100%|██████████| 23/23 [04:21<00:00, 11.38s/cell]
+Executing:   4%|▍         | 1/23 [00:18<06:46, 18.50s/cell]Executing:   9%|▊         | 2/23 [00:43<07:50, 22.40s/cell]Executing:  13%|█▎        | 3/23 [02:06<16:38, 49.93s/cell]Executing:  17%|█▋        | 4/23 [02:06<09:35, 30.29s/cell]Executing:  30%|███       | 7/23 [02:06<03:00, 11.28s/cell]Executing:  39%|███▉      | 9/23 [02:06<01:39,  7.09s/cell]Executing:  48%|████▊     | 11/23 [02:06<00:55,  4.64s/cell]Executing:  57%|█████▋    | 13/23 [02:07<00:31,  3.14s/cell]Executing:  70%|██████▉   | 16/23 [02:07<00:13,  1.87s/cell]Executing:  78%|███████▊  | 18/23 [02:07<00:06,  1.40s/cell]Executing:  83%|████████▎ | 19/23 [02:18<00:11,  2.87s/cell]Executing:  87%|████████▋ | 20/23 [02:18<00:07,  2.39s/cell]Executing:  91%|█████████▏| 21/23 [02:18<00:03,  1.92s/cell]Executing:  96%|█████████▌| 22/23 [02:19<00:01,  1.69s/cell]Executing: 100%|██████████| 23/23 [02:22<00:00,  6.20s/cell]
 Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
@@ -30,7 +30,7 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:10<03:58, 10.84s/cell]Executing:   9%|▊         | 2/23 [00:28<05:10, 14.78s/cell]Executing:  13%|█▎        | 3/23 [00:28<02:41,  8.08s/cell]Executing:  30%|███       | 7/23 [00:28<00:36,  2.26s/cell]Executing:  39%|███▉      | 9/23 [00:36<00:57,  4.10s/cell]
+Executing:   4%|▍         | 1/23 [00:10<03:48, 10.38s/cell]Executing:   9%|▊         | 2/23 [00:30<05:39, 16.17s/cell]Executing:  30%|███       | 7/23 [00:30<00:50,  3.14s/cell]Executing:  39%|███▉      | 9/23 [00:44<01:09,  4.93s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
