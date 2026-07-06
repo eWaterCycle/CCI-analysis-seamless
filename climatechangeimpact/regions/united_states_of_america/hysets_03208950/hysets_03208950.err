@@ -1,8 +1,22 @@
-2026/06/25 09:52:36 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/25 09:52:36 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/25 09:52:36 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:28,  1.31s/cell]Executing:   9%|▊         | 2/23 [00:02<00:23,  1.10s/cell]Executing:  13%|█▎        | 3/23 [00:05<00:42,  2.14s/cell]Executing:  26%|██▌       | 6/23 [00:05<00:12,  1.33cell/s]Executing:  43%|████▎     | 10/23 [00:05<00:04,  2.88cell/s]Executing:  61%|██████    | 14/23 [00:05<00:01,  4.84cell/s]Executing:  74%|███████▍  | 17/23 [00:06<00:01,  5.87cell/s]Executing:  87%|████████▋ | 20/23 [00:07<00:00,  4.39cell/s]Executing:  96%|█████████▌| 22/23 [00:07<00:00,  4.44cell/s]Executing: 100%|██████████| 23/23 [00:09<00:00,  2.50cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:00<00:18,  1.20cell/s]Executing:   9%|▊         | 2/23 [00:05<01:01,  2.93s/cell]Executing:  22%|██▏       | 5/23 [00:05<00:15,  1.14cell/s]Executing:  30%|███       | 7/23 [00:05<00:09,  1.71cell/s]Executing:  39%|███▉      | 9/23 [00:06<00:06,  2.12cell/s]Executing:  48%|████▊     | 11/23 [00:07<00:05,  2.20cell/s]Executing:  61%|██████    | 14/23 [00:07<00:02,  3.14cell/s]Executing:  65%|██████▌   | 15/23 [00:07<00:02,  3.20cell/s]Executing:  74%|███████▍  | 17/23 [00:08<00:01,  3.64cell/s]Executing:  78%|███████▊  | 18/23 [00:08<00:01,  3.07cell/s]Executing:  87%|████████▋ | 20/23 [00:09<00:00,  3.64cell/s]Executing:  96%|█████████▌| 22/23 [00:55<00:07,  7.88s/cell]Executing:  96%|█████████▌| 22/23 [00:57<00:02,  2.63s/cell]
+2026/07/02 22:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 22:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 22:35:11 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:04<01:43,  4.71s/cell]Executing:   9%|▊         | 2/23 [00:06<00:59,  2.85s/cell]Executing:  13%|█▎        | 3/23 [00:12<01:23,  4.18s/cell]Executing:  22%|██▏       | 5/23 [00:14<00:46,  2.61s/cell]Executing:  39%|███▉      | 9/23 [00:14<00:14,  1.01s/cell]Executing:  52%|█████▏    | 12/23 [00:15<00:07,  1.57cell/s]Executing:  61%|██████    | 14/23 [00:15<00:04,  2.08cell/s]Executing:  70%|██████▉   | 16/23 [00:16<00:03,  1.88cell/s]Executing:  78%|███████▊  | 18/23 [00:17<00:02,  2.02cell/s]Executing:  83%|████████▎ | 19/23 [00:18<00:02,  1.64cell/s]Executing:  96%|█████████▌| 22/23 [00:23<00:01,  1.05s/cell]Executing: 100%|██████████| 23/23 [00:26<00:00,  1.16s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
+Traceback (most recent call last):
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
+    self.new_session()
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
+    return f(self, *a, **kw)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
+    cur = conn.execute(
+          ^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+Executing:   4%|▍         | 1/23 [00:09<03:26,  9.37s/cell]Executing:   9%|▊         | 2/23 [00:16<02:46,  7.91s/cell]Executing:  30%|███       | 7/23 [00:16<00:24,  1.54s/cell]Executing:  48%|████▊     | 11/23 [00:17<00:11,  1.07cell/s]Executing:  61%|██████    | 14/23 [00:17<00:05,  1.58cell/s]Executing:  74%|███████▍  | 17/23 [00:17<00:02,  2.28cell/s]Executing:  87%|████████▋ | 20/23 [00:18<00:01,  2.49cell/s]Executing:  91%|█████████▏| 21/23 [00:33<00:00,  2.49cell/s]Executing:  96%|█████████▌| 22/23 [00:44<00:03,  3.31s/cell]Executing:  96%|█████████▌| 22/23 [00:48<00:02,  2.18s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -195,10 +209,10 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
 HTTPResponseError: Polytope error
 Situation: trying to download data
 Description: HTTP CLIENT ERROR (400)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/06017b25-ba51-4c28-b38a-33491abd9bc5
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/f828384b-1f99-458c-9252-a976a0444a61
 HTTP method: GET
 Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********B7wA'}, 'json': None}
+{'headers': {'Authorization': 'Bearer **********hq4w'}, 'json': None}
 Expected responses: 200, 202
 Received response: CLIENT ERROR (400)
 Details:
