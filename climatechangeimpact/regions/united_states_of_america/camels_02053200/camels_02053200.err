@@ -1,22 +1,8 @@
-2026/06/24 10:44:04 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/24 10:44:04 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]2026/06/24 10:44:09 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-[IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:06<02:30,  6.85s/cell]Executing:   9%|▊         | 2/23 [00:08<01:18,  3.73s/cell]Executing:  13%|█▎        | 3/23 [00:13<01:31,  4.55s/cell]Executing:  17%|█▋        | 4/23 [00:14<00:55,  2.90s/cell]Executing:  30%|███       | 7/23 [00:14<00:17,  1.10s/cell]Executing:  39%|███▉      | 9/23 [00:14<00:10,  1.36cell/s]Executing:  65%|██████▌   | 15/23 [00:14<00:02,  3.33cell/s]Executing:  74%|███████▍  | 17/23 [00:15<00:01,  3.69cell/s]Executing:  83%|████████▎ | 19/23 [00:16<00:01,  2.82cell/s]Executing:  91%|█████████▏| 21/23 [00:17<00:00,  2.52cell/s]Executing:  96%|█████████▌| 22/23 [00:18<00:00,  2.31cell/s]Executing: 100%|██████████| 23/23 [00:20<00:00,  1.11cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:03<01:27,  3.97s/cell]Executing:   9%|▊         | 2/23 [00:10<01:56,  5.56s/cell]Executing:  13%|█▎        | 3/23 [00:11<01:03,  3.18s/cell]Executing:  17%|█▋        | 4/23 [00:11<00:42,  2.21s/cell]Executing:  22%|██▏       | 5/23 [00:12<00:31,  1.74s/cell]Executing:  26%|██▌       | 6/23 [00:12<00:21,  1.26s/cell]Executing:  30%|███       | 7/23 [00:13<00:14,  1.07cell/s]Executing:  39%|███▉      | 9/23 [00:14<00:11,  1.19cell/s]Executing:  39%|███▉      | 9/23 [00:17<00:26,  1.92s/cell]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:27,  1.23s/cell]Executing:   9%|▊         | 2/23 [00:02<00:21,  1.00s/cell]2026/07/02 20:35:14 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:35:14 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+2026/07/02 20:35:14 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
+Executing:  13%|█▎        | 3/23 [00:05<00:42,  2.13s/cell]Executing:  22%|██▏       | 5/23 [00:10<00:43,  2.41s/cell]Executing:  61%|██████    | 14/23 [00:10<00:04,  1.89cell/s]Executing:  78%|███████▊  | 18/23 [00:11<00:01,  2.74cell/s]Executing:  91%|█████████▏| 21/23 [00:11<00:00,  2.92cell/s]Executing: 100%|██████████| 23/23 [00:14<00:00,  1.54cell/s]
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:02<00:50,  2.28s/cell]Executing:   9%|▊         | 2/23 [00:06<01:09,  3.33s/cell]Executing:  17%|█▋        | 4/23 [00:10<00:50,  2.68s/cell]Executing:  26%|██▌       | 6/23 [00:11<00:24,  1.44s/cell]Executing:  39%|███▉      | 9/23 [00:11<00:12,  1.16cell/s]Executing:  39%|███▉      | 9/23 [00:14<00:22,  1.61s/cell]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
