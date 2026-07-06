@@ -1,6 +1,7 @@
-2026/06/24 10:41:22 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/24 10:41:22 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
-2026/06/24 10:41:22 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 20:34:12 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 20:34:13 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 20:34:13 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:37,  1.72s/cell]Executing:   9%|▊         | 2/23 [00:03<00:32,  1.53s/cell]Executing:  13%|█▎        | 3/23 [00:08<01:09,  3.47s/cell]Executing:  22%|██▏       | 5/23 [00:09<00:32,  1.81s/cell]Executing:  30%|███       | 7/23 [00:10<00:16,  1.03s/cell]Executing:  35%|███▍      | 8/23 [00:10<00:12,  1.17cell/s]Executing:  39%|███▉      | 9/23 [00:10<00:09,  1.44cell/s]Executing:  52%|█████▏    | 12/23 [00:10<00:03,  2.75cell/s]Executing:  57%|█████▋    | 13/23 [00:11<00:03,  3.00cell/s]Executing:  65%|██████▌   | 15/23 [00:11<00:01,  4.25cell/s]Executing:  74%|███████▍  | 17/23 [00:11<00:01,  3.39cell/s]Executing:  78%|███████▊  | 18/23 [00:12<00:02,  2.43cell/s]Executing:  83%|████████▎ | 19/23 [00:14<00:02,  1.75cell/s]Executing:  91%|█████████▏| 21/23 [00:18<00:02,  1.17s/cell]Executing:  96%|█████████▌| 22/23 [00:18<00:01,  1.00s/cell]Executing: 100%|██████████| 23/23 [00:21<00:00,  1.07cell/s]
 Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
@@ -15,22 +16,7 @@ Traceback (most recent call last):
     cur = conn.execute(
           ^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:07<02:47,  7.59s/cell]Executing:   9%|▊         | 2/23 [00:09<01:27,  4.14s/cell]Executing:  13%|█▎        | 3/23 [00:16<01:48,  5.41s/cell]Executing:  22%|██▏       | 5/23 [00:16<00:42,  2.38s/cell]Executing:  35%|███▍      | 8/23 [00:16<00:16,  1.10s/cell]Executing:  52%|█████▏    | 12/23 [00:16<00:06,  1.81cell/s]Executing:  70%|██████▉   | 16/23 [00:16<00:02,  2.98cell/s]Executing:  83%|████████▎ | 19/23 [00:18<00:01,  2.62cell/s]Executing:  91%|█████████▏| 21/23 [00:18<00:00,  3.19cell/s]Executing: 100%|██████████| 23/23 [00:19<00:00,  3.11cell/s]Executing: 100%|██████████| 23/23 [00:21<00:00,  1.06cell/s]
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s][IPKernelApp] ERROR | Failed to create history session in /home/ewater-mmelotto/.ipython/profile_default/history.sqlite. History will not be saved.
-Traceback (most recent call last):
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 693, in __init__
-    self.new_session()
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 105, in only_when_enabled
-    return f(self, *a, **kw)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/ewater-mmelotto/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/IPython/core/history.py", line 755, in new_session
-    cur = conn.execute(
-          ^^^^^^^^^^^^^
-sqlite3.OperationalError: database is locked
-Executing:   4%|▍         | 1/23 [00:06<02:32,  6.92s/cell]Executing:   9%|▊         | 2/23 [00:15<02:43,  7.76s/cell]Executing:  26%|██▌       | 6/23 [00:15<00:30,  1.80s/cell]Executing:  39%|███▉      | 9/23 [00:15<00:14,  1.02s/cell]Executing:  48%|████▊     | 11/23 [00:17<00:11,  1.07cell/s]Executing:  61%|██████    | 14/23 [00:17<00:05,  1.72cell/s]Executing:  74%|███████▍  | 17/23 [00:17<00:02,  2.54cell/s]Executing:  83%|████████▎ | 19/23 [00:18<00:01,  2.31cell/s]Executing:  91%|█████████▏| 21/23 [00:18<00:00,  2.62cell/s]Executing:  96%|█████████▌| 22/23 [13:33<02:07, 127.54s/cell]Executing:  96%|█████████▌| 22/23 [13:36<00:37, 37.12s/cell] 
+Executing:   4%|▍         | 1/23 [00:07<02:51,  7.78s/cell]Executing:   9%|▊         | 2/23 [00:14<02:28,  7.05s/cell]Executing:  13%|█▎        | 3/23 [00:14<01:18,  3.91s/cell]Executing:  39%|███▉      | 9/23 [00:14<00:11,  1.21cell/s]Executing:  48%|████▊     | 11/23 [00:15<00:09,  1.29cell/s]Executing:  61%|██████    | 14/23 [00:16<00:04,  1.98cell/s]Executing:  70%|██████▉   | 16/23 [00:16<00:02,  2.39cell/s]Executing:  78%|███████▊  | 18/23 [00:17<00:02,  2.33cell/s]Executing:  83%|████████▎ | 19/23 [00:17<00:01,  2.51cell/s]Executing:  87%|████████▋ | 20/23 [00:17<00:01,  2.65cell/s]Executing:  96%|█████████▌| 22/23 [15:43<02:42, 162.16s/cell]Executing:  96%|█████████▌| 22/23 [15:46<00:43, 43.02s/cell] 
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 151, in <module>
     pm.execute_notebook(
@@ -223,10 +209,10 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/polytope/
 HTTPResponseError: Polytope error
 Situation: trying to download data
 Description: HTTP CLIENT ERROR (400)
-URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/83c0599d-a06b-4374-8e09-f8aa6784e9fa
+URL: https://polytope.lumi.apps.dte.destination-earth.eu:443/api/v1/requests/f61e4737-a9af-4e20-859b-cf791d00de40
 HTTP method: GET
 Request header/body contents:
-{'headers': {'Authorization': 'Bearer **********-TOA'}, 'json': None}
+{'headers': {'Authorization': 'Bearer **********bT3A'}, 'json': None}
 Expected responses: 200, 202
 Received response: CLIENT ERROR (400)
 Details:
