@@ -1,7 +1,7 @@
-Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:43,  1.97s/cell]2026/06/24 10:36:20 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/24 10:36:20 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-2026/06/24 10:36:20 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: Server is busy. Please try again later.: 429 Too Many Requests
-Executing:   9%|▊         | 2/23 [00:47<09:40, 27.64s/cell]Executing:  13%|█▎        | 3/23 [03:13<27:10, 81.52s/cell]Executing:  17%|█▋        | 4/23 [03:13<15:39, 49.45s/cell]Executing:  22%|██▏       | 5/23 [03:19<10:07, 33.75s/cell]Executing:  26%|██▌       | 6/23 [03:19<06:20, 22.41s/cell]Executing:  30%|███       | 7/23 [03:20<04:03, 15.20s/cell]Executing:  35%|███▍      | 8/23 [03:20<02:36, 10.41s/cell]Executing:  39%|███▉      | 9/23 [03:20<01:40,  7.20s/cell]Executing:  43%|████▎     | 10/23 [03:21<01:07,  5.16s/cell]Executing:  61%|██████    | 14/23 [04:02<01:15,  8.43s/cell]Executing:  65%|██████▌   | 15/23 [04:02<00:55,  6.90s/cell]Executing:  70%|██████▉   | 16/23 [04:05<00:42,  6.10s/cell]Executing:  70%|██████▉   | 16/23 [04:08<01:48, 15.50s/cell]
+2026/07/02 20:48:40 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 20:48:40 CRITICAL: Failed to create file system for "dcache:/climate-data/obs6": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+2026/07/02 20:48:40 CRITICAL: Failed to create file system for "dcache:/climate-data/caravan": read metadata failed: 401 macaroon login denied: Invalid macaroon [-:jxj5ppDw]: expired: before:2026-06-10T13:08:16.922985792Z
+Executing:   0%|          | 0/23 [00:00<?, ?cell/s]Executing:   4%|▍         | 1/23 [00:01<00:26,  1.20s/cell]Executing:   9%|▊         | 2/23 [00:02<00:21,  1.04s/cell]Executing:  13%|█▎        | 3/23 [00:05<00:46,  2.32s/cell]Executing:  17%|█▋        | 4/23 [00:06<00:27,  1.45s/cell]Executing:  26%|██▌       | 6/23 [00:06<00:12,  1.40cell/s]Executing:  30%|███       | 7/23 [00:06<00:11,  1.44cell/s]Executing:  43%|████▎     | 10/23 [00:07<00:04,  2.60cell/s]Executing:  65%|██████▌   | 15/23 [00:07<00:01,  5.55cell/s]Executing:  70%|██████▉   | 16/23 [00:11<00:04,  1.44cell/s]
 Traceback (most recent call last):
   File "/home/ewater-mmelotto/seamless_spider/climatechangeimpact/scripts/cci.py", line 105, in <module>
     pm.execute_notebook(
@@ -42,7 +42,7 @@ File ~/miniforge3/envs/ewatercycle_spider/lib/python3.12/site-packages/xarray/ba
 ---> 56     value = self._cache[key]
      57     self._cache.move_to_end(key)
 
-KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_403213A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '7c51f76e-8ae5-48da-acab-6e83f77e25f7']
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/project/ewater/Data/caravan_data/timeseries/netcdf/camelsaus/camelsaus_403213A.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '2a6743e9-bdc8-40d4-852d-4fb2044fd55e']
 
 During handling of the above exception, another exception occurred:
 
