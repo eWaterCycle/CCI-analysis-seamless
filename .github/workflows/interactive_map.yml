@@ -1,13 +1,14 @@
 name: Deploy Map to GitHub Pages
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch: 
+#   push:
+#     branches: [main]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# permissions:
+#   contents: read
+#   pages: write
+#   id-token: write
 
 jobs:
   deploy:
